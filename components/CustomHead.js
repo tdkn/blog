@@ -25,6 +25,8 @@ const CustomHead = props => (
     <meta property="og:url" content={props.url} />
     <meta property="og:title" content={props.title || ""} />
     <meta property="og:description" content={props.description} />
+    <meta name="twitter:title" content={props.title || ""} />
+    <meta name="twitter:description" content={props.description} />
     <meta name="twitter:site" content={`@${siteMeta.social.twitter}`} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={`${siteMeta.url}${props.ogImage}`} />
