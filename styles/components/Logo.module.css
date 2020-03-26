@@ -1,0 +1,16 @@
+.logo {
+  @apply font-black
+    leading-none
+    text-lg
+    text-typography
+    inline-flex
+    items-center
+    font-sans;
+
+  transform: scale(1.5);
+  transform-origin: top left;
+}
+
+.logo svg {
+  @apply mr-2;
+}

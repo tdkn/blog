@@ -1,0 +1,7 @@
+.header {
+  @apply flex items-center py-10;
+
+  & a:hover {
+    @apply border-0;
+  }
+}
