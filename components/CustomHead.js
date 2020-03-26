@@ -13,28 +13,32 @@ const siteMeta = {
   }
 };
 
-const CustomHead = props => (
-  <NextHead>
-    <title>
-      {props.title ? `${props.title} | ${siteMeta.title}` : siteMeta.title}
-    </title>
-    <link rel="icon" href="/icon.png" />
-    <meta charSet="UTF-8" />
-    <meta name="description" content={props.description} />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta property="og:url" content={props.url} />
-    <meta property="og:title" content={props.title || ""} />
-    <meta property="og:description" content={props.description} />
-    <meta name="twitter:title" content={props.title || ""} />
-    <meta name="twitter:description" content={props.description} />
-    <meta name="twitter:site" content={`@${siteMeta.social.twitter}`} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content={`${siteMeta.url}${props.ogImage}`} />
-    <meta property="og:image" content={`${siteMeta.url}${props.ogImage}`} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-  </NextHead>
-);
+const CustomHead = props => {
+  const title = props.title
+    ? `${props.title} | ${siteMeta.title}`
+    : siteMeta.title;
+
+  return (
+    <NextHead>
+      <title>{title}</title>
+      <link rel="icon" href="/icon.png" />
+      <meta charSet="UTF-8" />
+      <meta name="description" content={props.description} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta property="og:url" content={props.url} />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={props.description} />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={props.description} />
+      <meta name="twitter:site" content={`@${siteMeta.social.twitter}`} />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:image" content={`${siteMeta.url}${props.ogImage}`} />
+      <meta property="og:image" content={`${siteMeta.url}${props.ogImage}`} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
+    </NextHead>
+  );
+};
 
 CustomHead.propTypes = {
   title: string,
