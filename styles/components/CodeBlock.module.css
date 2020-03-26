@@ -1,0 +1,7 @@
+.code {
+  @apply relative my-5;
+
+  & > pre {
+    @apply border border-gray-700;
+  }
+}

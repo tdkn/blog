@@ -1,0 +1,92 @@
+.article {
+  @apply max-w-screen-md mx-auto px-8;
+
+  & main {
+    /* Typography */
+    & h1 {
+      @apply font-bold text-3xl mt-10 mb-1;
+    }
+
+    & h2 {
+      @apply font-bold text-2xl mt-10 mb-1;
+    }
+
+    & h3 {
+      @apply font-bold text-xl mt-10 mb-1;
+    }
+
+    /* Table */
+    & table {
+      @apply table-auto;
+
+      & th,
+      & td {
+        @apply border border-surface px-4 py-2;
+      }
+    }
+
+    /* List */
+    & ul {
+      @apply list-disc list-inside;
+
+      & ul {
+        @apply pl-5;
+      }
+    }
+
+    & ol {
+      @apply list-decimal list-inside;
+
+      & ol {
+        @apply pl-5;
+      }
+    }
+
+    /* Horizontal Rule */
+    & hr {
+      @apply my-10 border-surface;
+    }
+
+    /* Code Block */
+    & pre {
+      @apply rounded;
+
+      &::-webkit-scrollbar {
+        @apply h-1;
+      }
+    }
+
+    & pre[class*="language-"] {
+      @apply bg-transparent pt-6;
+    }
+
+    & pre[class*="language-"]::before {
+      @apply font-mono
+        font-bold
+        text-gray-800
+        text-xs
+        uppercase
+        absolute
+        leading-none
+        tracking-wider
+        rounded-b-md
+        top-0
+        px-3 py-1;
+      left: 1rem;
+    }
+
+    & pre[class="language-js"]::before {
+      @apply bg-language-javascript;
+      content: "js";
+    }
+
+    /* Quote */
+    & blockquote {
+      @apply rounded p-5 bg-surface;
+    }
+  }
+}
+
+.header {
+  @apply pb-8;
+}

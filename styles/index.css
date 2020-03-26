@@ -1,0 +1,4 @@
+@import "~dracula-prism/css/dracula-prism.css";
+@import "~@fortawesome/fontawesome-svg-core/styles.css";
+@import "./tailwind.css";
+@import "./base.css";
