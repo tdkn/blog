@@ -7,7 +7,7 @@ import styles from "~/styles/layouts/MainLayout.module.css";
 const MainLayout = ({ children }) => {
   return (
     <div className={styles.main}>
-      <CustomHead />
+      <CustomHead title="tdkn.dev" />
 
       <BaseHeader />
 
