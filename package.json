@@ -4,9 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start",
-    "og": "node scripts/og-image.js"
+    "build": "cross-env AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer next build && next export",
+    "start": "next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
@@ -31,6 +30,7 @@
   "devDependencies": {
     "@babel/register": "^7.9.0",
     "chrome-aws-lambda": "^2.1.1",
+    "cross-env": "^7.0.2",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1",
     "puppeteer-core": "^2.1.1",
