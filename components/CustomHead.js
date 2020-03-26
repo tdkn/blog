@@ -3,7 +3,7 @@ import NextHead from "next/head";
 import { string } from "prop-types";
 
 const siteMeta = {
-  title: "tdkn",
+  title: "tdkn.dev",
   author: "Shun Tedokon",
   image: "/twitter-large-card.png",
   description: "Personal blog by Shun Tedokon",
