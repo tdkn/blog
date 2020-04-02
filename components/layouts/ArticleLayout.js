@@ -3,12 +3,11 @@ import { DateTime } from "luxon";
 import BaseHeader from "~/components/BaseHeader";
 import BaseFooter from "~/components/BaseFooter";
 import CustomHead from "~/components/CustomHead";
-import styles from "~/styles/layouts/ArticleLayout.module.css";
 
 const ArticleLayout = frontMatter => {
   return ({ children }) => {
     return (
-      <div className={styles.article}>
+      <div className="blog-layout-article">
         <CustomHead
           title={frontMatter.title}
           description={frontMatter.summary}
@@ -17,7 +16,7 @@ const ArticleLayout = frontMatter => {
 
         <BaseHeader />
 
-        <div className={styles.header}>
+        <div className="pb-8">
           <h1>{frontMatter.title}</h1>
           <p className="text-sm text-gray-600">
             {DateTime.fromJSDate(frontMatter.date).toRelative()}

@@ -1,9 +1,8 @@
 import React from "react";
-import styles from "~/styles/components/Footer.module.css";
 
 const BaseFooter = () => {
   return (
-    <footer className={styles.footer}>
+    <footer className="blog-footer">
       <ul>
         <li>
           <a href="https://github.com/tdkn">GitHub</a>

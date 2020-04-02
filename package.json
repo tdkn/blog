@@ -29,8 +29,10 @@
   },
   "devDependencies": {
     "@babel/register": "^7.9.0",
+    "@fullhuman/postcss-purgecss": "^2.1.0",
     "chrome-aws-lambda": "^2.1.1",
     "cross-env": "^7.0.2",
+    "postcss-easy-import": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1",
     "puppeteer-core": "^2.1.1",

@@ -2,11 +2,10 @@ import React from "react";
 import BaseHeader from "~/components/BaseHeader";
 import BaseFooter from "~/components/BaseFooter";
 import CustomHead from "~/components/CustomHead";
-import styles from "~/styles/layouts/MainLayout.module.css";
 
 const MainLayout = ({ children }) => {
   return (
-    <div className={styles.main}>
+    <div className="blog-layout-main">
       <CustomHead />
 
       <BaseHeader />

@@ -1,4 +1,4 @@
-.logo {
+.blog-logo {
   @apply font-black
     leading-none
     text-lg
@@ -9,8 +9,8 @@
 
   transform: scale(1.5);
   transform-origin: top left;
-}
 
-.logo svg {
-  @apply mr-2;
+  & svg {
+    @apply mr-2;
+  }
 }
