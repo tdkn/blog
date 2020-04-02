@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
     "build": "cross-env AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer next build && next export",
+    "dev": "next dev",
     "start": "next start"
   },
   "dependencies": {
@@ -13,29 +13,29 @@
     "@fortawesome/free-regular-svg-icons": "^5.12.1",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@fortawesome/react-fontawesome": "^0.1.9",
-    "@mapbox/rehype-prism": "^0.4.0",
-    "@mdx-js/loader": "^1.5.7",
-    "@next/mdx": "^9.3.0",
-    "babel-plugin-import-glob-array": "^0.2.0",
     "dracula-prism": "^1.2.1",
     "luxon": "^1.22.0",
     "next": "9.3.2",
-    "next-mdx-enhanced": "^2.4.0",
     "prop-types": "^15.7.2",
     "react": "16.13.0",
-    "react-dom": "16.13.0",
-    "remark-emoji": "^2.0.2",
-    "remark-images": "^1.0.0"
+    "react-dom": "16.13.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.9.0",
     "@babel/register": "^7.9.0",
     "@fullhuman/postcss-purgecss": "^2.1.0",
+    "@mapbox/rehype-prism": "^0.4.0",
+    "@mdx-js/loader": "^1.5.7",
+    "babel-plugin-import-glob-array": "^0.2.0",
     "chrome-aws-lambda": "^2.1.1",
     "cross-env": "^7.0.2",
+    "next-mdx-enhanced": "^2.4.0",
     "postcss-easy-import": "^3.0.0",
     "postcss-preset-env": "^6.7.0",
     "prettier": "^1.19.1",
     "puppeteer-core": "^2.1.1",
+    "remark-emoji": "^2.0.2",
+    "remark-images": "^1.0.0",
     "tailwindcss": "^1.2.0"
   }
 }
