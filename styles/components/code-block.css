@@ -1,4 +1,4 @@
-.code {
+.blog-code-block {
   @apply relative my-5;
 
   & > pre {

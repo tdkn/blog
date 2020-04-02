@@ -1,4 +1,4 @@
-.article {
+.blog-layout-article {
   @apply max-w-screen-md mx-auto px-8;
 
   & main {
@@ -85,8 +85,4 @@
       @apply rounded p-5 bg-surface;
     }
   }
-}
-
-.header {
-  @apply pb-8;
 }

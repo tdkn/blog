@@ -1,4 +1,4 @@
-.code {
+.blog-inline-code {
   @apply rounded-md px-2 py-1 bg-surface;
 
   @screen dark {
