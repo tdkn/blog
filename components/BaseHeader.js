@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Logo from "~/components/Logo";
+import DarkModeToggle from "~/components/DarkModeToggle";
 
 const BaseHeader = () => {
   return (
@@ -10,6 +11,7 @@ const BaseHeader = () => {
           <Logo />
         </a>
       </Link>
+      <DarkModeToggle />
     </header>
   );
 };

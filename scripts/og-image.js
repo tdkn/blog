@@ -7,12 +7,13 @@ const ReactDOMServer = require("react-dom/server");
 const Template = require("./template");
 
 const isDev = process.env.NODE_ENV !== "production";
+const isPreview = typeof process.env.BLOG_PREVIEW !== "undefined";
 
 async function getOptions() {
   const exePath =
     "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome";
 
-  if (isDev) {
+  if (isDev || isPreview) {
     return {
       args: [],
       executablePath: exePath,

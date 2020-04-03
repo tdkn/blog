@@ -2,23 +2,21 @@
   --color-language-javascript: #f7df1e;
 }
 
-@screen light {
-  :root {
-    --color-background: #fff;
-    --color-surface: #edf2f7;
-    --color-typography: #000;
-    --color-link: #000;
-  }
+:root,
+.light-mode {
+  --color-background: #fff;
+  --color-surface: #edf2f7;
+  --color-typography: #000;
+  --color-link: #000;
 }
 
-@screen dark {
-  :root {
-    --color-background: #191f2d;
-    --color-surface: rgba(54, 60, 72, 0.51);
-    --color-typography: #fff;
-    --color-link: #ffdb62;
-    --color-accent: rgba(255, 219, 98, 0.51);
-  }
+.dark-mode:root,
+.dark-mode {
+  --color-background: #191f2d;
+  --color-surface: rgba(54, 60, 72, 0.51);
+  --color-typography: #fff;
+  --color-link: #ffdb62;
+  --color-accent: rgba(255, 219, 98, 0.51);
 }
 
 ::selection {
@@ -55,10 +53,6 @@ a {
   @apply font-bold text-link no-underline;
 
   &:hover {
-    @apply border-b;
-
-    @screen dark {
-      @apply border-link;
-    }
+    @apply border-b border-link;
   }
 }
