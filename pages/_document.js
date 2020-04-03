@@ -10,6 +10,7 @@ class CustomDocument extends Document {
           <GoogleAnalyticsScript />
         </Head>
         <body>
+          <script src="/noflash.js" />
           <Main />
           <NextScript />
         </body>

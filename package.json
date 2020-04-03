@@ -5,6 +5,7 @@
   "scripts": {
     "build": "cross-env AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer next build && next export",
     "dev": "next dev",
+    "preview": "cross-env BLOG_PREVIEW=true next build && next export && next start",
     "start": "next start"
   },
   "dependencies": {
@@ -18,7 +19,8 @@
     "next": "9.3.2",
     "prop-types": "^15.7.2",
     "react": "16.13.0",
-    "react-dom": "16.13.0"
+    "react-dom": "16.13.0",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "@babel/register": "^7.9.0",

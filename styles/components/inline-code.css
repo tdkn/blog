@@ -1,7 +1,3 @@
 .blog-inline-code {
-  @apply rounded-md px-2 py-1 bg-surface;
-
-  @screen dark {
-    @apply text-link;
-  }
+  @apply rounded-md px-2 py-1 bg-surface text-link;
 }
