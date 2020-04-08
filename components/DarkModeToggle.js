@@ -12,7 +12,7 @@ const DarkModeToggle = () => {
   };
   const isClient = typeof document !== "undefined";
   const defaultElement = isClient ? document.documentElement : mockElement;
-  const darkMode = useDarkMode(false, { element: defaultElement });
+  const darkMode = useDarkMode(true, { element: defaultElement });
   const [icon, setIcon] = useState("moon");
 
   useEffect(() => {
