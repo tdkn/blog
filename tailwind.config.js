@@ -11,7 +11,8 @@ module.exports = {
         typography: "var(--color-typography)",
         link: "var(--color-link)",
         language: {
-          javascript: "var(--color-language-javascript)"
+          javascript: "var(--color-language-javascript)",
+          swift: "var(--color-language-swift)",
         }
       },
       fontFamily: {
