@@ -1,4 +1,5 @@
 require("@babel/register");
+const fs = require("fs");
 const path = require("path");
 const puppeteer = require("puppeteer-core");
 const chrome = require("chrome-aws-lambda");
@@ -30,8 +31,10 @@ async function getOptions() {
 
 function getHtml({ title }) {
   const doctype = `<!doctype html>`;
+  const fontPath = path.resolve(__dirname, "./MPLUSRounded1c-Bold.ttf");
+  const font = fs.readFileSync(fontPath, { encoding: "base64" });
   const markup = ReactDOMServer.renderToStaticMarkup(
-    React.createElement(Template, { title })
+    React.createElement(Template, { title, font })
   );
 
   return `${doctype}${markup}`;

@@ -49,58 +49,56 @@ const Logo = () => (
 const Template = props => {
   const getCss = font => `
     @font-face {
-      font-family: 'M PLUS Rounded 1c', sans-serif;
-      src: url(data:application/x-font-ttf;charset=utf-8;base64,${font}) format('truetype');
+      font-family: 'M PLUS Rounded 1c';
       font-weight: bold;
+      src: url(data:font/ttf;charset=utf-8;base64,${font}) format('truetype');
+    }
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      width: 1200px;
+      height: 630px;
+      display: flex;
+      position: relative;
+      align-items: center;
+      font-family: 'M PLUS Rounded 1c';
+      font-weight: bold;
+      justify-content: center;
+    }
+    .logo {
+      top: 0;
+      left: 0;
+      margin: 50px;
+      position: absolute;
+    }
+    .title {
+      font-size: 50px;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    .author {
+      right: 0;
+      bottom: 0;
+      margin: 50px;
+      position: absolute;
+      font-size: 40px;
+      font-weight: 700;
     }
   `;
 
-  const styles = {
-    root: {
-      padding: 0,
-      margin: 0
-    },
-    wrapper: {
-      fontFamily: "'M PLUS Rounded 1c', sans-serif",
-      position: "relative",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      width: 1200,
-      height: 630
-    },
-    logo: {
-      position: "absolute",
-      top: 0,
-      left: 0,
-      margin: 50
-    },
-    title: {
-      paddingLeft: 80,
-      paddingRight: 80,
-      fontWeight: 700,
-      fontSize: 50
-    },
-    author: {
-      position: "absolute",
-      bottom: 0,
-      right: 0,
-      margin: 50,
-      fontSize: 40,
-      fontWeight: 700
-    }
-  };
-
   return (
-    <html style={styles.root}>
-      <style>{getCss(props.font)}</style>
-      <body style={styles.root}>
-        <div style={styles.wrapper}>
-          <div style={styles.logo}>
+    <html>
+      <style dangerouslySetInnerHTML={{ __html: getCss(props.font) }} />
+      <body>
+        <div className="wrapper">
+          <div className="logo">
             <Logo />
           </div>
-          <div style={styles.title}>{props.title}</div>
-          <div style={styles.author}>@tdkn_</div>
+          <div className="title">{props.title}</div>
+          <div className="author">@tdkn_</div>
         </div>
       </body>
     </html>
