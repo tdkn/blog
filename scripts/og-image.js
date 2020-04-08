@@ -50,7 +50,7 @@ async function generateOgImage({ title, filePath }) {
   await page.evaluateHandle("document.fonts.ready");
   await page.setViewport({ width: 2048, height: 1170 });
   await page.screenshot({
-    path: path.resolve(__dirname, `../public/${filePath}.png`),
+    path: path.resolve(__dirname, `../public/og/${filePath}.png`),
     type: "png",
     clip: { x: 0, y: 0, width: 1200, height: 630 }
   });

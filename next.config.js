@@ -11,7 +11,7 @@ const withMdxEnhanced = require("next-mdx-enhanced")({
         ...frontMatter,
         layout: layout || "ArticleLayout",
         url,
-        ogImage: `/${url.replace("/", "_")}.png`
+        ogImage: `/og/${url.replace("/", "_")}.png`
       };
     }
   },
