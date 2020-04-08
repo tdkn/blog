@@ -80,6 +80,11 @@
       content: "js";
     }
 
+    & pre[class="language-swift"]::before {
+      @apply bg-language-swift;
+      content: "swift";
+    }
+
     /* Quote */
     & blockquote {
       @apply rounded p-5 bg-surface;
