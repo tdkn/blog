@@ -28,5 +28,5 @@ yarn-error.log*
 .mdx-data
 
 # og image
-/public/og
+/public/og/*
 !.gitkeep
