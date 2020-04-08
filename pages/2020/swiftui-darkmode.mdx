@@ -1,0 +1,77 @@
+---
+title: 'SwiftUI のダークモードプレビュー時の不具合を回避する'
+date: 2020-04-09
+summary: 'SwiftUI プレビューの不具合を独自の extension で回避する方法について'
+---
+
+SwiftUI の `PreviewProvider` は `Group` を使うことで複数のプレビューを同時に生成することができます。
+
+```swift
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            ContentView().environment(\.colorScheme, .dark)
+            ContentView().environment(\.colorScheme, .light)
+        }
+    }
+}
+```
+
+しかし、実際に Canvas に表示されるプレビューを見てみると、
+`.dark` を設定したはずの View の background は白くなってしまっています。
+
+![01](/2020/darkmode-preview-01.png)
+
+これは既知の不具合で、私が発見した回避方法としては、View を `NavigationView` でラップするか、`extension` を使った方法があります。
+
+## Extension
+
+```swift
+import SwiftUI
+
+public struct DarkView<Content>: View where Content: View {
+    var wrappedContent: Content
+
+    public init(@ViewBuilder content: () -> Content) {
+        self.wrappedContent = content()
+    }
+
+    public var body: some View {
+        ZStack {
+            // Set background color
+            Color.black.edgesIgnoringSafeArea(.all)
+
+            // Set color scheme
+            wrappedContent.environment(\.colorScheme, .dark)
+        }
+    }
+}
+
+extension View {
+    public func darkMode() -> DarkView<Self> {
+        DarkView {
+            self
+        }
+    }
+}
+```
+
+`ZStack` で `wrappedContent` の背景に `Color.black` を配置しています。
+
+## 使い方
+
+```swift
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        Group {
+            ContentView().darkMode()
+            ContentView()
+        }
+    }
+}
+```
+
+![02](/2020/darkmode-preview-02.png)
+
+`.darkMode()` を付けるだけで OK です。
+将来的に不具合が修正されたら `.environment(\.colorScheme, .dark)` に変更してあげましょう。
