@@ -1,23 +1,18 @@
-const isProduction = process.env.NODE_ENV === "production";
-
 module.exports = {
   plugins: {
     "postcss-easy-import": {},
     tailwindcss: {},
-    ...(isProduction && {
-      "@fullhuman/postcss-purgecss": {
-        content: [
-          "./pages/**/*.{js,jsx,ts,tsx}",
-          "./components/**/*.{js,jsx,ts,tsx}"
-        ],
-        defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || []
-      }
-    }),
+    autoprefixer: {},
     "postcss-flexbugs-fixes": {},
     "postcss-preset-env": {
+      stage: 3,
+      autoprefixer: {
+        flexbox: "no-2009",
+      },
       features: {
-        "nesting-rules": true
-      }
-    }
-  }
+        "custom-properties": false,
+        "nesting-rules": true,
+      },
+    },
+  },
 };

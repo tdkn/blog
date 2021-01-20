@@ -9,10 +9,11 @@ const PostCard = ({ post }) => (
         <a>{post.title}</a>
       </Link>
     </h2>
-    <p className="text-sm text-gray-600">
+    <p className="text-sm text-gray-500">
       {DateTime.fromISO(post.date).toRelative()}
     </p>
     <p>{post.summary}</p>
   </article>
 );
+
 export default PostCard;

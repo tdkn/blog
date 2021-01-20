@@ -30,3 +30,11 @@ yarn-error.log*
 # og image
 /public/og/*
 !.gitkeep
+
+# yarn v2
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*

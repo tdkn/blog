@@ -1,11 +1,11 @@
 .blog-logo {
-  @apply font-black
+  @apply font-sans
+    font-black
     leading-none
     text-lg
     text-typography
     inline-flex
-    items-center
-    font-sans;
+    items-center;
 
   transform: scale(1.5);
   transform-origin: top left;

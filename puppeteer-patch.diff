@@ -1,0 +1,54 @@
+diff --git a/lib/cjs/puppeteer/node/BrowserFetcher.js b/lib/cjs/puppeteer/node/BrowserFetcher.js
+index b950476309639ebf4e0022a18bd79553ef3e7d52..69c42d2b2e4f390e44d847bea1c326b28378f0f2 100644
+--- a/lib/cjs/puppeteer/node/BrowserFetcher.js
++++ b/lib/cjs/puppeteer/node/BrowserFetcher.js
+@@ -106,10 +106,14 @@ function downloadURL(product, platform, host, revision) {
+ function handleArm64() {
+     fs.stat('/usr/bin/chromium-browser', function (err, stats) {
+         if (stats === undefined) {
+-            console.error(`The chromium binary is not available for arm64: `);
+-            console.error(`If you are on Ubuntu, you can install with: `);
+-            console.error(`\n apt-get install chromium-browser\n`);
+-            throw new Error();
++            fs.stat('/usr/bin/chromium', function (err, stats) {
++                if (stats === undefined) {
++                    console.error(`The chromium binary is not available for arm64: `);
++                    console.error(`If you are on Ubuntu, you can install with: `);
++                    console.error(`\n apt-get install chromium-browser\n`);
++                    throw new Error();
++                }
++            });
+         }
+     });
+ }
+diff --git a/lib/cjs/puppeteer/node/Launcher.js b/lib/cjs/puppeteer/node/Launcher.js
+index b3ce3d9ba064e6eb7557cb44cd127f7a547a1108..7d5644c70fe08387ee351e8e58c19eebf7ab1acb 100644
+--- a/lib/cjs/puppeteer/node/Launcher.js
++++ b/lib/cjs/puppeteer/node/Launcher.js
+@@ -70,15 +70,18 @@ class ChromeLauncher {
+             chromeArguments.push(`--user-data-dir=${temporaryUserDataDir}`);
+         }
+         let chromeExecutable = executablePath;
+-        if (os.arch() === 'arm64') {
+-            chromeExecutable = '/usr/bin/chromium-browser';
+-        }
+-        else if (!executablePath) {
+-            const { missingText, executablePath } = resolveExecutablePath(this);
+-            if (missingText)
+-                throw new Error(missingText);
+-            chromeExecutable = executablePath;
++        if (!executablePath) {
++            if (os.arch() === 'arm64') {
++                chromeExecutable = '/usr/bin/chromium-browser';
++            }
++            else if (!executablePath) {
++                const { missingText, executablePath } = resolveExecutablePath(this);
++                if (missingText)
++                    throw new Error(missingText);
++                chromeExecutable = executablePath;
++            }
+         }
++
+         const usePipe = chromeArguments.includes('--remote-debugging-pipe');
+         const runner = new BrowserRunner_js_1.BrowserRunner(chromeExecutable, chromeArguments, temporaryUserDataDir);
+         runner.start({
