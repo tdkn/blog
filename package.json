@@ -2,6 +2,10 @@
   "name": "blog",
   "version": "0.1.0",
   "private": true,
+  "author": "Shun Tedokon <web@tedokon.com> (https://tdkn.dev)",
+  "bugs": {
+    "url": "https://github.com/tdkn/blog/issues"
+  },
   "scripts": {
     "build": "cross-env AWS_LAMBDA_FUNCTION_NAME=trickpuppeteer next build && next export",
     "dev": "next dev",
