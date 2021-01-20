@@ -38,6 +38,23 @@ function getHtml({ title }) {
 
 export default async function generateOgImage({ title, filePath }) {
   const options = await getOptions();
+
+  console.log(
+    "🧐 check options",
+    JSON.stringify(
+      {
+        options,
+        AWS_REGION: process.env.AWS_REGION,
+        AWS_DEFAULT_REGION: process.env.AWS_DEFAULT_REGION,
+        AWS_LAMBDA_FUNCTION_NAME: process.env.AWS_LAMBDA_FUNCTION_NAME,
+        AWS_LAMBDA_FUNCTION_MEMORY_SIZE: process.env.AWS_LAMBDA_FUNCTION_MEMORY_SIZE,
+        AWS_LAMBDA_FUNCTION_VERSION: process.env.AWS_LAMBDA_FUNCTION_VERSION,
+      },
+      null,
+      2
+    )
+  );
+
   const browser = await puppeteer.launch(options);
   const page = await browser.newPage();
   const html = getHtml({ title });
