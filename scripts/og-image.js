@@ -20,7 +20,7 @@ async function getOptions() {
     return {
       args: chrome.args,
       executablePath: await chrome.executablePath,
-      headless: chrome.headless
+      headless: true
     };
   }
 }
