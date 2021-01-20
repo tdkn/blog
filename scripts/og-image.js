@@ -1,11 +1,10 @@
-require("@babel/register");
-const fs = require("fs");
-const path = require("path");
-const puppeteer = require("puppeteer-core");
-const chrome = require("chrome-aws-lambda");
-const React = require("react");
-const ReactDOMServer = require("react-dom/server");
-const Template = require("./template");
+import fs from "fs";
+import path from "path";
+import puppeteer from "puppeteer-core";
+import chrome from "chrome-aws-lambda";
+import React from "react";
+import ReactDOMServer from "react-dom/server";
+import Template from "./template";
 
 const isDev = process.env.NODE_ENV !== "production";
 const isPreview = typeof process.env.BLOG_PREVIEW !== "undefined";
@@ -37,7 +36,7 @@ function getHtml({ title }) {
   return `${doctype}${markup}`;
 }
 
-async function generateOgImage({ title, filePath }) {
+export default async function generateOgImage({ title, filePath }) {
   const options = await getOptions();
   const browser = await puppeteer.launch(options);
   const page = await browser.newPage();
@@ -59,5 +58,3 @@ async function generateOgImage({ title, filePath }) {
 
   await browser.close();
 }
-
-module.exports = generateOgImage;

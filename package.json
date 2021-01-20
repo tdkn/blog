@@ -26,7 +26,6 @@
     "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
-    "@babel/register": "^7.12.10",
     "@mapbox/rehype-prism": "^0.5.0",
     "autoprefixer": "^10.2.3",
     "chrome-aws-lambda": "^5.5.0",
