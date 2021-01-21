@@ -37,24 +37,29 @@ function getHtml({ title }) {
 }
 
 export default async function generateOgImage({ title, filePath }) {
-  const options = await getOptions();
-  const browser = await puppeteer.launch(options);
-  const page = await browser.newPage();
-  const html = getHtml({ title });
+  try {
+    const options = await getOptions();
+    const browser = await puppeteer.launch(options);
+    const page = await browser.newPage();
+    const html = getHtml({ title });
 
-  const fileName = filePath
-      .split("/")
-      .pop()
-      .replace(/\.mdx$/, "")
+    const fileName = filePath
+        .split("/")
+        .pop()
+        .replace(/\.mdx$/, "")
 
-  await page.setContent(html, { waitUntil: ["domcontentloaded"] });
-  await page.evaluateHandle("document.fonts.ready");
-  await page.setViewport({ width: 2048, height: 1170 });
-  await page.screenshot({
-    path: path.resolve(process.cwd(), `./public/og/${fileName}.png`),
-    type: "png",
-    clip: { x: 0, y: 0, width: 1200, height: 630 }
-  });
+    await page.setContent(html, { waitUntil: ["domcontentloaded"] });
+    await page.evaluateHandle("document.fonts.ready");
+    await page.setViewport({ width: 2048, height: 1170 });
+    await page.screenshot({
+      path: path.resolve(process.cwd(), `./public/og/${fileName}.png`),
+      type: "png",
+      clip: { x: 0, y: 0, width: 1200, height: 630 }
+    });
 
-  return await browser.close();
+    await browser.close();
+  } catch (error) {
+    console.error(`❌ Error while generating og-image: ${filePath}`, error);
+    throw error;
+  }
 }
