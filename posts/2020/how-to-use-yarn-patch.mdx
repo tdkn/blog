@@ -1,0 +1,26 @@
+---
+title: 'yarn patch の使い方'
+date: '2021-01-21'
+summary: 'かゆいところに手が届きます。不具合を踏んでも大丈夫。'
+---
+
+## 手順
+
+1. パッチを適用したい package が`puppeteer-core@^5.5.0` だと仮定します
+2. `yarn patch puppeteer-core` コマンドを実行します
+3. コマンドにより生成された一時フォルダの中身を編集します
+4. `yarn patch-commit <path> > puppeteer.patch` コマンドを実行します
+5. `package.json` に記載しているバージョン指定を以下のように書き換えます
+
+    ```diff
+    --  "puppeteer-core": "^5.5.0",
+    ++  "puppeteer-core": "patch:puppeteer-core@^5.5.0#./puppeteer.patch",
+    ```
+
+最後に `yarn install` をして完了です。
+
+## どんな場面で役に立つか?
+
+僕の場合、`puppeteer-core` が Apple Silicon の MacBook Pro 上でうまく動かず、
+原因を調べていると、不具合を修正した Pull Request が GitHub 上でマージされているもののリリースはまだされていないという状況で、
+一時的に自前でパッチを当ててでも利用したいというシチュエーションで有用でした。
