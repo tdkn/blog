@@ -56,5 +56,5 @@ export default async function generateOgImage({ title, filePath }) {
     clip: { x: 0, y: 0, width: 1200, height: 630 }
   });
 
-  await browser.close();
+  return await browser.close();
 }
