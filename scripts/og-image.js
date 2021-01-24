@@ -31,8 +31,11 @@ function getHtml({ title }) {
   return `${doctype}${markup}`;
 }
 
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
+
 export default async function generateOgImage({ title, filePath }) {
   try {
+    await sleep(2000);
     const launchOptions = await getLaunchOptions();
     const browser = await playwright.launchChromium(launchOptions);
     const page = await browser.newPage();
