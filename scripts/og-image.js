@@ -1,7 +1,6 @@
 import fs from "fs";
 import path from "path";
-import puppeteer from "puppeteer-core";
-import chrome from "chrome-aws-lambda";
+import * as playwright from "playwright-aws-lambda";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import Template from "./template";
@@ -9,7 +8,7 @@ import Template from "./template";
 const isDev = process.env.NODE_ENV !== "production";
 const isPreview = typeof process.env.BLOG_PREVIEW !== "undefined";
 
-async function getOptions() {
+async function getLaunchOptions() {
   if (isDev || isPreview) {
     return {
       args: [],
@@ -17,11 +16,7 @@ async function getOptions() {
       headless: true
     };
   } else {
-    return {
-      args: chrome.args,
-      executablePath: await chrome.executablePath,
-      headless: true
-    };
+    return {};
   }
 }
 
@@ -38,19 +33,18 @@ function getHtml({ title }) {
 
 export default async function generateOgImage({ title, filePath }) {
   try {
-    const options = await getOptions();
-    const browser = await puppeteer.launch(options);
+    const launchOptions = await getLaunchOptions();
+    const browser = await playwright.launchChromium(launchOptions);
     const page = await browser.newPage();
     const html = getHtml({ title });
-
     const fileName = filePath
-        .split("/")
-        .pop()
-        .replace(/\.mdx$/, "")
+      .split("/")
+      .pop()
+      .replace(/\.mdx$/, "");
 
-    await page.setContent(html, { waitUntil: ["domcontentloaded"] });
+    await page.setContent(html, { waitUntil: "domcontentloaded" });
     await page.evaluateHandle("document.fonts.ready");
-    await page.setViewport({ width: 2048, height: 1170 });
+    await page.setViewportSize({ width: 2048, height: 1170 });
     await page.screenshot({
       path: path.resolve(process.cwd(), `./public/og/${fileName}.png`),
       type: "png",
