@@ -1,22 +1,33 @@
 import React from "react";
 import NextHead from "next/head";
+import { useRouter } from "next/router";
 import { string } from "prop-types";
 
 const siteMeta = {
   title: "tdkn.dev",
   author: "Shun Tedokon",
-  image: "/twitter-large-card.png",
+  ogImage: "twitter-large-card.png",
   description: "Personal blog by Shun Tedokon",
-  url: "https://tdkn.dev",
+  url: process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000",
   social: {
-    twitter: "tdkn_"
-  }
+    twitter: "tdkn_",
+  },
 };
 
-const CustomHead = props => {
-  const title = props.title
-    ? `${props.title} | ${siteMeta.title}`
-    : siteMeta.title;
+const getTitle = ({ title }) =>
+  title ? `${title} | ${siteMeta.title}` : siteMeta.title;
+
+const getOgImageUrl = ({ query }) =>
+  query.year && query.slug
+    ? `${siteMeta.url}/api/og/${query.year}/${query.slug}`
+    : `${siteMeta.url}/${siteMeta.ogImage}`;
+
+const CustomHead = (props) => {
+  const router = useRouter();
+  const title = getTitle(props);
+  const ogImageUrl = getOgImageUrl(router);
 
   return (
     <NextHead>
@@ -32,8 +43,8 @@ const CustomHead = props => {
       <meta name="twitter:description" content={props.description} />
       <meta name="twitter:site" content={`@${siteMeta.social.twitter}`} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content={`${siteMeta.url}${props.ogImage}`} />
-      <meta property="og:image" content={`${siteMeta.url}${props.ogImage}`} />
+      <meta name="twitter:image" content={ogImageUrl} />
+      <meta property="og:image" content={ogImageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
     </NextHead>
@@ -44,13 +55,11 @@ CustomHead.propTypes = {
   title: string,
   description: string,
   url: string,
-  ogImage: string
 };
 
 CustomHead.defaultProps = {
   description: siteMeta.description,
   url: siteMeta.url,
-  ogImage: siteMeta.image
 };
 
 export default CustomHead;

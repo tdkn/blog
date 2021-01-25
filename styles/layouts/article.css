@@ -29,6 +29,10 @@
     & ul {
       @apply list-disc list-inside;
 
+      & p {
+        @apply inline;
+      }
+
       & ul {
         @apply pl-5;
       }
@@ -36,6 +40,10 @@
 
     & ol {
       @apply list-decimal list-inside;
+
+      & p {
+        @apply inline;
+      }
 
       & ol {
         @apply pl-5;

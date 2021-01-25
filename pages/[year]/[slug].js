@@ -11,7 +11,6 @@ import BaseFooter from "~/components/BaseFooter";
 import CustomHead from "~/components/CustomHead";
 import InlineCode from "~/components/InlineCode";
 import CodeBlock from "~/components/CodeBlock";
-import generateOgImage from "~/scripts/og-image";
 
 export const components = {
   pre: CodeBlock,
@@ -23,11 +22,7 @@ export default function ArticleLayout({ source, frontMatter }) {
 
   return (
     <div className="blog-layout-article">
-      <CustomHead
-        title={frontMatter.title}
-        description={frontMatter.summary}
-        ogImage={frontMatter.ogImage}
-      />
+      <CustomHead title={frontMatter.title} description={frontMatter.summary} />
 
       <BaseHeader />
 
@@ -69,33 +64,17 @@ export default function ArticleLayout({ source, frontMatter }) {
 export const getStaticProps = async ({ params }) => {
   const postFilePath = path.join(POSTS_PATH, params.year, `${params.slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
-  const { content, data } = matter(source);
-  const ogImagePath = postFilePath
-    .split("/")
-    .pop()
-    .replace(/\.mdx$/, ".png");
-  const frontMatter = {
-    ...data,
-    ogImage: `/og/${ogImagePath}`,
-  };
+  const { content, data: frontMatter } = matter(source);
   const mdxSource = await renderToString(content, {
     components,
     mdxOptions: {
       remarkPlugins: [require("remark-images"), require("remark-emoji")],
-      rehypePlugins: [require("@mapbox/rehype-prism")],
+      rehypePlugins: [
+        require("@mapbox/rehype-prism"),
+      ],
     },
     scope: frontMatter,
   });
-
-  // Generate Open Graph image
-  if (process.env.NODE_ENV === "production") {
-    await generateOgImage({
-      title: frontMatter.title,
-      filePath: postFilePath,
-    });
-
-    console.log("🌈 og:image created");
-  }
 
   return {
     props: {
