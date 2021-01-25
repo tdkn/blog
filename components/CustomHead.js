@@ -8,9 +8,10 @@ const siteMeta = {
   author: "Shun Tedokon",
   ogImage: "twitter-large-card.png",
   description: "Personal blog by Shun Tedokon",
-  url: process.env.NODE_ENV === "production"
-    ? `https://tdkn.dev`
-    : "http://localhost:3000",
+  url:
+    process.env.NODE_ENV === "production"
+      ? `https://tdkn.dev`
+      : "http://localhost:3000",
   social: {
     twitter: "tdkn_",
   },
@@ -24,10 +25,13 @@ const getOgImageUrl = ({ query }) =>
     ? `${siteMeta.url}/api/og/${query.year}/${query.slug}`
     : `${siteMeta.url}/${siteMeta.ogImage}`;
 
+const getUrl = ({ asPath }) => [siteMeta.url, asPath].join("");
+
 const CustomHead = (props) => {
   const router = useRouter();
   const title = getTitle(props);
   const ogImageUrl = getOgImageUrl(router);
+  const url = getUrl(router);
 
   return (
     <NextHead>
@@ -36,7 +40,7 @@ const CustomHead = (props) => {
       <meta charSet="UTF-8" />
       <meta name="description" content={props.description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta property="og:url" content={props.url} />
+      <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={props.description} />
       <meta name="twitter:title" content={title} />
