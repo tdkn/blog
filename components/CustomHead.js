@@ -8,8 +8,8 @@ const siteMeta = {
   author: "Shun Tedokon",
   ogImage: "twitter-large-card.png",
   description: "Personal blog by Shun Tedokon",
-  url: process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
+  url: process.env.NODE_ENV === "production"
+    ? `https://tdkn.dev`
     : "http://localhost:3000",
   social: {
     twitter: "tdkn_",
