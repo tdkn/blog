@@ -1,5 +1,3 @@
-import React from "react";
-
 const Logo = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -46,7 +44,7 @@ const Logo = () => (
   </svg>
 );
 
-const Template = props => {
+const OpenGraphTemplate = props => {
   const getCss = font => `
     @font-face {
       font-family: 'M PLUS Rounded 1c';
@@ -105,5 +103,4 @@ const Template = props => {
   );
 };
 
-module.exports = Template;
-export default Template;
+export default OpenGraphTemplate;

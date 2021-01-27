@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import useDarkMode from "use-dark-mode";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 
 const DarkModeToggle = () => {
   const noop = () => {};
   const mockElement = {
     classList: {
       add: noop,
-      remove: noop
-    }
-  };
+      remove: noop,
+    },
+  } as HTMLElement;
   const isClient = typeof document !== "undefined";
   const defaultElement = isClient ? document.documentElement : mockElement;
   const darkMode = useDarkMode(true, { element: defaultElement });
-  const [icon, setIcon] = useState("moon");
+  const [icon, setIcon] = useState(faMoon);
 
   useEffect(() => {
-    setIcon(darkMode.value ? "sun" : "moon");
+    setIcon(darkMode.value ? faSun : faMoon);
   }, [darkMode.value]);
 
   return (

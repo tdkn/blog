@@ -1,7 +1,10 @@
-import React from "react";
 import NextHead from "next/head";
 import { useRouter } from "next/router";
-import { string } from "prop-types";
+
+interface CustomHeadProps {
+  title?: string;
+  description?: string;
+}
 
 const siteMeta = {
   title: "tdkn.dev",
@@ -13,39 +16,34 @@ const siteMeta = {
       ? `https://tdkn.dev`
       : "http://localhost:3000",
   social: {
-    twitter: "tdkn_",
+    twitter: "@tdkn_",
   },
 };
 
-const getTitle = ({ title }) =>
-  title ? `${title} | ${siteMeta.title}` : siteMeta.title;
-
-const getOgImageUrl = ({ query }) =>
-  query.year && query.slug
-    ? `${siteMeta.url}/api/og/${query.year}/${query.slug}`
-    : `${siteMeta.url}/${siteMeta.ogImage}`;
-
-const getUrl = ({ asPath }) => [siteMeta.url, asPath].join("");
-
-const CustomHead = (props) => {
-  const router = useRouter();
-  const title = getTitle(props);
-  const ogImageUrl = getOgImageUrl(router);
-  const url = getUrl(router);
+const CustomHead = ({
+  title = siteMeta.title,
+  description = siteMeta.description,
+}: CustomHeadProps) => {
+  const { query, asPath } = useRouter();
+  const url = [siteMeta.url, asPath].join("");
+  const ogImageUrl =
+    query.year && query.slug
+      ? `${siteMeta.url}/api/og/${query.year}/${query.slug}`
+      : `${siteMeta.url}/${siteMeta.ogImage}`;
 
   return (
     <NextHead>
       <title>{title}</title>
       <link rel="icon" href="/icon.png" />
       <meta charSet="UTF-8" />
-      <meta name="description" content={props.description} />
+      <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
-      <meta property="og:description" content={props.description} />
+      <meta property="og:description" content={description} />
       <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={props.description} />
-      <meta name="twitter:site" content={`@${siteMeta.social.twitter}`} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:site" content={siteMeta.social.twitter} />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:image" content={ogImageUrl} />
       <meta property="og:image" content={ogImageUrl} />
@@ -53,17 +51,6 @@ const CustomHead = (props) => {
       <meta property="og:image:height" content="630" />
     </NextHead>
   );
-};
-
-CustomHead.propTypes = {
-  title: string,
-  description: string,
-  url: string,
-};
-
-CustomHead.defaultProps = {
-  description: siteMeta.description,
-  url: siteMeta.url,
 };
 
 export default CustomHead;

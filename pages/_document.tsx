@@ -1,11 +1,11 @@
 import React from "react";
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import { GoogleAnalyticsScript } from "~/lib/google-analytics";
+import Document, { Head, Html, Main, NextScript } from "next/document";
+import GoogleAnalyticsScript from "~/components/GoogleAnalyticsScript";
 
-class CustomDocument extends Document {
+export default class CustomDocument extends Document {
   render() {
     return (
-      <Html>
+      <Html lang="ja">
         <Head>
           <GoogleAnalyticsScript />
         </Head>
@@ -18,5 +18,3 @@ class CustomDocument extends Document {
     );
   }
 }
-
-export default CustomDocument;

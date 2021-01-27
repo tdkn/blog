@@ -10,7 +10,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "preview": "next build && next export && next start"
+    "preview": "next build && next start"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
@@ -31,6 +31,8 @@
   },
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.5.0",
+    "@types/gtag.js": "^0.0.4",
+    "@types/react": "^17.0.0",
     "autoprefixer": "^10.2.3",
     "next-remote-watch": "^0.3.0",
     "playwright-aws-lambda": "^0.6.0",
@@ -42,6 +44,7 @@
     "prettier": "^2.2.1",
     "remark-emoji": "^2.1.0",
     "remark-images": "^2.0.0",
-    "tailwindcss": "^2.0.2"
+    "tailwindcss": "^2.0.2",
+    "typescript": "^4.1.3"
   }
 }
