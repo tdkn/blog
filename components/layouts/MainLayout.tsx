@@ -1,4 +1,3 @@
-import React from "react";
 import BaseHeader from "~/components/BaseHeader";
 import BaseFooter from "~/components/BaseFooter";
 import CustomHead from "~/components/CustomHead";

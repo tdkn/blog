@@ -1,5 +1,3 @@
-import React from "react";
-
 const BaseFooter = () => {
   return (
     <footer className="blog-footer">

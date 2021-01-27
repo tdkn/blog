@@ -1,11 +1,12 @@
+import type { NextApiRequest, NextApiResponse } from "next";
 import * as playwright from "playwright-aws-lambda";
 import React from "react";
 import path from "path";
 import fs from "fs";
 import ReactDOMServer from "react-dom/server";
-import Template from "~/scripts/template";
-import { postFiles } from "~/lib/mdx";
 import matter from "gray-matter";
+import OpenGraphTemplate from "~/components/OpenGraphTemplate";
+import { postFiles } from "~/lib/mdx";
 
 const isDev = process.env.NODE_ENV !== "production";
 const isPreview = typeof process.env.BLOG_PREVIEW !== "undefined";
@@ -23,23 +24,24 @@ async function getLaunchOptions() {
   }
 }
 
-function getHtml({ title }) {
+function getHtml({ title }): string {
   const doctype = `<!doctype html>`;
   const fontPath = path.resolve(
     process.cwd(),
-    "./scripts/MPLUSRounded1c-Bold.ttf"
+    "./assets/MPLUSRounded1c-Bold.ttf"
   );
   const font = fs.readFileSync(fontPath, { encoding: "base64" });
-  const element = React.createElement(Template, { title, font });
+  const element = React.createElement(OpenGraphTemplate, { title, font });
   const markup = ReactDOMServer.renderToStaticMarkup(element);
 
   return `${doctype}${markup}`;
 }
 
-export default async (req, res) => {
-  const { query } = req;
-  const [year, slug] = query.path;
-  const postFile = postFiles.find(file => file.year === year && file.slug === slug);
+export default async (req: NextApiRequest, res: NextApiResponse) => {
+  const [year, slug] = req.query.path;
+  const postFile = postFiles.find(
+    (file) => file.year === year && file.slug === slug
+  );
   const source = fs.readFileSync(postFile.absolutePath);
   const { data: frontMatter } = matter(source);
   const options = await getLaunchOptions();

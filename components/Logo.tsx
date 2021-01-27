@@ -1,5 +1,3 @@
-import React from "react";
-
 const Logo = () => (
   <span className="blog-logo">
     <svg viewBox="0 0 20 20" width="20" height="20">

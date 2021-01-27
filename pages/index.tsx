@@ -1,3 +1,4 @@
+import { GetStaticProps } from "next";
 import fs from "fs";
 import matter from "gray-matter";
 import React from "react";
@@ -16,7 +17,7 @@ export default function Index({ posts }) {
   );
 }
 
-export const getStaticProps = () => {
+export const getStaticProps: GetStaticProps = async () => {
   const posts = postFiles
     .map(({ absolutePath, year, slug }) => {
       const source = fs.readFileSync(absolutePath);

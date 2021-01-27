@@ -1,3 +1,6 @@
+import { GetStaticProps, GetStaticPropsContext } from "next";
+import { ParsedUrlQuery } from "querystring";
+import { MdxRemote } from "next-mdx-remote/types";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -5,7 +8,7 @@ import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";
 import React from "react";
 import { DateTime } from "luxon";
-import { POSTS_PATH, postFiles } from "~/lib/mdx";
+import { postFiles, POSTS_PATH } from "~/lib/mdx";
 import BaseHeader from "~/components/BaseHeader";
 import BaseFooter from "~/components/BaseFooter";
 import CustomHead from "~/components/CustomHead";
@@ -17,7 +20,12 @@ export const components = {
   inlineCode: InlineCode,
 };
 
-export default function ArticleLayout({ source, frontMatter }) {
+interface PageProps {
+  source: MdxRemote.Source;
+  frontMatter: { [key: string]: any };
+}
+
+export default function Post({ source, frontMatter }: PageProps) {
   const content = hydrate(source, { components });
 
   return (
@@ -61,17 +69,23 @@ export default function ArticleLayout({ source, frontMatter }) {
   );
 }
 
-export const getStaticProps = async ({ params }) => {
-  const postFilePath = path.join(POSTS_PATH, params.year, `${params.slug}.mdx`);
+interface PageParams extends ParsedUrlQuery {
+  year: string;
+  slug: string;
+}
+
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: GetStaticPropsContext<PageParams>) => {
+  const { year, slug } = params;
+  const postFilePath = path.join(POSTS_PATH, year, `${slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
   const { content, data: frontMatter } = matter(source);
   const mdxSource = await renderToString(content, {
     components,
     mdxOptions: {
       remarkPlugins: [require("remark-images"), require("remark-emoji")],
-      rehypePlugins: [
-        require("@mapbox/rehype-prism"),
-      ],
+      rehypePlugins: [require("@mapbox/rehype-prism")],
     },
     scope: frontMatter,
   });

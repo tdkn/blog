@@ -1,5 +1,3 @@
-import React from "react";
-
 const CodeBlock = props => (
   <div className="blog-code-block">
     <pre {...props} />
