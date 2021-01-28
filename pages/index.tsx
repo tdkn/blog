@@ -7,16 +7,6 @@ import { postFiles } from "~/lib/mdx";
 import MainLayout from "~/components/layouts/MainLayout";
 import PostCard from "~/components/PostCard";
 
-export default function Index({ posts }) {
-  return (
-    <MainLayout>
-      {posts.map((post) => (
-        <PostCard post={post} key={post.url} />
-      ))}
-    </MainLayout>
-  );
-}
-
 export const getStaticProps: GetStaticProps = async () => {
   const posts = postFiles
     .map(({ absolutePath, year, slug }) => {
@@ -34,3 +24,13 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return { props: { posts } };
 };
+
+const Index = ({ posts }) => (
+  <MainLayout>
+    {posts.map((post) => (
+      <PostCard post={post} key={post.url} />
+    ))}
+  </MainLayout>
+);
+
+export default Index;

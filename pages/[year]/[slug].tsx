@@ -16,7 +16,7 @@ import InlineCode from "~/components/InlineCode";
 import CodeBlock from "~/components/CodeBlock";
 
 interface PageProps {
-  source: MdxRemote.Source;
+  mdxSource: MdxRemote.Source;
   frontMatter: { [key: string]: any };
 }
 
@@ -25,13 +25,46 @@ interface PageParams extends ParsedUrlQuery {
   slug: string;
 }
 
-export const components = {
+const components: MdxRemote.Components = {
   pre: CodeBlock,
   inlineCode: InlineCode,
 };
 
-export default function Post({ source, frontMatter }: PageProps) {
-  const content = hydrate(source, { components });
+export const getStaticProps: GetStaticProps = async ({
+  params,
+}: GetStaticPropsContext<PageParams>) => {
+  const { year, slug } = params;
+  const postFilePath = path.join(POSTS_PATH, year, `${slug}.mdx`);
+  const source = fs.readFileSync(postFilePath);
+  const { content, data: frontMatter } = matter(source);
+  const mdxSource = await renderToString(content, {
+    components,
+    mdxOptions: {
+      remarkPlugins: [require("remark-images"), require("remark-emoji")],
+      rehypePlugins: [require("@mapbox/rehype-prism")],
+    },
+    scope: frontMatter,
+  });
+
+  return {
+    props: {
+      mdxSource,
+      frontMatter,
+    },
+  };
+};
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = postFiles.map(({ year, slug }) => ({ params: { year, slug } }));
+
+  return {
+    paths,
+    fallback: false,
+  };
+};
+
+const Post = ({ mdxSource, frontMatter }: PageProps) => {
+  const content = hydrate(mdxSource, { components });
 
   return (
     <div className="blog-layout-article">
@@ -72,39 +105,6 @@ export default function Post({ source, frontMatter }: PageProps) {
       <BaseFooter />
     </div>
   );
-}
-
-export const getStaticProps: GetStaticProps = async ({
-  params,
-}: GetStaticPropsContext<PageParams>) => {
-  const { year, slug } = params;
-  const postFilePath = path.join(POSTS_PATH, year, `${slug}.mdx`);
-  const source = fs.readFileSync(postFilePath);
-  const { content, data: frontMatter } = matter(source);
-  const mdxSource = await renderToString(content, {
-    components,
-    mdxOptions: {
-      remarkPlugins: [require("remark-images"), require("remark-emoji")],
-      rehypePlugins: [require("@mapbox/rehype-prism")],
-    },
-    scope: frontMatter,
-  });
-
-  return {
-    props: {
-      source: mdxSource,
-      frontMatter,
-    },
-  };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = postFiles.map(({ year, slug }) => {
-    return { params: { year, slug } };
-  });
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
+export default Post;
