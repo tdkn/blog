@@ -1,4 +1,4 @@
-import { GetStaticProps, GetStaticPropsContext } from "next";
+import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { MdxRemote } from "next-mdx-remote/types";
 import fs from "fs";
@@ -15,15 +15,20 @@ import CustomHead from "~/components/CustomHead";
 import InlineCode from "~/components/InlineCode";
 import CodeBlock from "~/components/CodeBlock";
 
-export const components = {
-  pre: CodeBlock,
-  inlineCode: InlineCode,
-};
-
 interface PageProps {
   source: MdxRemote.Source;
   frontMatter: { [key: string]: any };
 }
+
+interface PageParams extends ParsedUrlQuery {
+  year: string;
+  slug: string;
+}
+
+export const components = {
+  pre: CodeBlock,
+  inlineCode: InlineCode,
+};
 
 export default function Post({ source, frontMatter }: PageProps) {
   const content = hydrate(source, { components });
@@ -69,11 +74,6 @@ export default function Post({ source, frontMatter }: PageProps) {
   );
 }
 
-interface PageParams extends ParsedUrlQuery {
-  year: string;
-  slug: string;
-}
-
 export const getStaticProps: GetStaticProps = async ({
   params,
 }: GetStaticPropsContext<PageParams>) => {
@@ -98,7 +98,7 @@ export const getStaticProps: GetStaticProps = async ({
   };
 };
 
-export const getStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths = async () => {
   const paths = postFiles.map(({ year, slug }) => {
     return { params: { year, slug } };
   });
