@@ -6,7 +6,7 @@ export const POSTS_PATH = path.join(process.cwd(), "posts");
 
 export const postFiles = glob
   .sync("**/*.mdx", { cwd: POSTS_PATH })
-  .map((relativePath) => {
+  .map((relativePath: string) => {
     const [year, slug] = relativePath.replace(/\.mdx?$/, "").split("/");
 
     return {
