@@ -1,0 +1,149 @@
+---
+title: "Vercel + Next.js + PlaywrightでOGP画像をページ別に自動生成する"
+date: "2021-02-24"
+summary: "OGP画像をサーバーサイドで自動生成する方法を解説。"
+---
+
+Twitter や Facebook など、SNS 上で Web サイトをシェアしたときに表示される OGP 画像。
+あらかじめ静的ファイルとしてサーバーに配置されることも多い一方で、
+画像をサーバー側で動的に生成することができれば、より自由度高く、視覚に訴える OGP 画像で PR することができます。
+
+## Playwright
+
+[Playwright](https://playwright.dev/)は、Headless Chrome を Node.js から手軽に扱うことができるパッケージです。
+Headless Chrome とは、Window を持たない Web ブラウザです。主に E2E テストの自動化に使用されていますが、
+ここでは Playwright のスクリーンショット機能を利用して、OGP 画像の生成に利用します。
+
+## Next.js の API ルート
+
+Vercel の場合、API ルートは Serverless Function として AWS Lambda にデプロイされます。
+Lambda の実行環境には様々な制約があるため、AWS Lambda 環境でも動作するように最適化された `playwright-aws-lambda` パッケージを利用します。
+
+## サンプルコード
+
+ディレクトリの構成:
+
+```bash
+$ tree -L 2 --dirsfirst ./pages
+./pages
+├── api
+│   └── ogp.js
+├── posts
+│   └── [id].js
+└── index.js
+```
+
+OGP 画像生成の処理:
+
+```js
+/* pages/api/ogp.js */
+
+import ReactDOM from "react-dom/server";
+import * as playwright from "playwright-aws-lambda";
+
+const styles = `
+  html, body {
+    height: 100%;
+    display: grid;
+  }
+
+  h1 { margin: auto }
+`;
+
+const Content = (props) => (
+  <html>
+    <head>
+      <style>{styles}</style>
+    </head>
+    <body>
+      <h1>{props.title}</h1>
+    </body>
+  </html>
+);
+
+export default async (req, res) => {
+  // サイズの設定
+  const viewport = { width: 1200, height: 630 };
+
+  // ブラウザインスタンスの生成
+  const browser = await playwright.launchChromium();
+  const page = await browser.newPage({ viewport });
+
+  // HTMLの生成
+  const props = { title: "Hello OGP!" };
+  const markup = ReactDOM.renderToStaticMarkup(<Content {...props} />);
+  const html = `<!doctype html>${markup}`;
+
+  // HTMLをセットして、ページの読み込み完了を待つ
+  await page.setContent(html, { waitUntil: "domcontentloaded" });
+
+  // スクリーンショットを取得する
+  const image = await page.screenshot({ type: "png" });
+  await browser.close();
+
+  // Vercel Edge Networkのキャッシュを利用するための設定
+  res.setHeader("Cache-Control", "s-maxage=31536000, stale-while-revalidate");
+
+  // Content Type を設定
+  res.setHeader("Content-Type", "image/png");
+
+  // レスポンスを返す
+  res.end(image);
+};
+```
+
+ページごとの `meta` タグに OGP 画像を設定:
+
+```js
+/* pages/posts/[id].js */
+
+import Head from "next/head";
+
+const headers = { "X-API-KEY": process.env.CMS_API_KEY };
+
+export const getStaticPaths = async () => {
+  const response = await fetch(process.env.CMS_API_URL, { headers });
+  const { contents: posts } = await response.json();
+
+  return {
+    paths: posts.map((post) => `/posts/${post.id}`),
+    fallback: false,
+  };
+};
+
+export async function getStaticProps({ params }) {
+  const blogPostUrl = [process.env.CMS_API_URL, params.id].join("/");
+  const response = await fetch(blogPostUrl, { headers });
+  const { title } = await response.json();
+  const baseUrl = {
+    production: "https://tdkn.dev",
+    development: "http://localhost:3000",
+  }[process.env.NODE_ENV];
+
+  return {
+    props: {
+      title,
+      // OGP画像は絶対URLで記述する必要があります
+      ogImageUrl: `${baseUrl}/api/ogp?title=${title}`,
+    },
+  };
+}
+
+export default function BlogPost(props) {
+  return (
+    <div>
+      <Head>
+        <title>{props.title}</title>
+        <meta property="og:image" content={props.ogImageUrl} />
+      </Head>
+
+      {/* ... */}
+    </div>
+  );
+}
+```
+
+## ポイント
+
+- サーバーサイドでの画像生成は処理コストが高いので、アクセスされるたびに実行するのは非効率です。
+  そこで [Vercel Edge Cache](https://vercel.com/docs/edge-network/caching) を活用し、一定期間はキャッシュからレスポンスするようにしています。
