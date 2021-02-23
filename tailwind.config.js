@@ -20,6 +20,7 @@ module.exports = {
         language: {
           javascript: "var(--color-language-javascript)",
           swift: "var(--color-language-swift)",
+          diff: "var(--color-language-diff)",
         },
       },
     },

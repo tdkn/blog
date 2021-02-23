@@ -40,8 +40,10 @@ export const getStaticProps: GetStaticProps = async ({
   const mdxSource = await renderToString(content, {
     components,
     mdxOptions: {
-      remarkPlugins: [require("remark-images"), require("remark-emoji")],
-      rehypePlugins: [require("@mapbox/rehype-prism")],
+      remarkPlugins: [require("remark-images"), [require("remark-emoji")]],
+      rehypePlugins: [
+        [require("@mapbox/rehype-prism"), { ignoreMissing: true }],
+      ],
     },
     scope: frontMatter,
   });

@@ -55,44 +55,6 @@
       @apply my-10 border-surface;
     }
 
-    /* Code Block */
-    & pre {
-      @apply rounded;
-
-      &::-webkit-scrollbar {
-        @apply h-1;
-      }
-    }
-
-    & pre[class*="language-"] {
-      @apply bg-transparent pt-6;
-    }
-
-    & pre[class*="language-"]::before {
-      @apply font-mono
-        font-bold
-        text-gray-800
-        text-xs
-        uppercase
-        absolute
-        leading-none
-        tracking-wider
-        rounded-b-md
-        top-0
-        px-3 py-1;
-      left: 1rem;
-    }
-
-    & pre[class="language-js"]::before {
-      @apply bg-language-javascript;
-      content: "js";
-    }
-
-    & pre[class="language-swift"]::before {
-      @apply bg-language-swift;
-      content: "swift";
-    }
-
     /* Quote */
     & blockquote {
       @apply rounded p-5 bg-surface;
