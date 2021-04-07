@@ -1,0 +1,11 @@
+{
+  "extends": [
+    "config:base",
+    "group:monorepos",
+    "group:allNonMajor",
+    "group:definitelyTyped",
+    "group:linters"
+  ],
+  "enabledManagers": ["npm"],
+  "reviewers": ["tdkn"]
+}
