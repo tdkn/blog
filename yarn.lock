@@ -2067,7 +2067,7 @@ __metadata:
     luxon: 1.26.0
     next: 10.1.3
     next-mdx-remote: 2.1.3
-    next-remote-watch: 0.3.0
+    next-remote-watch: 1.0.0
     playwright-aws-lambda: 0.6.0
     playwright-core: 1.10.0
     postcss: 8.2.9
@@ -5151,9 +5151,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"next-remote-watch@npm:0.3.0":
-  version: 0.3.0
-  resolution: "next-remote-watch@npm:0.3.0"
+"next-remote-watch@npm:1.0.0":
+  version: 1.0.0
+  resolution: "next-remote-watch@npm:1.0.0"
   dependencies:
     body-parser: ^1.19.0
     chalk: ^4.0.0
@@ -5162,7 +5162,7 @@ fsevents@~2.3.1:
     express: ^4.17.1
   bin:
     next-remote-watch: bin/next-remote-watch
-  checksum: 2965c7bfd16cafb32cfa8dbcde009e28670bcf85f97e46abf5614776ed58466128546229bb2bb2465e23b70b75be04f0314ae701b11769c7c453403f88ae0fde
+  checksum: 43794861d986f2acc1c1af5b205c158327cd48babd3dc4197fee5afe4034cd695789f0da7b76919bac5e65ed00358d30c007eb4d52657628f1005aeae1467c09
   languageName: node
   linkType: hard
 
