@@ -2688,7 +2688,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-svg-core@npm:^1.2.34":
+"@fortawesome/fontawesome-svg-core@npm:1.2.34":
   version: 1.2.34
   resolution: "@fortawesome/fontawesome-svg-core@npm:1.2.34"
   dependencies:
@@ -2697,7 +2697,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/free-brands-svg-icons@npm:^5.15.2":
+"@fortawesome/free-brands-svg-icons@npm:5.15.2":
   version: 5.15.2
   resolution: "@fortawesome/free-brands-svg-icons@npm:5.15.2"
   dependencies:
@@ -2706,7 +2706,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/free-regular-svg-icons@npm:^5.15.2":
+"@fortawesome/free-regular-svg-icons@npm:5.15.2":
   version: 5.15.2
   resolution: "@fortawesome/free-regular-svg-icons@npm:5.15.2"
   dependencies:
@@ -2715,7 +2715,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/free-solid-svg-icons@npm:^5.15.2":
+"@fortawesome/free-solid-svg-icons@npm:5.15.2":
   version: 5.15.2
   resolution: "@fortawesome/free-solid-svg-icons@npm:5.15.2"
   dependencies:
@@ -2724,7 +2724,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/react-fontawesome@npm:^0.1.14":
+"@fortawesome/react-fontawesome@npm:0.1.14":
   version: 0.1.14
   resolution: "@fortawesome/react-fontawesome@npm:0.1.14"
   dependencies:
@@ -3028,7 +3028,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mapbox/rehype-prism@npm:^0.5.0":
+"@mapbox/rehype-prism@npm:0.5.0":
   version: 0.5.0
   resolution: "@mapbox/rehype-prism@npm:0.5.0"
   dependencies:
@@ -3573,7 +3573,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/gtag.js@npm:^0.0.4":
+"@types/gtag.js@npm:0.0.4":
   version: 0.0.4
   resolution: "@types/gtag.js@npm:0.0.4"
   checksum: fdf4712ca06161a0385f991ada22a7bf949e455ad12eaa4606877b284778712883442260b6ebcbd9f90b97c623bdb53c26733e5e3582cb48d13280e37b362940
@@ -3717,7 +3717,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:^17.0.2":
+"@types/react@npm:17.0.2":
   version: 17.0.2
   resolution: "@types/react@npm:17.0.2"
   dependencies:
@@ -4732,7 +4732,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:^10.2.4":
+"autoprefixer@npm:10.2.4":
   version: 10.2.4
   resolution: "autoprefixer@npm:10.2.4"
   dependencies:
@@ -5181,38 +5181,38 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blog@workspace:."
   dependencies:
-    "@fortawesome/fontawesome-svg-core": ^1.2.34
-    "@fortawesome/free-brands-svg-icons": ^5.15.2
-    "@fortawesome/free-regular-svg-icons": ^5.15.2
-    "@fortawesome/free-solid-svg-icons": ^5.15.2
-    "@fortawesome/react-fontawesome": ^0.1.14
-    "@mapbox/rehype-prism": ^0.5.0
-    "@types/gtag.js": ^0.0.4
-    "@types/react": ^17.0.2
-    autoprefixer: ^10.2.4
-    dracula-prism: ^2.1.1
-    glob: ^7.1.6
-    gray-matter: ^4.0.2
-    husky: ^4.3.8
-    lint-staged: ^10.5.4
-    luxon: ^1.26.0
-    next: ^10.0.7
-    next-mdx-remote: ^2.1.3
-    next-remote-watch: ^0.3.0
-    playwright-aws-lambda: ^0.6.0
-    playwright-core: ^1.8.1
-    postcss: ^8.2.6
-    postcss-easy-import: ^3.0.0
-    postcss-flexbugs-fixes: ^5.0.2
-    postcss-preset-env: ^6.7.0
-    prettier: ^2.2.1
-    react: ^17.0.1
-    react-dom: ^17.0.1
-    remark-emoji: ^2.1.0
-    remark-images: ^2.0.0
-    tailwindcss: ^2.0.3
-    typescript: ^4.1.5
-    use-dark-mode: ^2.3.1
+    "@fortawesome/fontawesome-svg-core": 1.2.34
+    "@fortawesome/free-brands-svg-icons": 5.15.2
+    "@fortawesome/free-regular-svg-icons": 5.15.2
+    "@fortawesome/free-solid-svg-icons": 5.15.2
+    "@fortawesome/react-fontawesome": 0.1.14
+    "@mapbox/rehype-prism": 0.5.0
+    "@types/gtag.js": 0.0.4
+    "@types/react": 17.0.2
+    autoprefixer: 10.2.4
+    dracula-prism: 2.1.1
+    glob: 7.1.6
+    gray-matter: 4.0.2
+    husky: 4.3.8
+    lint-staged: 10.5.4
+    luxon: 1.26.0
+    next: 10.0.7
+    next-mdx-remote: 2.1.3
+    next-remote-watch: 0.3.0
+    playwright-aws-lambda: 0.6.0
+    playwright-core: 1.8.1
+    postcss: 8.2.6
+    postcss-easy-import: 3.0.0
+    postcss-flexbugs-fixes: 5.0.2
+    postcss-preset-env: 6.7.0
+    prettier: 2.2.1
+    react: 17.0.1
+    react-dom: 17.0.1
+    remark-emoji: 2.1.0
+    remark-images: 2.0.0
+    tailwindcss: 2.0.3
+    typescript: 4.1.5
+    use-dark-mode: 2.3.1
   languageName: unknown
   linkType: soft
 
@@ -7360,7 +7360,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dracula-prism@npm:^2.1.1":
+"dracula-prism@npm:2.1.1":
   version: 2.1.1
   resolution: "dracula-prism@npm:2.1.1"
   dependencies:
@@ -8928,7 +8928,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.0, glob@npm:^7.0.3, glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6":
+"glob@npm:7.1.6, glob@npm:^7.0.0, glob@npm:^7.0.3, glob@npm:^7.1.1, glob@npm:^7.1.2, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6":
   version: 7.1.6
   resolution: "glob@npm:7.1.6"
   dependencies:
@@ -9042,7 +9042,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"gray-matter@npm:^4.0.2":
+"gray-matter@npm:4.0.2":
   version: 4.0.2
   resolution: "gray-matter@npm:4.0.2"
   dependencies:
@@ -9557,7 +9557,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"husky@npm:^4.3.8":
+"husky@npm:4.3.8":
   version: 4.3.8
   resolution: "husky@npm:4.3.8"
   dependencies:
@@ -11293,7 +11293,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:^10.5.4":
+"lint-staged@npm:10.5.4":
   version: 10.5.4
   resolution: "lint-staged@npm:10.5.4"
   dependencies:
@@ -11568,7 +11568,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"luxon@npm:^1.26.0":
+"luxon@npm:1.26.0":
   version: 1.26.0
   resolution: "luxon@npm:1.26.0"
   checksum: e12bb8bfdd69707f0f3e57b1b2ff39042c67904bdc437602064519f3eb87d3267497bc56cc0b7611faa40e22019991440a8e8e179d4c6a0440e9f226571fce46
@@ -12198,7 +12198,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"next-mdx-remote@npm:^2.1.3":
+"next-mdx-remote@npm:2.1.3":
   version: 2.1.3
   resolution: "next-mdx-remote@npm:2.1.3"
   dependencies:
@@ -12215,7 +12215,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"next-remote-watch@npm:^0.3.0":
+"next-remote-watch@npm:0.3.0":
   version: 0.3.0
   resolution: "next-remote-watch@npm:0.3.0"
   dependencies:
@@ -12237,7 +12237,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"next@npm:^10.0.7":
+"next@npm:10.0.7":
   version: 10.0.7
   resolution: "next@npm:10.0.7"
   dependencies:
@@ -13317,7 +13317,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"playwright-aws-lambda@npm:^0.6.0":
+"playwright-aws-lambda@npm:0.6.0":
   version: 0.6.0
   resolution: "playwright-aws-lambda@npm:0.6.0"
   dependencies:
@@ -13328,7 +13328,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:^1.8.1":
+"playwright-core@npm:1.8.1":
   version: 1.8.1
   resolution: "playwright-core@npm:1.8.1"
   dependencies:
@@ -13585,7 +13585,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss-easy-import@npm:^3.0.0":
+"postcss-easy-import@npm:3.0.0":
   version: 3.0.0
   resolution: "postcss-easy-import@npm:3.0.0"
   dependencies:
@@ -13620,7 +13620,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss-flexbugs-fixes@npm:^5.0.2":
+"postcss-flexbugs-fixes@npm:5.0.2":
   version: 5.0.2
   resolution: "postcss-flexbugs-fixes@npm:5.0.2"
   peerDependencies:
@@ -14057,7 +14057,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss-preset-env@npm:6.7.0, postcss-preset-env@npm:^6.7.0":
+"postcss-preset-env@npm:6.7.0":
   version: 6.7.0
   resolution: "postcss-preset-env@npm:6.7.0"
   dependencies:
@@ -14279,6 +14279,17 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
+"postcss@npm:8.2.6, postcss@npm:^8.1.0":
+  version: 8.2.6
+  resolution: "postcss@npm:8.2.6"
+  dependencies:
+    colorette: ^1.2.1
+    nanoid: ^3.1.20
+    source-map: ^0.6.1
+  checksum: 31dcc6632589e5b0d06ae3854122073a38952f3a25280511fa4bd8c2bc254c05d1d1db0913848ed3171c84d41b233ec3fe5d7349de4700f624a16fa93553ccac
+  languageName: node
+  linkType: hard
+
 "postcss@npm:^6.0.1, postcss@npm:^6.0.11, postcss@npm:^6.0.9":
   version: 6.0.23
   resolution: "postcss@npm:6.0.23"
@@ -14298,17 +14309,6 @@ fsevents@~2.3.1:
     source-map: ^0.6.1
     supports-color: ^6.1.0
   checksum: 8a979ea9799dd48399337708a395ddb8cf0e328515201ed35c99f5ba5eaa7688eae65764c570bf49b5be0b106226e2f222abc210de068b3d3da9a9a3bbb70567
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.1.0, postcss@npm:^8.2.6":
-  version: 8.2.6
-  resolution: "postcss@npm:8.2.6"
-  dependencies:
-    colorette: ^1.2.1
-    nanoid: ^3.1.20
-    source-map: ^0.6.1
-  checksum: 31dcc6632589e5b0d06ae3854122073a38952f3a25280511fa4bd8c2bc254c05d1d1db0913848ed3171c84d41b233ec3fe5d7349de4700f624a16fa93553ccac
   languageName: node
   linkType: hard
 
@@ -14369,7 +14369,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.2.1":
+"prettier@npm:2.2.1":
   version: 2.2.1
   resolution: "prettier@npm:2.2.1"
   bin:
@@ -14793,7 +14793,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^17.0.1":
+"react-dom@npm:17.0.1, react-dom@npm:^17.0.1":
   version: 17.0.1
   resolution: "react-dom@npm:17.0.1"
   dependencies:
@@ -14912,7 +14912,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"react@npm:^17.0.1":
+"react@npm:17.0.1, react@npm:^17.0.1":
   version: 17.0.1
   resolution: "react@npm:17.0.1"
   dependencies:
@@ -15173,7 +15173,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"remark-emoji@npm:^2.1.0":
+"remark-emoji@npm:2.1.0":
   version: 2.1.0
   resolution: "remark-emoji@npm:2.1.0"
   dependencies:
@@ -15191,7 +15191,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"remark-images@npm:^2.0.0":
+"remark-images@npm:2.0.0":
   version: 2.0.0
   resolution: "remark-images@npm:2.0.0"
   dependencies:
@@ -16967,7 +16967,7 @@ resolve@1.18.1:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^2.0.3":
+"tailwindcss@npm:2.0.3":
   version: 2.0.3
   resolution: "tailwindcss@npm:2.0.3"
   dependencies:
@@ -17516,7 +17516,7 @@ resolve@1.18.1:
   languageName: node
   linkType: hard
 
-typescript@^4.1.5:
+typescript@4.1.5:
   version: 4.1.5
   resolution: "typescript@npm:4.1.5"
   bin:
@@ -17526,7 +17526,7 @@ typescript@^4.1.5:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.1.5#builtin<compat/typescript>":
+"typescript@patch:typescript@4.1.5#builtin<compat/typescript>":
   version: 4.1.5
   resolution: "typescript@patch:typescript@npm%3A4.1.5#builtin<compat/typescript>::version=4.1.5&hash=cc6730"
   bin:
@@ -17825,7 +17825,7 @@ typescript@^4.1.5:
   languageName: node
   linkType: hard
 
-"use-dark-mode@npm:^2.3.1":
+"use-dark-mode@npm:2.3.1":
   version: 2.3.1
   resolution: "use-dark-mode@npm:2.3.1"
   dependencies:
