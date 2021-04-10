@@ -1,12 +1,12 @@
 // Insert this script in your index.html right after the <body> tag.
 // This will help to prevent a flash if dark mode is the default.
 
-(function() {
+(function () {
   // Change these if you use something different in your hook.
   const element = document.documentElement;
   const storageKey = "darkMode";
-  const classNameDark = "dark-mode";
-  const classNameLight = "light-mode";
+  const classNameDark = "dark";
+  const classNameLight = "light";
 
   function setClassOnDocumentBody(darkMode) {
     element.classList.add(darkMode ? classNameDark : classNameLight);

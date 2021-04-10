@@ -1,4 +1,6 @@
 module.exports = {
+  mode: "jit",
+  darkMode: "class",
   purge: {
     enabled: process.env.NODE_ENV === "production",
     content: [
@@ -8,19 +10,15 @@ module.exports = {
   },
   theme: {
     extend: {
-      screens: {
-        dark: { raw: "(prefers-color-scheme: dark)" },
-        light: { raw: "(prefers-color-scheme: light)" },
-      },
       colors: {
-        background: "var(--color-background)",
-        surface: "var(--color-surface)",
-        typography: "var(--color-typography)",
-        link: "var(--color-link)",
+        // background: "var(--color-background)",
+        // surface: "var(--color-surface)",
+        // typography: "var(--color-typography)",
+        // link: "var(--color-link)",
         language: {
-          javascript: "var(--color-language-javascript)",
-          swift: "var(--color-language-swift)",
-          diff: "var(--color-language-diff)",
+          javascript: "#f7df1e",
+          swift: "#de5c43",
+          diff: "#43de6a",
         },
       },
     },
