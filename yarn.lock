@@ -2138,6 +2138,7 @@ __metadata:
     "@types/gtag.js": 0.0.4
     "@types/react": 17.0.3
     autoprefixer: 10.2.5
+    clsx: ^1.1.1
     dracula-prism: 2.1.3
     glob: 7.1.6
     gray-matter: 4.0.2
@@ -2591,6 +2592,13 @@ __metadata:
     select: ^1.1.2
     tiny-emitter: ^2.0.0
   checksum: 8eab011ad8cf2dc794b717483f913550c1be1298c84550917f99734b8c5d6674ab86fe6c074234a9597bf60efddffa2ca11ce0df0f78f7c64c4e6a64302437f8
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "clsx@npm:1.1.1"
+  checksum: d8ae10ac0546da19fe8c9516886f6582a64a382cf4d09ea7d36d5287cafbdab1192ab249adc2cdf0310e0b0aeac4f4142cf7c738c98d9cb68c19ba24b6f673d5
   languageName: node
   linkType: hard
 

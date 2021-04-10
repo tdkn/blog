@@ -1,7 +1,0 @@
-.blog-header {
-  @apply flex items-center justify-between py-10;
-
-  & a:hover {
-    @apply border-0;
-  }
-}
