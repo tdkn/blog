@@ -1,17 +1,11 @@
 import React from "react";
 import { DateTime } from "luxon";
-import {
-  CustomHead,
-  Profile,
-  BaseHeader,
-  BaseFooter,
-} from "~/components/common";
+import { Profile, BaseHeader, BaseFooter } from "~/components/common";
 import styles from "./ArticleLayout.module.css";
 
 const ArticleLayout = ({ frontMatter, children }) => {
   return (
     <div className={styles.root}>
-      <CustomHead title={frontMatter.title} description={frontMatter.summary} />
       <BaseHeader />
       <div className="pb-8">
         <span className="text-sm text-gray-600">

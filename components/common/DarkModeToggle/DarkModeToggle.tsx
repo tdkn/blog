@@ -26,7 +26,7 @@ const DarkModeToggle = () => {
 
   return (
     <button
-      className="focus:outline-none p-2 inline-flex"
+      className="focus:outline-none p-2 inline-flex hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
       type="button"
       onClick={darkMode.toggle}
     >
