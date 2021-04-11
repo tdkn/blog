@@ -1,6 +1,6 @@
 import React from "react";
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import GoogleAnalyticsScript from "~/components/GoogleAnalyticsScript";
+import { GoogleAnalyticsScript } from "~/components/common";
 
 export default class CustomDocument extends Document {
   render() {

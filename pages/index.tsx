@@ -4,8 +4,8 @@ import matter from "gray-matter";
 import React from "react";
 import { DateTime } from "luxon";
 import { postFiles } from "~/lib/mdx";
-import MainLayout from "~/components/MainLayout";
-import PostCard from "~/components/PostCard";
+import { MainLayout } from "~/components/layouts";
+import { PostCard } from "~/components/common";
 
 export const getStaticProps: GetStaticProps = async () => {
   const posts = postFiles
