@@ -11,10 +11,6 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // background: "var(--color-background)",
-        // surface: "var(--color-surface)",
-        // typography: "var(--color-typography)",
-        // link: "var(--color-link)",
         language: {
           javascript: "#f7df1e",
           swift: "#de5c43",
