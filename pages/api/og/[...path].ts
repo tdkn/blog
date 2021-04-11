@@ -5,7 +5,7 @@ import path from "path";
 import fs from "fs";
 import ReactDOMServer from "react-dom/server";
 import matter from "gray-matter";
-import OpenGraphTemplate from "~/components/OpenGraphTemplate";
+import { OpenGraphTemplate } from "~/components/common";
 import { postFiles } from "~/lib/mdx";
 
 const isDev = process.env.NODE_ENV !== "production";

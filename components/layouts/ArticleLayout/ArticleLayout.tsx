@@ -1,9 +1,11 @@
 import React from "react";
 import { DateTime } from "luxon";
-import BaseHeader from "~/components/BaseHeader";
-import CustomHead from "~/components/CustomHead";
-import BaseFooter from "~/components/BaseFooter";
-import Profile from "~/components/Profile";
+import {
+  CustomHead,
+  Profile,
+  BaseHeader,
+  BaseFooter,
+} from "~/components/common";
 import styles from "./ArticleLayout.module.css";
 
 const ArticleLayout = ({ frontMatter, children }) => {

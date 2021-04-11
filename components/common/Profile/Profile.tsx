@@ -1,5 +1,5 @@
 import clsx from "clsx";
-import Link from "~/components/Link";
+import { Link } from "~/components/ui";
 
 interface ProfileProps {
   className?: string;

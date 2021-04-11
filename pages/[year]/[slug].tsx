@@ -8,10 +8,10 @@ import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";
 import React from "react";
 import { postFiles, POSTS_PATH } from "~/lib/mdx";
-import InlineCode from "~/components/InlineCode";
-import CodeBlock from "~/components/CodeBlock";
-import ArticleLayout from "~/components/ArticleLayout";
-import Link from "~/components/Link";
+import { InlineCode } from "~/components/common";
+import { CodeBlock } from "~/components/common";
+import { ArticleLayout } from "~/components/layouts";
+import { Link } from "~/components/ui";
 
 interface PageProps {
   mdxSource: MdxRemote.Source;

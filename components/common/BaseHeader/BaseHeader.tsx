@@ -1,6 +1,6 @@
 import NextLink from "next/link";
-import Logo from "~/components/Logo";
-import DarkModeToggle from "~/components/DarkModeToggle";
+import { Logo } from "~/components/ui";
+import { DarkModeToggle } from "~/components/common";
 import styles from "./BaseHeader.module.css";
 
 const BaseHeader = () => {

@@ -1,7 +1,9 @@
-import BaseHeader from "~/components/BaseHeader";
-import BaseFooter from "~/components/BaseFooter";
-import CustomHead from "~/components/CustomHead";
-import Profile from "~/components/Profile";
+import {
+  CustomHead,
+  Profile,
+  BaseHeader,
+  BaseFooter,
+} from "~/components/common";
 import styles from "./MainLayout.module.css";
 
 const MainLayout = ({ children }) => {

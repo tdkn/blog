@@ -1,4 +1,4 @@
-import Link from "~/components/Link";
+import { Link } from "~/components/ui";
 import { DateTime } from "luxon";
 
 const PostCard = ({ post }) => (
