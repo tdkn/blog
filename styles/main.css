@@ -23,8 +23,7 @@
 
   body {
     @apply bg-white dark:bg-gray-800
-    text-black dark:text-white
-    transition-colors ease-in-out duration-500;
+    text-black dark:text-white;
   }
 
   h1,
