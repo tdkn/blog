@@ -1,5 +1,5 @@
-export { default as BaseFooter } from "./BaseFooter";
-export { default as BaseHeader } from "./BaseHeader";
+export { default as Footer } from "./Footer";
+export { default as Header } from "./Header";
 export { default as CodeBlock } from "./CodeBlock";
 export { default as Head } from "./Head";
 export { default as DarkModeToggle } from "./DarkModeToggle";

@@ -1,9 +1,9 @@
 import NextLink from "next/link";
 import { Logo } from "~/components/ui";
 import { DarkModeToggle } from "~/components/common";
-import styles from "./BaseHeader.module.css";
+import styles from "./Header.module.css";
 
-const BaseHeader = () => {
+const Header = () => {
   return (
     <header className={styles.root}>
       <NextLink href="/">
@@ -16,4 +16,4 @@ const BaseHeader = () => {
   );
 };
 
-export default BaseHeader;
+export default Header;

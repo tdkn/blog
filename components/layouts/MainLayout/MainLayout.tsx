@@ -1,10 +1,10 @@
-import { Profile, BaseHeader } from "~/components/common";
+import { Profile, Header } from "~/components/common";
 import styles from "./MainLayout.module.css";
 
 const MainLayout = ({ children }) => {
   return (
     <div className={styles.root}>
-      <BaseHeader />
+      <Header />
       <Profile />
       <main className="pt-5">{children}</main>
     </div>
