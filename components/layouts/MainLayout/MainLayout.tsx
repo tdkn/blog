@@ -1,4 +1,4 @@
-import { Profile, BaseHeader, BaseFooter } from "~/components/common";
+import { Profile, BaseHeader } from "~/components/common";
 import styles from "./MainLayout.module.css";
 
 const MainLayout = ({ children }) => {
