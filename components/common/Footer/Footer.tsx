@@ -1,6 +1,6 @@
-import styles from "./BaseFooter.module.css";
+import styles from "./Footer.module.css";
 
-const BaseFooter = () => {
+const Footer = () => {
   return (
     <footer className={styles.root}>
       <ul>
@@ -18,4 +18,4 @@ const BaseFooter = () => {
   );
 };
 
-export default BaseFooter;
+export default Footer;
