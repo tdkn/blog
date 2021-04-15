@@ -2138,13 +2138,13 @@ __metadata:
     lint-staged: 10.5.4
     luxon: 1.26.0
     next: 10.1.3
-    next-mdx-remote: 2.1.3
+    next-mdx-remote: 2.1.4
     next-remote-watch: 1.0.0
     next-seo: 4.23.0
     next-themes: 0.0.14
     playwright-aws-lambda: 0.6.0
     playwright-core: 1.10.0
-    postcss: 8.2.9
+    postcss: 8.2.10
     postcss-easy-import: 3.0.0
     postcss-flexbugs-fixes: 5.0.2
     postcss-preset-env: 6.7.0
@@ -5177,9 +5177,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"next-mdx-remote@npm:2.1.3":
-  version: 2.1.3
-  resolution: "next-mdx-remote@npm:2.1.3"
+"next-mdx-remote@npm:2.1.4":
+  version: 2.1.4
+  resolution: "next-mdx-remote@npm:2.1.4"
   dependencies:
     "@babel/core": ^7.12.10
     "@babel/preset-env": ^7.12.11
@@ -5188,9 +5188,9 @@ fsevents@~2.3.1:
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
   peerDependencies:
-    react: ">=16.13.1 <=17.0.1"
-    react-dom: ">=16.13.1 <=17.0.1"
-  checksum: 0f8a6735f5be619d368b5a3a989f24db8a2b81948413ccfbe17b25c176b3fbd70abb10816f2e127764a3c06310cb96db63d53bf9b40ff244eb34c22d391027a9
+    react: ">=16.x <=17.x"
+    react-dom: ">=16.x <=17.x"
+  checksum: d63840fe14839975a9c2daa9a6504b0ffc957774b875ead392c060a7c0fb7036268ad313c97765c3893d10d5814249a1bc4ce2fd1d12997ea273f766fdabb550
   languageName: node
   linkType: hard
 
@@ -6301,14 +6301,14 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.2.9, postcss@npm:^8.1.6, postcss@npm:^8.2.1":
-  version: 8.2.9
-  resolution: "postcss@npm:8.2.9"
+"postcss@npm:8.2.10":
+  version: 8.2.10
+  resolution: "postcss@npm:8.2.10"
   dependencies:
     colorette: ^1.2.2
     nanoid: ^3.1.22
     source-map: ^0.6.1
-  checksum: b661a6e858c82e8919c9b1e6bc299b5b2ba61dc66ccc52ef631ddc8b69aabce170a6f0a9ea04f087e7be780ad34cfc15dbbf952c152a9698375de8c88b8c4e96
+  checksum: 83912f846376ceb501d887951bb3c7f5efc16452b124ba5ffbdd27f718dabd1edce8f6ef777a88aeb93366081cc2a3804581b2e6711a1e89ecaecb0dff2d2b73
   languageName: node
   linkType: hard
 
@@ -6331,6 +6331,17 @@ fsevents@~2.3.1:
     source-map: ^0.6.1
     supports-color: ^6.1.0
   checksum: 8a979ea9799dd48399337708a395ddb8cf0e328515201ed35c99f5ba5eaa7688eae65764c570bf49b5be0b106226e2f222abc210de068b3d3da9a9a3bbb70567
+  languageName: node
+  linkType: hard
+
+"postcss@npm:^8.1.6, postcss@npm:^8.2.1":
+  version: 8.2.9
+  resolution: "postcss@npm:8.2.9"
+  dependencies:
+    colorette: ^1.2.2
+    nanoid: ^3.1.22
+    source-map: ^0.6.1
+  checksum: b661a6e858c82e8919c9b1e6bc299b5b2ba61dc66ccc52ef631ddc8b69aabce170a6f0a9ea04f087e7be780ad34cfc15dbbf952c152a9698375de8c88b8c4e96
   languageName: node
   linkType: hard
 
