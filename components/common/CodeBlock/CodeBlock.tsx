@@ -1,7 +1,14 @@
 import styles from "./CodeBlock.module.css";
+import { DetailedHTMLProps, HTMLAttributes } from "react";
+import clsx from "clsx";
 
-const CodeBlock = (props) => (
-  <div className={styles.root}>
+interface Props
+  extends DetailedHTMLProps<HTMLAttributes<HTMLPreElement>, HTMLPreElement> {
+  rootClassName?: string;
+}
+
+const CodeBlock = ({ rootClassName, ...props }: Props) => (
+  <div className={clsx(styles.root, rootClassName)}>
     <pre {...props} />
   </div>
 );
