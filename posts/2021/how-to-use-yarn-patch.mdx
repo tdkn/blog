@@ -1,7 +1,7 @@
 ---
-title: 'yarn patch の使い方'
-date: '2021-01-21'
-summary: 'かゆいところに手が届きます。不具合を踏んでも大丈夫。'
+title: "yarn patch の使い方"
+date: "2021-01-21"
+summary: "かゆいところに手が届きます。不具合を踏んでも大丈夫。"
 ---
 
 ## 手順
@@ -12,10 +12,10 @@ summary: 'かゆいところに手が届きます。不具合を踏んでも大�
 4. `yarn patch-commit <path> > puppeteer.patch` コマンドを実行します
 5. `package.json` に記載しているバージョン指定を以下のように書き換えます
 
-    ```diff
-    -  "puppeteer-core": "^5.5.0",
-    +  "puppeteer-core": "patch:puppeteer-core@^5.5.0#./puppeteer.patch",
-    ```
+   ```diff
+   -  "puppeteer-core": "^5.5.0",
+   +  "puppeteer-core": "patch:puppeteer-core@^5.5.0#./puppeteer.patch",
+   ```
 
 最後に `yarn install` をして完了です。
 
