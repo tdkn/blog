@@ -1,5 +1,5 @@
 import React from "react";
-import { DateTime } from "luxon";
+import { formatDate, formatTimeAgo } from "~/lib/format-date";
 import { Profile, Header, Footer } from "~/components/common";
 import styles from "./ArticleLayout.module.css";
 
@@ -8,10 +8,10 @@ const ArticleLayout = ({ frontMatter, children }) => {
     <div className={styles.root}>
       <Header />
       <div className="pb-8">
-        <span className="text-sm text-gray-600">
-          {DateTime.fromISO(frontMatter.date).toRelative()}
-        </span>
         <h1>{frontMatter.title}</h1>
+        <span className="text-sm text-gray-600">
+          {formatDate(frontMatter.date)} ({formatTimeAgo(frontMatter.date)})
+        </span>
       </div>
       <main className="pb-10">{children}</main>
       <Profile />

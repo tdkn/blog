@@ -2,7 +2,7 @@ import { GetStaticProps } from "next";
 import fs from "fs";
 import matter from "gray-matter";
 import React from "react";
-import { DateTime } from "luxon";
+import { parseISO, differenceInMilliseconds } from "date-fns";
 import { postFiles } from "~/lib/mdx";
 import { MainLayout } from "~/components/layouts";
 import { PostCard } from "~/components/common";
@@ -20,7 +20,9 @@ export const getStaticProps: GetStaticProps = async () => {
         summary: frontMatter.summary,
       };
     })
-    .sort((a, b) => DateTime.fromISO(b.date) - DateTime.fromISO(a.date));
+    .sort((a, b) =>
+      differenceInMilliseconds(parseISO(b.date), parseISO(a.date))
+    );
 
   return { props: { posts } };
 };
