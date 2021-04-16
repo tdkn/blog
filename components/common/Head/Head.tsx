@@ -1,3 +1,4 @@
+import React from "react";
 import NextHead from "next/head";
 import { DefaultSeo } from "next-seo";
 import config from "~/seo.config";
@@ -8,7 +9,7 @@ const baseUrl =
     ? "https://tdkn.dev"
     : "http://localhost:3000";
 
-const Head = () => {
+const Head: React.VFC = () => {
   const { query } = useRouter();
   const ogImageUrl =
     query.year && query.slug

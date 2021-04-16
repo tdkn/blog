@@ -2,7 +2,7 @@ import styles from "./CodeBlock.module.css";
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import clsx from "clsx";
 
-interface Props
+export interface Props
   extends DetailedHTMLProps<HTMLAttributes<HTMLPreElement>, HTMLPreElement> {
   rootClassName?: string;
 }

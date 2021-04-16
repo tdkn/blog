@@ -1,17 +1,15 @@
+import React from "react";
 import clsx from "clsx";
 import { Link } from "~/components/ui";
+import { Avatar } from "~/components/common";
 
-interface ProfileProps {
+export interface ProfileProps {
   className?: string;
 }
 
 const Profile: React.VFC<ProfileProps> = ({ className }) => (
   <aside className={clsx("flex items-center", className)}>
-    <img
-      src="/avatar.jpg"
-      alt="Avatar"
-      className="w-16 h-16 rounded-full mr-4"
-    />
+    <Avatar />
     <div className="text-sm">
       <p>
         Personal blog by{" "}
