@@ -3,17 +3,15 @@ import { Logo } from "~/components/ui";
 import { DarkModeToggle } from "~/components/common";
 import styles from "./Header.module.css";
 
-const Header = () => {
-  return (
-    <header className={styles.root}>
-      <NextLink href="/">
-        <a>
-          <Logo />
-        </a>
-      </NextLink>
-      <DarkModeToggle />
-    </header>
-  );
-};
+const Header = () => (
+  <header className={styles.root}>
+    <NextLink href="/">
+      <a>
+        <Logo />
+      </a>
+    </NextLink>
+    <DarkModeToggle />
+  </header>
+);
 
 export default Header;

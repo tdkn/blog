@@ -8,6 +8,7 @@ import "~/styles/main.css";
 initGoogleAnalytics();
 
 export default function CustomApp({ Component, pageProps }: AppProps) {
+  // noinspection HtmlRequiredTitleElement
   return (
     <>
       <Head />
