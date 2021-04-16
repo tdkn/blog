@@ -1626,6 +1626,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/glob@npm:7.1.3":
+  version: 7.1.3
+  resolution: "@types/glob@npm:7.1.3"
+  dependencies:
+    "@types/minimatch": "*"
+    "@types/node": "*"
+  checksum: 633bf1dda9a30899b233ed6b97c75cdd59f2ee856a12240c85474ce6889e26b3b3520b62de56f6bb61824af0ef51b311a0cae305f27ba0de8ddc4898a3673d42
+  languageName: node
+  linkType: hard
+
 "@types/gtag.js@npm:0.0.4":
   version: 0.0.4
   resolution: "@types/gtag.js@npm:0.0.4"
@@ -1658,6 +1668,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/minimatch@npm:*":
+  version: 3.0.4
+  resolution: "@types/minimatch@npm:3.0.4"
+  checksum: abbe7031d8a6144c36f1803c5c1914885c2349d5d73fc45aae44807c12c4c803b8acfb134c71c7eff75c462c218697f982b96633f8fdf71b83ec50eba36122a6
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:*":
   version: 14.14.37
   resolution: "@types/node@npm:14.14.37"
@@ -1686,7 +1703,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.3":
+"@types/react-dom@npm:17.0.3":
+  version: 17.0.3
+  resolution: "@types/react-dom@npm:17.0.3"
+  dependencies:
+    "@types/react": "*"
+  checksum: 9314c91a985f153591e1e74aef3d63d8b22e098069773f32745bf0733740a49802731761a46da8788a7d3dd2c21346036f12c2c24627630e5a6210b120a650e6
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:*, @types/react@npm:17.0.3":
   version: 17.0.3
   resolution: "@types/react@npm:17.0.3"
   dependencies:
@@ -2315,8 +2341,10 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": 5.15.3
     "@fortawesome/react-fontawesome": 0.1.14
     "@mapbox/rehype-prism": 0.6.0
+    "@types/glob": 7.1.3
     "@types/gtag.js": 0.0.4
     "@types/react": 17.0.3
+    "@types/react-dom": 17.0.3
     "@typescript-eslint/eslint-plugin": 4.22.0
     "@typescript-eslint/parser": 4.22.0
     autoprefixer: 10.2.5

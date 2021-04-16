@@ -24,7 +24,7 @@ async function getLaunchOptions() {
   }
 }
 
-function getHtml({ title }): string {
+function getHtml({ title }: { title: string }): string {
   const doctype = `<!doctype html>`;
   const fontPath = path.resolve(
     process.cwd(),
