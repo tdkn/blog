@@ -42,27 +42,32 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   const postFile = postFiles.find(
     (file) => file.year === year && file.slug === slug
   );
-  const source = fs.readFileSync(postFile.absolutePath);
-  const { data: frontMatter } = matter(source);
-  const options = await getLaunchOptions();
-  const browser = await playwright.launchChromium(options);
-  const page = await browser.newPage({
-    viewport: {
-      width: 1200,
-      height: 630,
-    },
-  });
-  const html = getHtml({ title: frontMatter.title });
 
-  await page.setContent(html, { waitUntil: "domcontentloaded" });
-  await page.evaluateHandle("document.fonts.ready");
+  if (postFile) {
+    const source = fs.readFileSync(postFile.absolutePath);
+    const { data: frontMatter } = matter(source);
+    const options = await getLaunchOptions();
+    const browser = await playwright.launchChromium(options);
+    const page = await browser.newPage({
+      viewport: {
+        width: 1200,
+        height: 630,
+      },
+    });
+    const html = getHtml({ title: frontMatter.title });
 
-  const data = await page.screenshot({ type: "png" });
-  await browser.close();
+    await page.setContent(html, { waitUntil: "domcontentloaded" });
+    await page.evaluateHandle("document.fonts.ready");
 
-  // Set the s-maxage property which caches the images then on the Vercel edge
-  res.setHeader("Cache-Control", "s-maxage=31536000, stale-while-revalidate");
-  res.setHeader("Content-Type", "image/png");
-  // write the image to the response with the specified Content-Type
-  res.end(data);
+    const data = await page.screenshot({ type: "png" });
+    await browser.close();
+
+    // Set the s-maxage property which caches the images then on the Vercel edge
+    res.setHeader("Cache-Control", "s-maxage=31536000, stale-while-revalidate");
+    res.setHeader("Content-Type", "image/png");
+    // write the image to the response with the specified Content-Type
+    res.end(data);
+  } else {
+    res.status(404).json({ message: "Post not found." });
+  }
 };
