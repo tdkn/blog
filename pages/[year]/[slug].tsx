@@ -1,4 +1,4 @@
-import { GetStaticPaths, GetStaticProps, GetStaticPropsContext } from "next";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
 import { MdxRemote } from "next-mdx-remote/types";
 import fs from "fs";
@@ -29,10 +29,10 @@ const components: MdxRemote.Components = {
   a: Link,
 };
 
-export const getStaticProps: GetStaticProps = async ({
+export const getStaticProps: GetStaticProps<PageProps, PageParams> = async ({
   params,
-}: GetStaticPropsContext<PageParams>) => {
-  const { year, slug } = params;
+}) => {
+  const { year, slug } = params as PageParams;
   const postFilePath = path.join(POSTS_PATH, year, `${slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
   const { content, data: frontMatter } = matter(source);
@@ -55,19 +55,15 @@ export const getStaticProps: GetStaticProps = async ({
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = postFiles.map(({ year, slug }) => ({ params: { year, slug } }));
+export const getStaticPaths: GetStaticPaths = async () => ({
+  paths: postFiles.map(({ year, slug }) => ({ params: { year, slug } })),
+  fallback: false,
+});
 
-  return {
-    paths,
-    fallback: false,
-  };
-};
-
-const Post = ({ mdxSource, frontMatter }: PageProps) => {
-  const content = hydrate(mdxSource, { components });
-
-  return <ArticleLayout frontMatter={frontMatter}>{content}</ArticleLayout>;
-};
+const Post = ({ mdxSource, frontMatter }: PageProps) => (
+  <ArticleLayout frontMatter={frontMatter}>
+    {hydrate(mdxSource, { components })}
+  </ArticleLayout>
+);
 
 export default Post;

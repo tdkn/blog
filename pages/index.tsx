@@ -6,9 +6,14 @@ import { parseISO, differenceInMilliseconds } from "date-fns";
 import { postFiles } from "~/lib/mdx";
 import { MainLayout } from "~/components/layouts";
 import { PostCard } from "~/components/common";
+import type { Post } from "~/types";
 
-export const getStaticProps: GetStaticProps = async () => {
-  const posts = postFiles
+export interface Props {
+  posts: Post[];
+}
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const posts: Post[] = postFiles
     .map(({ absolutePath, year, slug }) => {
       const source = fs.readFileSync(absolutePath);
       const { data: frontMatter } = matter(source);
@@ -27,7 +32,7 @@ export const getStaticProps: GetStaticProps = async () => {
   return { props: { posts } };
 };
 
-const Index = ({ posts }) => (
+const Index: React.VFC<Props> = ({ posts }) => (
   <MainLayout>
     {posts.map((post) => (
       <PostCard post={post} key={post.url} />

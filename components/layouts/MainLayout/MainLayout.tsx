@@ -1,7 +1,12 @@
+import React from "react";
 import { Profile, Header } from "~/components/common";
 import styles from "./MainLayout.module.css";
 
-const MainLayout = ({ children }) => {
+export interface Props {
+  children: React.ReactNode;
+}
+
+const MainLayout: React.VFC<Props> = ({ children }) => {
   return (
     <div className={styles.root}>
       <Header />
