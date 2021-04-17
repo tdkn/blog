@@ -17,13 +17,11 @@
   }
 
   html {
-    @apply antialiased
-    font-sans;
+    @apply antialiased font-sans;
   }
 
   body {
-    @apply bg-white dark:bg-gray-800
-    text-black dark:text-white;
+    @apply bg-white dark:bg-gray-800 text-black dark:text-white;
   }
 
   h1,

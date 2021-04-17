@@ -12,7 +12,7 @@ const ArticleLayout: React.VFC<Props> = ({ frontMatter, children }) => (
   <div className={styles.root}>
     <Header />
     <div className="pb-8">
-      <span className="text-sm text-gray-600">
+      <span className="text-sm text-gray-400">
         {formatDate(frontMatter.date)} ({formatTimeAgo(frontMatter.date)})
       </span>
       <h1>{frontMatter.title}</h1>

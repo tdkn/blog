@@ -1,6 +1,7 @@
 import React from "react";
 import NextLink, { LinkProps as NextLinkProps } from "next/link";
 import clsx from "clsx";
+import styles from "./Link.module.css";
 
 export interface LinkProps extends NextLinkProps {
   className?: string;
@@ -9,13 +10,7 @@ export interface LinkProps extends NextLinkProps {
 const Link: React.FC<LinkProps> = ({ href, className, children, ...props }) => {
   return (
     <NextLink href={href}>
-      <a
-        className={clsx(
-          "font-bold text-gray-700 dark:text-yellow-200 no-underline hover:text-black dark:hover:text-yellow-300",
-          className
-        )}
-        {...props}
-      >
+      <a className={clsx(styles.root, className)} {...props}>
         {children}
       </a>
     </NextLink>

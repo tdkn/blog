@@ -1,0 +1,7 @@
+.root {
+  @apply focus:outline-none p-2 inline-flex hover:bg-gray-200 rounded;
+}
+
+:global(.dark) .root {
+  @apply hover:bg-gray-700;
+}
