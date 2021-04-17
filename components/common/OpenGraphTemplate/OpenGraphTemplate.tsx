@@ -32,6 +32,7 @@ const OpenGraphTemplate = (props: Props) => {
       left: 0;
       margin: 50px;
       position: absolute;
+      height: 64px;
     }
     .title {
       font-size: 50px;
@@ -53,7 +54,7 @@ const OpenGraphTemplate = (props: Props) => {
       <style dangerouslySetInnerHTML={{ __html: getCss(props.font) }} />
       <body>
         <div className="wrapper">
-          <Logo className="logo" height={64} />
+          <Logo className="logo" />
           <div className="title">{props.title}</div>
           <div className="author">@tdkn_</div>
         </div>

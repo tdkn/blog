@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import styles from "./DarkModeToggle.module.css";
 
 const DarkModeToggle = () => {
   const { theme, setTheme } = useTheme();
@@ -15,11 +16,7 @@ const DarkModeToggle = () => {
   }, [theme]);
 
   return (
-    <button
-      className="focus:outline-none p-2 inline-flex hover:bg-gray-200 dark:hover:bg-gray-700 rounded"
-      type="button"
-      onClick={toggle}
-    >
+    <button className={styles.root} type="button" onClick={toggle}>
       <FontAwesomeIcon icon={icon} />
     </button>
   );

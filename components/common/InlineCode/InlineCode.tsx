@@ -1,18 +1,11 @@
 import { DetailedHTMLProps, HTMLAttributes } from "react";
 import clsx from "clsx";
+import styles from "./InlineCode.module.css";
 
 export type Props = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement>;
 
-const InlineCode = ({ className, ...props }: Props) => {
-  return (
-    <code
-      className={clsx(
-        "rounded-md p-1 bg-gray-100 dark:bg-gray-700 text-black dark:text-yellow-300 leading-loose",
-        className
-      )}
-      {...props}
-    />
-  );
-};
+const InlineCode = ({ className, ...props }: Props) => (
+  <code className={clsx(styles.root, className)} {...props} />
+);
 
 export default InlineCode;

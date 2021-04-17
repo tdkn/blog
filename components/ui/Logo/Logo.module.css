@@ -1,0 +1,11 @@
+.root {
+  @apply h-8;
+}
+
+.typography {
+  @apply fill-current text-gray-800;
+}
+
+:global(.dark) .typography {
+  @apply text-white;
+}

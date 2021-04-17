@@ -1,0 +1,7 @@
+.root {
+  @apply font-bold text-gray-700 no-underline hover:text-black;
+}
+
+:global(.dark) .root {
+  @apply text-yellow-200 hover:text-yellow-300;
+}

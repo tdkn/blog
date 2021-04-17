@@ -1,0 +1,7 @@
+.root {
+  @apply rounded-md p-1 bg-gray-100 text-black leading-loose;
+}
+
+:global(.dark) .root {
+  @apply text-yellow-300 bg-gray-700;
+}
