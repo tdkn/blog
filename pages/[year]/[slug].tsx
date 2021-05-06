@@ -1,11 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { ParsedUrlQuery } from "querystring";
-import { MdxRemote } from "next-mdx-remote/types";
+import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
+import { serialize } from "next-mdx-remote/serialize";
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
-import hydrate from "next-mdx-remote/hydrate";
-import renderToString from "next-mdx-remote/render-to-string";
 import React from "react";
 import { postFiles, POSTS_PATH } from "~/lib/mdx";
 import { InlineCode } from "~/components/common";
@@ -14,7 +13,7 @@ import { ArticleLayout } from "~/components/layouts";
 import { Link } from "~/components/ui";
 
 interface PageProps {
-  mdxSource: MdxRemote.Source;
+  mdxSource: MDXRemoteSerializeResult;
   frontMatter: { [key: string]: any };
 }
 
@@ -23,7 +22,7 @@ interface PageParams extends ParsedUrlQuery {
   slug: string;
 }
 
-const components: MdxRemote.Components = {
+const components = {
   pre: CodeBlock,
   inlineCode: InlineCode,
   a: Link,
@@ -36,15 +35,14 @@ export const getStaticProps: GetStaticProps<PageProps, PageParams> = async ({
   const postFilePath = path.join(POSTS_PATH, year, `${slug}.mdx`);
   const source = fs.readFileSync(postFilePath);
   const { content, data: frontMatter } = matter(source);
-  const mdxSource = await renderToString(content, {
-    components,
+  const mdxSource = await serialize(content, {
+    scope: frontMatter,
     mdxOptions: {
       remarkPlugins: [require("remark-images"), [require("remark-emoji")]],
       rehypePlugins: [
         [require("@mapbox/rehype-prism"), { ignoreMissing: true }],
       ],
     },
-    scope: frontMatter,
   });
 
   return {
@@ -62,7 +60,7 @@ export const getStaticPaths: GetStaticPaths = async () => ({
 
 const Post = ({ mdxSource, frontMatter }: PageProps) => (
   <ArticleLayout frontMatter={frontMatter}>
-    {hydrate(mdxSource, { components })}
+    <MDXRemote {...mdxSource} components={components} />
   </ArticleLayout>
 );
 
