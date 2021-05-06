@@ -6,7 +6,7 @@ import fs from "fs";
 import ReactDOMServer from "react-dom/server";
 import matter from "gray-matter";
 import { OpenGraphTemplate } from "~/components/common";
-import { postFiles } from "~/lib/mdx";
+import { postFiles, POSTS_PATH } from "~/lib/mdx";
 
 const isDev = process.env.NODE_ENV !== "production";
 const isPreview = typeof process.env.BLOG_PREVIEW !== "undefined";
@@ -68,6 +68,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     // write the image to the response with the specified Content-Type
     res.end(data);
   } else {
+    console.error("[debug]: ", { postFiles, POSTS_PATH });
+
     res.status(404).json({ message: "Post not found." });
   }
 };
