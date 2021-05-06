@@ -1289,7 +1289,7 @@ __metadata:
     next-seo: 4.24.0
     next-themes: 0.0.14
     playwright-aws-lambda: 0.6.0
-    playwright-core: 1.10.0
+    playwright-core: next
     postcss: 8.2.14
     postcss-easy-import: 3.0.0
     postcss-flexbugs-fixes: 5.0.2
@@ -5369,9 +5369,9 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.10.0":
-  version: 1.10.0
-  resolution: "playwright-core@npm:1.10.0"
+"playwright-core@npm:next":
+  version: 1.11.0-1620262237000
+  resolution: "playwright-core@npm:1.11.0-1620262237000"
   dependencies:
     commander: ^6.1.0
     debug: ^4.1.1
@@ -5386,9 +5386,10 @@ fsevents@~2.3.1:
     rimraf: ^3.0.2
     stack-utils: ^2.0.3
     ws: ^7.3.1
+    yazl: ^2.5.1
   bin:
     playwright: lib/cli/cli.js
-  checksum: 04b374f79ff9a7fef08b7b62a4c67c99e6c7cbf012b2a588cb99e6a69873c5f8b4e9ab02e8800d3c2fa80597b87d7f34758542458044a1a5bb5db4dde3f0d63c
+  checksum: 27b1812f468fedf79b3b2857b9f0b63809112a6d101c6008cc0e8519d717014739826930ff0ae29ae1dd6e4e24acd00208eaf4f9f3fa6b2733d9bd3916b12a22
   languageName: node
   linkType: hard
 
@@ -7886,6 +7887,15 @@ typescript@4.2.4:
     buffer-crc32: ~0.2.3
     fd-slicer: ~1.1.0
   checksum: 6d0c4e72706ec2df6ea842d09c792e7b34badc5db3d8a893e0c70d0e464c9bf82bac4b1690f3515b5e1d96b72fceb6cc4dd96465426077ba6dddc54e7dd4d517
+  languageName: node
+  linkType: hard
+
+"yazl@npm:^2.5.1":
+  version: 2.5.1
+  resolution: "yazl@npm:2.5.1"
+  dependencies:
+    buffer-crc32: ~0.2.3
+  checksum: ee9bd2f57dfe1bdca333749bbb42b5a9e68a39871a31d8eed93b5606b8dfa1a1dda89af5cfd274a455c0f5f5790d743538067f2468d3bc8cd4227cdc94bc6ec3
   languageName: node
   linkType: hard
 
