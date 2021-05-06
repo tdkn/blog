@@ -51,7 +51,7 @@
     "lint-staged": "10.5.4",
     "next-remote-watch": "1.0.0",
     "playwright-aws-lambda": "0.6.0",
-    "playwright-core": "1.10.0",
+    "playwright-core": "next",
     "postcss": "8.2.14",
     "postcss-easy-import": "3.0.0",
     "postcss-flexbugs-fixes": "5.0.2",
