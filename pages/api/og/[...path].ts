@@ -1,5 +1,4 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import getConfig from "next/config";
 import * as playwright from "playwright-aws-lambda";
 import React from "react";
 import path from "path";
@@ -9,8 +8,6 @@ import { OpenGraphTemplate } from "~/components/common";
 import { posts } from "~/posts/index.json";
 import { assert } from "~/lib/assert";
 
-const { serverRuntimeConfig } = getConfig();
-const { PROJECT_ROOT } = serverRuntimeConfig;
 const isDev = process.env.NODE_ENV !== "production";
 const isPreview = typeof process.env.BLOG_PREVIEW !== "undefined";
 
@@ -28,7 +25,10 @@ async function getLaunchOptions() {
 }
 
 function getHtml({ title }: { title: string }): string {
-  const fontPath = path.join(PROJECT_ROOT, "./assets/MPLUSRounded1c-Bold.ttf");
+  const fontPath = path.resolve(
+    process.cwd(),
+    "./assets/MPLUSRounded1c-Bold.ttf"
+  );
   const font = fs.readFileSync(fontPath, { encoding: "base64" });
   const element = React.createElement(OpenGraphTemplate, { title, font });
   const markup = ReactDOMServer.renderToStaticMarkup(element);

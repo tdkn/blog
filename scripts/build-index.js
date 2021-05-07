@@ -11,7 +11,6 @@ const posts = glob.sync("**/*.mdx", { cwd: POSTS_PATH }).map((relativePath) => {
   const { title } = matter(source).data;
 
   return {
-    relativePath,
     year,
     slug,
     title,
