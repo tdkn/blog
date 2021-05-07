@@ -1,19 +1,16 @@
 {
   "posts": [
     {
-      "relativePath": "2020/swiftui-darkmode.mdx",
       "year": "2020",
       "slug": "swiftui-darkmode",
       "title": "SwiftUI のダークモードプレビュー時の不具合を回避する"
     },
     {
-      "relativePath": "2021/how-to-use-yarn-patch.mdx",
       "year": "2021",
       "slug": "how-to-use-yarn-patch",
       "title": "yarn patch の使い方"
     },
     {
-      "relativePath": "2021/vercel-next-playwright.mdx",
       "year": "2021",
       "slug": "vercel-next-playwright",
       "title": "Vercel + Next.js + PlaywrightでOGP画像をページ別に自動生成する"
