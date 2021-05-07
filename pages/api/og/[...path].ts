@@ -1,13 +1,16 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import getConfig from "next/config";
 import * as playwright from "playwright-aws-lambda";
 import React from "react";
 import path from "path";
 import fs from "fs";
 import ReactDOMServer from "react-dom/server";
-import matter from "gray-matter";
 import { OpenGraphTemplate } from "~/components/common";
-import { postFiles, POSTS_PATH } from "~/lib/mdx";
+import { posts } from "~/posts/index.json";
+import { assert } from "~/lib/assert";
 
+const { serverRuntimeConfig } = getConfig();
+const { PROJECT_ROOT } = serverRuntimeConfig;
 const isDev = process.env.NODE_ENV !== "production";
 const isPreview = typeof process.env.BLOG_PREVIEW !== "undefined";
 
@@ -25,51 +28,46 @@ async function getLaunchOptions() {
 }
 
 function getHtml({ title }: { title: string }): string {
-  const doctype = `<!doctype html>`;
-  const fontPath = path.resolve(
-    process.cwd(),
-    "./assets/MPLUSRounded1c-Bold.ttf"
-  );
+  const fontPath = path.join(PROJECT_ROOT, "./assets/MPLUSRounded1c-Bold.ttf");
   const font = fs.readFileSync(fontPath, { encoding: "base64" });
   const element = React.createElement(OpenGraphTemplate, { title, font });
   const markup = ReactDOMServer.renderToStaticMarkup(element);
 
-  return `${doctype}${markup}`;
+  return `<!doctype html>${markup}`;
+}
+
+function getTitle(req: NextApiRequest): string {
+  const [year, slug] = req.query.path;
+  const post = posts.find((post) => post.year === year && post.slug === slug);
+
+  assert(post !== undefined);
+
+  return post.title;
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const [year, slug] = req.query.path;
-  const postFile = postFiles.find(
-    (file) => file.year === year && file.slug === slug
-  );
-
-  if (postFile) {
-    const source = fs.readFileSync(postFile.absolutePath);
-    const { data: frontMatter } = matter(source);
-    const options = await getLaunchOptions();
-    const browser = await playwright.launchChromium(options);
-    const page = await browser.newPage({
-      viewport: {
-        width: 1200,
-        height: 630,
-      },
-    });
-    const html = getHtml({ title: frontMatter.title });
+  try {
+    const title = getTitle(req);
+    const html = getHtml({ title });
+    const viewport = { width: 1200, height: 630 };
+    const launchOptions = await getLaunchOptions();
+    const browser = await playwright.launchChromium(launchOptions);
+    const page = await browser.newPage({ viewport });
 
     await page.setContent(html, { waitUntil: "domcontentloaded" });
     await page.evaluateHandle("document.fonts.ready");
 
-    const data = await page.screenshot({ type: "png" });
+    const buffer = await page.screenshot({ type: "png" });
     await browser.close();
 
     // Set the s-maxage property which caches the images then on the Vercel edge
     res.setHeader("Cache-Control", "s-maxage=31536000, stale-while-revalidate");
     res.setHeader("Content-Type", "image/png");
-    // write the image to the response with the specified Content-Type
-    res.end(data);
-  } else {
-    console.error("[debug]: ", { postFiles, POSTS_PATH });
 
-    res.status(404).json({ message: "Post not found." });
+    // write the image to the response with the specified Content-Type
+    res.end(buffer);
+  } catch (error) {
+    console.error("[Error]: ", error);
+    res.status(404).json({ message: "Cannot render og-image" });
   }
 };
