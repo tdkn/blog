@@ -57,7 +57,7 @@
     "postcss-easy-import": "3.0.0",
     "postcss-flexbugs-fixes": "5.0.2",
     "postcss-preset-env": "6.7.0",
-    "prettier": "2.2.1",
+    "prettier": "2.3.0",
     "remark-emoji": "2.2.0",
     "remark-images": "2.0.0",
     "tailwindcss": "2.1.2",
