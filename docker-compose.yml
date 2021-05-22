@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  blog:
+    image: "node:14-alpine"
+    working_dir: /usr/src/app
+    volumes:
+      - yarn-cache:/usr/src/app/.yarn/cache
+      - node-modules:/usr/src/app/node_modules
+      - .:/usr/src/app:delegated
+    ports:
+      - "3000:3000"
+    command: yarn run dev
+volumes:
+  yarn-cache:
+  node-modules:
