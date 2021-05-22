@@ -1,0 +1,9 @@
+{
+  "recommendations": [
+    "bradlc.vscode-tailwindcss",
+    "clinyong.vscode-css-modules",
+    "csstools.postcss",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode"
+  ]
+}
