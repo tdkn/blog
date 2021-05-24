@@ -1,5 +1,5 @@
 import React from "react";
-import { Profile, Header } from "~/components/common";
+import { Profile, Header, Footer } from "~/components/common";
 import styles from "./MainLayout.module.css";
 
 export interface Props {
@@ -12,6 +12,7 @@ const MainLayout: React.VFC<Props> = ({ children }) => {
       <Header />
       <Profile />
       <main className="pt-5">{children}</main>
+      <Footer />
     </div>
   );
 };
