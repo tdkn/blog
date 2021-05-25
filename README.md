@@ -1,6 +1,6 @@
 # blog
 
-This is the blog that powers tdkn.dev, built on Next.js.
+This is the blog that powers [tdkn.dev](https://tdkn.dev), built on Next.js.
 
 ## Getting Started
 
