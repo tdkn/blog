@@ -681,14 +681,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.6":
-  version: 17.0.6
-  resolution: "@types/react@npm:17.0.6"
+"@types/react@npm:17.0.7":
+  version: 17.0.7
+  resolution: "@types/react@npm:17.0.7"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: dcd8e559f758de7c856bd24136d9005e2b6fbae3d6d81704ba33c6a8ba787874f738b7aae8cfffd89ee35f05658800c43d7fdb9493b79c06a3bcdc1e37ea4635
+  checksum: 0b550ae747c254c8117cf92b99fb1e98ad71d073f0661d4119aa422487da06ab2f3e6e3523389ff3c54a0f2c59d9fb8f03e729001839490fcc473b0f7e275ff3
   languageName: node
   linkType: hard
 
@@ -1267,14 +1267,14 @@ __metadata:
     "@mapbox/rehype-prism": 0.6.0
     "@types/glob": 7.1.3
     "@types/gtag.js": 0.0.4
-    "@types/react": 17.0.6
+    "@types/react": 17.0.7
     "@types/react-dom": 17.0.5
     "@typescript-eslint/eslint-plugin": 4.25.0
     "@typescript-eslint/parser": 4.25.0
     autoprefixer: 10.2.5
     clsx: 1.1.1
     date-fns: 2.21.3
-    dracula-prism: 2.1.3
+    dracula-prism: 2.1.4
     eslint: 7.27.0
     eslint-config-prettier: 8.3.0
     eslint-plugin-react: 7.23.2
@@ -2319,10 +2319,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dracula-prism@npm:2.1.3":
-  version: 2.1.3
-  resolution: "dracula-prism@npm:2.1.3"
-  checksum: 63bdc4e6541b6122ede59d5d686b5e023de5a23a1cb6b452453c6efbcf53628bfb57cfa570a108b761990a68213e553f89df79d340c369ce8f5c462da833835c
+"dracula-prism@npm:2.1.4":
+  version: 2.1.4
+  resolution: "dracula-prism@npm:2.1.4"
+  checksum: 1a553c64577a09d275c13d4dfddd4215dc6126e8b0aa9cf7dc36abd776f22e88730c610d6a9532e58d788d03299035209599e8ed1219c6c55b0e9200d50e242b
   languageName: node
   linkType: hard
 
