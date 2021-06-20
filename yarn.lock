@@ -1344,7 +1344,7 @@ __metadata:
     date-fns: 2.22.1
     dracula-prism: 2.1.4
     eslint: 7.29.0
-    eslint-config-next: ^11.0.0
+    eslint-config-next: 11.0.0
     eslint-config-prettier: 8.3.0
     eslint-plugin-react: 7.24.0
     glob: 7.1.7
@@ -2656,7 +2656,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:^11.0.0":
+"eslint-config-next@npm:11.0.0":
   version: 11.0.0
   resolution: "eslint-config-next@npm:11.0.0"
   dependencies:
