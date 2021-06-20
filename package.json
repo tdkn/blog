@@ -13,7 +13,7 @@
     "start": "next start",
     "preview": "yarn build && yarn start",
     "test:prettier": "prettier --check .",
-    "test:lint": "eslint . --ext .js,.ts,.tsx",
+    "test:lint": "next lint",
     "test:typecheck": "tsc --pretty --noEmit",
     "postinstall": "is-ci || husky install"
   },
