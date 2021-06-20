@@ -61,7 +61,7 @@
     "remark-emoji": "2.2.0",
     "remark-images": "2.0.0",
     "tailwindcss": "2.2.2",
-    "typescript": "4.3.2"
+    "typescript": "4.3.4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
