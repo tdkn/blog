@@ -2,4 +2,6 @@ build
 coverage
 .next
 out
+posts/index.json
 .yarn
+.vercel
