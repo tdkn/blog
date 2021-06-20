@@ -35,7 +35,7 @@ jobs:
         run: yarn test:prettier
 
       - name: ESLint
-        run: yarn test:eslint
+        run: yarn test:lint
 
       - name: Type Checking
         run: yarn test:typecheck
