@@ -1270,12 +1270,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.2.6":
-  version: 10.2.6
-  resolution: "autoprefixer@npm:10.2.6"
+"autoprefixer@npm:10.3.1":
+  version: 10.3.1
+  resolution: "autoprefixer@npm:10.3.1"
   dependencies:
     browserslist: ^4.16.6
-    caniuse-lite: ^1.0.30001230
+    caniuse-lite: ^1.0.30001243
     colorette: ^1.2.2
     fraction.js: ^4.1.1
     normalize-range: ^0.1.2
@@ -1284,7 +1284,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: dedcc56739b3e5beda3927c13cd4dbb8e1eeb568418b28fb6b4a52697e951ec72ae3aca89e5d871c310e520a8bbbe24267b7401d21f96c07bf0ea6527977f9e8
+  checksum: 89397dfc17eb0116b0eafeac36f161e7ece58b11fd9f290cb27740d6d49a885c407c609547a05f8c8715d974d945f2647e25a6606919169d2567698c328fde7f
   languageName: node
   linkType: hard
 
@@ -1418,7 +1418,7 @@ __metadata:
     "@types/react-dom": 17.0.8
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
-    autoprefixer: 10.2.6
+    autoprefixer: 10.3.1
     clsx: 1.1.1
     date-fns: 2.22.1
     dracula-prism: 2.1.4
@@ -1430,9 +1430,9 @@ __metadata:
     gray-matter: 4.0.3
     husky: 6.0.0
     is-ci: 3.0.0
-    lint-staged: 11.0.0
+    lint-staged: 11.0.1
     next: 11.0.1
-    next-mdx-remote: 3.0.2
+    next-mdx-remote: 3.0.4
     next-remote-watch: 1.0.0
     next-seo: 4.26.0
     next-themes: 0.0.15
@@ -1742,10 +1742,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001230":
-  version: 1.0.30001233
-  resolution: "caniuse-lite@npm:1.0.30001233"
-  checksum: 7a628430f01192779a0e21384a464c566b7ffd1b9a082526efdb1dee4dda685ae05bbf7c2b8c04217ae7e3fb507af65c3df1eb0f87c3441f5e6a01a9a7030858
+"caniuse-lite@npm:^1.0.30001243":
+  version: 1.0.30001244
+  resolution: "caniuse-lite@npm:1.0.30001244"
+  checksum: 5f4db2605bd54815fedf1bf922c14f3356d65ccfb4099dc9abfbe2e8c3f43dad008b85637971f76403b36963af95e3ea5b2b9a14948aafddd4cd6982e2047cf4
   languageName: node
   linkType: hard
 
@@ -2692,12 +2692,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.11.12":
-  version: 0.11.19
-  resolution: "esbuild@npm:0.11.19"
+"esbuild@npm:^0.12.9":
+  version: 0.12.15
+  resolution: "esbuild@npm:0.12.15"
   bin:
     esbuild: bin/esbuild
-  checksum: 0ffd3987aa89eb0a5052915556d6c07f85650d5e86638fee361ba48bd23125ba1fd71dfab61e87f0f9b6d4028f96f3ca45ef24ee92aa466469c2dcd00c983fee
+  checksum: 7d496cb355d6612506639002224a48469d3bff546cbb3acababfdb84dd5a927973e8b9646ef4af8716647113d4dd25ae6309b7b8956251f73749f7e59c005cb6
   languageName: node
   linkType: hard
 
@@ -4572,9 +4572,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:11.0.0":
-  version: 11.0.0
-  resolution: "lint-staged@npm:11.0.0"
+"lint-staged@npm:11.0.1":
+  version: 11.0.1
+  resolution: "lint-staged@npm:11.0.1"
   dependencies:
     chalk: ^4.1.1
     cli-truncate: ^2.1.0
@@ -4593,7 +4593,7 @@ __metadata:
     stringify-object: ^3.3.0
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 3be24b4a88799264bbb9baeedfc5be278d25aa85dc766c5328da23d5d92300c0a163563b455d530ca2a74510a161f17623e846e1aca81e44f389108274ad2acd
+  checksum: 5046fbaa020e573ca31a4b7a3819cdd5383912c53dc55f5e68db4a525eba1fc23312f4cf0162742ef6a358464394e584b718049cd62b883b1d4f06fdfb163022
   languageName: node
   linkType: hard
 
@@ -5182,18 +5182,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-mdx-remote@npm:3.0.2":
-  version: 3.0.2
-  resolution: "next-mdx-remote@npm:3.0.2"
+"next-mdx-remote@npm:3.0.4":
+  version: 3.0.4
+  resolution: "next-mdx-remote@npm:3.0.4"
   dependencies:
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
-    esbuild: ^0.11.12
+    esbuild: ^0.12.9
     pkg-dir: ^5.0.0
   peerDependencies:
     react: ">=16.x <=17.x"
     react-dom: ">=16.x <=17.x"
-  checksum: 32c000dd85fbc72ccb0607ab782773ee015f41ddf79a14dcb98bf222d242a848e23b8fdaae458511cc94398bbff9151478195fd1d9ba119c13920f8effb1c5d7
+  checksum: d62be3ff915caabd09e911a0d686317b810c077f6508afe939ce2e976a49281911d7775274d4f216dcb176e949b955790e48a9387d4aaebc9a50d6d0c26a780d
   languageName: node
   linkType: hard
 
