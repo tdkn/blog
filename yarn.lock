@@ -621,20 +621,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/glob@npm:7.1.3":
-  version: 7.1.3
-  resolution: "@types/glob@npm:7.1.3"
+"@types/glob@npm:7.1.4":
+  version: 7.1.4
+  resolution: "@types/glob@npm:7.1.4"
   dependencies:
     "@types/minimatch": "*"
     "@types/node": "*"
-  checksum: e0eef12285f548f15d887145590594a04ccce7f7e645fb047cbac18cb093f25d507ffbcc725312294c224bb78cf980fce33e5807de8d6f8a868b4186253499d4
+  checksum: 6911a956448f5eddea1e4371f814bf92072e8ceedba83de6ce2a6745938a6f0327376e1c0072fa0d7b3b73d84e255aafda53c1dff148225cfe542a8cc5d54b02
   languageName: node
   linkType: hard
 
-"@types/gtag.js@npm:0.0.6":
-  version: 0.0.6
-  resolution: "@types/gtag.js@npm:0.0.6"
-  checksum: e1d6657b6b183f9c49fe0bd2340d063e7c5acbced4a90be29784f6c766295aa42ab53e3649ee6d588d5a2830c0bf0f8c6626175290b89f7246fdaa4ea7ed29c9
+"@types/gtag.js@npm:0.0.7":
+  version: 0.0.7
+  resolution: "@types/gtag.js@npm:0.0.7"
+  checksum: 056b15ac63429993a0a43ef85c950e5fcf413d5ca104bd8b25c24625fe61e5b2af4a61eaa2be53e31f29e1ef4f9e953830ddd98693e885f531ab70482863419c
   languageName: node
   linkType: hard
 
@@ -705,12 +705,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.8":
-  version: 17.0.8
-  resolution: "@types/react-dom@npm:17.0.8"
+"@types/react-dom@npm:17.0.9":
+  version: 17.0.9
+  resolution: "@types/react-dom@npm:17.0.9"
   dependencies:
     "@types/react": "*"
-  checksum: 9ad1220297bede365e0d2aae4bc4a2deee3247da9da62d45bcd770812d246d46c219b3f58755b08423a4339c3c654fddd6c2b16b27151d09213b527a7cde8910
+  checksum: b7e898e1a22643a371f58e801a3d1d8cf13a82d77063c24be73e840ef8d877ca1d04adc5db168d0dac3167dc050a26b1d70efc5fe8566a7f46a3c488a8322989
   languageName: node
   linkType: hard
 
@@ -725,14 +725,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.13":
-  version: 17.0.13
-  resolution: "@types/react@npm:17.0.13"
+"@types/react@npm:17.0.16":
+  version: 17.0.16
+  resolution: "@types/react@npm:17.0.16"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 8e25aaeac17c48e1f60544dc583c3ea770cd3d3ffdea944a1da3069db6a7d3a374d3a8bdac726150404318203c1b564135ce93e3b69bd5c06d7f262463b5525d
+  checksum: cba60aeb284d4024feaca1364557fda72011e984b6b08f6e06a7cdc65e267eabc42d59c541ddbbb81720ab195b6df95a3535540abadd5c0e2cce26b16759dbaa
   languageName: node
   linkType: hard
 
@@ -1412,10 +1412,10 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": 5.15.3
     "@fortawesome/react-fontawesome": 0.1.14
     "@mapbox/rehype-prism": 0.7.0
-    "@types/glob": 7.1.3
-    "@types/gtag.js": 0.0.6
-    "@types/react": 17.0.13
-    "@types/react-dom": 17.0.8
+    "@types/glob": 7.1.4
+    "@types/gtag.js": 0.0.7
+    "@types/react": 17.0.16
+    "@types/react-dom": 17.0.9
     "@typescript-eslint/eslint-plugin": 4.28.1
     "@typescript-eslint/parser": 4.28.1
     autoprefixer: 10.2.6
