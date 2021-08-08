@@ -350,69 +350,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-common-types@npm:^0.2.35":
-  version: 0.2.35
-  resolution: "@fortawesome/fontawesome-common-types@npm:0.2.35"
-  checksum: fc5e0e9182d52ccac244754beafae907f5623350e8437fa5e118278927988436a28d16700ee4b03b2fee96c736c1e45f2d58158a355fd1d187faebc4e3782f30
+"@fortawesome/fontawesome-common-types@npm:^0.2.36":
+  version: 0.2.36
+  resolution: "@fortawesome/fontawesome-common-types@npm:0.2.36"
+  checksum: d604ac51da0b1597127fde70c64157b70ead6af7f2643ab7dfca268ef99d4ed0b4cc823afba206362422a622e389828408bec573df802bf4f02b118d0fa18dc8
   languageName: node
   linkType: hard
 
-"@fortawesome/fontawesome-svg-core@npm:1.2.35":
-  version: 1.2.35
-  resolution: "@fortawesome/fontawesome-svg-core@npm:1.2.35"
+"@fortawesome/fontawesome-svg-core@npm:1.2.36":
+  version: 1.2.36
+  resolution: "@fortawesome/fontawesome-svg-core@npm:1.2.36"
   dependencies:
-    "@fortawesome/fontawesome-common-types": ^0.2.35
-  checksum: eccb31d2d0f2a14be482822acfb560c68b73f76123808003ffde2b45e32c6816fd9d1feb408f3f23176bc297a651799f3f71aa85e81b7eb9e0def0221f40e41c
+    "@fortawesome/fontawesome-common-types": ^0.2.36
+  checksum: 3011d8c1452b5df52a62eaee8b1ec925b9fdfabcc170fd6da5eaac7cfdef56258b9292ddd06c30f03a6a8ed6faa886565211f2e469fee3c9831c32f93e9383d8
   languageName: node
   linkType: hard
 
-"@fortawesome/free-brands-svg-icons@npm:5.15.3":
-  version: 5.15.3
-  resolution: "@fortawesome/free-brands-svg-icons@npm:5.15.3"
+"@fortawesome/free-brands-svg-icons@npm:5.15.4":
+  version: 5.15.4
+  resolution: "@fortawesome/free-brands-svg-icons@npm:5.15.4"
   dependencies:
-    "@fortawesome/fontawesome-common-types": ^0.2.35
-  checksum: 03d65f66de621eecca01916d1738fbcd3dd89dee7401799b0b63d88ff00d8405160e490c34bb1d7fda38136ab2b04401724560893d9248331b78244ce3339604
+    "@fortawesome/fontawesome-common-types": ^0.2.36
+  checksum: 06e38132fbdf04d8677cf6e47e73cd566f68256f542d68d354e26f5ca7536c714b56f5f3dc6c670065b888ee08bc913bb4f213ab08225faf955d893a6a86ed02
   languageName: node
   linkType: hard
 
-"@fortawesome/free-regular-svg-icons@npm:5.15.3":
-  version: 5.15.3
-  resolution: "@fortawesome/free-regular-svg-icons@npm:5.15.3"
+"@fortawesome/free-regular-svg-icons@npm:5.15.4":
+  version: 5.15.4
+  resolution: "@fortawesome/free-regular-svg-icons@npm:5.15.4"
   dependencies:
-    "@fortawesome/fontawesome-common-types": ^0.2.35
-  checksum: 4f713dbf8326d7f14ad3a1a7c5c91cd4e4de41ac642dcb2d5623261d9c33d65af494797d147c85a39c406767d97a1dad36232815fec7c579293b94defa55f48c
+    "@fortawesome/fontawesome-common-types": ^0.2.36
+  checksum: 2e6039e3bb2125940ed2cb5738b6562b082755c1e45b73571ee92d976773ab81118c9efb9a7b57453b664a025613e81e1dafd2235aafeaadd8f0d75f8e1fe25e
   languageName: node
   linkType: hard
 
-"@fortawesome/free-solid-svg-icons@npm:5.15.3":
-  version: 5.15.3
-  resolution: "@fortawesome/free-solid-svg-icons@npm:5.15.3"
+"@fortawesome/free-solid-svg-icons@npm:5.15.4":
+  version: 5.15.4
+  resolution: "@fortawesome/free-solid-svg-icons@npm:5.15.4"
   dependencies:
-    "@fortawesome/fontawesome-common-types": ^0.2.35
-  checksum: 5df2a837a3fbe339e5de26ac91024b5db33243f495916faa4cd7b2c0cf3b9bc1462d7a4695f069d2553dea07c83c8b7aed085f8fce9b83d7b9958dbb2a08dfae
+    "@fortawesome/fontawesome-common-types": ^0.2.36
+  checksum: eb037b703827ee37af3387a964afc7a190ff42a674ef46f4a6c295b634a38e849741eca78306b6423eaf3062d6ab1e7372aac5be2aec06f0fd9e8bd8110efcf9
   languageName: node
   linkType: hard
 
-"@fortawesome/react-fontawesome@npm:0.1.14":
-  version: 0.1.14
-  resolution: "@fortawesome/react-fontawesome@npm:0.1.14"
+"@fortawesome/react-fontawesome@npm:0.1.15":
+  version: 0.1.15
+  resolution: "@fortawesome/react-fontawesome@npm:0.1.15"
   dependencies:
     prop-types: ^15.7.2
   peerDependencies:
     "@fortawesome/fontawesome-svg-core": ^1.2.32
     react: ">=16.x"
-  checksum: fba8ee619ac77893fa119fc202d7807f2cc44c7093cb6ac7867a26536a62a6b62b71211bc5224378d48adcaede3d6fdf3e469139fab823717ae4031cec599342
-  languageName: node
-  linkType: hard
-
-"@fullhuman/postcss-purgecss@npm:^4.0.3":
-  version: 4.0.3
-  resolution: "@fullhuman/postcss-purgecss@npm:4.0.3"
-  dependencies:
-    purgecss: ^4.0.3
-  peerDependencies:
-    postcss: ^8.0.0
-  checksum: 170bf2788dccbb9b28518177ed46711889e0776e7f0d18ea72102cf127cb549baff8acc2c942cb7cf038bb8c25121389896e7af05ade698268eb87c9f282ae78
+  checksum: 88670e1af943aed33463a258d1be7323f51ef3b50de98f0e8ae56dbd65871b77488570dd02ac6548126989c73af4d115098f12969354988992aff8c4985e92b0
   languageName: node
   linkType: hard
 
@@ -1270,12 +1259,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.2.6":
-  version: 10.2.6
-  resolution: "autoprefixer@npm:10.2.6"
+"autoprefixer@npm:10.3.1":
+  version: 10.3.1
+  resolution: "autoprefixer@npm:10.3.1"
   dependencies:
     browserslist: ^4.16.6
-    caniuse-lite: ^1.0.30001230
+    caniuse-lite: ^1.0.30001243
     colorette: ^1.2.2
     fraction.js: ^4.1.1
     normalize-range: ^0.1.2
@@ -1284,7 +1273,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: dedcc56739b3e5beda3927c13cd4dbb8e1eeb568418b28fb6b4a52697e951ec72ae3aca89e5d871c310e520a8bbbe24267b7401d21f96c07bf0ea6527977f9e8
+  checksum: 89397dfc17eb0116b0eafeac36f161e7ece58b11fd9f290cb27740d6d49a885c407c609547a05f8c8715d974d945f2647e25a6606919169d2567698c328fde7f
   languageName: node
   linkType: hard
 
@@ -1406,11 +1395,11 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blog@workspace:."
   dependencies:
-    "@fortawesome/fontawesome-svg-core": 1.2.35
-    "@fortawesome/free-brands-svg-icons": 5.15.3
-    "@fortawesome/free-regular-svg-icons": 5.15.3
-    "@fortawesome/free-solid-svg-icons": 5.15.3
-    "@fortawesome/react-fontawesome": 0.1.14
+    "@fortawesome/fontawesome-svg-core": 1.2.36
+    "@fortawesome/free-brands-svg-icons": 5.15.4
+    "@fortawesome/free-regular-svg-icons": 5.15.4
+    "@fortawesome/free-solid-svg-icons": 5.15.4
+    "@fortawesome/react-fontawesome": 0.1.15
     "@mapbox/rehype-prism": 0.7.0
     "@types/glob": 7.1.4
     "@types/gtag.js": 0.0.7
@@ -1418,9 +1407,9 @@ __metadata:
     "@types/react-dom": 17.0.9
     "@typescript-eslint/eslint-plugin": 4.29.0
     "@typescript-eslint/parser": 4.29.0
-    autoprefixer: 10.2.6
+    autoprefixer: 10.3.1
     clsx: 1.1.1
-    date-fns: 2.22.1
+    date-fns: 2.23.0
     dracula-prism: 2.1.4
     eslint: 7.32.0
     eslint-config-next: 11.0.1
@@ -1430,15 +1419,15 @@ __metadata:
     gray-matter: 4.0.3
     husky: 7.0.1
     is-ci: 3.0.0
-    lint-staged: 11.0.0
+    lint-staged: 11.1.2
     next: 11.0.1
-    next-mdx-remote: 3.0.2
+    next-mdx-remote: 3.0.4
     next-remote-watch: 1.0.0
     next-seo: 4.26.0
     next-themes: 0.0.15
     playwright-aws-lambda: 0.7.0
     playwright-core: next
-    postcss: 8.3.5
+    postcss: 8.3.6
     postcss-easy-import: 3.0.0
     postcss-flexbugs-fixes: 5.0.2
     postcss-preset-env: 6.7.0
@@ -1447,7 +1436,7 @@ __metadata:
     react-dom: 17.0.2
     remark-emoji: 2.2.0
     remark-images: 2.0.0
-    tailwindcss: 2.2.4
+    tailwindcss: 2.2.7
     typescript: 4.3.5
   languageName: unknown
   linkType: soft
@@ -1742,10 +1731,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001230":
-  version: 1.0.30001233
-  resolution: "caniuse-lite@npm:1.0.30001233"
-  checksum: 7a628430f01192779a0e21384a464c566b7ffd1b9a082526efdb1dee4dda685ae05bbf7c2b8c04217ae7e3fb507af65c3df1eb0f87c3441f5e6a01a9a7030858
+"caniuse-lite@npm:^1.0.30001243":
+  version: 1.0.30001249
+  resolution: "caniuse-lite@npm:1.0.30001249"
+  checksum: d6a7b78e21258b27e238e997a70c3257aa02121a2e05f7636399a967503816af02fb0b11029f2f6e2e363d5267cf4366ca60f6fb33e206dfa6020836e4452a86
   languageName: node
   linkType: hard
 
@@ -1941,7 +1930,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-convert@npm:^1.9.0, color-convert@npm:^1.9.1":
+"color-convert@npm:^1.9.0, color-convert@npm:^1.9.3":
   version: 1.9.3
   resolution: "color-convert@npm:1.9.3"
   dependencies:
@@ -1973,23 +1962,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"color-string@npm:^1.5.4":
-  version: 1.5.5
-  resolution: "color-string@npm:1.5.5"
+"color-string@npm:^1.6.0":
+  version: 1.6.0
+  resolution: "color-string@npm:1.6.0"
   dependencies:
     color-name: ^1.0.0
     simple-swizzle: ^0.2.2
-  checksum: 4f19c2042c8953973a3c71a53e53da9fa54194cc1e0270bdbe431b14476b3faed054eb1c960910a8c2b631e7c67daccf79f8579eaa2d16dc99c3739c66f98ab1
+  checksum: 33466a65277dd3d4ce24ef1991b47069292f75d1a43b0d2e7ea43076ba793728e965d50deed2b523f35519f4995a908253fcbcc774baceae8e439bc78c02e850
   languageName: node
   linkType: hard
 
-"color@npm:^3.1.3":
-  version: 3.1.3
-  resolution: "color@npm:3.1.3"
+"color@npm:^3.2.0":
+  version: 3.2.1
+  resolution: "color@npm:3.2.1"
   dependencies:
-    color-convert: ^1.9.1
-    color-string: ^1.5.4
-  checksum: d52a77ae239e1cdb55d9920e73d730df69a05cec9cb5d9b83a3e311b23009fd4053f4a88e7f6152207db498838f10e3ba4b1661a64a3acb41a50b14944214f26
+    color-convert: ^1.9.3
+    color-string: ^1.6.0
+  checksum: f81220e8b774d35865c2561be921f5652117638dcda7ca4029262046e37fc2444ac7bbfdd110cf1fd9c074a4ee5eda8f85944ffbdda26186b602dd9bb05f6400
   languageName: node
   linkType: hard
 
@@ -2312,10 +2301,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.22.1":
-  version: 2.22.1
-  resolution: "date-fns@npm:2.22.1"
-  checksum: 7ff97cd605af50c02f341687c2cafd218839a1aace67965374989855a13f76dc4fe52e0e38c343c1ad1f8399787cb6839a0b14a669c44b30550c287300b1bb50
+"date-fns@npm:2.23.0":
+  version: 2.23.0
+  resolution: "date-fns@npm:2.23.0"
+  checksum: 485216d550255a548552db16379e7a5cd440e262b90fbdc0362f63ee71d0e74bd00ce29ca8d76b343f6df36c1ecb6f22edba0b72848a4c32674e755619695c1f
   languageName: node
   linkType: hard
 
@@ -2346,13 +2335,6 @@ __metadata:
   dependencies:
     ms: ^2.1.1
   checksum: b3d8c5940799914d30314b7c3304a43305fd0715581a919dacb8b3176d024a782062368405b47491516d2091d6462d4d11f2f4974a405048094f8bfebfa3071c
-  languageName: node
-  linkType: hard
-
-"dedent@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "dedent@npm:0.7.0"
-  checksum: 87de191050d9a40dd70cad01159a0bcf05ecb59750951242070b6abf9569088684880d00ba92a955b4058804f16eeaf91d604f283929b4f614d181cd7ae633d2
   languageName: node
   linkType: hard
 
@@ -2432,10 +2414,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"didyoumean@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "didyoumean@npm:1.2.1"
-  checksum: fbf443156814b0f47bd17d123942ac53701a6ca25ae46f246ffba2665b2d37777e8c940c3b41072cb53d22fcebfaed8c3413d92dd11160c381c8c87bbe232000
+"didyoumean@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "didyoumean@npm:1.2.2"
+  checksum: d5d98719d58b3c2fa59663c4c42ba9716f1fd01245c31d5fce31915bd3aa26e6aac149788e007358f778ebbd68a2256eb5973e8ca6f221df221ba060115acf2e
   languageName: node
   linkType: hard
 
@@ -2692,12 +2674,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:^0.11.12":
-  version: 0.11.19
-  resolution: "esbuild@npm:0.11.19"
+"esbuild@npm:^0.12.9":
+  version: 0.12.19
+  resolution: "esbuild@npm:0.12.19"
   bin:
     esbuild: bin/esbuild
-  checksum: 0ffd3987aa89eb0a5052915556d6c07f85650d5e86638fee361ba48bd23125ba1fd71dfab61e87f0f9b6d4028f96f3ca45ef24ee92aa466469c2dcd00c983fee
+  checksum: f6ba6b9ee0e114c24b222bf95f18f6742002c4462d8b74e779effd1244bae8af964452ad8f6d70120d8ddf311a3b8ccc5026fb8ff1d0ac1fda14ed6435e2f6b3
   languageName: node
   linkType: hard
 
@@ -3158,7 +3140,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:^3.1.1, fast-glob@npm:^3.2.5":
+"fast-glob@npm:^3.1.1":
   version: 3.2.5
   resolution: "fast-glob@npm:3.2.5"
   dependencies:
@@ -3169,6 +3151,19 @@ __metadata:
     micromatch: ^4.0.2
     picomatch: ^2.2.1
   checksum: 5d6772c9b63dbb739d60b5630851e1f2cbf9744119e0968eac44c9f8cbc2d3d5cb4f2f0c74715ccb23daa336c87bea42186ed367e6c991afee61cd3d967320eb
+  languageName: node
+  linkType: hard
+
+"fast-glob@npm:^3.2.7":
+  version: 3.2.7
+  resolution: "fast-glob@npm:3.2.7"
+  dependencies:
+    "@nodelib/fs.stat": ^2.0.2
+    "@nodelib/fs.walk": ^1.2.3
+    glob-parent: ^5.1.2
+    merge2: ^1.3.0
+    micromatch: ^4.0.4
+  checksum: 2f4708ff112d2b451888129fdd9a0938db88b105b0ddfd043c064e3c4d3e20eed8d7c7615f7565fee660db34ddcf08a2db1bf0ab3c00b87608e4719694642d78
   languageName: node
   linkType: hard
 
@@ -4572,16 +4567,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lint-staged@npm:11.0.0":
-  version: 11.0.0
-  resolution: "lint-staged@npm:11.0.0"
+"lint-staged@npm:11.1.2":
+  version: 11.1.2
+  resolution: "lint-staged@npm:11.1.2"
   dependencies:
     chalk: ^4.1.1
     cli-truncate: ^2.1.0
     commander: ^7.2.0
     cosmiconfig: ^7.0.0
     debug: ^4.3.1
-    dedent: ^0.7.0
     enquirer: ^2.3.6
     execa: ^5.0.0
     listr2: ^3.8.2
@@ -4593,7 +4587,7 @@ __metadata:
     stringify-object: ^3.3.0
   bin:
     lint-staged: bin/lint-staged.js
-  checksum: 3be24b4a88799264bbb9baeedfc5be278d25aa85dc766c5328da23d5d92300c0a163563b455d530ca2a74510a161f17623e846e1aca81e44f389108274ad2acd
+  checksum: 0050d1836dda879c58561fa4efd100f5cd14fcbf8ee3fdeab7e89ec4219c019543bb5bf2442f760557ebe4bb8b7bfc56a9c98b9384acecfe0f8553f091723e36
   languageName: node
   linkType: hard
 
@@ -5182,18 +5176,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-mdx-remote@npm:3.0.2":
-  version: 3.0.2
-  resolution: "next-mdx-remote@npm:3.0.2"
+"next-mdx-remote@npm:3.0.4":
+  version: 3.0.4
+  resolution: "next-mdx-remote@npm:3.0.4"
   dependencies:
     "@mdx-js/mdx": ^1.6.22
     "@mdx-js/react": ^1.6.22
-    esbuild: ^0.11.12
+    esbuild: ^0.12.9
     pkg-dir: ^5.0.0
   peerDependencies:
     react: ">=16.x <=17.x"
     react-dom: ">=16.x <=17.x"
-  checksum: 32c000dd85fbc72ccb0607ab782773ee015f41ddf79a14dcb98bf222d242a848e23b8fdaae458511cc94398bbff9151478195fd1d9ba119c13920f8effb1c5d7
+  checksum: d62be3ff915caabd09e911a0d686317b810c077f6508afe939ce2e976a49281911d7775274d4f216dcb176e949b955790e48a9387d4aaebc9a50d6d0c26a780d
   languageName: node
   linkType: hard
 
@@ -6474,14 +6468,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.3.5":
-  version: 8.3.5
-  resolution: "postcss@npm:8.3.5"
+"postcss@npm:8.3.6":
+  version: 8.3.6
+  resolution: "postcss@npm:8.3.6"
   dependencies:
     colorette: ^1.2.2
     nanoid: ^3.1.23
     source-map-js: ^0.6.2
-  checksum: c73fc4825ed27396d453a942628cd8e34dd43c11b724f43f65f376d3900037736013b6446f1d9947ce5a847837cf96649e9a3f200ca2bd94a884e91e56ee1ceb
+  checksum: ff55b91bea21f42c2a94d77fd05c3f66dd15889c68506cf1dbb9cdee8c3b9e9d0e219bcbc6e61a107bd63e3cac0670176486e2a5794c106a4e1b9babceb79317
   languageName: node
   linkType: hard
 
@@ -7855,21 +7849,20 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:2.2.4":
-  version: 2.2.4
-  resolution: "tailwindcss@npm:2.2.4"
+"tailwindcss@npm:2.2.7":
+  version: 2.2.7
+  resolution: "tailwindcss@npm:2.2.7"
   dependencies:
-    "@fullhuman/postcss-purgecss": ^4.0.3
     arg: ^5.0.0
     bytes: ^3.0.0
     chalk: ^4.1.1
     chokidar: ^3.5.2
-    color: ^3.1.3
+    color: ^3.2.0
     cosmiconfig: ^7.0.0
     detective: ^5.2.0
-    didyoumean: ^1.2.1
+    didyoumean: ^1.2.2
     dlv: ^1.1.3
-    fast-glob: ^3.2.5
+    fast-glob: ^3.2.7
     fs-extra: ^10.0.0
     glob-parent: ^6.0.0
     html-tags: ^3.1.0
@@ -7886,6 +7879,7 @@ resolve@^2.0.0-next.3:
     postcss-selector-parser: ^6.0.6
     postcss-value-parser: ^4.1.0
     pretty-hrtime: ^1.0.3
+    purgecss: ^4.0.3
     quick-lru: ^5.1.1
     reduce-css-calc: ^2.1.8
     resolve: ^1.20.0
@@ -7896,7 +7890,7 @@ resolve@^2.0.0-next.3:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: be7f1249dc22af781bebf9426619450e849c6c13b86913199f8a33779a2b7a57e59862e7c53f55fc0a5c45f9d967c444a0ca5318a68f8baf3b747594c10d18b6
+  checksum: 540b90180e3bae4e6c8ffeed9f635a3b70e129561b6ba3f41742c3b2553e730f777e79b30a0ffc2c7aba8a1baffaac82a328552e613d991322354e2478d54921
   languageName: node
   linkType: hard
 
