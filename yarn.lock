@@ -1352,6 +1352,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bail@npm:^2.0.0":
+  version: 2.0.1
+  resolution: "bail@npm:2.0.1"
+  checksum: 5e80e3d71c52f134bf51e9e89570c4e81e50e9ace0126954e4594699cafdf01136535bedf36780ef77802c88be3d3cfb0d0f83495d8d7ddf90e948e4fbaf99c3
+  languageName: node
+  linkType: hard
+
 "balanced-match@npm:^1.0.0":
   version: 1.0.2
   resolution: "balanced-match@npm:1.0.2"
@@ -1435,7 +1442,7 @@ __metadata:
     react: 17.0.2
     react-dom: 17.0.2
     remark-emoji: 2.2.0
-    remark-images: 2.0.0
+    remark-images: 3.0.0
     tailwindcss: 2.2.7
     typescript: 4.3.5
   languageName: unknown
@@ -4271,6 +4278,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-plain-obj@npm:^4.0.0":
+  version: 4.0.0
+  resolution: "is-plain-obj@npm:4.0.0"
+  checksum: a6bb55a90636345a64c6153b74d85a9b6440f9975f4dcc57eed596c280b7ba228c71c406355a3147ed0488330d2743d5756e052c9492b1aa4f7dcd281f08c4b6
+  languageName: node
+  linkType: hard
+
 "is-regex@npm:^1.1.2":
   version: 1.1.2
   resolution: "is-regex@npm:1.1.2"
@@ -4348,7 +4362,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-url@npm:^1.2.2":
+"is-url@npm:^1.0.0":
   version: 1.2.4
   resolution: "is-url@npm:1.2.4"
   checksum: 100e74b3b1feab87a43ef7653736e88d997eb7bd32e71fd3ebc413e58c1cbe56269699c776aaea84244b0567f2a7d68dfaa512a062293ed2f9fdecb394148432
@@ -6969,14 +6983,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-images@npm:2.0.0":
-  version: 2.0.0
-  resolution: "remark-images@npm:2.0.0"
+"remark-images@npm:3.0.0":
+  version: 3.0.0
+  resolution: "remark-images@npm:3.0.0"
   dependencies:
-    is-url: ^1.2.2
-    unist-util-is: ^4.0.0
-    unist-util-visit-parents: ^3.0.0
-  checksum: e58e410d7e24432e7124fbe9677481bef51b5369850ac47ebf1ef95cc9dab93480731eef225eb5a01e63022580da8b18b9b818c7f80903a0bcf105cd6f0905bf
+    "@types/mdast": ^3.0.0
+    is-url: ^1.0.0
+    unified: ^10.0.0
+    unist-util-is: ^5.0.0
+    unist-util-visit-parents: ^5.0.0
+  checksum: 2733d721516969bf610f67a97b84e05161485376068de6b7781b63ebc9e65bde4f88c8983adfff8a23f7be2fea1b54ccc65b9644057bcabda8bf1141dd898c30
   languageName: node
   linkType: hard
 
@@ -8025,6 +8041,13 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
+"trough@npm:^2.0.0":
+  version: 2.0.2
+  resolution: "trough@npm:2.0.2"
+  checksum: e0c18f3fb4c26e84d7864528f49a3f43a8fef8245d6ffe1fced90a867ea88be9838948fd98cf838da448700f5e4ec909576a469719db5e9833f5b58fed26dfa0
+  languageName: node
+  linkType: hard
+
 "ts-pnp@npm:^1.1.6":
   version: 1.2.0
   resolution: "ts-pnp@npm:1.2.0"
@@ -8175,6 +8198,21 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
+"unified@npm:^10.0.0":
+  version: 10.1.0
+  resolution: "unified@npm:10.1.0"
+  dependencies:
+    "@types/unist": ^2.0.0
+    bail: ^2.0.0
+    extend: ^3.0.0
+    is-buffer: ^2.0.0
+    is-plain-obj: ^4.0.0
+    trough: ^2.0.0
+    vfile: ^5.0.0
+  checksum: b7e1d8dcf61d139ff57df1d393b177098a7fa53bddd47dd8c44cdfe983557d653719fd0ba3668a0be89a4a6189907327d56c2d13b21361e3d07b74f51b0d98ef
+  languageName: node
+  linkType: hard
+
 "uniq@npm:^1.0.1":
   version: 1.0.1
   resolution: "uniq@npm:1.0.1"
@@ -8221,6 +8259,13 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
+"unist-util-is@npm:^5.0.0":
+  version: 5.1.1
+  resolution: "unist-util-is@npm:5.1.1"
+  checksum: e8743a19a304d8a8f5684f3e5ddb5546f2655847b42123687277d76566a2aba89beb7b4a8a9e9ebc4d904cd1cecc285356d7923d973a43cfc19a1e10ff6bdee4
+  languageName: node
+  linkType: hard
+
 "unist-util-position@npm:^3.0.0":
   version: 3.1.0
   resolution: "unist-util-position@npm:3.1.0"
@@ -8255,6 +8300,15 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
+"unist-util-stringify-position@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "unist-util-stringify-position@npm:3.0.0"
+  dependencies:
+    "@types/unist": ^2.0.0
+  checksum: 460d5e16065942da7acd2578e92f4b8421c5af1f3f15ebc858db90865be69a5454dd6638d73f855cc82b1fa9e6e941a258f97b3f5f3be4f2766b0e6f6c45a031
+  languageName: node
+  linkType: hard
+
 "unist-util-visit-parents@npm:^3.0.0":
   version: 3.1.1
   resolution: "unist-util-visit-parents@npm:3.1.1"
@@ -8262,6 +8316,16 @@ typescript@4.3.5:
     "@types/unist": ^2.0.0
     unist-util-is: ^4.0.0
   checksum: 1170e397dff88fab01e76d5154981666eb0291019d2462cff7a2961a3e76d3533b42eaa16b5b7e2d41ad42a5ea7d112301458283d255993e660511387bf67bc3
+  languageName: node
+  linkType: hard
+
+"unist-util-visit-parents@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "unist-util-visit-parents@npm:5.0.0"
+  dependencies:
+    "@types/unist": ^2.0.0
+    unist-util-is: ^5.0.0
+  checksum: 867bc66748c7b03f687ef111dee72b188024cefe375f612d05c1e64dcbf053109fae1aefe4bf253dc780811a484117c488458d8f87ef0b338ccccc647f66c653
   languageName: node
   linkType: hard
 
@@ -8407,6 +8471,16 @@ typescript@4.3.5:
   languageName: node
   linkType: hard
 
+"vfile-message@npm:^3.0.0":
+  version: 3.0.1
+  resolution: "vfile-message@npm:3.0.1"
+  dependencies:
+    "@types/unist": ^2.0.0
+    unist-util-stringify-position: ^3.0.0
+  checksum: 8b41b2582687503a952271786a3895a84755d3ec0db09c970b45da4f8bd86be06982279468f430e3010268e496966de4b2ba833a0e5a1a5a6f2f29161db33bd1
+  languageName: node
+  linkType: hard
+
 "vfile@npm:^4.0.0":
   version: 4.2.1
   resolution: "vfile@npm:4.2.1"
@@ -8416,6 +8490,18 @@ typescript@4.3.5:
     unist-util-stringify-position: ^2.0.0
     vfile-message: ^2.0.0
   checksum: ee5726e10d170472cde778fc22e0f7499caa096eb85babea5d0ce0941455b721037ee1c9e6ae506ca2803250acd313d0f464328ead0b55cfe7cb6315f1b462d6
+  languageName: node
+  linkType: hard
+
+"vfile@npm:^5.0.0":
+  version: 5.0.2
+  resolution: "vfile@npm:5.0.2"
+  dependencies:
+    "@types/unist": ^2.0.0
+    is-buffer: ^2.0.0
+    unist-util-stringify-position: ^3.0.0
+    vfile-message: ^3.0.0
+  checksum: 613c3d3fcdbf7a6e2fdbd9bbbd04b5c94825242a71a6f60ddd3f37da5c32e05f5815d9458eca724c32789c99453184f21af12d6febade87abee275c8c91e3c93
   languageName: node
   linkType: hard
 

@@ -60,7 +60,7 @@
     "postcss-preset-env": "6.7.0",
     "prettier": "2.3.2",
     "remark-emoji": "2.2.0",
-    "remark-images": "2.0.0",
+    "remark-images": "3.0.0",
     "tailwindcss": "2.2.7",
     "typescript": "4.3.5"
   },
