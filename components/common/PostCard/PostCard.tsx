@@ -1,5 +1,12 @@
+import {
+  Heading,
+  LinkBox,
+  LinkOverlay,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
+import NextLink from "next/link";
 import React from "react";
-import { Link } from "~/components/ui";
 import { formatDate } from "~/lib/format-date";
 import type { Post } from "~/types";
 
@@ -8,12 +15,20 @@ export interface Props {
 }
 
 const PostCard: React.VFC<Props> = ({ post }) => (
-  <article className="py-3">
-    <p className="text-sm text-gray-500">{formatDate(post.date)}</p>
-    <h2>
-      <Link href={post.url}>{post.title}</Link>
-    </h2>
-  </article>
+  <LinkBox as="article" py="5">
+    <Text
+      fontSize="sm"
+      color={useColorModeValue("gray.500", "gray.400")}
+      fontWeight="medium"
+    >
+      {formatDate(post.date)}
+    </Text>
+    <Heading size="md" color={useColorModeValue("black.500", "yellow.200")}>
+      <NextLink href={post.url} passHref>
+        <LinkOverlay>{post.title}</LinkOverlay>
+      </NextLink>
+    </Heading>
+  </LinkBox>
 );
 
 export default PostCard;

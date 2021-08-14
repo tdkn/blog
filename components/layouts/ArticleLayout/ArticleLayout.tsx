@@ -1,7 +1,13 @@
+import {
+  Box,
+  Container,
+  Heading,
+  Text,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import React from "react";
+import { Footer, Header, Profile } from "~/components/common";
 import { formatDate, formatTimeAgo } from "~/lib/format-date";
-import { Profile, Header, Footer } from "~/components/common";
-import styles from "./ArticleLayout.module.css";
 
 export interface Props {
   children: React.ReactNode;
@@ -9,18 +15,27 @@ export interface Props {
 }
 
 const ArticleLayout: React.VFC<Props> = ({ frontMatter, children }) => (
-  <div className={styles.root}>
+  <Container maxW="container.md">
     <Header />
-    <div className="pb-8">
-      <span className="text-sm text-gray-400">
+    <Box pb="2">
+      <Heading as="h1" size="xl">
+        {frontMatter.title}
+      </Heading>
+      <Text
+        fontSize="sm"
+        textAlign="left"
+        py="8"
+        color={useColorModeValue("gray.500", "gray.400")}
+      >
         {formatDate(frontMatter.date)} ({formatTimeAgo(frontMatter.date)})
-      </span>
-      <h1>{frontMatter.title}</h1>
-    </div>
-    <main className="pb-10">{children}</main>
+      </Text>
+    </Box>
+    <Box as="main" pb="10">
+      {children}
+    </Box>
     <Profile />
     <Footer />
-  </div>
+  </Container>
 );
 
 export default ArticleLayout;

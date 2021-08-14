@@ -1,18 +1,14 @@
-import React from "react";
-import NextLink, { LinkProps as NextLinkProps } from "next/link";
-import clsx from "clsx";
-import styles from "./Link.module.css";
+import { Link as ChakraLink, useColorModeValue } from "@chakra-ui/react";
+import NextLink, { LinkProps } from "next/link";
 
-export interface LinkProps extends NextLinkProps {
-  className?: string;
-}
+const Link: React.FC<LinkProps> = ({ href, children }) => {
+  const color = useColorModeValue("black.500", "yellow.200");
 
-const Link: React.FC<LinkProps> = ({ href, className, children, ...props }) => {
   return (
-    <NextLink href={href}>
-      <a className={clsx(styles.root, className)} {...props}>
+    <NextLink href={href} passHref>
+      <ChakraLink color={color} fontWeight="bold">
         {children}
-      </a>
+      </ChakraLink>
     </NextLink>
   );
 };
