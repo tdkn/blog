@@ -1,19 +1,12 @@
-import styles from "./Footer.module.css";
+import { Stack, Text } from "@chakra-ui/react";
+import { getYear } from "date-fns";
 
 const Footer = () => (
-  <footer className={styles.root}>
-    <ul>
-      <li>
-        <a href="https://github.com/tdkn">GitHub</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/tdkn_">Twitter</a>
-      </li>
-      <li>
-        <a href="https://facebook.com/ted0k0n">Facebook</a>
-      </li>
-    </ul>
-  </footer>
+  <Stack as="footer" align="center" py="20">
+    <Text fontSize="sm" color="gray.500">
+      Copyright © {getYear(new Date())} Shun Tedokon.
+    </Text>
+  </Stack>
 );
 
 export default Footer;

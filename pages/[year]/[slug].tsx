@@ -1,16 +1,14 @@
+import fs from "fs";
+import matter from "gray-matter";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { ParsedUrlQuery } from "querystring";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
-import fs from "fs";
 import path from "path";
-import matter from "gray-matter";
+import { ParsedUrlQuery } from "querystring";
 import React from "react";
-import { postFiles, POSTS_PATH } from "~/lib/mdx";
-import { InlineCode } from "~/components/common";
-import { CodeBlock } from "~/components/common";
 import { ArticleLayout } from "~/components/layouts";
-import { Link } from "~/components/ui";
+import { MDXComponents } from "~/components/mdx-components";
+import { postFiles, POSTS_PATH } from "~/lib/mdx";
 
 interface PageProps {
   mdxSource: MDXRemoteSerializeResult;
@@ -21,12 +19,6 @@ interface PageParams extends ParsedUrlQuery {
   year: string;
   slug: string;
 }
-
-const components = {
-  pre: CodeBlock,
-  inlineCode: InlineCode,
-  a: Link,
-};
 
 export const getStaticProps: GetStaticProps<PageProps, PageParams> = async ({
   params,
@@ -39,9 +31,7 @@ export const getStaticProps: GetStaticProps<PageProps, PageParams> = async ({
     scope: frontMatter,
     mdxOptions: {
       remarkPlugins: [require("remark-images"), [require("remark-emoji")]],
-      rehypePlugins: [
-        [require("@mapbox/rehype-prism"), { ignoreMissing: true }],
-      ],
+      rehypePlugins: [],
     },
   });
 
@@ -60,7 +50,7 @@ export const getStaticPaths: GetStaticPaths = async () => ({
 
 const Post = ({ mdxSource, frontMatter }: PageProps) => (
   <ArticleLayout frontMatter={frontMatter}>
-    <MDXRemote {...mdxSource} components={components} />
+    <MDXRemote {...mdxSource} components={{ ...MDXComponents }} />
   </ArticleLayout>
 );
 

@@ -1,6 +1,6 @@
+import { Container } from "@chakra-ui/react";
 import React from "react";
-import { Profile, Header, Footer } from "~/components/common";
-import styles from "./MainLayout.module.css";
+import { Footer, Header, Profile } from "~/components/common";
 
 export interface Props {
   children: React.ReactNode;
@@ -8,12 +8,12 @@ export interface Props {
 
 const MainLayout: React.VFC<Props> = ({ children }) => {
   return (
-    <div className={styles.root}>
+    <Container maxW="container.md">
       <Header />
       <Profile />
       <main className="pt-5">{children}</main>
       <Footer />
-    </div>
+    </Container>
   );
 };
 

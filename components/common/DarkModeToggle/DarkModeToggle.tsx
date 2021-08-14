@@ -1,24 +1,31 @@
-import { useEffect, useState } from "react";
-import { useTheme } from "next-themes";
+import { Icon, IconButton, useColorMode } from "@chakra-ui/react";
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
-import styles from "./DarkModeToggle.module.css";
+import { useEffect, useState } from "react";
 
 const DarkModeToggle = () => {
-  const { theme, setTheme } = useTheme();
+  const { colorMode, toggleColorMode } = useColorMode();
   const [icon, setIcon] = useState(faMoon);
-  const toggle = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-  };
 
   useEffect(() => {
-    setIcon(theme === "light" ? faMoon : faSun);
-  }, [theme]);
+    setIcon(colorMode === "light" ? faMoon : faSun);
+  }, [colorMode]);
 
   return (
-    <button className={styles.root} type="button" onClick={toggle}>
-      <FontAwesomeIcon icon={icon} />
-    </button>
+    <IconButton
+      type="button"
+      variant="ghost"
+      aria-label="Dark Mode Toggle"
+      icon={
+        <Icon
+          as={FontAwesomeIcon}
+          icon={icon}
+          display="block"
+          transition="color 0.2s"
+        />
+      }
+      onClick={toggleColorMode}
+    />
   );
 };
 

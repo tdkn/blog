@@ -18,6 +18,9 @@
     "postinstall": "is-ci || husky install"
   },
   "dependencies": {
+    "@chakra-ui/react": "1.6.5",
+    "@emotion/react": "11.4.1",
+    "@emotion/styled": "11.3.0",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-regular-svg-icons": "5.15.4",
@@ -25,20 +28,21 @@
     "@fortawesome/react-fontawesome": "0.1.15",
     "clsx": "1.1.1",
     "date-fns": "2.23.0",
-    "dracula-prism": "2.1.4",
+    "framer-motion": "4.1.17",
     "glob": "7.1.7",
     "gray-matter": "4.0.3",
     "next": "11.0.1",
     "next-mdx-remote": "3.0.4",
     "next-seo": "4.26.0",
     "next-themes": "0.0.15",
+    "prism-react-renderer": "^1.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@mapbox/rehype-prism": "0.7.0",
     "@types/glob": "7.1.4",
     "@types/gtag.js": "0.0.7",
+    "@types/mdx-js__react": "^1.5.4",
     "@types/react": "17.0.16",
     "@types/react-dom": "17.0.9",
     "@typescript-eslint/eslint-plugin": "4.29.0",
@@ -55,13 +59,9 @@
     "playwright-aws-lambda": "0.7.0",
     "playwright-core": "next",
     "postcss": "8.3.6",
-    "postcss-easy-import": "3.0.0",
-    "postcss-flexbugs-fixes": "5.0.2",
-    "postcss-preset-env": "6.7.0",
     "prettier": "2.3.2",
     "remark-emoji": "2.2.0",
     "remark-images": "2.0.0",
-    "tailwindcss": "2.2.7",
     "typescript": "4.3.5"
   },
   "lint-staged": {

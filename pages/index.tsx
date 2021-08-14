@@ -1,11 +1,12 @@
-import { GetStaticProps } from "next";
+import { VStack } from "@chakra-ui/react";
+import { differenceInMilliseconds, parseISO } from "date-fns";
 import fs from "fs";
 import matter from "gray-matter";
+import { GetStaticProps } from "next";
 import React from "react";
-import { parseISO, differenceInMilliseconds } from "date-fns";
-import { postFiles } from "~/lib/mdx";
-import { MainLayout } from "~/components/layouts";
 import { PostCard } from "~/components/common";
+import { MainLayout } from "~/components/layouts";
+import { postFiles } from "~/lib/mdx";
 import type { Post } from "~/types";
 
 export interface Props {
@@ -34,9 +35,11 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
 
 const Index: React.VFC<Props> = ({ posts }) => (
   <MainLayout>
-    {posts.map((post) => (
-      <PostCard post={post} key={post.url} />
-    ))}
+    <VStack align="stretch" pt="8">
+      {posts.map((post, key) => (
+        <PostCard post={post} key={key} />
+      ))}
+    </VStack>
   </MainLayout>
 );
 
