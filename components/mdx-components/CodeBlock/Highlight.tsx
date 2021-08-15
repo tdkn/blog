@@ -2,9 +2,14 @@ import { chakra } from "@chakra-ui/react";
 import BaseHighlight, {
   defaultProps,
   Language,
+  Prism,
   PrismTheme,
 } from "prism-react-renderer";
 import { liveEditorStyle } from "./styles";
+
+(typeof global !== "undefined" ? global : window).Prism = Prism;
+
+require("prismjs/components/prism-swift");
 
 const RE = /{([\d,-]+)}/;
 
