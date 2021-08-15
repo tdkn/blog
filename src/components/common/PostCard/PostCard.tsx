@@ -8,7 +8,7 @@ import {
 import NextLink from "next/link";
 import React from "react";
 import { formatDate } from "~/lib/format-date";
-import type { Post } from "~/types";
+import type { Post } from "~/types/post";
 
 export interface Props {
   post: Post;

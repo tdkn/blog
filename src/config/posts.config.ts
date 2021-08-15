@@ -1,4 +1,4 @@
-import type { PostsConfig } from "~/types";
+import type { PostsConfig } from "~/types/posts-config";
 
 const config: PostsConfig = {
   posts: [
