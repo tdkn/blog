@@ -1,11 +1,11 @@
+import fs from "fs";
 import type { NextApiRequest, NextApiResponse } from "next";
+import path from "path";
 import * as playwright from "playwright-aws-lambda";
 import React from "react";
-import path from "path";
-import fs from "fs";
 import ReactDOMServer from "react-dom/server";
 import { OpenGraphTemplate } from "~/components/common";
-import { posts } from "~/posts/index.json";
+import PostsConfig from "~/config/posts.config";
 import { assert } from "~/lib/assert";
 
 const isDev = process.env.NODE_ENV !== "production";
@@ -38,7 +38,9 @@ function getHtml({ title }: { title: string }): string {
 
 function getTitle(req: NextApiRequest): string {
   const [year, slug] = req.query.path;
-  const post = posts.find((post) => post.year === year && post.slug === slug);
+  const post = PostsConfig.posts.find(
+    (post) => post.year === year && post.slug === slug
+  );
 
   assert(post !== undefined);
 

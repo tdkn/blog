@@ -1,4 +1,5 @@
 export * from "./post";
+export * from "./posts-config";
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace
