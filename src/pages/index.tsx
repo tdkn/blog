@@ -7,7 +7,7 @@ import React from "react";
 import { PostCard } from "~/components/common";
 import { MainLayout } from "~/components/layouts";
 import { postFiles } from "~/lib/mdx";
-import type { Post } from "~/types";
+import type { Post } from "~/types/post";
 
 export interface Props {
   posts: Post[];
