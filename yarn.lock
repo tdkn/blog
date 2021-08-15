@@ -2502,8 +2502,8 @@ __metadata:
     playwright-core: next
     postcss: 8.3.6
     prettier: 2.3.2
-    prism-react-renderer: ^1.2.1
-    prismjs: ^1.24.1
+    prism-react-renderer: 1.2.1
+    prismjs: 1.24.1
     react: 17.0.2
     react-dom: 17.0.2
     remark-emoji: 2.2.0
@@ -6917,7 +6917,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prism-react-renderer@npm:^1.2.1":
+"prism-react-renderer@npm:1.2.1":
   version: 1.2.1
   resolution: "prism-react-renderer@npm:1.2.1"
   peerDependencies:
@@ -6926,7 +6926,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"prismjs@npm:^1.24.1":
+"prismjs@npm:1.24.1":
   version: 1.24.1
   resolution: "prismjs@npm:1.24.1"
   checksum: e5d14a4ba56773122039295bd760c72106acc964e04cb9831b9ae7e7a58f67ccac6c053e77e21f1018a3684f31d35bb065c0c81fd4ff00b73b1570c3ace4aef0
