@@ -44,8 +44,8 @@
   "devDependencies": {
     "@types/glob": "7.1.4",
     "@types/gtag.js": "0.0.7",
-    "@types/mdx-js__react": "^1.5.4",
-    "@types/react": "17.0.16",
+    "@types/mdx-js__react": "1.5.4",
+    "@types/react": "17.0.18",
     "@types/react-dom": "17.0.9",
     "@typescript-eslint/eslint-plugin": "4.29.0",
     "@typescript-eslint/parser": "4.29.0",
