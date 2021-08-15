@@ -1,8 +1,8 @@
-import React from "react";
-import NextHead from "next/head";
 import { DefaultSeo } from "next-seo";
-import config from "~/seo.config";
+import NextHead from "next/head";
 import { useRouter } from "next/router";
+import React from "react";
+import config from "~/config/seo.config";
 
 const baseUrl =
   process.env.NODE_ENV === "production"

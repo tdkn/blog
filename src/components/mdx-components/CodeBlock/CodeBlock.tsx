@@ -23,7 +23,7 @@ const CodeBlock = (props: any) => {
           language={language}
           theme={theme}
           metastring={ln}
-          showLines={true}
+          showLines={false}
         />
       </Box>
       <Tag

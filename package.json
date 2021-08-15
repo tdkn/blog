@@ -8,8 +8,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "yarn build:index && next build",
-    "build:index": "node scripts/build-index.js",
+    "build": "next build",
     "start": "next start",
     "preview": "yarn build && yarn start",
     "test:prettier": "prettier --check .",
