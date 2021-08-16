@@ -1727,7 +1727,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdx-js__react@npm:^1.5.4":
+"@types/mdx-js__react@npm:1.5.4":
   version: 1.5.4
   resolution: "@types/mdx-js__react@npm:1.5.4"
   dependencies:
@@ -1791,14 +1791,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.16":
-  version: 17.0.16
-  resolution: "@types/react@npm:17.0.16"
+"@types/react@npm:17.0.18":
+  version: 17.0.18
+  resolution: "@types/react@npm:17.0.18"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: cba60aeb284d4024feaca1364557fda72011e984b6b08f6e06a7cdc65e267eabc42d59c541ddbbb81720ab195b6df95a3535540abadd5c0e2cce26b16759dbaa
+  checksum: 0b3d5fe0466b57c5539169671e29c4bdad2e2cf5b3eea25d443845d0153b2ddfbe0ef6d017f2f0a7ae49732d6fd14db189f9578ba0629790b896abe3a3ee44f3
   languageName: node
   linkType: hard
 
@@ -2475,8 +2475,8 @@ __metadata:
     "@next/bundle-analyzer": ^11.1.0
     "@types/glob": 7.1.4
     "@types/gtag.js": 0.0.7
-    "@types/mdx-js__react": ^1.5.4
-    "@types/react": 17.0.16
+    "@types/mdx-js__react": 1.5.4
+    "@types/react": 17.0.18
     "@types/react-dom": 17.0.9
     "@typescript-eslint/eslint-plugin": 4.29.0
     "@typescript-eslint/parser": 4.29.0
