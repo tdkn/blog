@@ -1490,7 +1490,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/bundle-analyzer@npm:^11.1.0":
+"@next/bundle-analyzer@npm:11.1.0":
   version: 11.1.0
   resolution: "@next/bundle-analyzer@npm:11.1.0"
   dependencies:
@@ -2472,7 +2472,7 @@ __metadata:
     "@fortawesome/free-regular-svg-icons": 5.15.4
     "@fortawesome/free-solid-svg-icons": 5.15.4
     "@fortawesome/react-fontawesome": 0.1.15
-    "@next/bundle-analyzer": ^11.1.0
+    "@next/bundle-analyzer": 11.1.0
     "@types/glob": 7.1.4
     "@types/gtag.js": 0.0.7
     "@types/mdx-js__react": 1.5.4
