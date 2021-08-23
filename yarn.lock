@@ -2353,24 +2353,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.3.1":
-  version: 10.3.1
-  resolution: "autoprefixer@npm:10.3.1"
-  dependencies:
-    browserslist: ^4.16.6
-    caniuse-lite: ^1.0.30001243
-    colorette: ^1.2.2
-    fraction.js: ^4.1.1
-    normalize-range: ^0.1.2
-    postcss-value-parser: ^4.1.0
-  peerDependencies:
-    postcss: ^8.1.0
-  bin:
-    autoprefixer: bin/autoprefixer
-  checksum: 89397dfc17eb0116b0eafeac36f161e7ece58b11fd9f290cb27740d6d49a885c407c609547a05f8c8715d974d945f2647e25a6606919169d2567698c328fde7f
-  languageName: node
-  linkType: hard
-
 "available-typed-arrays@npm:^1.0.2":
   version: 1.0.2
   resolution: "available-typed-arrays@npm:1.0.2"
@@ -2492,8 +2474,6 @@ __metadata:
     "@types/react-dom": 17.0.9
     "@typescript-eslint/eslint-plugin": 4.29.2
     "@typescript-eslint/parser": 4.29.2
-    autoprefixer: 10.3.1
-    clsx: 1.1.1
     date-fns: 2.23.0
     eslint: 7.32.0
     eslint-config-next: 11.1.0
@@ -2512,7 +2492,6 @@ __metadata:
     next-themes: 0.0.15
     playwright-aws-lambda: 0.7.0
     playwright-core: next
-    postcss: 8.3.6
     prettier: 2.3.2
     prism-react-renderer: 1.2.1
     prismjs: 1.24.1
@@ -2655,7 +2634,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:4.16.6, browserslist@npm:^4.16.6":
+"browserslist@npm:4.16.6":
   version: 4.16.6
   resolution: "browserslist@npm:4.16.6"
   dependencies:
@@ -2789,13 +2768,6 @@ __metadata:
   version: 1.0.30001228
   resolution: "caniuse-lite@npm:1.0.30001228"
   checksum: d7ea2234d3ad1841dab6cd0b6ee16e89958f5893ef2e024a7447d6f889f496e40b6dafe000f391b8d4f0c0ef08671dbb5969fd66e6f74d402994865ce5705a53
-  languageName: node
-  linkType: hard
-
-"caniuse-lite@npm:^1.0.30001243":
-  version: 1.0.30001249
-  resolution: "caniuse-lite@npm:1.0.30001249"
-  checksum: d6a7b78e21258b27e238e997a70c3257aa02121a2e05f7636399a967503816af02fb0b11029f2f6e2e363d5267cf4366ca60f6fb33e206dfa6020836e4452a86
   languageName: node
   linkType: hard
 
@@ -2948,13 +2920,6 @@ __metadata:
     slice-ansi: ^3.0.0
     string-width: ^4.2.0
   checksum: bf1e4e6195392dc718bf9cd71f317b6300dc4a9191d052f31046b8773230ece4fa09458813bf0e3455a5e68c0690d2ea2c197d14a8b85a7b5e01c97f4b5feb5d
-  languageName: node
-  linkType: hard
-
-"clsx@npm:1.1.1":
-  version: 1.1.1
-  resolution: "clsx@npm:1.1.1"
-  checksum: ff052650329773b9b245177305fc4c4dc3129f7b2be84af4f58dc5defa99538c61d4207be7419405a5f8f3d92007c954f4daba5a7b74e563d5de71c28c830063
   languageName: node
   linkType: hard
 
@@ -4291,13 +4256,6 @@ __metadata:
   version: 0.1.2
   resolution: "forwarded@npm:0.1.2"
   checksum: 54695c574292f9bc6bfa52111844337bc2e61cfcc5ec82f16b816d721a67a0c76b4849a34b57e38e51d64ddbb81aef974f393579f610ed1b990470e75abad2e0
-  languageName: node
-  linkType: hard
-
-"fraction.js@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "fraction.js@npm:4.1.1"
-  checksum: e5a1f81d73e32aabf4fbd6581a7b3dfabd9a449ceb97c7e71ed2931dd0607095622341100d7819741eb9b435eb4e0d4a040a69e411dc943fa9b3a3872f3a2e0f
   languageName: node
   linkType: hard
 
@@ -6318,13 +6276,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"normalize-range@npm:^0.1.2":
-  version: 0.1.2
-  resolution: "normalize-range@npm:0.1.2"
-  checksum: 9b2f14f093593f367a7a0834267c24f3cb3e887a2d9809c77d8a7e5fd08738bcd15af46f0ab01cc3a3d660386f015816b5c922cea8bf2ee79777f40874063184
-  languageName: node
-  linkType: hard
-
 "npm-run-path@npm:^4.0.1":
   version: 4.0.1
   resolution: "npm-run-path@npm:4.0.1"
@@ -6878,13 +6829,6 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"postcss-value-parser@npm:^4.1.0":
-  version: 4.1.0
-  resolution: "postcss-value-parser@npm:4.1.0"
-  checksum: 68a9ea27c780fa3cc350be37b47cc46385c61dd9627990909230e0e9c3debf6d5beb49006bd743a2e506cdd6fa7d07637f2d9504a394f67cc3011d1ff0134886
-  languageName: node
-  linkType: hard
-
 "postcss@npm:8.2.15":
   version: 8.2.15
   resolution: "postcss@npm:8.2.15"
@@ -6893,17 +6837,6 @@ fsevents@~2.3.1:
     nanoid: ^3.1.23
     source-map: ^0.6.1
   checksum: 07c309e5318843cdbb240b19101c8c679e19cb88544811de921dd9125118d6c0603afe925da7f2ac928dd7d4c0c6380ccdedf032400af5013210a3f145baca5d
-  languageName: node
-  linkType: hard
-
-"postcss@npm:8.3.6":
-  version: 8.3.6
-  resolution: "postcss@npm:8.3.6"
-  dependencies:
-    colorette: ^1.2.2
-    nanoid: ^3.1.23
-    source-map-js: ^0.6.2
-  checksum: ff55b91bea21f42c2a94d77fd05c3f66dd15889c68506cf1dbb9cdee8c3b9e9d0e219bcbc6e61a107bd63e3cac0670176486e2a5794c106a4e1b9babceb79317
   languageName: node
   linkType: hard
 
@@ -7825,13 +7758,6 @@ resolve@^2.0.0-next.3:
     ip: ^1.1.5
     smart-buffer: ^4.1.0
   checksum: 5c532e4646f0c5de22527cecbe0a2fb33b997f4c99f56dc4a7da13de74f83faa7b3e9dc480fa84e584a4564aa684ea4a94026e3cfbf263e834021063adf444f2
-  languageName: node
-  linkType: hard
-
-"source-map-js@npm:^0.6.2":
-  version: 0.6.2
-  resolution: "source-map-js@npm:0.6.2"
-  checksum: 9c8151a29e00fd8d3ba87709fdf9a9ce48313d653f4a29a39b4ae53d346ac79e005de624796ff42eff55cbaf26d2e87f4466001ca87831d400d818c5cf146a0e
   languageName: node
   linkType: hard
 
