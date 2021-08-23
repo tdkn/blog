@@ -11,6 +11,7 @@ import {
 import { MDXProviderComponentsProp } from "@mdx-js/react";
 import { Link } from "~/components/ui";
 import CodeBlock from "./CodeBlock";
+import Image from "./Image";
 import InlineCode from "./InlineCode";
 
 export const MDXComponents: MDXProviderComponentsProp = {
@@ -26,5 +27,6 @@ export const MDXComponents: MDXProviderComponentsProp = {
   code: CodeBlock,
   inlineCode: InlineCode,
   a: Link,
-  hr: Divider,
+  hr: (props) => <Divider my="10" {...props} />,
+  Image,
 };
