@@ -59,7 +59,7 @@
     "playwright-aws-lambda": "0.7.0",
     "playwright-core": "next",
     "prettier": "2.3.2",
-    "remark-emoji": "2.2.0",
+    "remark-emoji": "3.0.1",
     "remark-images": "2.0.0",
     "typescript": "4.3.5"
   },
