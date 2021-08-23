@@ -1,6 +1,4 @@
-import fs from "fs";
 import type { NextApiRequest, NextApiResponse } from "next";
-import path from "path";
 import * as playwright from "playwright-aws-lambda";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
@@ -25,12 +23,7 @@ async function getLaunchOptions() {
 }
 
 function getHtml({ title }: { title: string }): string {
-  const fontPath = path.resolve(
-    process.cwd(),
-    "./assets/MPLUSRounded1c-Bold.ttf"
-  );
-  const font = fs.readFileSync(fontPath, { encoding: "base64" });
-  const element = React.createElement(OpenGraphTemplate, { title, font });
+  const element = React.createElement(OpenGraphTemplate, { title });
   const markup = ReactDOMServer.renderToStaticMarkup(element);
 
   return `<!doctype html>${markup}`;
@@ -56,8 +49,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     const browser = await playwright.launchChromium(launchOptions);
     const page = await browser.newPage({ viewport });
 
-    await page.setContent(html, { waitUntil: "domcontentloaded" });
-    await page.evaluateHandle("document.fonts.ready");
+    await page.setContent(html, { waitUntil: "networkidle" });
 
     const buffer = await page.screenshot({ type: "png" });
     await browser.close();
