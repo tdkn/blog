@@ -1,17 +1,12 @@
 import { Logo } from "~/components/ui";
 
 export interface Props {
-  font: string;
   title: string;
 }
 
 const OpenGraphTemplate = (props: Props) => {
-  const getCss = (font: string) => `
-    @font-face {
-      font-family: 'M PLUS Rounded 1c';
-      font-weight: bold;
-      src: url(data:font/ttf;charset=utf-8;base64,${font}) format('truetype');
-    }
+  const css = `
+    @import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@700&display=swap');
     html,
     body {
       margin: 0;
@@ -44,7 +39,7 @@ const OpenGraphTemplate = (props: Props) => {
 
   return (
     <html>
-      <style dangerouslySetInnerHTML={{ __html: getCss(props.font) }} />
+      <style dangerouslySetInnerHTML={{ __html: css }} />
       <body>
         <div className="wrapper">
           <Logo height={64} top={0} left={0} position="absolute" margin="50" />
