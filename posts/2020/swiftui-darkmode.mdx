@@ -4,6 +4,12 @@ date: "2020-04-09"
 summary: "SwiftUI プレビューの不具合を独自の extension で回避する方法について"
 ---
 
+## 追記
+
+- `2021-08-24`: Xcode 12 では本記事で説明している不具合は解消されているため、対応の必要はありません。
+
+---
+
 SwiftUI の `PreviewProvider` は `Group` を使うことで複数のプレビューを同時に生成することができます。
 
 ```swift
@@ -20,7 +26,7 @@ struct ContentView_Previews: PreviewProvider {
 しかし、実際に Canvas に表示されるプレビューを見てみると、
 `.dark` を設定したはずの View の background は白くなってしまっています。
 
-![01](/2020/darkmode-preview-01.png)
+<Image src="/2020/darkmode-preview-01.png" width={2726 / 2} height={1874 / 2} />
 
 これは既知の不具合で、私が発見した回避方法としては、View を `NavigationView` でラップするか、`extension` を使った方法があります。
 
@@ -71,7 +77,7 @@ struct ContentView_Previews: PreviewProvider {
 }
 ```
 
-![02](/2020/darkmode-preview-02.png)
+<Image src="/2020/darkmode-preview-02.png" width={2726 / 2} height={1874 / 2} />
 
 `.darkMode()` を付けるだけで OK です。
 将来的に不具合が修正されたら `.environment(\.colorScheme, .dark)` に変更してあげましょう。
