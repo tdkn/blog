@@ -6,6 +6,7 @@ import { serialize } from "next-mdx-remote/serialize";
 import path from "path";
 import { ParsedUrlQuery } from "querystring";
 import React from "react";
+import remarkEmoji from "remark-emoji";
 import { ArticleLayout } from "~/components/layouts";
 import { MDXComponents } from "~/components/mdx-components";
 import { postFiles, POSTS_PATH } from "~/lib/mdx";
@@ -30,7 +31,7 @@ export const getStaticProps: GetStaticProps<PageProps, PageParams> = async ({
   const mdxSource = await serialize(content, {
     scope: frontMatter,
     mdxOptions: {
-      remarkPlugins: [require("remark-images"), [require("remark-emoji")]],
+      remarkPlugins: [require("remark-images"), remarkEmoji],
       rehypePlugins: [],
     },
   });
