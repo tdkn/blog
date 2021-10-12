@@ -18,7 +18,7 @@
     "postinstall": "is-ci || husky install"
   },
   "dependencies": {
-    "@chakra-ui/react": "1.6.7",
+    "@chakra-ui/react": "1.6.9",
     "@emotion/react": "11.4.1",
     "@emotion/styled": "11.3.0",
     "@fortawesome/fontawesome-svg-core": "1.2.36",
@@ -27,13 +27,13 @@
     "@fortawesome/free-solid-svg-icons": "5.15.4",
     "@fortawesome/react-fontawesome": "0.1.15",
     "@next/bundle-analyzer": "11.1.2",
-    "date-fns": "2.23.0",
+    "date-fns": "2.25.0",
     "framer-motion": "4.1.17",
-    "glob": "7.1.7",
+    "glob": "7.2.0",
     "gray-matter": "4.0.3",
     "next": "11.1.2",
-    "next-mdx-remote": "3.0.4",
-    "next-seo": "4.26.0",
+    "next-mdx-remote": "3.0.6",
+    "next-seo": "4.28.1",
     "next-themes": "0.0.15",
     "prism-react-renderer": "1.2.1",
     "prismjs": "1.24.1",
@@ -54,14 +54,14 @@
     "eslint-plugin-react": "7.25.2",
     "husky": "7.0.2",
     "is-ci": "3.0.0",
-    "lint-staged": "11.1.2",
+    "lint-staged": "11.2.3",
     "next-remote-watch": "1.0.0",
     "playwright-aws-lambda": "0.7.0",
     "playwright-core": "next",
-    "prettier": "2.3.2",
+    "prettier": "2.4.1",
     "remark-emoji": "3.0.1",
     "remark-images": "2.0.0",
-    "typescript": "4.4.2"
+    "typescript": "4.4.4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
