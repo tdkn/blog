@@ -1875,14 +1875,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.19":
-  version: 17.0.19
-  resolution: "@types/react@npm:17.0.19"
+"@types/react@npm:17.0.29":
+  version: 17.0.29
+  resolution: "@types/react@npm:17.0.29"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: d5af52623dd863e5a9f64eb72979f19c21e03012e25ee93adc93f664ed7976e81b654128dc653b225ad5ba2aaae24e0febe37face272bb051d6289e23ed7177d
+  checksum: 39280743f6fec1bbc5c8e705976c1738a5526aaa0e693052badf5cd2dd599b6536dd815b651017737a533bf1c03db6a5738498796ff44f806e55324dc7867723
   languageName: node
   linkType: hard
 
@@ -2529,7 +2529,7 @@ __metadata:
     "@types/glob": 7.1.4
     "@types/gtag.js": 0.0.7
     "@types/mdx-js__react": 1.5.4
-    "@types/react": 17.0.19
+    "@types/react": 17.0.29
     "@types/react-dom": 17.0.9
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0

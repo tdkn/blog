@@ -44,7 +44,7 @@
     "@types/glob": "7.1.4",
     "@types/gtag.js": "0.0.7",
     "@types/mdx-js__react": "1.5.4",
-    "@types/react": "17.0.19",
+    "@types/react": "17.0.29",
     "@types/react-dom": "17.0.9",
     "@typescript-eslint/eslint-plugin": "4.33.0",
     "@typescript-eslint/parser": "4.33.0",
