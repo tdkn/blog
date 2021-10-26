@@ -1770,13 +1770,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/glob@npm:7.1.4":
-  version: 7.1.4
-  resolution: "@types/glob@npm:7.1.4"
+"@types/glob@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@types/glob@npm:7.2.0"
   dependencies:
     "@types/minimatch": "*"
     "@types/node": "*"
-  checksum: 6911a956448f5eddea1e4371f814bf92072e8ceedba83de6ce2a6745938a6f0327376e1c0072fa0d7b3b73d84e255aafda53c1dff148225cfe542a8cc5d54b02
+  checksum: 6ae717fedfdfdad25f3d5a568323926c64f52ef35897bcac8aca8e19bc50c0bd84630bbd063e5d52078b2137d8e7d3c26eabebd1a2f03ff350fff8a91e79fc19
   languageName: node
   linkType: hard
 
@@ -1835,12 +1835,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdx-js__react@npm:1.5.4":
-  version: 1.5.4
-  resolution: "@types/mdx-js__react@npm:1.5.4"
+"@types/mdx-js__react@npm:1.5.5":
+  version: 1.5.5
+  resolution: "@types/mdx-js__react@npm:1.5.5"
   dependencies:
     "@types/react": "*"
-  checksum: b06ec66dc91d8c0b425ee0fb7f4ff29b77d6ffe9da0a4f5f60b45ceb8773b19fc6225570b92914d2fd4df63f24d8aadafffb60207705b541e9922cd485575dbd
+  checksum: 91229e9e4d129bed0cd457459970daf8e505de9932791915cb91ad82f033b85c921c773ad16b7de629a7fa3ba97c8301784aad3b9ab6e431c3e5fc521a16a0f2
   languageName: node
   linkType: hard
 
@@ -1879,12 +1879,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.9":
-  version: 17.0.9
-  resolution: "@types/react-dom@npm:17.0.9"
+"@types/react-dom@npm:17.0.10":
+  version: 17.0.10
+  resolution: "@types/react-dom@npm:17.0.10"
   dependencies:
     "@types/react": "*"
-  checksum: b7e898e1a22643a371f58e801a3d1d8cf13a82d77063c24be73e840ef8d877ca1d04adc5db168d0dac3167dc050a26b1d70efc5fe8566a7f46a3c488a8322989
+  checksum: cc7d8d5b77ee2f3b989c107abd8ec0f2460ba1b1ee6e6d637124e1939594b5619fa4166ef0ea7632a69b68358e0b71aa618de446ccc416dcc0017175549da601
   languageName: node
   linkType: hard
 
@@ -1899,14 +1899,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.29":
-  version: 17.0.29
-  resolution: "@types/react@npm:17.0.29"
+"@types/react@npm:17.0.33":
+  version: 17.0.33
+  resolution: "@types/react@npm:17.0.33"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 39280743f6fec1bbc5c8e705976c1738a5526aaa0e693052badf5cd2dd599b6536dd815b651017737a533bf1c03db6a5738498796ff44f806e55324dc7867723
+  checksum: 5f53f3dae034229ff1eccb5de1c16d046696e883f8eae81b86e95c532798e655015e4edff8a6c9ec8f1c0ef12bb60dec43622d06256ba33ba6069e67a74b8d4e
   languageName: node
   linkType: hard
 
@@ -2557,11 +2557,11 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": 5.15.4
     "@fortawesome/react-fontawesome": 0.1.16
     "@next/bundle-analyzer": 11.1.2
-    "@types/glob": 7.1.4
+    "@types/glob": 7.2.0
     "@types/gtag.js": 0.0.7
-    "@types/mdx-js__react": 1.5.4
-    "@types/react": 17.0.29
-    "@types/react-dom": 17.0.9
+    "@types/mdx-js__react": 1.5.5
+    "@types/react": 17.0.33
+    "@types/react-dom": 17.0.10
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0
     date-fns: 2.25.0
