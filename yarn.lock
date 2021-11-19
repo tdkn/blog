@@ -2565,12 +2565,12 @@ __metadata:
     "@types/react-dom": 17.0.10
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0
-    date-fns: 2.25.0
+    date-fns: 2.26.0
     eslint: 7.32.0
     eslint-config-next: 11.1.2
     eslint-config-prettier: 8.3.0
     eslint-plugin-react: 7.26.1
-    framer-motion: 5.3.0
+    framer-motion: 5.3.1
     glob: 7.2.0
     gray-matter: 4.0.3
     husky: 7.0.4
@@ -3349,10 +3349,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:2.25.0":
-  version: 2.25.0
-  resolution: "date-fns@npm:2.25.0"
-  checksum: 8896dc1dde0ee5ef77616942423bfa11fa2017a5ac19457293b7aaedc8822ff94f0a14eaf93da573b09b601dc0149eb430988a046cc9f79a2eb15f8c66c9c50c
+"date-fns@npm:2.26.0":
+  version: 2.26.0
+  resolution: "date-fns@npm:2.26.0"
+  checksum: 49ad59bc788134a6552ef4e4af0d18792001c1ca0070d543de4f36aba5761058b6e6a57b8ca51dd3b0f07f3bd55376b8bc69602bd7940648ba3869c5253c6ae8
   languageName: node
   linkType: hard
 
@@ -4365,9 +4365,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:5.3.0":
-  version: 5.3.0
-  resolution: "framer-motion@npm:5.3.0"
+"framer-motion@npm:5.3.1":
+  version: 5.3.1
+  resolution: "framer-motion@npm:5.3.1"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     framesync: 6.0.1
@@ -4381,7 +4381,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 1ba539e21ab1bbb77b014b3a2d908ce67dde1467e34405b72f6cc1b9ab6e19b3b539953d5102aace1178acd4408d6c1caf299aeb7de035b12579bd2ad2562d0f
+  checksum: 048d43a5f55e37621bfb2e6d3ff581005a29da1a1fafd77e3a8861f31e40700f27e7772c63b96064387132a2a94fcb71f41c8a97c76dd0bf14a87ca806b77c48
   languageName: node
   linkType: hard
 
