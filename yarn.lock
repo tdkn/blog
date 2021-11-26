@@ -1789,10 +1789,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/gtag.js@npm:0.0.7":
-  version: 0.0.7
-  resolution: "@types/gtag.js@npm:0.0.7"
-  checksum: 056b15ac63429993a0a43ef85c950e5fcf413d5ca104bd8b25c24625fe61e5b2af4a61eaa2be53e31f29e1ef4f9e953830ddd98693e885f531ab70482863419c
+"@types/gtag.js@npm:0.0.8":
+  version: 0.0.8
+  resolution: "@types/gtag.js@npm:0.0.8"
+  checksum: fecb1d772a0cdbf8573741ad4f8932a418bf44c3d38dec01221504e35658040fb82d6c7916577bb2cd5f3eff4a30642bda81fc35847443101eda05cf58107199
   languageName: node
   linkType: hard
 
@@ -1888,12 +1888,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.10":
-  version: 17.0.10
-  resolution: "@types/react-dom@npm:17.0.10"
+"@types/react-dom@npm:17.0.11":
+  version: 17.0.11
+  resolution: "@types/react-dom@npm:17.0.11"
   dependencies:
     "@types/react": "*"
-  checksum: cc7d8d5b77ee2f3b989c107abd8ec0f2460ba1b1ee6e6d637124e1939594b5619fa4166ef0ea7632a69b68358e0b71aa618de446ccc416dcc0017175549da601
+  checksum: 4d5730dffbef86c887cecad7e3cecda424ce6a64d0b5441c63b5b015d48219868660a2bb1aa15e897e565ad8867fa6b885d4358b04e1c4e589ba4c07c3fda55c
   languageName: node
   linkType: hard
 
@@ -1908,14 +1908,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:17.0.33":
-  version: 17.0.33
-  resolution: "@types/react@npm:17.0.33"
+"@types/react@npm:17.0.37":
+  version: 17.0.37
+  resolution: "@types/react@npm:17.0.37"
   dependencies:
     "@types/prop-types": "*"
     "@types/scheduler": "*"
     csstype: ^3.0.2
-  checksum: 5f53f3dae034229ff1eccb5de1c16d046696e883f8eae81b86e95c532798e655015e4edff8a6c9ec8f1c0ef12bb60dec43622d06256ba33ba6069e67a74b8d4e
+  checksum: e68b0d59aa69577fc6a6d654b25d5d8408625498f4c483f160b557fac21e840f6e8807cbde93e9f039949b6d624a019b1990d18499c1d65aecf3605c25e30242
   languageName: node
   linkType: hard
 
@@ -2559,10 +2559,10 @@ __metadata:
     "@fortawesome/react-fontawesome": 0.1.16
     "@next/bundle-analyzer": 12.0.4
     "@types/glob": 7.2.0
-    "@types/gtag.js": 0.0.7
+    "@types/gtag.js": 0.0.8
     "@types/mdx-js__react": 1.5.5
-    "@types/react": 17.0.33
-    "@types/react-dom": 17.0.10
+    "@types/react": 17.0.37
+    "@types/react-dom": 17.0.11
     "@typescript-eslint/eslint-plugin": 4.33.0
     "@typescript-eslint/parser": 4.33.0
     date-fns: 2.26.0
