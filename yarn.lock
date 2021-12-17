@@ -2600,7 +2600,7 @@ __metadata:
     eslint-config-next: 12.0.7
     eslint-config-prettier: 8.3.0
     eslint-plugin-react: 7.27.1
-    framer-motion: 5.5.3
+    framer-motion: 5.5.5
     glob: 7.2.0
     gray-matter: 4.0.3
     husky: 7.0.4
@@ -4369,9 +4369,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:5.5.3":
-  version: 5.5.3
-  resolution: "framer-motion@npm:5.5.3"
+"framer-motion@npm:5.5.5":
+  version: 5.5.5
+  resolution: "framer-motion@npm:5.5.5"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     framesync: 6.0.1
@@ -4394,7 +4394,7 @@ __metadata:
       optional: true
     three:
       optional: true
-  checksum: 8edcb39e1bc9216b36ebc924e18e36f2ad105e2a0ecddce9bfd551e770cd81994811445061514dbb0cc320b2d020f226523869408c5dd505a027f41fa2dad843
+  checksum: 95329fd69c721768bd6e5ecb72a7a822f389e73121981b1344b67af60c63cff29baca4235537ee558d54c415438702e40b153be4449d7fa970ddb118dddb783c
   languageName: node
   linkType: hard
 
