@@ -13,7 +13,7 @@ const Head: React.VFC = () => {
   const { query } = useRouter();
   const ogImageUrl =
     query.year && query.slug
-      ? `${baseUrl}/api/og/${query.year}/${query.slug}`
+      ? `${baseUrl}/api/og/${query.year}/${query.slug}.png`
       : `${baseUrl}/twitter-large-card.png`;
 
   return (
