@@ -33,7 +33,7 @@
     "gray-matter": "4.0.3",
     "next": "12.0.7",
     "next-mdx-remote": "3.0.8",
-    "next-seo": "4.28.1",
+    "next-seo": "5.1.0",
     "next-themes": "0.0.15",
     "prism-react-renderer": "1.2.1",
     "prismjs": "1.26.0",
