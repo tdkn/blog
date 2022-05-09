@@ -17,6 +17,11 @@ const config: PostsConfig = {
       slug: "vercel-next-playwright",
       title: "Vercel + Next.js + PlaywrightでOGP画像をページ別に自動生成する",
     },
+    {
+      year: "2022",
+      slug: "aws-cli",
+      title: "AWS CLI を docker run 経由で使う",
+    },
   ],
 };
 
