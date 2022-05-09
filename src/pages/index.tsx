@@ -23,7 +23,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
         url: `/${year}/${slug}`,
         title: frontMatter.title,
         date: frontMatter.date,
-        summary: frontMatter.summary,
       };
     })
     .sort((a, b) =>

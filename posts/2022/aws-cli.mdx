@@ -1,0 +1,34 @@
+---
+title: "AWS CLI を docker run 経由で使う"
+date: "2022-05-10"
+---
+
+ローカル環境にはいろいろなツールをインストールせずにシンプルに保ちたいので、
+公式の Docker イメージが提供されている場合はなるべくそちらを利用しています。
+
+こうすることで、個別に brew install したり、よくある curl で取得したインストーラを bash で実行したりなどで環境を汚す心配がなくなります。
+
+## コマンド
+
+```bash
+$ docker run --rm -it -e LANG=en_US.UTF-8 \
+                      -v $(pwd):/aws \
+                      -v ~/.aws:/root/.aws amazon/aws-cli
+```
+
+少し解説
+
+- `-e LANG=en_US.UTF-8`: 出力結果に日本語が含まれる場合に『'ascii' codec can't encode characters』とエラーになる問題のワークアラウンド。
+- `-v $(pwd):/aws`: カレントディレクトリをコンテナ側から読み取りできる状態にする。
+- `-v ~/.aws:/root/.aws`: ホストマシンに保存されている認証情報やプロファイルを読み込ませる。
+  - `~/.aws/credentials` や `~/.aws/config` など
+
+## エイリアス
+
+とはいえ、毎回このような長々としたコマンドを入力していては大変なので、シェルにエイリアスを設定しておくと便利です。
+
+```bash
+# .zshrc
+
+alias aws='docker run --rm -it -e LANG=en_US.UTF-8 -v $(pwd):/aws -v ~/.aws:/root/.aws amazon/aws-cli'
+```
