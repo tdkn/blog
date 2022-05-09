@@ -2252,7 +2252,7 @@ __metadata:
     react-dom: 17.0.2
     remark-emoji: 3.0.2
     remark-images: 2.0.0
-    remark-mdx-code-meta: ^1.0.0
+    remark-mdx-code-meta: 1.0.0
     typescript: 4.6.4
   languageName: unknown
   linkType: soft
@@ -6561,7 +6561,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"remark-mdx-code-meta@npm:^1.0.0":
+"remark-mdx-code-meta@npm:1.0.0":
   version: 1.0.0
   resolution: "remark-mdx-code-meta@npm:1.0.0"
   dependencies:
