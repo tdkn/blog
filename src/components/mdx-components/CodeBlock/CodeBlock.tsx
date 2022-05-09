@@ -3,7 +3,8 @@ import theme from "prism-react-renderer/themes/dracula";
 import Highlight from "./Highlight";
 
 const CodeBlock = (props: any) => {
-  const { children, className, ln } = props;
+  const { ln } = props;
+  const { children, className } = props.children.props;
   const language = className?.replace(/language-/, "");
   const rawCode = children.trim();
 

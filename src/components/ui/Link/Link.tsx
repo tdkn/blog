@@ -1,7 +1,8 @@
 import { Link as ChakraLink, useColorModeValue } from "@chakra-ui/react";
-import NextLink, { LinkProps } from "next/link";
+import NextLink from "next/link";
+import { ComponentPropsWithoutRef, FC } from "react";
 
-const Link: React.FC<LinkProps> = ({ href, children }) => {
+const Link: FC<ComponentPropsWithoutRef<"a">> = ({ href = "", children }) => {
   const color = useColorModeValue("black.500", "yellow.200");
 
   return (
