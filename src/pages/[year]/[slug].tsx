@@ -7,6 +7,7 @@ import path from "path";
 import { ParsedUrlQuery } from "querystring";
 import React from "react";
 import remarkEmoji from "remark-emoji";
+import remarkImages from "remark-images";
 import { remarkMdxCodeMeta } from "remark-mdx-code-meta";
 import { ArticleLayout } from "~/components/layouts";
 import { MDXComponents } from "~/components/mdx-components";
@@ -32,7 +33,7 @@ export const getStaticProps: GetStaticProps<PageProps, PageParams> = async ({
   const mdxSource = await serialize(content, {
     scope: frontMatter,
     mdxOptions: {
-      remarkPlugins: [require("remark-images"), remarkEmoji, remarkMdxCodeMeta],
+      remarkPlugins: [remarkImages, remarkEmoji, remarkMdxCodeMeta],
       rehypePlugins: [],
     },
   });
