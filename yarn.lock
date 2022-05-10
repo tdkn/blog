@@ -2313,7 +2313,7 @@ __metadata:
     react: 17.0.2
     react-dom: 17.0.2
     remark-emoji: 3.0.2
-    remark-images: 2.0.0
+    remark-images: 3.1.0
     remark-mdx-code-meta: 1.0.0
     typescript: 4.6.4
   languageName: unknown
@@ -4609,7 +4609,7 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"is-url@npm:^1.2.2":
+"is-url@npm:^1.0.0":
   version: 1.2.4
   resolution: "is-url@npm:1.2.4"
   checksum: 100e74b3b1feab87a43ef7653736e88d997eb7bd32e71fd3ebc413e58c1cbe56269699c776aaea84244b0567f2a7d68dfaa512a062293ed2f9fdecb394148432
@@ -6650,14 +6650,16 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"remark-images@npm:2.0.0":
-  version: 2.0.0
-  resolution: "remark-images@npm:2.0.0"
+"remark-images@npm:3.1.0":
+  version: 3.1.0
+  resolution: "remark-images@npm:3.1.0"
   dependencies:
-    is-url: ^1.2.2
-    unist-util-is: ^4.0.0
-    unist-util-visit-parents: ^3.0.0
-  checksum: e58e410d7e24432e7124fbe9677481bef51b5369850ac47ebf1ef95cc9dab93480731eef225eb5a01e63022580da8b18b9b818c7f80903a0bcf105cd6f0905bf
+    "@types/mdast": ^3.0.0
+    is-url: ^1.0.0
+    unified: ^10.0.0
+    unist-util-is: ^5.0.0
+    unist-util-visit-parents: ^5.0.0
+  checksum: 7303021488583d933338f2d6cdc9dd9f4fb5d4e49a06cd47649460b59a383bece3b74ee6dcdd60b2da78f6366c4b37f3727a86af28e74951918ae06c07f6a5d3
   languageName: node
   linkType: hard
 
