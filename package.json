@@ -21,7 +21,7 @@
     "strip-ansi@npm:4.0.0/ansi-regex": "^3.0.1",
     "minimist": "^1.2.6",
     "tar": "^6.1.2",
-    "webpack-bundle-analyzer/ws": "^7.4.6"
+    "webpack-bundle-analyzer/ws": "^8.0.0"
   },
   "dependencies": {
     "@chakra-ui/react": "2.0.0",
