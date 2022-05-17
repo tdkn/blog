@@ -2238,7 +2238,7 @@ __metadata:
     next-seo: 5.4.0
     next-themes: 0.2.0
     playwright-aws-lambda: 0.7.0
-    playwright-core: 1.22.0
+    playwright-core: 1.22.1
     prettier: 2.6.2
     prism-react-renderer: 1.3.3
     prismjs: 1.28.0
@@ -6090,12 +6090,12 @@ fsevents@~2.3.1:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.22.0":
-  version: 1.22.0
-  resolution: "playwright-core@npm:1.22.0"
+"playwright-core@npm:1.22.1":
+  version: 1.22.1
+  resolution: "playwright-core@npm:1.22.1"
   bin:
     playwright: cli.js
-  checksum: e4eb2069961204d49818fb5575cf7310e7bd90c0b1dd2a84229c29e47a0257a02069f4bb3b802651f30efada850daf1555097748c27ca9a1b1151c67bce0cfe0
+  checksum: f93940fe3a596a0fe9a8d03ee1f01ed95ef9b23dc5662647c3b1eb7e7bbf65c116b19f763b91a39c041c0bea9ab5e50ecbb619dcbef9eebd3db3d940b3db2696
   languageName: node
   linkType: hard
 
