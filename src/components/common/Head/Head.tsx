@@ -3,6 +3,7 @@ import NextHead from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 import config from "~/config/seo.config";
+import { GoogleTagManagerScript } from "~/components/common";
 
 const baseUrl =
   process.env.NODE_ENV === "production"
@@ -18,6 +19,7 @@ const Head: React.VFC = () => {
 
   return (
     <>
+      <GoogleTagManagerScript />
       <DefaultSeo {...config} />
       <NextHead>
         <meta property="og:image" content={ogImageUrl} />
