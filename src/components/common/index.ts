@@ -1,6 +1,6 @@
 export { default as DarkModeToggle } from "./DarkModeToggle";
 export { default as Footer } from "./Footer";
-export { default as GoogleAnalyticsScript } from "./GoogleAnalyticsScript";
+export { default as GoogleTagManagerScript } from "./GoogleTagManagerScript";
 export { default as Head } from "./Head";
 export { default as Header } from "./Header";
 export { default as OpenGraphTemplate } from "./OpenGraphTemplate";
