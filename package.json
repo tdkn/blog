@@ -1,6 +1,7 @@
 {
   "name": "blog",
   "version": "0.1.0",
+  "packageManager": "yarn@3.2.1",
   "private": true,
   "author": "Shun Tedokon <web@tedokon.com> (https://tdkn.dev)",
   "bugs": {
