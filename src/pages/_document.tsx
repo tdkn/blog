@@ -1,7 +1,5 @@
 import { ColorModeScript, extendTheme, ThemeConfig } from "@chakra-ui/react";
 import { Head, Html, Main, NextScript } from "next/document";
-import React from "react";
-import { GoogleTagManagerScript } from "~/components/common";
 
 const config: ThemeConfig = {
   initialColorMode: "light",
@@ -13,10 +11,16 @@ const theme = extendTheme({ config });
 export default function Document() {
   return (
     <Html lang="ja">
-      <Head>
-        <GoogleTagManagerScript />
-      </Head>
+      <Head />
       <body>
+        <noscript>
+          <iframe
+            src={`https://www.googletagmanager.com/ns.html?id=${process.env.GTM_ID}`}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />
         <Main />
         <NextScript />
