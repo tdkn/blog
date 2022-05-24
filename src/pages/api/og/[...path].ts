@@ -41,7 +41,10 @@ function getTitle(req: NextApiRequest): string {
   return post.title;
 }
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   try {
     const title = getTitle(req);
     const html = getHtml({ title });
@@ -65,4 +68,4 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
     console.error("[Error]: ", error);
     res.status(404).json({ message: "Cannot render og-image" });
   }
-};
+}
