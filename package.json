@@ -58,7 +58,7 @@
     "eslint-config-prettier": "8.5.0",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
-    "lint-staged": "12.4.2",
+    "lint-staged": "13.0.0",
     "next-remote-watch": "1.0.0",
     "playwright-aws-lambda": "0.7.0",
     "playwright-core": "1.22.2",
