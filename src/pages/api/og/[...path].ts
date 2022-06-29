@@ -30,7 +30,11 @@ function getHtml({ title }: { title: string }): string {
 }
 
 function getTitle(req: NextApiRequest): string {
-  const [year, filename] = req.query.path;
+  if (!req.query.path) {
+    return "Untitled";
+  }
+
+  const [year, filename] = [req.query.path].flat();
   const slug = filename.split(".").shift();
   const post = PostsConfig.posts.find(
     (post) => post.year === year && post.slug === slug
