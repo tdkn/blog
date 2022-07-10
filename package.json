@@ -50,8 +50,8 @@
   "devDependencies": {
     "@types/glob": "7.2.0",
     "@types/mdx-js__react": "1.5.5",
-    "@types/react": "18.0.14",
-    "@types/react-dom": "18.0.5",
+    "@types/react": "18.0.15",
+    "@types/react-dom": "18.0.6",
     "@typescript-eslint/eslint-plugin": "5.30.5",
     "eslint": "8.19.0",
     "eslint-config-next": "12.2.2",
