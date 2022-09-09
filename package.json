@@ -35,7 +35,7 @@
     "@fortawesome/react-fontawesome": "0.2.0",
     "@next/bundle-analyzer": "12.3.0",
     "date-fns": "2.29.2",
-    "framer-motion": "6.5.1",
+    "framer-motion": "7.3.2",
     "glob": "8.0.3",
     "gray-matter": "4.0.3",
     "next": "12.3.0",
