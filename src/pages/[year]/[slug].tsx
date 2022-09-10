@@ -8,7 +8,7 @@ import { ParsedUrlQuery } from "querystring";
 import React from "react";
 import remarkEmoji from "remark-emoji";
 import remarkImages from "remark-images";
-import { remarkMdxCodeMeta } from "remark-mdx-code-meta";
+import remarkMdxCodeMeta from "remark-mdx-code-meta";
 import { ArticleLayout } from "~/components/layouts";
 import { MDXComponents } from "~/components/mdx-components";
 import { postFiles, POSTS_PATH } from "~/lib/mdx";
