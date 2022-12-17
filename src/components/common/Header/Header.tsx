@@ -12,9 +12,7 @@ import { Logo } from "~/components/ui";
 const Header = () => (
   <Flex align="center" py="10" justify="space-between">
     <NextLink href="/">
-      <a>
-        <Logo />
-      </a>
+      <Logo />
     </NextLink>
 
     <ButtonGroup>

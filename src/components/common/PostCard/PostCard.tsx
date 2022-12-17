@@ -24,9 +24,9 @@ const PostCard: React.VFC<Props> = ({ post }) => (
       {formatDate(post.date)}
     </Text>
     <Heading size="md" color={useColorModeValue("black.500", "yellow.200")}>
-      <NextLink href={post.url} passHref>
-        <LinkOverlay>{post.title}</LinkOverlay>
-      </NextLink>
+      <LinkOverlay as={NextLink} href={post.url}>
+        {post.title}
+      </LinkOverlay>
     </Heading>
   </LinkBox>
 );
