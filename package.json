@@ -31,6 +31,7 @@
     "@fortawesome/free-solid-svg-icons": "6.2.1",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@next/bundle-analyzer": "13.0.7",
+    "@vercel/og": "^0.0.21",
     "date-fns": "2.29.3",
     "framer-motion": "7.10.2",
     "glob": "8.0.3",
