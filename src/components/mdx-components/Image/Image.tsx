@@ -23,7 +23,8 @@ const toBase64 = (str: string) =>
 const Image = (props: ImageProps) => (
   <NextImage
     placeholder="blur"
-    layout="responsive"
+    sizes="100vw"
+    style={{ width: "100%", height: "auto" }}
     blurDataURL={`data:image/svg+xml;base64,${toBase64(
       shimmer(props.width, props.height)
     )}`}

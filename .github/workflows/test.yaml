@@ -14,20 +14,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
-      - name: Setup Node.js v16.x
+      - name: Setup Node.js v18.x
         uses: actions/setup-node@v3
         with:
-          node-version: "16.x"
+          node-version: "18.x"
           cache: "yarn"
 
       - name: Install dependencies
         run: yarn install --immutable
 
-      - name: Prettier
-        run: yarn test:prettier
+      - name: Static Code Analysis
+        run: yarn run check
 
-      - name: ESLint
-        run: yarn test:lint
-
-      - name: Type Checking
-        run: yarn test:typecheck
+      - name: Testing
+        run: yarn run test:ci

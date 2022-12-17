@@ -1,5 +1,13 @@
-import path from "path";
+import { differenceInMilliseconds, parseISO } from "date-fns";
+import fs from "fs";
 import glob from "glob";
+import matter from "gray-matter";
+import path from "path";
+import type { Post } from "~/types/post";
+
+export interface Props {
+  posts: Post[];
+}
 
 interface PostFile {
   absolutePath: string;
@@ -23,3 +31,16 @@ export const postFiles: PostFile[] = glob
       slug,
     };
   });
+
+export const posts: Post[] = postFiles
+  .map(({ absolutePath, year, slug }) => {
+    const source = fs.readFileSync(absolutePath);
+    const { data: frontMatter } = matter(source);
+
+    return {
+      url: `/${year}/${slug}`,
+      title: frontMatter.title,
+      date: frontMatter.date,
+    };
+  })
+  .sort((a, b) => differenceInMilliseconds(parseISO(b.date), parseISO(a.date)));
