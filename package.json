@@ -64,8 +64,6 @@
     "lint-staged": "13.1.0",
     "next-remote-watch": "2.0.0",
     "npm-run-all": "^4.1.5",
-    "playwright-aws-lambda": "0.9.0",
-    "playwright-core": "1.29.0",
     "prettier": "2.8.1",
     "remark-emoji": "3.0.2",
     "remark-images": "3.1.0",
