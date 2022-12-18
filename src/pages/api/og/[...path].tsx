@@ -16,17 +16,22 @@ function getTitle(req: NextRequest): string {
   return post.title;
 }
 
-const font = fetch(
-  new URL("../../../../assets/MPLUSRounded1c-Bold.ttf", import.meta.url)
-).then((res) => res.arrayBuffer());
-
 export const config = {
   runtime: "experimental-edge",
 };
 
 export default async function handler(req: NextRequest) {
-  const fontData = await font;
   const title = getTitle(req);
+  const baseUrl =
+    process.env.NODE_ENV === "production"
+      ? "https://tdkn.dev"
+      : "http://localhost:3000";
+  const fontData = await fetch(
+    `${baseUrl}/api/font?font=M+PLUS+Rounded+1c:wght@700&text=${encodeURIComponent(
+      title
+    )}`
+  ).then((res) => res.arrayBuffer());
+
   return new ImageResponse(
     (
       <div
