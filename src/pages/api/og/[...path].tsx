@@ -4,8 +4,9 @@ import PostsConfig from "~/config/posts.config";
 import { assert } from "~/lib/assert";
 
 function getTitle(req: NextRequest): string {
-  const path = req.nextUrl.searchParams.getAll("path");
-  console.info("path", path);
+  const { searchParams } = new URL(req.url);
+  const path = searchParams.getAll("path");
+  console.info("path:0", path);
   const [year, filename] = path.flat();
   const slug = filename.split(".").shift();
   const post = PostsConfig.posts.find(
