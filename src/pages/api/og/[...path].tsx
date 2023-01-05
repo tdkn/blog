@@ -1,36 +1,28 @@
 import { ImageResponse } from "@vercel/og";
+import { allPosts } from "contentlayer/generated";
 import type { NextRequest } from "next/server";
-import PostsConfig from "~/config/posts.config";
-import { assert } from "~/lib/assert";
-
-function getTitle(req: NextRequest): string {
-  const { searchParams } = new URL(req.url);
-  const path = searchParams.getAll("path");
-  console.info("path:0", path);
-  const [year, filename] = path.flat();
-  const slug = filename.split(".").shift();
-  const post = PostsConfig.posts.find(
-    (post) => post.year === year && post.slug === slug
-  );
-
-  assert(post !== undefined);
-
-  return post.title;
-}
 
 export const config = {
   runtime: "experimental-edge",
 };
 
 export default async function handler(req: NextRequest) {
-  const title = getTitle(req);
+  const { pathname } = new URL(req.url);
+  const post = allPosts.find(
+    (post) => post.url === pathname.replace("/api/og", "").replace(".png", "")
+  );
+
+  if (!post) {
+    return new Response(null, { status: 404 });
+  }
+
   const baseUrl =
     process.env.NODE_ENV === "production"
       ? "https://tdkn.dev"
       : "http://localhost:3000";
   const fontData = await fetch(
     `${baseUrl}/api/font?font=M+PLUS+Rounded+1c:wght@700&text=${encodeURIComponent(
-      title
+      post.title
     )}`
   ).then((res) => res.arrayBuffer());
 
@@ -97,7 +89,7 @@ export default async function handler(req: NextRequest) {
             paddingRight: 80,
           }}
         >
-          {title}
+          {post.title}
         </div>
         <div
           style={{

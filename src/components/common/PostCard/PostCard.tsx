@@ -1,34 +1,23 @@
-import {
-  Heading,
-  LinkBox,
-  LinkOverlay,
-  Text,
-  useColorModeValue,
-} from "@chakra-ui/react";
-import NextLink from "next/link";
-import React from "react";
+import type { Post } from "contentlayer/generated";
+import type { ComponentPropsWithoutRef, FC } from "react";
+import { Link } from "~/components/ui";
 import { formatDate } from "~/lib/format-date";
-import type { Post } from "~/types/post";
 
-export interface Props {
+export type PostCardProps = ComponentPropsWithoutRef<"article"> & {
   post: Post;
-}
+};
 
-const PostCard: React.VFC<Props> = ({ post }) => (
-  <LinkBox as="article" py="5">
-    <Text
-      fontSize="sm"
-      color={useColorModeValue("gray.500", "gray.400")}
-      fontWeight="medium"
-    >
+const PostCard: FC<PostCardProps> = ({ post }) => (
+  <article className="py-5">
+    <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
       {formatDate(post.date)}
-    </Text>
-    <Heading size="md" color={useColorModeValue("black.500", "yellow.200")}>
-      <LinkOverlay as={NextLink} href={post.url}>
+    </div>
+    <Link href={post.url}>
+      <h2 className="text-xl font-bold text-black dark:text-yellow-200">
         {post.title}
-      </LinkOverlay>
-    </Heading>
-  </LinkBox>
+      </h2>
+    </Link>
+  </article>
 );
 
 export default PostCard;

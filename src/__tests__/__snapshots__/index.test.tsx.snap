@@ -1,4 +1,120 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1
+
+exports[`Home > renders homepage unchanged 1`] = `
+<div>
+  <aside
+    class="flex flex-row items-center text-sm"
+  >
+    <img
+      alt="Shun Tedokon"
+      class="inline-block h-16 w-16 rounded-full"
+      data-nimg="1"
+      decoding="async"
+      height="64"
+      loading="lazy"
+      src="/_next/image?url=%2Favatar.jpg&w=128&q=75"
+      srcset="/_next/image?url=%2Favatar.jpg&w=64&q=75 1x, /_next/image?url=%2Favatar.jpg&w=128&q=75 2x"
+      style="color: transparent;"
+      width="64"
+    />
+    <p
+      class="ml-4"
+    >
+      Personal blog by
+       
+      <a
+        class="dark:text-yellow-200"
+        href="https://twitter.com/tdkn_"
+      >
+        Shun Tedokon
+      </a>
+      .
+      <br />
+      I write about design, programming, and thinking.
+    </p>
+  </aside>
+  <main
+    class="pt-8"
+  >
+    <article
+      class="py-5"
+    >
+      <div
+        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+      >
+        May 10, 2022
+      </div>
+      <a
+        class="dark:text-yellow-200"
+        href="/2022/aws-cli"
+      >
+        <h2
+          class="text-xl font-bold text-black dark:text-yellow-200"
+        >
+          AWS CLI を docker run 経由で使う
+        </h2>
+      </a>
+    </article>
+    <article
+      class="py-5"
+    >
+      <div
+        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+      >
+        February 24, 2021
+      </div>
+      <a
+        class="dark:text-yellow-200"
+        href="/2021/vercel-next-playwright"
+      >
+        <h2
+          class="text-xl font-bold text-black dark:text-yellow-200"
+        >
+          Vercel + Next.js + PlaywrightでOGP画像をページ別に自動生成する
+        </h2>
+      </a>
+    </article>
+    <article
+      class="py-5"
+    >
+      <div
+        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+      >
+        January 21, 2021
+      </div>
+      <a
+        class="dark:text-yellow-200"
+        href="/2021/how-to-use-yarn-patch"
+      >
+        <h2
+          class="text-xl font-bold text-black dark:text-yellow-200"
+        >
+          yarn patch の使い方
+        </h2>
+      </a>
+    </article>
+    <article
+      class="py-5"
+    >
+      <div
+        class="text-sm font-medium text-gray-500 dark:text-gray-400"
+      >
+        April 9, 2020
+      </div>
+      <a
+        class="dark:text-yellow-200"
+        href="/2020/swiftui-darkmode"
+      >
+        <h2
+          class="text-xl font-bold text-black dark:text-yellow-200"
+        >
+          SwiftUI のダークモードプレビュー時の不具合を回避する
+        </h2>
+      </a>
+    </article>
+  </main>
+</div>
+`;
 
 exports[`Home renders homepage unchanged 1`] = `
 <div>

@@ -1,58 +1,38 @@
-import { ButtonGroup, Flex, HStack, Icon, Link } from "@chakra-ui/react";
 import {
   faFacebook,
   faGithub,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import NextLink from "next/link";
-import { DarkModeToggle } from "~/components/common";
+import Link from "next/link";
 import { Logo } from "~/components/ui";
 
 const Header = () => (
-  <Flex align="center" py="10" justify="space-between">
-    <NextLink href="/">
+  <div className="flex items-center justify-between py-10">
+    <Link href="/" aria-label="Home">
       <Logo />
-    </NextLink>
+    </Link>
 
-    <ButtonGroup>
-      <HStack spacing="5" display={{ base: "none", md: "flex" }}>
-        <Link href="https://github.com/tdkn" isExternal aria-label="GitHub">
-          <Icon
-            as={FontAwesomeIcon}
-            icon={faGithub}
-            display="block"
-            transition="color 0.2s"
-            _hover={{ color: "gray.600" }}
-          />
-        </Link>
-        <Link href="https://twitter.com/tdkn_" isExternal aria-label="Twitter">
-          <Icon
-            as={FontAwesomeIcon}
-            icon={faTwitter}
-            display="block"
-            transition="color 0.2s"
-            _hover={{ color: "gray.600" }}
-          />
-        </Link>
-        <Link
-          href="https://facebook.com/ted0k0n"
-          isExternal
-          aria-label="Facebook"
-        >
-          <Icon
-            as={FontAwesomeIcon}
-            icon={faFacebook}
-            display="block"
-            transition="color 0.2s"
-            _hover={{ color: "gray.600" }}
-          />
-        </Link>
-      </HStack>
-
-      <DarkModeToggle />
-    </ButtonGroup>
-  </Flex>
+    <div className="flex items-center space-x-4">
+      <Link href="https://github.com/tdkn" target="_blank" aria-label="GitHub">
+        <FontAwesomeIcon icon={faGithub} className="h-5 w-5" />
+      </Link>
+      <Link
+        href="https://twitter.com/tdkn_"
+        target="_blank"
+        aria-label="Twitter"
+      >
+        <FontAwesomeIcon icon={faTwitter} className="h-5 w-5" />
+      </Link>
+      <Link
+        href="https://facebook.com/shun.tedokon"
+        target="_blank"
+        aria-label="Facebook"
+      >
+        <FontAwesomeIcon icon={faFacebook} className="h-5 w-5" />
+      </Link>
+    </div>
+  </div>
 );
 
 export default Header;

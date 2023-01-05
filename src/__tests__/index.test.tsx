@@ -1,17 +1,19 @@
 import { render } from "@testing-library/react";
-import { posts } from "~/lib/mdx";
-import Home from "~/pages/index";
+import { describe, expect, it, vi } from "vitest";
+import Home from "~/app/page";
 
 describe("Home", () => {
   it("renders a Home", () => {
-    jest.spyOn(console, "error").mockImplementation();
+    vi.spyOn(console, "error").mockImplementation(() => {
+      /* no-op */
+    });
 
-    render(<Home posts={posts} />);
+    render(<Home />);
 
     expect(console.error).not.toHaveBeenCalled();
   });
   it("renders homepage unchanged", () => {
-    const { container } = render(<Home posts={posts} />);
+    const { container } = render(<Home />);
 
     expect(container).toMatchSnapshot();
   });
