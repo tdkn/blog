@@ -1,15 +1,14 @@
 // @ts-check
-
-const withBundleAnalyzer = require("@next/bundle-analyzer")({
-  enabled: process.env.ANALYZE === "true",
-});
+const { withContentlayer } = require("next-contentlayer");
 
 /**
  * @type {import('next').NextConfig}
  */
 const nextConfig = {
   poweredByHeader: false,
-  swcMinify: true,
+  experimental: {
+    appDir: true,
+  },
 };
 
-module.exports = withBundleAnalyzer(nextConfig);
+module.exports = withContentlayer(nextConfig);

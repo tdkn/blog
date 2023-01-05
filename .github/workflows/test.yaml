@@ -27,4 +27,4 @@ jobs:
         run: yarn run check
 
       - name: Testing
-        run: yarn run test:ci
+        run: yarn run test

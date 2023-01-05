@@ -1,6 +1,6 @@
-import { DefaultSeoProps } from "next-seo/lib/types";
+import type { NextSeoProps } from "next-seo/lib/types";
 
-const config: DefaultSeoProps = {
+const config: NextSeoProps = {
   title: "tdkn.dev",
   openGraph: {
     title: "tdkn.dev",

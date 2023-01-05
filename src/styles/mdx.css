@@ -1,0 +1,11 @@
+:not(pre) > code {
+  @apply inline-flex items-center rounded-md bg-gray-100 px-1.5 dark:bg-gray-100/10;
+}
+
+[data-rehype-pretty-code-fragment] code {
+  @apply grid min-w-full;
+}
+
+[data-rehype-pretty-code-fragment] .line {
+  @apply px-4;
+}
