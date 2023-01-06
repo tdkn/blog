@@ -1,16 +1,15 @@
-import { Link as ChakraLink, useColorModeValue } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { ComponentPropsWithoutRef, FC } from "react";
+import { classNames } from "~/lib/style";
 
-const Link: FC<ComponentPropsWithoutRef<"a">> = (props) => {
-  return (
-    <ChakraLink
-      as={NextLink}
-      color={useColorModeValue("black.500", "yellow.200")}
-      fontWeight="bold"
-      {...props}
-    />
-  );
-};
+const Link: FC<ComponentPropsWithoutRef<typeof NextLink>> = ({
+  className,
+  ...otherProps
+}) => (
+  <NextLink
+    className={classNames("dark:text-yellow-200", className)}
+    {...otherProps}
+  />
+);
 
 export default Link;

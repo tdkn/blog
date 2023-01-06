@@ -27,8 +27,6 @@ export default async function loadGoogleFont(req: NextRequest) {
     })
   ).text();
 
-  console.info("css", css);
-
   const resource = css.match(
     /src: url\((.+)\) format\('(opentype|truetype)'\)/
   );

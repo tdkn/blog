@@ -23,8 +23,11 @@ jobs:
       - name: Install dependencies
         run: yarn install --immutable
 
+      - name: Build
+        run: yarn run build
+
       - name: Static Code Analysis
         run: yarn run check
 
       - name: Testing
-        run: yarn run test:ci
+        run: yarn run test

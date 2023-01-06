@@ -5,3 +5,4 @@ out
 posts/index.json
 .yarn
 .vercel
+.contentlayer

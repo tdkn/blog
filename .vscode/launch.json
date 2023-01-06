@@ -1,0 +1,39 @@
+{
+  "configurations": [
+    {
+      "name": "Launch Next.js",
+      "type": "node-terminal",
+      "request": "launch",
+      "command": "yarn run dev"
+    },
+    {
+      "type": "msedge",
+      "name": "Launch Microsoft Edge in headless mode",
+      "request": "launch",
+      "runtimeArgs": ["--headless", "--remote-debugging-port=9222"],
+      "url": "http://localhost:3000",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "type": "vscode-edge-devtools.debug",
+      "name": "Open Edge DevTools",
+      "request": "attach",
+      "url": "http://localhost:3000",
+      "presentation": {
+        "hidden": true
+      }
+    }
+  ],
+  "compounds": [
+    {
+      "name": "Launch Edge Headless and attach DevTools",
+      "configurations": [
+        "Launch Next.js",
+        "Launch Microsoft Edge in headless mode",
+        "Open Edge DevTools"
+      ]
+    }
+  ]
+}
