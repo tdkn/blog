@@ -23,6 +23,12 @@ export const Post = defineDocumentType(() => ({
       description: "The summary of the post",
       required: false,
     },
+    deprecated: {
+      type: "boolean",
+      description: "",
+      required: false,
+      default: false,
+    },
   },
   computedFields: {
     url: {

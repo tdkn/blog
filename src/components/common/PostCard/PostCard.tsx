@@ -1,5 +1,6 @@
 import type { Post } from "contentlayer/generated";
 import type { ComponentPropsWithoutRef, FC } from "react";
+import { Deprecated } from "~/components/common";
 import { Link } from "~/components/ui";
 import { formatDate } from "~/lib/format-date";
 
@@ -9,8 +10,11 @@ export type PostCardProps = ComponentPropsWithoutRef<"article"> & {
 
 const PostCard: FC<PostCardProps> = ({ post }) => (
   <article className="py-5">
-    <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
-      {formatDate(post.date)}
+    <div className="flex items-center space-x-2">
+      <div className="text-sm font-medium text-gray-500 dark:text-gray-400">
+        {formatDate(post.date)}
+      </div>
+      {post.deprecated && <Deprecated />}
     </div>
     <Link href={post.url}>
       <h2 className="text-xl font-bold text-black dark:text-yellow-200">

@@ -1,6 +1,6 @@
 import { allPosts } from "contentlayer/generated";
 import { notFound } from "next/navigation";
-import { Profile } from "~/components/common";
+import { Deprecated, Profile } from "~/components/common";
 import { formatDate, formatTimeAgo } from "~/lib/format-date";
 import Mdx from "./mdx";
 
@@ -38,8 +38,11 @@ export default async function BlogPostPage({ params }: PageProps) {
     <>
       <div className="pb-2">
         <h1 className="text-4xl font-bold">{post.title}</h1>
-        <p className="py-8 text-sm text-gray-500 dark:text-gray-400">
-          {formatDate(post.date)} ({formatTimeAgo(post.date)})
+        <p className="flex items-center space-x-2 py-8">
+          <span className="text-sm text-gray-500 dark:text-gray-400">
+            {formatDate(post.date)} ({formatTimeAgo(post.date)})
+          </span>
+          {post.deprecated && <Deprecated />}
         </p>
       </div>
       <Mdx code={post.body.code} />
