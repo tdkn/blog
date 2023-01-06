@@ -1,12 +1,13 @@
-import { Stack, Text } from "@chakra-ui/react";
 import { getYear } from "date-fns";
+import { ComponentPropsWithoutRef, FC } from "react";
+import { classNames } from "~/lib/style";
 
-const Footer = () => (
-  <Stack as="footer" align="center" py="20">
-    <Text fontSize="sm" color="gray.500">
-      Copyright © {getYear(new Date())} Shun Tedokon.
-    </Text>
-  </Stack>
+const Footer: FC<ComponentPropsWithoutRef<"footer">> = ({ className }) => (
+  <footer
+    className={classNames("py-20 text-center text-sm text-gray-500", className)}
+  >
+    Copyright © {getYear(new Date())} Shun Tedokon.
+  </footer>
 );
 
 export default Footer;
