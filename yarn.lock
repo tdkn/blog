@@ -2211,14 +2211,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/og@npm:^0.0.21":
-  version: 0.0.21
-  resolution: "@vercel/og@npm:0.0.21"
+"@vercel/og@npm:^0.0.22":
+  version: 0.0.22
+  resolution: "@vercel/og@npm:0.0.22"
   dependencies:
     "@resvg/resvg-wasm": 2.0.0-alpha.4
-    satori: 0.0.44
+    satori: 0.0.45
     yoga-wasm-web: 0.1.2
-  checksum: 6db209c43e170ce6b9db5181b24b7db2c41c2c79dde7e14a59f296e74f3aeb99944001a6827708397e287a5cf6eaeca21521aef07466d2d206c3c9f780c7b13d
+  checksum: 17d68d0ec2aac78b662d8d46816ea0a0a4e367e551d14cc087ca617d78fc2ca6f376569b4e74c3bb97935a180d412b1583f31870415af16665db30da74636322
   languageName: node
   linkType: hard
 
@@ -2874,7 +2874,7 @@ __metadata:
     "@types/react-dom": 18.0.10
     "@typescript-eslint/eslint-plugin": 5.48.0
     "@typescript-eslint/parser": ^5.48.0
-    "@vercel/og": ^0.0.21
+    "@vercel/og": ^0.0.22
     "@vitejs/plugin-react": ^3.0.1
     autoprefixer: ^10.4.13
     clsx: ^1.2.1
@@ -2883,7 +2883,7 @@ __metadata:
     eslint: 8.31.0
     eslint-config-next: 13.1.1
     eslint-config-prettier: 8.6.0
-    framer-motion: 8.1.9
+    framer-motion: 8.2.4
     husky: 8.0.3
     is-ci: 3.0.1
     jsdom: ^20.0.3
@@ -2893,7 +2893,7 @@ __metadata:
     next-seo: 5.15.0
     npm-run-all: ^4.1.5
     postcss: ^8.4.20
-    prettier: 2.8.1
+    prettier: 2.8.2
     prettier-plugin-tailwindcss: ^0.2.1
     react: 18.2.0
     react-dom: 18.2.0
@@ -5411,9 +5411,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:8.1.9":
-  version: 8.1.9
-  resolution: "framer-motion@npm:8.1.9"
+"framer-motion@npm:8.2.4":
+  version: 8.2.4
+  resolution: "framer-motion@npm:8.2.4"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": ^10.15.3
@@ -5425,7 +5425,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 6bb52e1daff78660b1c1610c02fa2a8ecf7ecf00c7b303dd2ce9672c56e4cb2636a2c2ee7a6d5b0443a451b39746c6cdfe4222df84c01f1871380abeb14373f4
+  checksum: e5598a84a9f6446ba15b73b89513faf20fa680d1045588bb8708479245806d921d52f9ba494858ce862a9b791050ac23732f22d23a6e3c443516f77f21fc49a2
   languageName: node
   linkType: hard
 
@@ -9215,12 +9215,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:2.8.1":
-  version: 2.8.1
-  resolution: "prettier@npm:2.8.1"
+"prettier@npm:2.8.2":
+  version: 2.8.2
+  resolution: "prettier@npm:2.8.2"
   bin:
     prettier: bin-prettier.js
-  checksum: 4f21a0f1269f76fb36f54e9a8a1ea4c11e27478958bf860661fb4b6d7ac69aac1581f8724fa98ea3585e56d42a2ea317a17ff6e3324f40cb11ff9e20b73785cc
+  checksum: 740c56c2128d587d656ea1dde9bc9c3503dfc94db4f3ac387259215eeb2e216680bdad9d18a0c9feecc6b42cfa188d6fa777df4c36c1d00cedd4199074fbfbd2
   languageName: node
   linkType: hard
 
@@ -9957,9 +9957,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"satori@npm:0.0.44":
-  version: 0.0.44
-  resolution: "satori@npm:0.0.44"
+"satori@npm:0.0.45":
+  version: 0.0.45
+  resolution: "satori@npm:0.0.45"
   dependencies:
     "@shuding/opentype.js": 1.4.0-beta.0
     css-background-parser: ^0.1.0
@@ -9968,7 +9968,7 @@ resolve@^2.0.0-next.3:
     emoji-regex: ^10.2.1
     postcss-value-parser: ^4.2.0
     yoga-layout-prebuilt: ^1.10.0
-  checksum: a6087d9c615d1239c7d0864bac61c21b5fab7c78260127e72de60368d26aaaff7aeb90a7c6f8a632eabc43f05668e28ba19345ceff82d534b7a94b309876315d
+  checksum: d9a189b9ef6f38b56632a7697d5120326afc87698b195f80f4ffe154781419da9a48b5fb4ee0cd477e105b8d574db679fd94095685871cf579484fa2ca4b10b5
   languageName: node
   linkType: hard
 

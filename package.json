@@ -31,11 +31,11 @@
     "@fortawesome/free-solid-svg-icons": "6.2.1",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@next/bundle-analyzer": "13.1.1",
-    "@vercel/og": "^0.0.21",
+    "@vercel/og": "^0.0.22",
     "clsx": "^1.2.1",
     "contentlayer": "^0.2.9",
     "date-fns": "2.29.3",
-    "framer-motion": "8.1.9",
+    "framer-motion": "8.2.4",
     "next": "13.1.1",
     "next-contentlayer": "^0.2.9",
     "next-seo": "5.15.0",
@@ -62,7 +62,7 @@
     "lint-staged": "13.1.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.20",
-    "prettier": "2.8.1",
+    "prettier": "2.8.2",
     "prettier-plugin-tailwindcss": "^0.2.1",
     "remark-emoji": "3.0.2",
     "remark-images": "3.1.0",
@@ -80,6 +80,6 @@
     "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
   },
   "volta": {
-    "node": "18.12.1"
+    "node": "18.13.0"
   }
 }
