@@ -1,8 +1,13 @@
 {
   "files.exclude": {
-    "**/.yarn": true,
-    "**/.contentlayer/.cache": true
+    "**/node_modules": true,
+    "**/.contentlayer/.cache": true,
+    "**/.vercel/cache": true,
+    "**/.{husky,idea,next,swc,yarn}": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
-  "typescript.enablePromptUseWorkspaceTsdk": true
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+  "tailwindCSS.experimental.classRegex": [
+    ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ]
 }
