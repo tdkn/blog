@@ -2,11 +2,7 @@
 
 /** @type {import("stylelint").Config} */
 const stylelintConfig = {
-  extends: [
-    "stylelint-config-standard",
-    "stylelint-config-tailwindcss",
-    "stylelint-config-prettier",
-  ],
+  extends: ["stylelint-config-standard", "stylelint-config-tailwindcss"],
 };
 
 module.exports = stylelintConfig;
