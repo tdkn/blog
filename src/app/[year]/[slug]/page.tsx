@@ -1,4 +1,5 @@
 import { allPosts } from "contentlayer/generated";
+import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { Deprecated, Profile } from "~/components/common";
 import { formatDate, formatTimeAgo } from "~/lib/format-date";
@@ -10,6 +11,20 @@ type PageProps = {
     slug: string;
   };
 };
+
+export function generateMetadata({
+  params: { year, slug },
+}: PageProps): Metadata {
+  const url =
+    process.env.NODE_ENV === "production"
+      ? `https://tdkn.dev/api/og/${year}/${slug}.png`
+      : `http://localhost:3000/api/og/${year}/${slug}.png`;
+
+  return {
+    openGraph: { images: [{ url }] },
+    twitter: { images: [{ url }] },
+  };
+}
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
   return allPosts.map((post) => {
