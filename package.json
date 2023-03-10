@@ -30,13 +30,13 @@
     "@fortawesome/free-regular-svg-icons": "6.3.0",
     "@fortawesome/free-solid-svg-icons": "6.3.0",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "@next/bundle-analyzer": "13.2.3",
+    "@next/bundle-analyzer": "13.2.4",
     "@vercel/og": "^0.4.0",
     "clsx": "^1.2.1",
     "contentlayer": "^0.3.0",
     "date-fns": "2.29.3",
-    "framer-motion": "10.2.2",
-    "next": "13.2.4-canary.5",
+    "framer-motion": "10.2.4",
+    "next": "13.2.4",
     "next-contentlayer": "^0.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -58,7 +58,7 @@
     "husky": "8.0.3",
     "is-ci": "3.0.1",
     "jsdom": "^21.1.0",
-    "lint-staged": "13.1.4",
+    "lint-staged": "13.2.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
     "prettier": "2.8.4",
@@ -78,6 +78,6 @@
     "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
   },
   "volta": {
-    "node": "18.14.2"
+    "node": "18.15.0"
   }
 }
