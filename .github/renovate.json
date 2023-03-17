@@ -8,5 +8,6 @@
   ],
   "enabledManagers": ["npm"],
   "reviewers": ["tdkn"],
-  "automerge": true
+  "automerge": true,
+  "platformAutomerge": true
 }
