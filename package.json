@@ -25,10 +25,10 @@
     "postinstall": "is-ci || husky install"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "6.3.0",
-    "@fortawesome/free-brands-svg-icons": "6.3.0",
-    "@fortawesome/free-regular-svg-icons": "6.3.0",
-    "@fortawesome/free-solid-svg-icons": "6.3.0",
+    "@fortawesome/fontawesome-svg-core": "6.4.0",
+    "@fortawesome/free-brands-svg-icons": "6.4.0",
+    "@fortawesome/free-regular-svg-icons": "6.4.0",
+    "@fortawesome/free-solid-svg-icons": "6.4.0",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@next/bundle-analyzer": "13.2.4",
     "@vercel/og": "^0.4.0",
@@ -48,7 +48,7 @@
     "@testing-library/react": "^14.0.0",
     "@types/react": "18.0.29",
     "@types/react-dom": "18.0.11",
-    "@typescript-eslint/eslint-plugin": "5.56.0",
+    "@typescript-eslint/eslint-plugin": "5.57.0",
     "@typescript-eslint/parser": "^5.54.1",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.13",
