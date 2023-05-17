@@ -14502,8 +14502,8 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "stylelint@npm:^15.2.0":
-  version: 15.6.1
-  resolution: "stylelint@npm:15.6.1"
+  version: 15.6.2
+  resolution: "stylelint@npm:15.6.2"
   dependencies:
     "@csstools/css-parser-algorithms": ^2.1.1
     "@csstools/css-tokenizer": ^2.1.1
@@ -14549,7 +14549,7 @@ resolve@^2.0.0-next.3:
     write-file-atomic: ^5.0.1
   bin:
     stylelint: bin/stylelint.js
-  checksum: 192ac3b5185cb59aaead62e1e2e53c42ffc9eba38e471bcb9e3a34381f688d2194a48ae5a356759e2368a9764626d2c6131dffd31933244519422ebcf76f6da6
+  checksum: b44949053b0500226d718d810af64a10b43d8faeed6c464ab1c8bebd8ace488135b47e3a6e4a97ae552d7e14f011dce82c6c69624e463476f8408751b7544b2f
   languageName: node
   linkType: hard
 
@@ -15555,8 +15555,8 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "vercel@npm:^29.0.0":
-  version: 29.3.1
-  resolution: "vercel@npm:29.3.1"
+  version: 29.3.2
+  resolution: "vercel@npm:29.3.2"
   dependencies:
     "@vercel/build-utils": 6.7.2
     "@vercel/go": 2.5.1
@@ -15571,7 +15571,7 @@ resolve@^2.0.0-next.3:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 7f78aeb57b5c35e4920cfcc80fc646552c3126b786f997ed02064be9baa142862f56be427ebdae2997ae7255810dff004b698ce4210dc3a70b63bb2e4ed2bedd
+  checksum: 88b3e71fa8a526ce8bda8a9b56a7eaedbc7fac4b047099de5eb75e0f604a62a45537807a4ebb61c77aa153154f4efa0825ab2766ecb9cd637c3e7dba3cd514df
   languageName: node
   linkType: hard
 
