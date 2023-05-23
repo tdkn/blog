@@ -5264,7 +5264,7 @@ __metadata:
     eslint: 8.41.0
     eslint-config-next: 13.4.3
     eslint-config-prettier: 8.8.0
-    framer-motion: 10.12.12
+    framer-motion: 10.12.13
     husky: 8.0.3
     is-ci: 3.0.1
     jsdom: ^22.0.0
@@ -8225,9 +8225,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:10.12.12":
-  version: 10.12.12
-  resolution: "framer-motion@npm:10.12.12"
+"framer-motion@npm:10.12.13":
+  version: 10.12.13
+  resolution: "framer-motion@npm:10.12.13"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     tslib: ^2.4.0
@@ -8242,7 +8242,7 @@ __metadata:
       optional: true
     react-dom:
       optional: true
-  checksum: 28ff7202b79833c0aa2fc412e64055b34f6405dc5b025eceb6fa737725f4005a2b29bec31011dd5c1c4cd44af2430b3d622e4a77a11a032e7b08e1e108456430
+  checksum: 144965d08d22760cc64dbb932ac0d4295b3b8972253ce8c535a4126ccd17d129b883dd0cce8aba47c438522b5182994337293d6e118d7371860e914afe18e1f2
   languageName: node
   linkType: hard
 
