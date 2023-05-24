@@ -5287,7 +5287,7 @@ __metadata:
     tailwind-merge: ^1.10.0
     tailwindcss: ^3.2.7
     typescript: 5.0.4
-    vercel: ^29.0.0
+    vercel: ^30.0.0
     vite-tsconfig-paths: ^4.0.5
     vitest: ^0.31.0
   languageName: unknown
@@ -15735,9 +15735,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"vercel@npm:^29.0.0":
-  version: 29.4.0
-  resolution: "vercel@npm:29.4.0"
+"vercel@npm:^30.0.0":
+  version: 30.0.0
+  resolution: "vercel@npm:30.0.0"
   dependencies:
     "@vercel/build-utils": 6.7.3
     "@vercel/go": 2.5.1
@@ -15752,7 +15752,7 @@ resolve@^2.0.0-next.3:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: ccff035b691208824a24e88991f2bbe7ccc3060ed8113586e0f1c23afc081b36f30b7c03858cfd6358a8c2477f1979b99111320d20f1e3a32e2ed75f7cb9c9b0
+  checksum: 6eb0abbe4dbfe44a1f3382020723c264b894940786dd05baaa2bef711d02a402dacf78c4dd3e6d229f2126fcbd0adfe49c1439a51c7595502121683bc98003bb
   languageName: node
   linkType: hard
 
