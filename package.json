@@ -70,7 +70,7 @@
     "stylelint-config-tailwindcss": "^0.0.7",
     "tailwindcss": "^3.2.7",
     "typescript": "5.0.4",
-    "vercel": "^29.0.0",
+    "vercel": "^30.0.0",
     "vite-tsconfig-paths": "^4.0.5",
     "vitest": "^0.31.0"
   },
