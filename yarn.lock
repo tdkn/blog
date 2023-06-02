@@ -15701,8 +15701,8 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "vercel@npm:^30.0.0":
-  version: 30.1.0
-  resolution: "vercel@npm:30.1.0"
+  version: 30.1.1
+  resolution: "vercel@npm:30.1.1"
   dependencies:
     "@vercel/build-utils": 6.7.4
     "@vercel/go": 2.5.1
@@ -15717,7 +15717,7 @@ resolve@^2.0.0-next.3:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: 5dd443fe0ae95e7b9a82d1ca17bc1092e8e6bf56d3fe94c4f79ef5344400c2d6eb75cbb68b5b51c363be08c30ed562d21f81cf2d963fc19133d8e4996bf0b3d8
+  checksum: 676d68a5d6a792eec2a589ff325d61673d1660a79093c294dc74553d9b43351886e8f98225995d1868b338935890492b727e5a9bbd19b3fce9242ab2ab34b517
   languageName: node
   linkType: hard
 
