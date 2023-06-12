@@ -40,7 +40,7 @@ export const Post = defineDocumentType(() => ({
 
 const rehypePrettyCodeOptions: Partial<Options> = {
   theme: "dracula-soft",
-  onVisitLine(node) {
+  onVisitLine(node: any) {
     // Prevent lines from collapsing in `display: grid` mode, and
     // allow empty lines to be copy/pasted
     if (node.children.length === 0) {
@@ -48,10 +48,10 @@ const rehypePrettyCodeOptions: Partial<Options> = {
     }
   },
   // Feel free to add classNames that suit your docs
-  onVisitHighlightedLine(node) {
+  onVisitHighlightedLine(node: any) {
     node.properties.className.push("highlighted");
   },
-  onVisitHighlightedWord(node) {
+  onVisitHighlightedWord(node: any) {
     node.properties.className = ["word"];
   },
 };
