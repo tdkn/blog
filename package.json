@@ -63,7 +63,7 @@
     "postcss": "^8.4.21",
     "prettier": "2.8.8",
     "prettier-plugin-tailwindcss": "^0.3.0",
-    "remark-emoji": "3.1.1",
+    "remark-emoji": "3.1.2",
     "remark-images": "3.1.0",
     "stylelint": "^15.2.0",
     "stylelint-config-standard": "^33.0.0",
