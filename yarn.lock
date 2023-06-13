@@ -13315,15 +13315,15 @@ __metadata:
   linkType: hard
 
 "rehype-pretty-code@npm:^0.9.4":
-  version: 0.9.7
-  resolution: "rehype-pretty-code@npm:0.9.7"
+  version: 0.9.8
+  resolution: "rehype-pretty-code@npm:0.9.8"
   dependencies:
     "@types/hast": ^2.0.0
     hash-obj: ^4.0.0
     parse-numeric-range: ^1.3.0
   peerDependencies:
     shiki: "*"
-  checksum: d32cdf6da9ab384b6007698b10244bac80b1f4b85d12fe5e278a95046bb0ab904bdbc7009d134fc4110e9041f06c8aa67f03294d09532861a6f01df89d2fb84c
+  checksum: 558fef2c79bf065afbc420505889811348a171a15a4978a894dbd96f01a62e40363214846e2e6259a5080f4c745ab17cc7c3e940912193385f711d01864ecf00
   languageName: node
   linkType: hard
 
