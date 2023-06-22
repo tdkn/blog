@@ -4532,13 +4532,13 @@ __metadata:
   linkType: hard
 
 "@vercel/og@npm:^0.5.0":
-  version: 0.5.7
-  resolution: "@vercel/og@npm:0.5.7"
+  version: 0.5.8
+  resolution: "@vercel/og@npm:0.5.8"
   dependencies:
     "@resvg/resvg-wasm": 2.4.1
     satori: 0.10.1
     yoga-wasm-web: 0.3.3
-  checksum: 9b94fa37373569a51e534555c77a2e9391169fafa7b5e044e819f230448b598b1c901337f1842992ceb4f6ba6f85dc17033bbfb847da1263014850c936718fd0
+  checksum: 23d7cf8506fa2edec59d44ecbaef692e3b9efffa56243aa7f42295279e0ca688b5863ee97892b20a0ad1969ac82b48a64dd037c522aed5de7e23b2ffa5175c44
   languageName: node
   linkType: hard
 
