@@ -6,6 +6,14 @@
   @apply grid min-w-full;
 }
 
-[data-rehype-pretty-code-fragment] .line {
+[data-rehype-pretty-code-fragment] [data-line] {
   @apply px-4;
+}
+
+[data-rehype-pretty-code-fragment] [data-highlighted-chars] {
+  @apply rounded-md bg-[#F1FA8C80] px-1 py-0.5;
+}
+
+[data-rehype-pretty-code-fragment] [data-highlighted-line] {
+  @apply bg-[#424450];
 }
