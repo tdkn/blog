@@ -72,7 +72,7 @@
     "typescript": "5.1.6",
     "vercel": "^31.0.0",
     "vite-tsconfig-paths": "^4.0.5",
-    "vitest": "^0.32.0"
+    "vitest": "^0.33.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
