@@ -4485,13 +4485,13 @@ __metadata:
   linkType: hard
 
 "@vercel/og@npm:^0.5.0":
-  version: 0.5.8
-  resolution: "@vercel/og@npm:0.5.8"
+  version: 0.5.9
+  resolution: "@vercel/og@npm:0.5.9"
   dependencies:
     "@resvg/resvg-wasm": 2.4.1
     satori: 0.10.1
     yoga-wasm-web: 0.3.3
-  checksum: 23d7cf8506fa2edec59d44ecbaef692e3b9efffa56243aa7f42295279e0ca688b5863ee97892b20a0ad1969ac82b48a64dd037c522aed5de7e23b2ffa5175c44
+  checksum: c0596288561494bc2bbed1544d1c6121c1612a25955a6316dae1a9e260241569034d139af64225ae981d92cdbe4a59e67701a3e6764285b7ce114767438f2f67
   languageName: node
   linkType: hard
 
