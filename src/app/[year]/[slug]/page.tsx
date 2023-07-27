@@ -38,7 +38,8 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
 
 async function getPost(params: PageProps["params"]) {
   return allPosts.find(
-    (post) => `/${post._raw.flattenedPath}` === `/${params.year}/${params.slug}`
+    (post) =>
+      `/${post._raw.flattenedPath}` === `/${params.year}/${params.slug}`,
   );
 }
 

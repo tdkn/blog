@@ -2,10 +2,10 @@ export const runtime = "edge";
 
 async function fetchFont(
   text: string,
-  font: string
+  font: string,
 ): Promise<ArrayBuffer | null> {
   const API = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(
-    text
+    text,
   )}`;
 
   const css = await fetch(API, {
@@ -17,7 +17,7 @@ async function fetchFont(
   }).then((res) => res.text());
 
   const resource = css.match(
-    /src: url\((.+)\) format\('(opentype|truetype)'\)/
+    /src: url\((.+)\) format\('(opentype|truetype)'\)/,
   );
 
   if (!resource) {
