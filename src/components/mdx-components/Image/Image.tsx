@@ -26,7 +26,7 @@ const Image = (props: ImageProps) => (
     sizes="100vw"
     style={{ width: "100%", height: "auto" }}
     blurDataURL={`data:image/svg+xml;base64,${toBase64(
-      shimmer(props.width, props.height)
+      shimmer(props.width, props.height),
     )}`}
     {...props}
   />

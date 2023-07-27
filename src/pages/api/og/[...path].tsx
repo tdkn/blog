@@ -9,7 +9,7 @@ export const config = {
 export default async function handler(req: NextRequest) {
   const { pathname } = new URL(req.url);
   const post = allPosts.find(
-    (post) => post.url === pathname.replace("/api/og", "").replace(".png", "")
+    (post) => post.url === pathname.replace("/api/og", "").replace(".png", ""),
   );
 
   if (!post) {
@@ -22,8 +22,8 @@ export default async function handler(req: NextRequest) {
       : "http://localhost:3000";
   const fontData = await fetch(
     `${baseUrl}/api/font?font=M+PLUS+Rounded+1c:wght@700&text=${encodeURIComponent(
-      post.title
-    )}`
+      post.title,
+    )}`,
   ).then((res) => res.arrayBuffer());
 
   return new ImageResponse(
@@ -110,6 +110,6 @@ export default async function handler(req: NextRequest) {
       height: 630,
       emoji: "twemoji",
       fonts: [{ name: "M PLUS Rounded 1c", data: fontData, style: "normal" }],
-    }
+    },
   );
 }
