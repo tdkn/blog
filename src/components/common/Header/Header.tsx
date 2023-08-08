@@ -1,7 +1,8 @@
 import {
   faFacebook,
   faGithub,
-  faTwitter,
+  faMastodon,
+  faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -17,12 +18,16 @@ const Header = () => (
       <Link href="https://github.com/tdkn" target="_blank" aria-label="GitHub">
         <FontAwesomeIcon icon={faGithub} className="h-5 w-5" />
       </Link>
+      <Link href="https://x.com/tdkn_" target="_blank" aria-label="X">
+        <FontAwesomeIcon icon={faXTwitter} className="h-5 w-5" />
+      </Link>
       <Link
-        href="https://twitter.com/tdkn_"
+        href="https://mastodon.social/@tdkn"
+        rel="me"
         target="_blank"
-        aria-label="Twitter"
+        aria-label="Mastodon"
       >
-        <FontAwesomeIcon icon={faTwitter} className="h-5 w-5" />
+        <FontAwesomeIcon icon={faMastodon} className="h-5 w-5" />
       </Link>
       <Link
         href="https://facebook.com/shun.tedokon"
