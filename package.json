@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "version": "0.1.0",
-  "packageManager": "yarn@3.6.1",
+  "packageManager": "yarn@3.6.2",
   "private": true,
   "author": "Shun Tedokon <me@tdkn.dev> (https://tdkn.dev)",
   "bugs": {
@@ -30,13 +30,13 @@
     "@fortawesome/free-regular-svg-icons": "6.4.2",
     "@fortawesome/free-solid-svg-icons": "6.4.2",
     "@fortawesome/react-fontawesome": "0.2.0",
-    "@next/bundle-analyzer": "13.4.12",
+    "@next/bundle-analyzer": "13.4.17",
     "@vercel/og": "^0.5.0",
     "clsx": "^2.0.0",
     "contentlayer": "^0.3.0",
     "date-fns": "2.30.0",
-    "framer-motion": "10.15.0",
-    "next": "13.4.12",
+    "framer-motion": "10.16.0",
+    "next": "13.4.17",
     "next-contentlayer": "^0.3.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
@@ -48,12 +48,12 @@
     "@testing-library/react": "^14.0.0",
     "@types/react": "18.2.20",
     "@types/react-dom": "18.2.7",
-    "@typescript-eslint/eslint-plugin": "6.2.0",
+    "@typescript-eslint/eslint-plugin": "6.4.0",
     "@typescript-eslint/parser": "^6.0.0",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.13",
-    "eslint": "8.46.0",
-    "eslint-config-next": "13.4.12",
+    "eslint": "8.47.0",
+    "eslint-config-next": "13.4.17",
     "eslint-config-prettier": "9.0.0",
     "husky": "8.0.3",
     "is-ci": "3.0.1",
@@ -61,8 +61,8 @@
     "lint-staged": "14.0.0",
     "npm-run-all": "^4.1.5",
     "postcss": "^8.4.21",
-    "prettier": "3.0.0",
-    "prettier-plugin-tailwindcss": "^0.4.0",
+    "prettier": "3.0.2",
+    "prettier-plugin-tailwindcss": "^0.5.0",
     "remark-emoji": "4.0.0",
     "remark-images": "3.1.0",
     "stylelint": "^15.2.0",
@@ -72,12 +72,12 @@
     "typescript": "5.1.6",
     "vercel": "^31.0.0",
     "vite-tsconfig-paths": "^4.0.5",
-    "vitest": "^0.33.0"
+    "vitest": "^0.34.0"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
   },
   "volta": {
-    "node": "18.17.0"
+    "node": "18.17.1"
   }
 }
