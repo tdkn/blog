@@ -2446,13 +2446,13 @@ __metadata:
   linkType: hard
 
 "@vercel/og@npm:^0.5.0":
-  version: 0.5.11
-  resolution: "@vercel/og@npm:0.5.11"
+  version: 0.5.12
+  resolution: "@vercel/og@npm:0.5.12"
   dependencies:
     "@resvg/resvg-wasm": 2.4.1
     satori: 0.10.3
     yoga-wasm-web: 0.3.3
-  checksum: 6bdda9399804e497613fe8a66d1acaa0cef7daf4b91060b79a804508d361fa72ea428db2b5c327e8ea5e20cb7d8ef47c7e155088d4b9f55f0d3b7bc9370926d6
+  checksum: c22f9ed4165cd9ed2e97a219cc36a75694a8e951af7e32073211f614e6008de2a2a197c891dd88996dcbbab73c2e036ab618cf143b974137189f63e363a25954
   languageName: node
   linkType: hard
 
@@ -10074,14 +10074,14 @@ resolve@^2.0.0-next.3:
   linkType: hard
 
 "shiki@npm:^0.14.1":
-  version: 0.14.3
-  resolution: "shiki@npm:0.14.3"
+  version: 0.14.4
+  resolution: "shiki@npm:0.14.4"
   dependencies:
     ansi-sequence-parser: ^1.1.0
     jsonc-parser: ^3.2.0
     vscode-oniguruma: ^1.7.0
     vscode-textmate: ^8.0.0
-  checksum: a4dd98e3b2a5dd8be207448f111ffb9ad2ed6c530f215714d8b61cbf91ec3edbabb09109b8ec58a26678aacd24e8161d5a9bc0c1fa1b4f64b27ceb180cbd0c89
+  checksum: 1173f6fa9531690a8cd4bf1d8e28c9eb9295af38a4c150cba6546e95f6e32bc96c7dd98826e39e688f1ca9d36b683a9a02ef77d51ce6495900b3a46ada64f828
   languageName: node
   linkType: hard
 
