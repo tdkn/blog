@@ -9524,15 +9524,15 @@ __metadata:
   linkType: hard
 
 "rehype-pretty-code@npm:^0.10.0":
-  version: 0.10.0
-  resolution: "rehype-pretty-code@npm:0.10.0"
+  version: 0.10.1
+  resolution: "rehype-pretty-code@npm:0.10.1"
   dependencies:
     "@types/hast": ^2.0.0
     hash-obj: ^4.0.0
     parse-numeric-range: ^1.3.0
   peerDependencies:
     shiki: 0.x
-  checksum: d04f35841080596d3a96d1959ffe1136ef65ba68daac0defdce9ae67f0fe8e8e0378e754156e53453fb123ded82b9e364f55127bce74822bbb4de0036289affe
+  checksum: bc62558e3ee4ec0cebae99b22834b499ff28d0817fe8d257f25d81c024ff0a44cc815d860b05b8f551c133ffdc1fbd5955408543e1801240baaad1d6e3f601e8
   languageName: node
   linkType: hard
 
