@@ -52,7 +52,7 @@
     "@typescript-eslint/parser": "6.6.0",
     "@vitejs/plugin-react": "4.0.4",
     "autoprefixer": "10.4.15",
-    "eslint": "8.48.0",
+    "eslint": "8.49.0",
     "eslint-config-next": "13.4.19",
     "eslint-config-prettier": "9.0.0",
     "husky": "8.0.3",
@@ -70,9 +70,9 @@
     "stylelint-config-tailwindcss": "0.0.7",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
-    "vercel": "32.1.0",
-    "vite-tsconfig-paths": "4.2.0",
-    "vitest": "0.34.3"
+    "vercel": "32.2.0",
+    "vite-tsconfig-paths": "4.2.1",
+    "vitest": "0.34.4"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
