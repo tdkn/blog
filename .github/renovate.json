@@ -1,11 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
-    "group:monorepos",
+    "config:recommended",
     "group:allNonMajor",
     "group:definitelyTyped"
   ],
+  "rangeStrategy": "pin",
   "enabledManagers": ["npm"],
   "reviewers": ["tdkn"],
   "automerge": true,
