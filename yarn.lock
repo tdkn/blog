@@ -3197,7 +3197,7 @@ __metadata:
     react-dom: 18.2.0
     rehype-pretty-code: 0.10.1
     remark-emoji: 4.0.0
-    remark-images: 3.1.0
+    remark-images: 4.0.0
     shiki: 0.14.4
     stylelint: 15.10.3
     stylelint-config-standard: 34.0.0
@@ -3564,6 +3564,13 @@ __metadata:
   version: 1.1.0
   resolution: "code-point-at@npm:1.1.0"
   checksum: 17d5666611f9b16d64fdf48176d9b7fb1c7d1c1607a189f7e600040a11a6616982876af148230336adb7d8fe728a559f743a4e29db3747e3b1a32fa7f4529681
+  languageName: node
+  linkType: hard
+
+"collapse-white-space@npm:^2.0.0":
+  version: 2.1.0
+  resolution: "collapse-white-space@npm:2.1.0"
+  checksum: c8978b1f4e7d68bf846cfdba6c6689ce8910511df7d331eb6e6757e51ceffb52768d59a28db26186c91dcf9594955b59be9f8ccd473c485790f5d8b90dc6726f
   languageName: node
   linkType: hard
 
@@ -9570,16 +9577,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-images@npm:3.1.0":
-  version: 3.1.0
-  resolution: "remark-images@npm:3.1.0"
+"remark-images@npm:4.0.0":
+  version: 4.0.0
+  resolution: "remark-images@npm:4.0.0"
   dependencies:
-    "@types/mdast": ^3.0.0
+    "@types/mdast": ^4.0.0
+    collapse-white-space: ^2.0.0
     is-url: ^1.0.0
-    unified: ^10.0.0
-    unist-util-is: ^5.0.0
-    unist-util-visit-parents: ^5.0.0
-  checksum: 7303021488583d933338f2d6cdc9dd9f4fb5d4e49a06cd47649460b59a383bece3b74ee6dcdd60b2da78f6366c4b37f3727a86af28e74951918ae06c07f6a5d3
+    unist-util-position: ^5.0.0
+    unist-util-visit-parents: ^6.0.0
+  checksum: 34bc9299f0736e7b6df9131c0a39bf73454bd6e67b7fde21592fda038ee8e0e87a85653e1ecaf1b2f741d359623621c10174e0111454cea091f2b291150b51d0
   languageName: node
   linkType: hard
 
@@ -11391,6 +11398,15 @@ resolve@^2.0.0-next.3:
   dependencies:
     "@types/unist": ^2.0.0
   checksum: 0d89973628d40f19345cbcc50008f7f56d411afa54434bbe6c224b22d26aaf9d4500da2de363f1f01945acab1f1c31920c514253149eb546ff9b8bbc1ea94209
+  languageName: node
+  linkType: hard
+
+"unist-util-position@npm:^5.0.0":
+  version: 5.0.0
+  resolution: "unist-util-position@npm:5.0.0"
+  dependencies:
+    "@types/unist": ^3.0.0
+  checksum: f89b27989b19f07878de9579cd8db2aa0194c8360db69e2c99bd2124a480d79c08f04b73a64daf01a8fb3af7cba65ff4b45a0b978ca243226084ad5f5d441dde
   languageName: node
   linkType: hard
 
