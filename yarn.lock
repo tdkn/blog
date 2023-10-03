@@ -2483,12 +2483,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/next@npm:4.0.9":
-  version: 4.0.9
-  resolution: "@vercel/next@npm:4.0.9"
+"@vercel/next@npm:4.0.10":
+  version: 4.0.10
+  resolution: "@vercel/next@npm:4.0.10"
   dependencies:
     "@vercel/nft": 0.24.2
-  checksum: a0709bb99e90e9c3e3d3c4e5cb49cef2ab41cde1f6a281c63c80ac75002b493a089991a56ee5231e213664556ab3becd3fffa6b7f38caa1e360b9388ca53de08
+  checksum: 6e1ac873d514a73cda9fc4b54778f8579d03019ec923751c31ed2f27a33ada94d076ecbe243a8c6338fcf6665d4f42bf835a7be302f4883e2d409bc9e36a47d2
   languageName: node
   linkType: hard
 
@@ -3363,7 +3363,7 @@ __metadata:
     tailwind-merge: 1.14.0
     tailwindcss: 3.3.3
     typescript: 5.2.2
-    vercel: 32.4.0
+    vercel: 32.4.1
     vite-tsconfig-paths: 4.2.1
     vitest: 0.34.6
   languageName: unknown
@@ -12510,15 +12510,15 @@ resolve@^1.20.0:
   languageName: node
   linkType: hard
 
-"vercel@npm:32.4.0":
-  version: 32.4.0
-  resolution: "vercel@npm:32.4.0"
+"vercel@npm:32.4.1":
+  version: 32.4.1
+  resolution: "vercel@npm:32.4.1"
   dependencies:
     "@vercel/build-utils": 7.2.2
     "@vercel/fun": 1.1.0
     "@vercel/go": 3.0.3
     "@vercel/hydrogen": 1.0.1
-    "@vercel/next": 4.0.9
+    "@vercel/next": 4.0.10
     "@vercel/node": 3.0.7
     "@vercel/python": 4.0.2
     "@vercel/redwood": 2.0.4
@@ -12529,7 +12529,7 @@ resolve@^1.20.0:
   bin:
     vc: dist/index.js
     vercel: dist/index.js
-  checksum: cccb5968827dd5027dbf3e3f1094eedf5adc98703f5cfd4aefe11191445a5f6e82e20990e713f0873b08d24cca877277d754c509317d6d4f3c4dcf2d6a731b0f
+  checksum: cbee9a1633e0a62c92e602d358439a48c31ea81ac2232ced25ae4166bc5f4f9a257ab5d085600401310daac3b45e93698431be8cc6cb10a8fc4db560dc28c542
   languageName: node
   linkType: hard
 
