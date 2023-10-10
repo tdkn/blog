@@ -41,7 +41,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rehype-pretty-code": "0.10.1",
-    "shiki": "0.14.4",
+    "shiki": "0.14.5",
     "tailwind-merge": "1.14.0"
   },
   "devDependencies": {
@@ -78,6 +78,6 @@
     "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
   },
   "volta": {
-    "node": "18.18.0"
+    "node": "18.18.1"
   }
 }
