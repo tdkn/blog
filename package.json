@@ -78,6 +78,6 @@
     "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
   },
   "volta": {
-    "node": "18.18.1"
+    "node": "18.18.2"
   }
 }
