@@ -65,7 +65,7 @@
     "prettier-plugin-tailwindcss": "0.5.6",
     "remark-emoji": "4.0.0",
     "remark-images": "4.0.0",
-    "stylelint": "15.10.3",
+    "stylelint": "15.11.0",
     "stylelint-config-standard": "34.0.0",
     "stylelint-config-tailwindcss": "0.0.7",
     "tailwindcss": "3.3.3",
