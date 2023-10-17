@@ -31,7 +31,7 @@
     "@fortawesome/free-solid-svg-icons": "6.4.2",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@next/bundle-analyzer": "13.5.5",
-    "@vercel/og": "0.5.18",
+    "@vercel/og": "0.5.19",
     "clsx": "2.0.0",
     "contentlayer": "0.3.4",
     "date-fns": "2.30.0",
