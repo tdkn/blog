@@ -1768,10 +1768,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@resvg/resvg-wasm@npm:2.4.1":
-  version: 2.4.1
-  resolution: "@resvg/resvg-wasm@npm:2.4.1"
-  checksum: 855aa1e5f1b228b9d2fe87e5d12b628c64b43a513fb67cd78b2eb447684d6b0861543a77ff8b878b21bf89b048ffeff73267685967d9f20cb8ef2c350dac5c81
+"@resvg/resvg-wasm@npm:2.5.0":
+  version: 2.5.0
+  resolution: "@resvg/resvg-wasm@npm:2.5.0"
+  checksum: 86b5128549ad685318b1669cecf00ac1986eac4c31515720c6245faabae1977bbc87df5dd5d0396dd06302151bdd0eff5bca6a705a3a4f72981188d53a10fe69
   languageName: node
   linkType: hard
 
@@ -2540,14 +2540,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/og@npm:0.5.18":
-  version: 0.5.18
-  resolution: "@vercel/og@npm:0.5.18"
+"@vercel/og@npm:0.5.19":
+  version: 0.5.19
+  resolution: "@vercel/og@npm:0.5.19"
   dependencies:
-    "@resvg/resvg-wasm": 2.4.1
+    "@resvg/resvg-wasm": 2.5.0
     satori: 0.10.9
     yoga-wasm-web: 0.3.3
-  checksum: 7e14e25e39f0545b77eb835b2bd22640233479942d9cf9665d7528e00efe98db97a17e0fc5d812f74bc48ca4067dba85fea7e7a956d12282037b7cdf5d4937d2
+  checksum: 27bc5415b10d10a3268f2c9710d6f0c57e3e4f22f98adc1f1fba9b21d7c23214636c16ba4abd92f4042ae3f9830bad18cd379a71206a649aaa9f03d901096878
   languageName: node
   linkType: hard
 
@@ -3331,7 +3331,7 @@ __metadata:
     "@types/react-dom": 18.2.13
     "@typescript-eslint/eslint-plugin": 6.8.0
     "@typescript-eslint/parser": 6.8.0
-    "@vercel/og": 0.5.18
+    "@vercel/og": 0.5.19
     "@vitejs/plugin-react": 4.1.0
     autoprefixer: 10.4.16
     clsx: 2.0.0
