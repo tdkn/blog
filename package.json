@@ -31,7 +31,7 @@
     "@fortawesome/free-solid-svg-icons": "6.4.2",
     "@fortawesome/react-fontawesome": "0.2.0",
     "@next/bundle-analyzer": "13.5.6",
-    "@vercel/og": "0.5.19",
+    "@vercel/og": "0.5.20",
     "clsx": "2.0.0",
     "contentlayer": "0.3.4",
     "date-fns": "2.30.0",
@@ -70,7 +70,7 @@
     "stylelint-config-tailwindcss": "0.0.7",
     "tailwindcss": "3.3.3",
     "typescript": "5.2.2",
-    "vercel": "32.4.1",
+    "vercel": "32.5.0",
     "vite-tsconfig-paths": "4.2.1",
     "vitest": "0.34.6"
   },
