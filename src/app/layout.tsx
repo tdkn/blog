@@ -1,15 +1,20 @@
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { Footer, Header } from "~/components/common";
 import "~/styles/globals.css";
 
-export function generateMetadata(): Metadata {
-  const ogImageUrl =
-    process.env.NODE_ENV === "production"
-      ? "https://tdkn.dev/twitter-large-card.png"
-      : "http://localhost:3000/twitter-large-card.png";
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
 
+export function generateMetadata(): Metadata {
   return {
+    metadataBase: new URL(
+      process.env.NODE_ENV === "production"
+        ? "https://tdkn.dev"
+        : "http://localhost:3000",
+    ),
     title: "tdkn.dev",
     openGraph: {
       type: "website",
@@ -18,15 +23,14 @@ export function generateMetadata(): Metadata {
       description: "Shun Tedokon's Personal Website",
       locale: "ja_jp",
       siteName: "tdkn.dev",
-      images: [{ url: ogImageUrl }],
+      images: "/twitter-large-card.png",
     },
     twitter: {
       site: "@tdkn_",
       creator: "@tdkn_",
       card: "summary_large_image",
-      images: [{ url: ogImageUrl }],
+      images: "/twitter-large-card.png",
     },
-    viewport: { width: "device-width", initialScale: 1 },
     appleWebApp: {
       title: "tdkn.dev",
       capable: true,

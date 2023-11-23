@@ -15,14 +15,9 @@ type PageProps = {
 export function generateMetadata({
   params: { year, slug },
 }: PageProps): Metadata {
-  const url =
-    process.env.NODE_ENV === "production"
-      ? `https://tdkn.dev/api/og/${year}/${slug}.png`
-      : `http://localhost:3000/api/og/${year}/${slug}.png`;
-
   return {
-    openGraph: { images: [{ url }] },
-    twitter: { images: [{ url }] },
+    openGraph: { images: `/api/og/${year}/${slug}.png` },
+    twitter: { images: `/api/og/${year}/${slug}.png` },
   };
 }
 
