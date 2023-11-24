@@ -10133,9 +10133,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"protobufjs@npm:^7.0.0":
-  version: 7.1.2
-  resolution: "protobufjs@npm:7.1.2"
+"protobufjs@npm:^7.0.0, protobufjs@npm:^7.2.2":
+  version: 7.2.5
+  resolution: "protobufjs@npm:7.2.5"
   dependencies:
     "@protobufjs/aspromise": "npm:^1.1.2"
     "@protobufjs/base64": "npm:^1.1.2"
@@ -10149,27 +10149,7 @@ __metadata:
     "@protobufjs/utf8": "npm:^1.1.0"
     "@types/node": "npm:>=13.7.0"
     long: "npm:^5.0.0"
-  checksum: f60f6a3dc05485d040a8683cd4ae6ab9a721fce5656c6ae12c965ea2db274ac3a86cc2ca21e5510c07af4b678ebeec4490e864be3073992c691511927a5618c8
-  languageName: node
-  linkType: hard
-
-"protobufjs@npm:^7.2.2":
-  version: 7.2.3
-  resolution: "protobufjs@npm:7.2.3"
-  dependencies:
-    "@protobufjs/aspromise": "npm:^1.1.2"
-    "@protobufjs/base64": "npm:^1.1.2"
-    "@protobufjs/codegen": "npm:^2.0.4"
-    "@protobufjs/eventemitter": "npm:^1.1.0"
-    "@protobufjs/fetch": "npm:^1.1.0"
-    "@protobufjs/float": "npm:^1.0.2"
-    "@protobufjs/inquire": "npm:^1.1.0"
-    "@protobufjs/path": "npm:^1.1.2"
-    "@protobufjs/pool": "npm:^1.1.0"
-    "@protobufjs/utf8": "npm:^1.1.0"
-    "@types/node": "npm:>=13.7.0"
-    long: "npm:^5.0.0"
-  checksum: 8092a67a31d961622322887a2374a63a3509f22d45ed7ada39be5987d590bf3ec46eb17aa64ba08f79b42be44adfce63c2fdedc389aea1423013417b6af2c61f
+  checksum: 12bb88965a2291ec717daddb1b7153c0e567586076da7d138c8f04558d3d0a9cad6445a3558f16c1a61f5cd9dec1a107712590daccb71763429d9b1e10d164d3
   languageName: node
   linkType: hard
 
