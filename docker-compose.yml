@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   blog:
-    image: "node:14-alpine"
+    image: "node:20-alpine"
     working_dir: /usr/src/app
     volumes:
       - yarn-cache:/usr/src/app/.yarn/cache

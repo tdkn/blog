@@ -1,13 +1,21 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "timezone": "Asia/Tokyo",
   "extends": [
     "config:recommended",
     "group:allNonMajor",
-    "group:definitelyTyped"
+    "group:definitelyTyped",
+    "schedule:weekly"
   ],
   "rangeStrategy": "pin",
-  "enabledManagers": ["npm"],
+  "enabledManagers": ["npm", "nvm"],
   "reviewers": ["tdkn"],
   "automerge": true,
-  "platformAutomerge": true
+  "platformAutomerge": true,
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "labels": ["dependencies", "javascript"]
+    }
+  ]
 }
