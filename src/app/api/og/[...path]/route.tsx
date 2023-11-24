@@ -1,12 +1,9 @@
 import { ImageResponse } from "@vercel/og";
 import { allPosts } from "contentlayer/generated";
-import type { NextRequest } from "next/server";
 
-export const config = {
-  runtime: "edge",
-};
+export const runtime = "edge";
 
-export default async function handler(req: NextRequest) {
+export async function GET(req: Request) {
   const { pathname } = new URL(req.url);
   const post = allPosts.find(
     (post) => post.url === pathname.replace("/api/og", "").replace(".png", ""),
