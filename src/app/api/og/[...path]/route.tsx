@@ -88,18 +88,6 @@ export async function GET(req: Request) {
         >
           {post.title}
         </div>
-        <div
-          style={{
-            right: 0,
-            bottom: 0,
-            margin: 50,
-            position: "absolute",
-            fontSize: 40,
-            fontWeight: 700,
-          }}
-        >
-          @tdkn_
-        </div>
       </div>
     ),
     {
