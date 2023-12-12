@@ -5,4 +5,4 @@ const prettierConfig = {
   plugins: ["prettier-plugin-tailwindcss"],
 };
 
-module.exports = prettierConfig;
+export default prettierConfig;

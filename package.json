@@ -16,6 +16,7 @@
     "lint": "npm-run-all --aggregate-output -l -p 'lint:*'",
     "lint:prettier": "prettier --check .",
     "lint:eslint": "next lint",
+    "lint:stylelint": "stylelint -f verbose 'src/**/*.css' --max-warnings=0",
     "lint:types": "tsc --pretty --noEmit",
     "fix": "npm-run-all -l -c --sequential 'fix:*'",
     "fix:eslint": "next lint --fix",
@@ -73,9 +74,6 @@
     "vercel": "32.5.6",
     "vite-tsconfig-paths": "4.2.1",
     "vitest": "0.34.6"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx,css,json,md,mdx}": "prettier --write"
   },
   "volta": {
     "node": "20.10.0"
