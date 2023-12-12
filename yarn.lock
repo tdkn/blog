@@ -2158,15 +2158,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/mdast@npm:^4.0.2":
-  version: 4.0.3
-  resolution: "@types/mdast@npm:4.0.3"
-  dependencies:
-    "@types/unist": "npm:*"
-  checksum: e6994404f5ce58073aa6c1a37ceac3060326470a464e2d751580a9f89e2dbca3a2a6222b849bdaaa5bffbe89033c50a886d17e49fca3b040a4ffcf970e387a0c
-  languageName: node
-  linkType: hard
-
 "@types/mdurl@npm:^1.0.0":
   version: 1.0.2
   resolution: "@types/mdurl@npm:1.0.2"
@@ -3431,7 +3422,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     rehype-pretty-code: "npm:0.12.1"
-    remark-emoji: "npm:4.0.1"
+    remark-emoji: "npm:4.0.0"
     remark-images: "npm:4.0.0"
     shiki: "npm:0.14.6"
     stylelint: "npm:16.0.2"
@@ -8074,7 +8065,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdast-util-find-and-replace@npm:^3.0.1":
+"mdast-util-find-and-replace@npm:^3.0.0":
   version: 3.0.1
   resolution: "mdast-util-find-and-replace@npm:3.0.1"
   dependencies:
@@ -10368,16 +10359,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"remark-emoji@npm:4.0.1":
-  version: 4.0.1
-  resolution: "remark-emoji@npm:4.0.1"
+"remark-emoji@npm:4.0.0":
+  version: 4.0.0
+  resolution: "remark-emoji@npm:4.0.0"
   dependencies:
-    "@types/mdast": "npm:^4.0.2"
     emoticon: "npm:^4.0.1"
-    mdast-util-find-and-replace: "npm:^3.0.1"
+    mdast-util-find-and-replace: "npm:^3.0.0"
     node-emoji: "npm:^2.1.0"
-    unified: "npm:^11.0.4"
-  checksum: 27f88892215f3efe8f25c43f226a82d70144a1ae5906d36f6e09390b893b2d5524d5949bd8ca6a02be0e3cb5cba908b35c4221f4e07f34e93d13d6ff9347dbb8
+  checksum: b42a2f0fc2bb976cd3dc81e3288ecdcf4188ce4d028b473f5b72a88500e54ff644041a304e76101b8da119dd875d310328a919692da4e9fec8adc8cabcc92bbb
   languageName: node
   linkType: hard
 
