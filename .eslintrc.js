@@ -7,6 +7,7 @@ const eslintConfig = {
     "plugin:@typescript-eslint/recommended",
     "prettier",
   ],
+  ignorePatterns: ["**/out/*", "**/public/*"],
   rules: {
     "no-console": ["error", { allow: ["warn", "error"] }],
     "react/jsx-no-useless-fragment": ["error", { allowExpressions: true }],
