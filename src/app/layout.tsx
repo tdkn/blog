@@ -1,49 +1,50 @@
 import { Metadata, Viewport } from "next";
 import Script from "next/script";
+
 import { Footer, Header } from "~/components/common";
 import "~/styles/globals.css";
 
 export const viewport: Viewport = {
-  width: "device-width",
   initialScale: 1,
+  width: "device-width",
 };
 
 export function generateMetadata(): Metadata {
   return {
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "black-translucent",
+      title: "tdkn.dev",
+    },
+    icons: {
+      apple: "/apple-touch-icon.png",
+      icon: [
+        { url: "/favicon.ico" },
+        { type: "image/svg+xml", url: "/icon.svg" },
+      ],
+    },
+    manifest: "/site.webmanifest",
     metadataBase: new URL(
       process.env.NODE_ENV === "production"
         ? "https://tdkn.dev"
         : "http://localhost:3000",
     ),
-    title: "tdkn.dev",
     openGraph: {
-      type: "website",
-      url: "https://tdkn.dev",
-      title: "tdkn.dev",
       description: "Shun Tedokon's Personal Website",
+      images: "/twitter-large-card.png",
       locale: "ja_jp",
       siteName: "tdkn.dev",
-      images: "/twitter-large-card.png",
-    },
-    twitter: {
-      site: "@tdkn_",
-      creator: "@tdkn_",
-      card: "summary_large_image",
-      images: "/twitter-large-card.png",
-    },
-    appleWebApp: {
       title: "tdkn.dev",
-      capable: true,
-      statusBarStyle: "black-translucent",
+      type: "website",
+      url: "https://tdkn.dev",
     },
-    icons: {
-      icon: [
-        { url: "/favicon.ico" },
-        { url: "/icon.svg", type: "image/svg+xml" },
-      ],
-      apple: "/apple-touch-icon.png",
+    title: "tdkn.dev",
+    twitter: {
+      card: "summary_large_image",
+      creator: "@tdkn_",
+      images: "/twitter-large-card.png",
+      site: "@tdkn_",
     },
-    manifest: "/site.webmanifest",
   };
 }
 
@@ -65,10 +66,10 @@ export default function RootLayout({
 
         <noscript>
           <iframe
-            src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
             height="0"
-            width="0"
+            src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
             style={{ display: "none", visibility: "hidden" }}
+            width="0"
           />
         </noscript>
 

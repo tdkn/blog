@@ -1,5 +1,6 @@
 import { getYear } from "date-fns";
 import { ComponentPropsWithoutRef, FC } from "react";
+
 import { classNames } from "~/lib/style";
 
 const Footer: FC<ComponentPropsWithoutRef<"footer">> = ({ className }) => (

@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
+
 import { classNames } from "~/lib/style";
 
 const Deprecated = ({ className }: ComponentPropsWithoutRef<"span">) => (

@@ -4,38 +4,38 @@ import remarkEmoji from "remark-emoji";
 import remarkImages from "remark-images";
 
 export const Post = defineDocumentType(() => ({
-  name: "Post",
-  filePathPattern: `**/*.mdx`,
-  contentType: "mdx",
-  fields: {
-    title: {
-      type: "string",
-      description: "The title of the post",
-      required: true,
-    },
-    date: {
-      type: "date",
-      description: "The date of the post",
-      required: true,
-    },
-    summary: {
-      type: "string",
-      description: "The summary of the post",
-      required: false,
-    },
-    deprecated: {
-      type: "boolean",
-      description: "",
-      required: false,
-      default: false,
-    },
-  },
   computedFields: {
     url: {
-      type: "string",
       resolve: (post) => `/${post._raw.flattenedPath}`,
+      type: "string",
     },
   },
+  contentType: "mdx",
+  fields: {
+    date: {
+      description: "The date of the post",
+      required: true,
+      type: "date",
+    },
+    deprecated: {
+      default: false,
+      description: "",
+      required: false,
+      type: "boolean",
+    },
+    summary: {
+      description: "The summary of the post",
+      required: false,
+      type: "string",
+    },
+    title: {
+      description: "The title of the post",
+      required: true,
+      type: "string",
+    },
+  },
+  filePathPattern: `**/*.mdx`,
+  name: "Post",
 }));
 
 const rehypePrettyCodeOptions: Partial<Options> = {
@@ -46,7 +46,7 @@ export default makeSource({
   contentDirPath: "posts",
   documentTypes: [Post],
   mdx: {
-    remarkPlugins: [remarkImages, remarkEmoji],
     rehypePlugins: [[rehypePrettyCode, rehypePrettyCodeOptions]],
+    remarkPlugins: [remarkImages, remarkEmoji],
   },
 });

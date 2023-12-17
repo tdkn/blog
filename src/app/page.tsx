@@ -1,5 +1,6 @@
 import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
+
 import { PostCard, Profile } from "~/components/common";
 
 function getPosts() {
@@ -18,7 +19,7 @@ export default function HomePage() {
       <Profile />
       <main className="pt-8">
         {posts.map((post, key) => (
-          <PostCard post={post} key={key} />
+          <PostCard key={key} post={post} />
         ))}
       </main>
     </>

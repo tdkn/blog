@@ -1,4 +1,5 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
+
 import { components } from "~/components/mdx-components";
 import "~/styles/mdx.css";
 

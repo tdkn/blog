@@ -1,19 +1,21 @@
 import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
+
 import { Deprecated, Profile } from "~/components/common";
 import { formatDate, formatTimeAgo } from "~/lib/format-date";
+
 import Mdx from "./mdx";
 
 type PageProps = {
   params: {
-    year: string;
     slug: string;
+    year: string;
   };
 };
 
 export function generateMetadata({
-  params: { year, slug },
+  params: { slug, year },
 }: PageProps): Metadata {
   return {
     openGraph: { images: `/api/og/${year}/${slug}.png` },
@@ -25,8 +27,8 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
   return allPosts.map((post) => {
     const [year, slug] = post._raw.flattenedPath.split("/");
     return {
-      year,
       slug,
+      year,
     };
   });
 }
