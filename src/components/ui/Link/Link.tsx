@@ -1,5 +1,6 @@
 import NextLink from "next/link";
 import { ComponentPropsWithoutRef, FC } from "react";
+
 import { classNames } from "~/lib/style";
 
 const Link: FC<ComponentPropsWithoutRef<typeof NextLink>> = ({

@@ -41,8 +41,8 @@ export async function GET(req: Request) {
 
   return new Response(responseBuffer, {
     headers: {
-      "Content-Type": "font/woff",
       "Cache-Control": "public, max-age=31536000, immutable",
+      "Content-Type": "font/woff",
     },
   });
 }

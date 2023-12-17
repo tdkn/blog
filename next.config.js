@@ -10,29 +10,29 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: "/github",
         destination: "https://github.com/tdkn",
         permanent: false,
+        source: "/github",
       },
       {
-        source: "/twitter",
         destination: "https://twitter.com/tdkn_",
         permanent: false,
+        source: "/twitter",
       },
       {
-        source: "/bluesky",
         destination: "https://bsky.app/profile/tdkn.bsky.social",
         permanent: false,
+        source: "/bluesky",
       },
       {
-        source: "/mastodon",
         destination: "https://mastodon.social/@tdkn",
         permanent: false,
+        source: "/mastodon",
       },
       {
-        source: "/facebook",
         destination: "https://facebook.com/shun.tedokon",
         permanent: false,
+        source: "/facebook",
       },
     ];
   },

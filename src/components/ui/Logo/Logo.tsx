@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
+
 import { classNames } from "~/lib/style";
 
 const Logo = ({
@@ -6,16 +7,16 @@ const Logo = ({
   ...otherProps
 }: ComponentPropsWithoutRef<"svg">) => (
   <svg
+    className={classNames("h-8 w-auto fill-none", className)}
     viewBox="0 0 410 70"
     xmlns="http://www.w3.org/2000/svg"
-    className={classNames("h-8 w-auto fill-none", className)}
     {...otherProps}
   >
     <path
-      fillRule="evenodd"
       clipRule="evenodd"
       d="M35 70C54.33 70 70 54.33 70 35C70 15.67 54.33 0 35 0C15.67 0 0 15.67 0 35C0 54.33 15.67 70 35 70ZM35 50C43.2843 50 50 43.2843 50 35C50 26.7157 43.2843 20 35 20C26.7157 20 20 26.7157 20 35C20 43.2843 26.7157 50 35 50Z"
       fill="url(#paint0_linear)"
+      fillRule="evenodd"
     />
     <path
       className="fill-[#1f2937] dark:fill-white"
@@ -23,12 +24,12 @@ const Logo = ({
     />
     <defs>
       <linearGradient
+        gradientUnits="userSpaceOnUse"
         id="paint0_linear"
         x1="35"
-        y1="35"
         x2="70"
+        y1="35"
         y2="70"
-        gradientUnits="userSpaceOnUse"
       >
         <stop stopColor="#F7C953" />
         <stop offset="1" stopColor="#F77A53" />
