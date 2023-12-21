@@ -23,7 +23,7 @@ export function generateMetadata({
   };
 }
 
-export async function generateStaticParams(): Promise<PageProps["params"][]> {
+export function generateStaticParams(): PageProps["params"][] {
   return allPosts.map((post) => {
     const [year, slug] = post._raw.flattenedPath.split("/");
     return {
@@ -33,15 +33,15 @@ export async function generateStaticParams(): Promise<PageProps["params"][]> {
   });
 }
 
-async function getPost(params: PageProps["params"]) {
+function getPost(params: PageProps["params"]) {
   return allPosts.find(
     (post) =>
       `/${post._raw.flattenedPath}` === `/${params.year}/${params.slug}`,
   );
 }
 
-export default async function BlogPostPage({ params }: PageProps) {
-  const post = await getPost(params);
+export default function BlogPostPage({ params }: PageProps) {
+  const post = getPost(params);
 
   if (!post) {
     notFound();

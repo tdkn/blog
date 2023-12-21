@@ -4,9 +4,9 @@ import { compareDesc } from "date-fns";
 import { PostCard, Profile } from "~/components/common";
 
 function getPosts() {
-  const posts = allPosts.sort((a, b) => {
-    return compareDesc(new Date(a.date), new Date(b.date));
-  });
+  const posts = allPosts.sort((a, b) =>
+    compareDesc(new Date(a.date), new Date(b.date)),
+  );
 
   return posts;
 }
