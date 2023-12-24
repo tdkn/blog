@@ -35,7 +35,7 @@
     "@vercel/og": "0.6.1",
     "clsx": "2.0.0",
     "contentlayer": "0.3.4",
-    "date-fns": "2.30.0",
+    "date-fns": "3.0.6",
     "framer-motion": "10.16.16",
     "next": "14.0.4",
     "next-contentlayer": "0.3.4",
