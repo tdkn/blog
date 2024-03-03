@@ -1945,6 +1945,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@shikijs/core@npm:1.1.7":
+  version: 1.1.7
+  resolution: "@shikijs/core@npm:1.1.7"
+  checksum: ee59b88d4c81422792651c0ca52ff378c3035f9d1e4907b58c1d6da06fad02d530775a2e6f43bb033832cd3d2a5f69c9aa4eb5b6b05311396acc503f15442f37
+  languageName: node
+  linkType: hard
+
 "@shuding/opentype.js@npm:1.4.0-beta.0":
   version: 1.4.0-beta.0
   resolution: "@shuding/opentype.js@npm:1.4.0-beta.0"
@@ -3087,13 +3094,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ansi-sequence-parser@npm:^1.1.0":
-  version: 1.1.0
-  resolution: "ansi-sequence-parser@npm:1.1.0"
-  checksum: 87810a794a7eea0ec947e6a576017c52a8d95494956c74769cc65582338de2a368525d25bc9fde68f78451d420e334b8b7dd22c3c00be4ac880f0a4ac1dd1a4b
-  languageName: node
-  linkType: hard
-
 "ansi-styles@npm:^3.2.1":
   version: 3.2.1
   resolution: "ansi-styles@npm:3.2.1"
@@ -3554,7 +3554,7 @@ __metadata:
     rehype-pretty-code: "npm:0.10.2"
     remark-emoji: "npm:4.0.0"
     remark-images: "npm:4.0.0"
-    shiki: "npm:0.14.6"
+    shiki: "npm:1.1.7"
     stylelint: "npm:16.0.2"
     stylelint-config-standard: "npm:35.0.0"
     stylelint-config-tailwindcss: "npm:0.0.7"
@@ -10973,15 +10973,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"shiki@npm:0.14.6":
-  version: 0.14.6
-  resolution: "shiki@npm:0.14.6"
+"shiki@npm:1.1.7":
+  version: 1.1.7
+  resolution: "shiki@npm:1.1.7"
   dependencies:
-    ansi-sequence-parser: "npm:^1.1.0"
-    jsonc-parser: "npm:^3.2.0"
-    vscode-oniguruma: "npm:^1.7.0"
-    vscode-textmate: "npm:^8.0.0"
-  checksum: cd056244c09b46df2ad1c4841358b5d510df44203394f54de8f42b6fb7ce37b7e788b3ec45ffec5acf82784fcf7eeb687e7a3854d8072daa8d53284948126bc1
+    "@shikijs/core": "npm:1.1.7"
+  checksum: 536f8dec961d7938f6d3a63dd6be64be082b56c1433380eda0a82cb57b5789759097947d9ef1726e521d4054a6fe2b73639e94bedaccea2044fa640667167501
   languageName: node
   linkType: hard
 
@@ -12742,20 +12739,6 @@ __metadata:
   bin:
     vitest: vitest.mjs
   checksum: 401cd3f7bc716269ed2e4d6304b3377a3957370f9ca1565d0fb328b3eb0017ba627e0357ccf7bf29126750ef312cc9e5319af8b5cfa87c3f746732480bebb813
-  languageName: node
-  linkType: hard
-
-"vscode-oniguruma@npm:^1.7.0":
-  version: 1.7.0
-  resolution: "vscode-oniguruma@npm:1.7.0"
-  checksum: bef0073c665ddf8c86e51da94529c905856559e9aba97a9882f951acd572da560384775941ab6e7e8db94d9c578b25fefb951e4b73c37e8712e16b0231de2689
-  languageName: node
-  linkType: hard
-
-"vscode-textmate@npm:^8.0.0":
-  version: 8.0.0
-  resolution: "vscode-textmate@npm:8.0.0"
-  checksum: 836f7fe73fc94998a38ca193df48173a2b6eab08b4943d83c8cac9a2a0c3546cfdab4cf1b10b890ec4a4374c5bee03a885ef0e83e7fd2bd618cf00781c017c04
   languageName: node
   linkType: hard
 
