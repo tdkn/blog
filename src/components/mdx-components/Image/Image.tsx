@@ -23,9 +23,11 @@ const Image = ({ height, width, ...otherProps }: ImageProps) => (
     blurDataURL={`data:image/svg+xml;base64,${toBase64(
       shimmer(width, height),
     )}`}
+    height={height}
     placeholder="blur"
     sizes="100vw"
     style={{ height: "auto", width: "100%" }}
+    width={width}
     {...otherProps}
   />
 );

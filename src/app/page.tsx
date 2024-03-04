@@ -1,14 +1,12 @@
-import { allPosts } from "contentlayer/generated";
 import { compareDesc } from "date-fns";
 
 import { PostCard, Profile } from "~/components/common";
+import { allPosts } from "~/lib/mdx";
 
 function getPosts() {
-  const posts = allPosts.sort((a, b) =>
+  return allPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   );
-
-  return posts;
 }
 
 export default function HomePage() {

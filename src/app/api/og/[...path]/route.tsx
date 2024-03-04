@@ -1,5 +1,6 @@
 import { ImageResponse } from "@vercel/og";
-import { allPosts } from "contentlayer/generated";
+
+import { allPosts } from "~/lib/mdx";
 
 export const runtime = "edge";
 

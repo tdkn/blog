@@ -1,10 +1,7 @@
 // @ts-check
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const { withContentlayer } = require("next-contentlayer");
 
-/**
- * @type {import('next').NextConfig}
- */
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   poweredByHeader: false,
   async redirects() {
@@ -38,4 +35,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withContentlayer(nextConfig);
+module.exports = nextConfig;
