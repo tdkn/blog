@@ -16,7 +16,7 @@ async function fetchFont(
     },
   });
 
-  const css = (await response.text()) as string;
+  const css = await response.text();
 
   const resource = css.match(
     /src: url\((.+)\) format\('(opentype|truetype)'\)/,

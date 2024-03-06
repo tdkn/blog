@@ -3,8 +3,7 @@
     "baseUrl": ".",
     "paths": {
       "~/*": ["src/*"],
-      "@posts/*": ["posts/*"],
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "@posts/*": ["posts/*"]
     },
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],
@@ -22,12 +21,6 @@
     "incremental": true,
     "plugins": [{ "name": "next" }]
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    ".next/types/**/*.ts",
-    ".contentlayer/generated"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }

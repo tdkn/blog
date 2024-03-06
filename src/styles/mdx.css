@@ -2,18 +2,18 @@
   @apply inline-flex items-center rounded-md bg-gray-100 px-1.5 dark:bg-gray-100/10;
 }
 
-[data-rehype-pretty-code-fragment] code {
+[data-rehype-pretty-code-figure] code {
   @apply grid min-w-full;
 }
 
-[data-rehype-pretty-code-fragment] [data-line] {
+[data-rehype-pretty-code-figure] [data-line] {
   @apply px-4;
 }
 
-[data-rehype-pretty-code-fragment] [data-highlighted-chars] {
+[data-rehype-pretty-code-figure] [data-highlighted-chars] {
   @apply rounded-md bg-[#F1FA8C80] px-1 py-0.5;
 }
 
-[data-rehype-pretty-code-fragment] [data-highlighted-line] {
+[data-rehype-pretty-code-figure] [data-highlighted-line] {
   @apply bg-[#424450];
 }

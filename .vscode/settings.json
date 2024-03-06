@@ -1,7 +1,6 @@
 {
   "files.exclude": {
     "**/node_modules": true,
-    "**/.contentlayer/.cache": true,
     "**/.vercel/cache": true,
     "**/.{husky,idea,next,swc,yarn}": true
   },

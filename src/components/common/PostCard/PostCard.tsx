@@ -1,5 +1,6 @@
-import type { Post } from "contentlayer/generated";
 import type { ComponentPropsWithoutRef, FC } from "react";
+
+import type { Post } from "~/types/post";
 
 import { Deprecated } from "~/components/common";
 import { Link } from "~/components/ui";

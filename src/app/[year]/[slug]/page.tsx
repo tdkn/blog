@@ -1,9 +1,9 @@
-import { allPosts } from "contentlayer/generated";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { Deprecated, Profile } from "~/components/common";
 import { formatDate, formatTimeAgo } from "~/lib/format-date";
+import { getAllPosts } from "~/lib/mdx";
 
 import Mdx from "./mdx";
 
@@ -23,25 +23,22 @@ export function generateMetadata({
   };
 }
 
-export function generateStaticParams(): PageProps["params"][] {
-  return allPosts.map((post) => {
-    const [year, slug] = post._raw.flattenedPath.split("/");
-    return {
-      slug,
-      year,
-    };
-  });
+export async function generateStaticParams(): Promise<PageProps["params"][]> {
+  const allPosts = await getAllPosts();
+
+  return allPosts.map(({ slug, year }) => ({ slug, year }));
 }
 
-function getPost(params: PageProps["params"]) {
+async function getPost(params: PageProps["params"]) {
+  const allPosts = await getAllPosts();
+
   return allPosts.find(
-    (post) =>
-      `/${post._raw.flattenedPath}` === `/${params.year}/${params.slug}`,
+    (post) => post.year === params.year && post.slug === params.slug,
   );
 }
 
-export default function BlogPostPage({ params }: PageProps) {
-  const post = getPost(params);
+export default async function BlogPostPage({ params }: PageProps) {
+  const post = await getPost(params);
 
   if (!post) {
     notFound();
@@ -58,7 +55,7 @@ export default function BlogPostPage({ params }: PageProps) {
           {post.deprecated && <Deprecated />}
         </p>
       </div>
-      <Mdx code={post.body.code} />
+      <Mdx code={post.content} />
       <Profile className="pt-10" />
     </>
   );

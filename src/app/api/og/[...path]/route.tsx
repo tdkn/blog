@@ -1,11 +1,12 @@
 import { ImageResponse } from "@vercel/og";
-import { allPosts } from "contentlayer/generated";
 
-export const runtime = "edge";
+import { getAllPosts } from "~/lib/mdx";
+
+export const runtime = "nodejs";
 
 export async function GET(req: Request) {
   const { pathname } = new URL(req.url);
-  const post = allPosts.find(
+  const post = (await getAllPosts()).find(
     (post) => post.url === pathname.replace("/api/og", "").replace(".png", ""),
   );
 
