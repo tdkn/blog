@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "~/*": ["src/*"],
-      "@posts/*": ["posts/*"]
+      "~/*": ["src/*"]
     },
     "target": "es6",
     "lib": ["dom", "dom.iterable", "esnext"],

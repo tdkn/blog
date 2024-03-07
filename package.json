@@ -23,7 +23,7 @@
     "fix:stylelint": "stylelint './src/**/*.css' -f verbose --fix",
     "fix:prettier": "prettier --write .",
     "test": "vitest",
-    "postinstall": "is-ci || husky install"
+    "postinstall": "husky"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "6.5.1",
@@ -59,7 +59,6 @@
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-perfectionist": "2.5.0",
     "husky": "9.0.11",
-    "is-ci": "3.0.1",
     "jsdom": "24.0.0",
     "lint-staged": "15.2.2",
     "npm-run-all2": "6.1.2",
@@ -73,7 +72,6 @@
     "tailwindcss": "3.4.1",
     "typescript": "5.3.3",
     "vercel": "33.5.3",
-    "vite-tsconfig-paths": "4.3.1",
     "vitest": "1.3.1"
   },
   "volta": {
