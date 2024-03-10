@@ -21,7 +21,7 @@ This is the blog that powers [tdkn.dev](https://tdkn.dev), built on Next.js.
 Run:
 
 ```bash
-yarn dev
+pnpm run dev
 ```
 
 Then, open [http://localhost:3000](http://localhost:3000) with your browser.

@@ -2,7 +2,7 @@
   "files.exclude": {
     "**/node_modules": true,
     "**/.vercel/cache": true,
-    "**/.{husky,idea,next,swc,yarn}": true
+    "**/.{idea,next,swc}": true
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
