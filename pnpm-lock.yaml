@@ -95,8 +95,8 @@ devDependencies:
     specifier: 9.1.0
     version: 9.1.0(eslint@8.57.0)
   eslint-plugin-perfectionist:
-    specifier: 2.5.0
-    version: 2.5.0(eslint@8.57.0)(typescript@5.3.3)
+    specifier: 2.6.0
+    version: 2.6.0(eslint@8.57.0)(typescript@5.3.3)
   husky:
     specifier: 9.0.11
     version: 9.0.11
@@ -3329,8 +3329,8 @@ packages:
       object.fromentries: 2.0.7
     dev: true
 
-  /eslint-plugin-perfectionist@2.5.0(eslint@8.57.0)(typescript@5.3.3):
-    resolution: {integrity: sha512-F6XXcq4mKKUe/SREoMGQqzgw6cgCgf3pFzkFfQVIGtqD1yXVpQjnhTepzhBeZfxZwgMzR9HO4yH4CUhIQ2WBcQ==}
+  /eslint-plugin-perfectionist@2.6.0(eslint@8.57.0)(typescript@5.3.3):
+    resolution: {integrity: sha512-hee0Fu5825v+WTIhrRIJdWO8biUgm9O+c4Q1AEXIIGsXDHrLv5cdXfVUdnQcYgGtI/4X+tdFu69iVofHCIkvtw==}
     peerDependencies:
       astro-eslint-parser: ^0.16.0
       eslint: '>=8.0.0'
