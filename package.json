@@ -43,7 +43,7 @@
     "react-dom": "18.2.0",
     "rehype-pretty-code": "0.13.0",
     "shiki": "1.1.7",
-    "tailwind-merge": "2.2.1"
+    "tailwind-merge": "2.2.2"
   },
   "devDependencies": {
     "@testing-library/react": "14.2.1",
