@@ -122,14 +122,14 @@ devDependencies:
     specifier: 4.0.0
     version: 4.0.0
   stylelint:
-    specifier: 16.3.0
-    version: 16.3.0(typescript@5.4.3)
+    specifier: 16.3.1
+    version: 16.3.1(typescript@5.4.3)
   stylelint-config-standard:
     specifier: 36.0.0
-    version: 36.0.0(stylelint@16.3.0)
+    version: 36.0.0(stylelint@16.3.1)
   stylelint-config-tailwindcss:
     specifier: 0.0.7
-    version: 0.0.7(stylelint@16.3.0)(tailwindcss@3.4.1)
+    version: 0.0.7(stylelint@16.3.1)(tailwindcss@3.4.1)
   tailwindcss:
     specifier: 3.4.1
     version: 3.4.1
@@ -5939,7 +5939,7 @@ packages:
       postcss: ^8.2.14
     dependencies:
       postcss: 8.4.38
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.0.16
     dev: true
 
   /postcss-resolve-nested-selector@0.1.1:
@@ -6785,37 +6785,37 @@ packages:
       react: 18.2.0
     dev: false
 
-  /stylelint-config-recommended@14.0.0(stylelint@16.3.0):
+  /stylelint-config-recommended@14.0.0(stylelint@16.3.1):
     resolution: {integrity: sha512-jSkx290CglS8StmrLp2TxAppIajzIBZKYm3IxT89Kg6fGlxbPiTiyH9PS5YUuVAFwaJLl1ikiXX0QWjI0jmgZQ==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: ^16.0.0
     dependencies:
-      stylelint: 16.3.0(typescript@5.4.3)
+      stylelint: 16.3.1(typescript@5.4.3)
     dev: true
 
-  /stylelint-config-standard@36.0.0(stylelint@16.3.0):
+  /stylelint-config-standard@36.0.0(stylelint@16.3.1):
     resolution: {integrity: sha512-3Kjyq4d62bYFp/Aq8PMKDwlgUyPU4nacXsjDLWJdNPRUgpuxALu1KnlAHIj36cdtxViVhXexZij65yM0uNIHug==}
     engines: {node: '>=18.12.0'}
     peerDependencies:
       stylelint: ^16.1.0
     dependencies:
-      stylelint: 16.3.0(typescript@5.4.3)
-      stylelint-config-recommended: 14.0.0(stylelint@16.3.0)
+      stylelint: 16.3.1(typescript@5.4.3)
+      stylelint-config-recommended: 14.0.0(stylelint@16.3.1)
     dev: true
 
-  /stylelint-config-tailwindcss@0.0.7(stylelint@16.3.0)(tailwindcss@3.4.1):
+  /stylelint-config-tailwindcss@0.0.7(stylelint@16.3.1)(tailwindcss@3.4.1):
     resolution: {integrity: sha512-n2dCWH+0ppr0/by4EYCLWW7g5LU+l4UzUIsYS7xbVHqvm9UWa7UhltNdNiz5NmLF/FmbJR4Yd/v9DuUGvLw1Tg==}
     peerDependencies:
       stylelint: '>=13.13.1'
       tailwindcss: '>=2.2.16'
     dependencies:
-      stylelint: 16.3.0(typescript@5.4.3)
+      stylelint: 16.3.1(typescript@5.4.3)
       tailwindcss: 3.4.1
     dev: true
 
-  /stylelint@16.3.0(typescript@5.4.3):
-    resolution: {integrity: sha512-hqC6xNTbQ5HRGQXfIW4HwXcx09raIFz4W4XFbraeqWqYRVVY/ibYvI0dsu0ORMQY8re2bpDdCAeIa2cm+QJ4Sw==}
+  /stylelint@16.3.1(typescript@5.4.3):
+    resolution: {integrity: sha512-/JOwQnBvxEKOT2RtNgGpBVXnCSMBgKOL2k7w0K52htwCyJls4+cHvc4YZgXlVoAZS9QJd2DgYAiRnja96pTgxw==}
     engines: {node: '>=18.12.0'}
     hasBin: true
     dependencies:
