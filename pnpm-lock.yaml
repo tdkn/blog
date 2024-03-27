@@ -129,10 +129,10 @@ devDependencies:
     version: 36.0.0(stylelint@16.3.1)
   stylelint-config-tailwindcss:
     specifier: 0.0.7
-    version: 0.0.7(stylelint@16.3.1)(tailwindcss@3.4.1)
+    version: 0.0.7(stylelint@16.3.1)(tailwindcss@3.4.2)
   tailwindcss:
-    specifier: 3.4.1
-    version: 3.4.1
+    specifier: 3.4.2
+    version: 3.4.2
   typescript:
     specifier: 5.4.3
     version: 5.4.3
@@ -5951,14 +5951,6 @@ packages:
       postcss: 8.4.38
     dev: true
 
-  /postcss-selector-parser@6.0.15:
-    resolution: {integrity: sha512-rEYkQOMUCEMhsKbK66tbEU9QVIxbhN18YiniAwA7XQYTVBqrBy+P2p5JcdqsHgKM2zWylp8d7J6eszocfds5Sw==}
-    engines: {node: '>=4'}
-    dependencies:
-      cssesc: 3.0.0
-      util-deprecate: 1.0.2
-    dev: true
-
   /postcss-selector-parser@6.0.16:
     resolution: {integrity: sha512-A0RVJrX+IUkVZbW3ClroRWurercFhieevHB38sr2+l9eUClMqome3LmEmnhlNy+5Mr2EYN6B2Kaw9wYdd+VHiw==}
     engines: {node: '>=4'}
@@ -6800,14 +6792,14 @@ packages:
       stylelint-config-recommended: 14.0.0(stylelint@16.3.1)
     dev: true
 
-  /stylelint-config-tailwindcss@0.0.7(stylelint@16.3.1)(tailwindcss@3.4.1):
+  /stylelint-config-tailwindcss@0.0.7(stylelint@16.3.1)(tailwindcss@3.4.2):
     resolution: {integrity: sha512-n2dCWH+0ppr0/by4EYCLWW7g5LU+l4UzUIsYS7xbVHqvm9UWa7UhltNdNiz5NmLF/FmbJR4Yd/v9DuUGvLw1Tg==}
     peerDependencies:
       stylelint: '>=13.13.1'
       tailwindcss: '>=2.2.16'
     dependencies:
       stylelint: 16.3.1(typescript@5.4.3)
-      tailwindcss: 3.4.1
+      tailwindcss: 3.4.2
     dev: true
 
   /stylelint@16.3.1(typescript@5.4.3):
@@ -6924,8 +6916,8 @@ packages:
       '@babel/runtime': 7.24.0
     dev: false
 
-  /tailwindcss@3.4.1:
-    resolution: {integrity: sha512-qAYmXRfk3ENzuPBakNK0SRrUDipP8NQnEY6772uDhflcQz5EhRdD7JNZxyrFHVQNCwULPBn6FNPp9brpO7ctcA==}
+  /tailwindcss@3.4.2:
+    resolution: {integrity: sha512-1kIzVecynNKMhhX8mPTOwTkkVHupUTMbEvk4n1ByxdM8sQTJ8fE41Y4TdORG6GmiVXHhfZ/++0hiIFJFwfadsA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
     dependencies:
@@ -6948,7 +6940,7 @@ packages:
       postcss-js: 4.0.1(postcss@8.4.38)
       postcss-load-config: 4.0.2(postcss@8.4.38)
       postcss-nested: 6.0.1(postcss@8.4.38)
-      postcss-selector-parser: 6.0.15
+      postcss-selector-parser: 6.0.16
       resolve: 1.22.8
       sucrase: 3.35.0
     transitivePeerDependencies:
