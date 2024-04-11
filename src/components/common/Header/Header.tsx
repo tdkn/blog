@@ -1,4 +1,5 @@
 import {
+  faBluesky,
   faFacebook,
   faGithub,
   faMastodon,
@@ -21,6 +22,13 @@ const Header = () => (
       </Link>
       <Link aria-label="X" href="https://x.com/tdkn_" target="_blank">
         <FontAwesomeIcon className="h-5 w-5" icon={faXTwitter} />
+      </Link>
+      <Link
+        aria-label="Bluesky"
+        href="https://bsky.app/profile/tdkn.bsky.social"
+        target="_blank"
+      >
+        <FontAwesomeIcon className="h-5 w-5" icon={faBluesky} />
       </Link>
       <Link
         aria-label="Mastodon"
