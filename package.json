@@ -64,7 +64,7 @@
     "npm-run-all2": "6.1.2",
     "postcss": "8.4.38",
     "prettier": "3.2.5",
-    "prettier-plugin-tailwindcss": "0.5.13",
+    "prettier-plugin-tailwindcss": "0.5.14",
     "remark-images": "4.0.0",
     "stylelint": "16.3.1",
     "stylelint-config-standard": "36.0.0",
