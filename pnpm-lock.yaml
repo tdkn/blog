@@ -136,8 +136,8 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
       vercel:
-        specifier: 34.1.3
-        version: 34.1.3
+        specifier: 34.1.4
+        version: 34.1.4
       vitest:
         specifier: 1.5.2
         version: 1.5.2(@edge-runtime/vm@3.2.0)(@types/node@14.18.33)(jsdom@24.0.0)
@@ -958,8 +958,8 @@ packages:
   '@vercel/hydrogen@1.0.2':
     resolution: {integrity: sha512-/Q2MKk1GfOuZAnkE9jQexjtUQqanbY65R+xtJWd9yKIgwcfRI1hxiNH3uXyVM5AvLoY+fxxULkSuxDtUKpkJpQ==}
 
-  '@vercel/next@4.2.3':
-    resolution: {integrity: sha512-qXWbgY4YzXE4wCrCaLW9dTsr53SN+HIk7XK7P749Ob/yaRMbTIDMof+NhM2IyyUaoVt4zxNVFoRbCqkYqJSevA==}
+  '@vercel/next@4.2.4':
+    resolution: {integrity: sha512-I86919ZtpzA5lcwvEc++U2zde/gLdpo1oVYwC0PJ3O4rEaj33T/b2I5DXkMsJFIkrp0h1+ExHqER33hrRoyvfg==}
 
   '@vercel/nft@0.26.4':
     resolution: {integrity: sha512-j4jCOOXke2t8cHZCIxu1dzKLHLcFmYzC3yqAK6MfZznOL1QIJKd0xcFsXK3zcqzU7ScsE2zWkiMMNHGMHgp+FA==}
@@ -3977,8 +3977,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@34.1.3:
-    resolution: {integrity: sha512-iwUsrhH5ncXK/BKZ6yn1iRQkWoNm7MDO+xErOFKrKA2MukPaRfSWaLDfARq2/SaKS5z86s36h5YFECtyAu6Q2Q==}
+  vercel@34.1.4:
+    resolution: {integrity: sha512-iMOiG7vt/mRR/bMmWi18aAXXnGZPSpXFipGhtUJxa13TH0HsJleQ8+RP0cJ2Be/OAplxVKsnKC9JLR907ZOAdA==}
     engines: {node: '>= 16'}
     hasBin: true
 
@@ -5042,7 +5042,7 @@ snapshots:
       '@vercel/static-config': 3.0.0
       ts-morph: 12.0.0
 
-  '@vercel/next@4.2.3':
+  '@vercel/next@4.2.4':
     dependencies:
       '@vercel/nft': 0.26.4
     transitivePeerDependencies:
@@ -8583,13 +8583,13 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@34.1.3:
+  vercel@34.1.4:
     dependencies:
       '@vercel/build-utils': 7.12.0
       '@vercel/fun': 1.1.0
       '@vercel/go': 3.1.1
       '@vercel/hydrogen': 1.0.2
-      '@vercel/next': 4.2.3
+      '@vercel/next': 4.2.4
       '@vercel/node': 3.0.27
       '@vercel/python': 4.2.0
       '@vercel/redwood': 2.0.8
