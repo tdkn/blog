@@ -83,7 +83,7 @@ importers:
         version: 7.8.0(eslint@8.57.0)(typescript@5.4.5)
       '@vitejs/plugin-react':
         specifier: 4.2.1
-        version: 4.2.1(vite@5.2.9(@types/node@14.18.33))
+        version: 4.2.1(vite@5.2.9(@types/node@16.18.11))
       autoprefixer:
         specifier: 10.4.19
         version: 10.4.19(postcss@8.4.38)
@@ -128,19 +128,19 @@ importers:
         version: 36.0.0(stylelint@16.5.0(typescript@5.4.5))
       stylelint-config-tailwindcss:
         specifier: 0.0.7
-        version: 0.0.7(stylelint@16.5.0(typescript@5.4.5))(tailwindcss@3.4.3(ts-node@10.9.1(@types/node@14.18.33)(typescript@5.4.5)))
+        version: 0.0.7(stylelint@16.5.0(typescript@5.4.5))(tailwindcss@3.4.3(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.4.5)))
       tailwindcss:
         specifier: 3.4.3
-        version: 3.4.3(ts-node@10.9.1(@types/node@14.18.33)(typescript@5.4.5))
+        version: 3.4.3(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.4.5))
       typescript:
         specifier: 5.4.5
         version: 5.4.5
       vercel:
-        specifier: 34.1.8
-        version: 34.1.8
+        specifier: 34.1.9
+        version: 34.1.9
       vitest:
         specifier: 1.6.0
-        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@14.18.33)(jsdom@24.0.0)
+        version: 1.6.0(@edge-runtime/vm@3.2.0)(@types/node@16.18.11)(jsdom@24.0.0)
 
 packages:
 
@@ -827,8 +827,8 @@ packages:
   '@types/ms@0.7.34':
     resolution: {integrity: sha512-nG96G3Wp6acyAgJqGasjODb+acrI7KltPiRxzHPXnP3NgI28bpQDRv53olbqGXbfcgF5aiiHmO3xpwEpS5Ld9g==}
 
-  '@types/node@14.18.33':
-    resolution: {integrity: sha512-qelS/Ra6sacc4loe/3MSjXNL1dNQ/GjxNHVzuChwMfmk7HuycRLVQN2qNY3XahK+fZc5E2szqQSKUyAF0E+2bg==}
+  '@types/node@16.18.11':
+    resolution: {integrity: sha512-3oJbGBUWuS6ahSnEq1eN2XrCyf4YsWI8OyCvo7c64zQJNplk3mO84t53o8lfTk+2ji59g5ycfc6qQ3fdHliHuA==}
 
   '@types/prop-types@15.7.11':
     resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
@@ -989,16 +989,16 @@ packages:
   '@vercel/hydrogen@1.0.2':
     resolution: {integrity: sha512-/Q2MKk1GfOuZAnkE9jQexjtUQqanbY65R+xtJWd9yKIgwcfRI1hxiNH3uXyVM5AvLoY+fxxULkSuxDtUKpkJpQ==}
 
-  '@vercel/next@4.2.7':
-    resolution: {integrity: sha512-twZaOXWmBKxs/S7Os56aQ8Ps7xNO6vhfesAym5XMHHuAA2Z+H2461uZFQnLP4HtKtEW/7g0AzJqlfWF2otVL9A==}
+  '@vercel/next@4.2.8':
+    resolution: {integrity: sha512-UaF1nWjqfj6T9nERD7MCKXhrFUgPZza+mQz7og3/wTcf17JS/Uu6Qvcf+5h5Xae2/7HQO7+ZNlj/EA9BIdIsvw==}
 
   '@vercel/nft@0.26.4':
     resolution: {integrity: sha512-j4jCOOXke2t8cHZCIxu1dzKLHLcFmYzC3yqAK6MfZznOL1QIJKd0xcFsXK3zcqzU7ScsE2zWkiMMNHGMHgp+FA==}
     engines: {node: '>=16'}
     hasBin: true
 
-  '@vercel/node@3.0.28':
-    resolution: {integrity: sha512-GQggDgsBgSJLDPlkddmSPOgfvrgRlxnQzhae64b21X0C5GHRmN8c1p5qVghjeNft8cIEIBETVOnSe8eBvqWYxQ==}
+  '@vercel/node@3.1.0':
+    resolution: {integrity: sha512-Ghx663fSKJoe9NxjEU9i5d9+QcPPEw4HWkSThCCO9OK0Ov2KdeZEBcfZe8OYLiFDY10LN0EPe2Ur3NmofcwyNA==}
 
   '@vercel/python@4.2.0':
     resolution: {integrity: sha512-oubkmRRxWQJGGYFq5Q49/2c94aHKCYXB+DkdtaW55syQ9N0LVBXCnCMZ4ZatSrSI18d9mMoDSx3xi4gtByy9NA==}
@@ -4008,8 +4008,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@34.1.8:
-    resolution: {integrity: sha512-PmT+fgTmwUvT8ZV1BvbMTpxossdLHaKJxLcaepBqAWwOdeM0TR8bVjXTpH/HEmhGL2RNhn8a2l8/cjZNVPfsJw==}
+  vercel@34.1.9:
+    resolution: {integrity: sha512-Dtr+gZ8QWQJG4WGiPgkVT3C8Hbg/7QUK7B2GQRCFZ8tRJ/JsiyOPhFoFxmUYNRbIv9M82sxGlCQ6m+kbmWSQRw==}
     engines: {node: '>= 16'}
     hasBin: true
 
@@ -4878,7 +4878,7 @@ snapshots:
 
   '@types/ms@0.7.34': {}
 
-  '@types/node@14.18.33': {}
+  '@types/node@16.18.11': {}
 
   '@types/prop-types@15.7.11': {}
 
@@ -5116,7 +5116,7 @@ snapshots:
       '@vercel/static-config': 3.0.0
       ts-morph: 12.0.0
 
-  '@vercel/next@4.2.7':
+  '@vercel/next@4.2.8':
     dependencies:
       '@vercel/nft': 0.26.4
     transitivePeerDependencies:
@@ -5141,12 +5141,12 @@ snapshots:
       - encoding
       - supports-color
 
-  '@vercel/node@3.0.28':
+  '@vercel/node@3.1.0':
     dependencies:
       '@edge-runtime/node-utils': 2.3.0
       '@edge-runtime/primitives': 4.1.0
       '@edge-runtime/vm': 3.2.0
-      '@types/node': 14.18.33
+      '@types/node': 16.18.11
       '@vercel/build-utils': 8.0.0
       '@vercel/error-utils': 2.0.2
       '@vercel/nft': 0.26.4
@@ -5160,7 +5160,7 @@ snapshots:
       node-fetch: 2.6.9
       path-to-regexp: 6.2.1
       ts-morph: 12.0.0
-      ts-node: 10.9.1(@types/node@14.18.33)(typescript@4.9.5)
+      ts-node: 10.9.1(@types/node@16.18.11)(typescript@4.9.5)
       typescript: 4.9.5
       undici: 5.26.5
     transitivePeerDependencies:
@@ -5211,14 +5211,14 @@ snapshots:
       json-schema-to-ts: 1.6.4
       ts-morph: 12.0.0
 
-  '@vitejs/plugin-react@4.2.1(vite@5.2.9(@types/node@14.18.33))':
+  '@vitejs/plugin-react@4.2.1(vite@5.2.9(@types/node@16.18.11))':
     dependencies:
       '@babel/core': 7.24.0
       '@babel/plugin-transform-react-jsx-self': 7.23.3(@babel/core@7.24.0)
       '@babel/plugin-transform-react-jsx-source': 7.23.3(@babel/core@7.24.0)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.0
-      vite: 5.2.9(@types/node@14.18.33)
+      vite: 5.2.9(@types/node@16.18.11)
     transitivePeerDependencies:
       - supports-color
 
@@ -7738,13 +7738,13 @@ snapshots:
       camelcase-css: 2.0.1
       postcss: 8.4.38
 
-  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@14.18.33)(typescript@5.4.5)):
+  postcss-load-config@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.4.5)):
     dependencies:
       lilconfig: 3.1.1
       yaml: 2.4.1
     optionalDependencies:
       postcss: 8.4.38
-      ts-node: 10.9.1(@types/node@14.18.33)(typescript@5.4.5)
+      ts-node: 10.9.1(@types/node@16.18.11)(typescript@5.4.5)
 
   postcss-nested@6.0.1(postcss@8.4.38):
     dependencies:
@@ -8236,10 +8236,10 @@ snapshots:
       stylelint: 16.5.0(typescript@5.4.5)
       stylelint-config-recommended: 14.0.0(stylelint@16.5.0(typescript@5.4.5))
 
-  stylelint-config-tailwindcss@0.0.7(stylelint@16.5.0(typescript@5.4.5))(tailwindcss@3.4.3(ts-node@10.9.1(@types/node@14.18.33)(typescript@5.4.5))):
+  stylelint-config-tailwindcss@0.0.7(stylelint@16.5.0(typescript@5.4.5))(tailwindcss@3.4.3(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.4.5))):
     dependencies:
       stylelint: 16.5.0(typescript@5.4.5)
-      tailwindcss: 3.4.3(ts-node@10.9.1(@types/node@14.18.33)(typescript@5.4.5))
+      tailwindcss: 3.4.3(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.4.5))
 
   stylelint@16.5.0(typescript@5.4.5):
     dependencies:
@@ -8327,7 +8327,7 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.24.4
 
-  tailwindcss@3.4.3(ts-node@10.9.1(@types/node@14.18.33)(typescript@5.4.5)):
+  tailwindcss@3.4.3(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.4.5)):
     dependencies:
       '@alloc/quick-lru': 5.2.0
       arg: 5.0.2
@@ -8346,7 +8346,7 @@ snapshots:
       postcss: 8.4.38
       postcss-import: 15.1.0(postcss@8.4.38)
       postcss-js: 4.0.1(postcss@8.4.38)
-      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@14.18.33)(typescript@5.4.5))
+      postcss-load-config: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.4.5))
       postcss-nested: 6.0.1(postcss@8.4.38)
       postcss-selector-parser: 6.0.16
       resolve: 1.22.8
@@ -8435,14 +8435,14 @@ snapshots:
       '@ts-morph/common': 0.11.1
       code-block-writer: 10.1.1
 
-  ts-node@10.9.1(@types/node@14.18.33)(typescript@4.9.5):
+  ts-node@10.9.1(@types/node@16.18.11)(typescript@4.9.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 14.18.33
+      '@types/node': 16.18.11
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -8453,14 +8453,14 @@ snapshots:
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
-  ts-node@10.9.1(@types/node@14.18.33)(typescript@5.4.5):
+  ts-node@10.9.1(@types/node@16.18.11)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 14.18.33
+      '@types/node': 16.18.11
       acorn: 8.11.3
       acorn-walk: 8.3.2
       arg: 4.1.3
@@ -8657,14 +8657,14 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@34.1.8:
+  vercel@34.1.9:
     dependencies:
       '@vercel/build-utils': 8.0.0
       '@vercel/fun': 1.1.0
       '@vercel/go': 3.1.1
       '@vercel/hydrogen': 1.0.2
-      '@vercel/next': 4.2.7
-      '@vercel/node': 3.0.28
+      '@vercel/next': 4.2.8
+      '@vercel/node': 3.1.0
       '@vercel/python': 4.2.0
       '@vercel/redwood': 2.0.8
       '@vercel/remix-builder': 2.1.5
@@ -8711,13 +8711,13 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite-node@1.6.0(@types/node@14.18.33):
+  vite-node@1.6.0(@types/node@16.18.11):
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.9(@types/node@14.18.33)
+      vite: 5.2.9(@types/node@16.18.11)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -8728,16 +8728,16 @@ snapshots:
       - supports-color
       - terser
 
-  vite@5.2.9(@types/node@14.18.33):
+  vite@5.2.9(@types/node@16.18.11):
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
       rollup: 4.14.3
     optionalDependencies:
-      '@types/node': 14.18.33
+      '@types/node': 16.18.11
       fsevents: 2.3.3
 
-  vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@14.18.33)(jsdom@24.0.0):
+  vitest@1.6.0(@edge-runtime/vm@3.2.0)(@types/node@16.18.11)(jsdom@24.0.0):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -8756,12 +8756,12 @@ snapshots:
       strip-literal: 2.0.0
       tinybench: 2.6.0
       tinypool: 0.8.3
-      vite: 5.2.9(@types/node@14.18.33)
-      vite-node: 1.6.0(@types/node@14.18.33)
+      vite: 5.2.9(@types/node@16.18.11)
+      vite-node: 1.6.0(@types/node@16.18.11)
       why-is-node-running: 2.2.2
     optionalDependencies:
       '@edge-runtime/vm': 3.2.0
-      '@types/node': 14.18.33
+      '@types/node': 16.18.11
       jsdom: 24.0.0
     transitivePeerDependencies:
       - less
