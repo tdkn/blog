@@ -42,7 +42,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rehype-pretty-code": "0.13.2",
-    "shiki": "1.6.0",
+    "shiki": "1.6.1",
     "tailwind-merge": "2.3.0"
   },
   "devDependencies": {
