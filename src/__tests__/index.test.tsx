@@ -1,7 +1,7 @@
 import { render } from "@testing-library/react";
 import { describe, expect, it, vi } from "vitest";
 
-import Home from "~/app/page";
+import Home from "~/app/(blog)/page";
 
 describe("Home", () => {
   it("renders a Home", async () => {
