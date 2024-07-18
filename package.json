@@ -46,7 +46,7 @@
     "tailwind-merge": "2.4.0"
   },
   "devDependencies": {
-    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/forms": "0.5.7",
     "@testing-library/react": "16.0.0",
     "@types/mdx": "2.0.13",
     "@types/react": "18.3.3",
