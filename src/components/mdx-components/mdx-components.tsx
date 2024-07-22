@@ -51,7 +51,7 @@ export const components: MDXComponents = {
   pre: ({ className, ...props }) => (
     <pre
       className={classNames(
-        "mb-4 mt-6 overflow-x-auto rounded-lg  bg-slate-800 py-4",
+        "mb-4 mt-6 overflow-x-auto rounded-lg bg-slate-800 py-4",
         className,
       )}
       {...props}
