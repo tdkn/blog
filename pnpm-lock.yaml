@@ -106,8 +106,8 @@ importers:
         specifier: 9.1.5
         version: 9.1.5
       jsdom:
-        specifier: 24.1.1
-        version: 24.1.1
+        specifier: 24.1.3
+        version: 24.1.3
       lint-staged:
         specifier: 15.2.9
         version: 15.2.9
@@ -143,7 +143,7 @@ importers:
         version: 37.1.0
       vitest:
         specifier: 2.0.5
-        version: 2.0.5(@edge-runtime/vm@3.2.0)(@types/node@16.18.11)(jsdom@24.1.1)
+        version: 2.0.5(@edge-runtime/vm@3.2.0)(@types/node@16.18.11)(jsdom@24.1.3)
 
 packages:
 
@@ -1509,15 +1509,6 @@ packages:
       supports-color:
         optional: true
 
-  debug@4.3.5:
-    resolution: {integrity: sha512-pt0bNEmneDIvdL1Xsd9oDQ/wrQRkXDT4AUWlNZNPKvW5x/jyO9VFXkJUP07vQ2upmw5PlaITaPKc31jK13V+jg==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-
   debug@4.3.6:
     resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
     engines: {node: '>=6.0'}
@@ -2570,8 +2561,8 @@ packages:
     resolution: {integrity: sha512-wpxZs9NoxZaJESJGIZTyDEaYpl0FKSA+FB9aJiyemKhMwkxQg63h4T1KJgUGHpTqPDNRcmmYLugrRjJlBtWvRA==}
     hasBin: true
 
-  jsdom@24.1.1:
-    resolution: {integrity: sha512-5O1wWV99Jhq4DV7rCLIoZ/UIhyQeDR7wHVyZAHAshbrvZsLs+Xzz7gtwnlJTJDjleiTKh54F4dXrX70vJQTyJQ==}
+  jsdom@24.1.3:
+    resolution: {integrity: sha512-MyL55p3Ut3cXbeBEG7Hcv0mVM8pp8PBNWxRqchZnSfAiES1v1mRnMeFfaHWIPULpwsYfvO+ZmMZz5tGCnjzDUQ==}
     engines: {node: '>=18'}
     peerDependencies:
       canvas: ^2.11.2
@@ -5716,10 +5707,6 @@ snapshots:
     dependencies:
       ms: 2.1.2
 
-  debug@4.3.5:
-    dependencies:
-      ms: 2.1.2
-
   debug@4.3.6:
     dependencies:
       ms: 2.1.2
@@ -6705,7 +6692,7 @@ snapshots:
   http-proxy-agent@7.0.2:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.5
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -6719,7 +6706,7 @@ snapshots:
   https-proxy-agent@7.0.5:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.3.5
+      debug: 4.3.6
     transitivePeerDependencies:
       - supports-color
 
@@ -6945,7 +6932,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jsdom@24.1.1:
+  jsdom@24.1.3:
     dependencies:
       cssstyle: 4.0.1
       data-urls: 5.0.0
@@ -8756,7 +8743,7 @@ snapshots:
       '@types/node': 16.18.11
       fsevents: 2.3.3
 
-  vitest@2.0.5(@edge-runtime/vm@3.2.0)(@types/node@16.18.11)(jsdom@24.1.1):
+  vitest@2.0.5(@edge-runtime/vm@3.2.0)(@types/node@16.18.11)(jsdom@24.1.3):
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@vitest/expect': 2.0.5
@@ -8780,7 +8767,7 @@ snapshots:
     optionalDependencies:
       '@edge-runtime/vm': 3.2.0
       '@types/node': 16.18.11
-      jsdom: 24.1.1
+      jsdom: 24.1.3
     transitivePeerDependencies:
       - less
       - lightningcss
