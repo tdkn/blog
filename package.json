@@ -34,7 +34,7 @@
     "@next/bundle-analyzer": "14.2.8",
     "clsx": "2.1.1",
     "date-fns": "3.6.0",
-    "framer-motion": "11.5.2",
+    "framer-motion": "11.5.3",
     "glob": "11.0.0",
     "gray-matter": "4.0.3",
     "next": "14.2.8",
