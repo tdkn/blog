@@ -31,7 +31,7 @@
     "@fortawesome/free-regular-svg-icons": "6.6.0",
     "@fortawesome/free-solid-svg-icons": "6.6.0",
     "@fortawesome/react-fontawesome": "0.2.2",
-    "@next/bundle-analyzer": "14.2.8",
+    "@next/bundle-analyzer": "14.2.9",
     "clsx": "2.1.1",
     "date-fns": "3.6.0",
     "framer-motion": "11.5.4",
