@@ -121,8 +121,8 @@ importers:
         specifier: 0.6.6
         version: 0.6.6(prettier@3.3.3)
       remark-images:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.1.0
+        version: 4.1.0
       stylelint:
         specifier: 16.9.0
         version: 16.9.0(typescript@5.6.2)
@@ -3438,8 +3438,8 @@ packages:
     peerDependencies:
       shiki: ^1.3.0
 
-  remark-images@4.0.0:
-    resolution: {integrity: sha512-YDZffkzmDWAve3tphTLZXlATb7TkJxTxqTJGrZDr+DSCMtVm78rCf4FORB/B+G64B0xGeXDfE6FUUb5mlTg3SQ==}
+  remark-images@4.1.0:
+    resolution: {integrity: sha512-16D81wwqssfexLeYXTHiw05rEbvt7K0dOef8Fjx86hbTwPEHDgzt610Z2l0TDeybdU42M6szvQzf/PtmiQC/Pw==}
 
   remark-mdx@3.0.1:
     resolution: {integrity: sha512-3Pz3yPQ5Rht2pM5R+0J2MrGoBSrzf+tJG94N+t/ilfdh8YLyyKYtidAYwTveB20BoHAcwIopOUqhcmh2F7hGYA==}
@@ -7946,7 +7946,7 @@ snapshots:
       unified: 11.0.5
       unist-util-visit: 5.0.0
 
-  remark-images@4.0.0:
+  remark-images@4.1.0:
     dependencies:
       '@types/mdast': 4.0.3
       collapse-white-space: 2.1.0
