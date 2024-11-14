@@ -139,8 +139,8 @@ importers:
         specifier: 5.6.3
         version: 5.6.3
       vercel:
-        specifier: 39.0.1
-        version: 39.0.1
+        specifier: 39.0.2
+        version: 39.0.2
       vitest:
         specifier: 2.1.5
         version: 2.1.5(@edge-runtime/vm@3.2.0)(@types/node@16.18.11)(jsdom@25.0.1)
@@ -4007,8 +4007,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@39.0.1:
-    resolution: {integrity: sha512-SBNiyl/ngaEOlKEkaNFTHSGRYFWYqCavK6TQx+XdbMfLDXG6U7GJodxFBa+j15senEzhGN27NPdKqRYpDFzqyQ==}
+  vercel@39.0.2:
+    resolution: {integrity: sha512-nXDg7sZtP9rYhCNnoOoD7QtX7Cvt5Ez67z4G2ThF82QZFzBdJgJiDKDjH3Nj6jyOOi0Ek0TF5AA7XsmirOIXLQ==}
     engines: {node: '>= 16'}
     hasBin: true
 
@@ -8639,7 +8639,7 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@39.0.1:
+  vercel@39.0.2:
     dependencies:
       '@vercel/build-utils': 8.4.12
       '@vercel/fun': 1.1.0
