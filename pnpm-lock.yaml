@@ -33,8 +33,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       framer-motion:
-        specifier: 11.14.1
-        version: 11.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 11.14.3
+        version: 11.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       glob:
         specifier: 11.0.0
         version: 11.0.0
@@ -2075,8 +2075,8 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  framer-motion@11.14.1:
-    resolution: {integrity: sha512-6B7jC54zgnefmUSa2l4gkc/2CrqclHL9AUbDxxRfbFyWKLd+4guUYtEabzoYMU8G5ICZ6CdJdydOLy74Ekd7ag==}
+  framer-motion@11.14.3:
+    resolution: {integrity: sha512-waX0Tn8J+Wkd57CG+ctjKtk6C4FlDH5ziNxLnnKNHpqKdny6y5wIXl36rBedVKuyLJC8b9F1wTkYhW4/qlg0vQ==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -2929,11 +2929,11 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  motion-dom@11.14.1:
-    resolution: {integrity: sha512-Y68tHWR0d2HxHDskNxpeY3pzUdz7L/m5A8TV7VSE6Sq4XUNJdZV8zXco1aeAQ44o48u0i8UKjt8TGIqkZSQ8ew==}
+  motion-dom@11.14.3:
+    resolution: {integrity: sha512-lW+D2wBy5vxLJi6aCP0xyxTxlTfiu+b+zcpVbGVFUxotwThqhdpPRSmX8xztAgtZMPMeU0WGVn/k1w4I+TbPqA==}
 
-  motion-utils@11.14.1:
-    resolution: {integrity: sha512-R6SsehArpkEBUHydkcwQ/8ij8k2PyKWAJ7Y8PN3ztnFwq5RBU3zIamYH6esTp09OgsbwB57mBEZ9DORaN1WTxQ==}
+  motion-utils@11.14.3:
+    resolution: {integrity: sha512-Xg+8xnqIJTpr0L/cidfTTBFkvRw26ZtGGuIhA94J9PQ2p4mEa06Xx7QVYZH0BP+EpMSaDlu+q0I0mmvwADPsaQ==}
 
   mri@1.2.0:
     resolution: {integrity: sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==}
@@ -6391,10 +6391,10 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@11.14.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@11.14.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      motion-dom: 11.14.1
-      motion-utils: 11.14.1
+      motion-dom: 11.14.3
+      motion-utils: 11.14.3
       tslib: 2.6.2
     optionalDependencies:
       react: 18.3.1
@@ -7503,9 +7503,9 @@ snapshots:
 
   mkdirp@1.0.4: {}
 
-  motion-dom@11.14.1: {}
+  motion-dom@11.14.3: {}
 
-  motion-utils@11.14.1: {}
+  motion-utils@11.14.3: {}
 
   mri@1.2.0: {}
 
