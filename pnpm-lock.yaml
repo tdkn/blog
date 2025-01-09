@@ -33,8 +33,8 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       framer-motion:
-        specifier: 11.16.3
-        version: 11.16.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 11.16.4
+        version: 11.16.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       glob:
         specifier: 11.0.0
         version: 11.0.0
@@ -2099,8 +2099,8 @@ packages:
   fraction.js@4.3.7:
     resolution: {integrity: sha512-ZsDfxO51wGAXREY55a7la9LScWpwv9RxIrYABrlvOFBlH/ShPnrtsXeuUIfXKKOVicNxQ+o8JTbJvjS4M89yew==}
 
-  framer-motion@11.16.3:
-    resolution: {integrity: sha512-4TN2TRKfc/t3WC7QJF349Oa2UVnMmIC+IOzb1jt4JMoqjmI7TO6ATnjlKs+hpMxCkDDwt7q5V8azMidm4UYtRg==}
+  framer-motion@11.16.4:
+    resolution: {integrity: sha512-7ncPlBjrYX6iQXcTSw1kvZcHSVjEuOAW3uWuu+/+chUS4UWBMe8kCjniE4VMc2/BMo0su0Uw9sw0aWS9anpPWA==}
     peerDependencies:
       '@emotion/is-prop-valid': '*'
       react: ^18.0.0 || ^19.0.0
@@ -2938,8 +2938,8 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
 
-  motion-dom@11.16.3:
-    resolution: {integrity: sha512-v9Xf2bknUWW7WQajIVo2limfcKlxYv/dcGfB2Vx5h8cswOzP4IvJK21UXz4P37e8G0HstDoW4XRkrPIm737lfw==}
+  motion-dom@11.16.4:
+    resolution: {integrity: sha512-2wuCie206pCiP2K23uvwJeci4pMFfyQKpWI0Vy6HrCTDzDCer4TsYtT7IVnuGbDeoIV37UuZiUr6SZMHEc1Vww==}
 
   motion-utils@11.16.0:
     resolution: {integrity: sha512-ngdWPjg31rD4WGXFi0eZ00DQQqKKu04QExyv/ymlC+3k+WIgYVFbt6gS5JsFPbJODTF/r8XiE/X+SsoT9c0ocw==}
@@ -6425,9 +6425,9 @@ snapshots:
 
   fraction.js@4.3.7: {}
 
-  framer-motion@11.16.3(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@11.16.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
     dependencies:
-      motion-dom: 11.16.3
+      motion-dom: 11.16.4
       motion-utils: 11.16.0
       tslib: 2.6.2
     optionalDependencies:
@@ -7513,7 +7513,7 @@ snapshots:
 
   mkdirp@3.0.1: {}
 
-  motion-dom@11.16.3:
+  motion-dom@11.16.4:
     dependencies:
       motion-utils: 11.16.0
 
