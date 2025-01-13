@@ -124,14 +124,14 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       stylelint:
-        specifier: 16.13.0
-        version: 16.13.0(typescript@5.7.3)
+        specifier: 16.13.1
+        version: 16.13.1(typescript@5.7.3)
       stylelint-config-standard:
         specifier: 36.0.1
-        version: 36.0.1(stylelint@16.13.0(typescript@5.7.3))
+        version: 36.0.1(stylelint@16.13.1(typescript@5.7.3))
       stylelint-config-tailwindcss:
         specifier: 0.0.7
-        version: 0.0.7(stylelint@16.13.0(typescript@5.7.3))(tailwindcss@3.4.17(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.7.3)))
+        version: 0.0.7(stylelint@16.13.1(typescript@5.7.3))(tailwindcss@3.4.17(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.7.3)))
       tailwindcss:
         specifier: 3.4.17
         version: 3.4.17(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.7.3))
@@ -2383,8 +2383,8 @@ packages:
     resolution: {integrity: sha512-hsBTNUqQTDwkWtcdYI2i06Y/nUBEsNEDJKjWdigLvegy8kDuJAS8uRlpkkcQpyEXL0Z/pjDy5HBmMjRCJ2gq+g==}
     engines: {node: '>= 4'}
 
-  ignore@7.0.0:
-    resolution: {integrity: sha512-lcX8PNQygAa22u/0BysEY8VhaFRzlOkvdlKczDPnJvrkJD1EuqzEky5VYYKM2iySIuaVIDv9N190DfSreSLw2A==}
+  ignore@7.0.1:
+    resolution: {integrity: sha512-D1gVletsbVOoiXF963rgZnfobGAbq7Lb+dz3fcBmlOmZg6hHkpbycLqL8PLNB8f4GVv6dOVYwhPL/r7hwiH0Fw==}
     engines: {node: '>= 4'}
 
   import-fresh@3.3.0:
@@ -3792,8 +3792,8 @@ packages:
       stylelint: '>=13.13.1'
       tailwindcss: '>=2.2.16'
 
-  stylelint@16.13.0:
-    resolution: {integrity: sha512-muxVjMhZB8BrDFSKNva0dmvD2tM0o/szrvuZuXYcAnN9a8nQmbGLqNUOemSgumaCMCPQ+0USYyG3hA5vJjUC1Q==}
+  stylelint@16.13.1:
+    resolution: {integrity: sha512-691JjSIIcP6f9QJFz0J0/AMG3lupE9RqYAgYCON3wiqp5nQiKqDYIsz321GeTOYNznoRPNh0Mf6VjzP1eBVz/Q==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -4934,7 +4934,7 @@ snapshots:
 
   '@ts-morph/common@0.11.1':
     dependencies:
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       minimatch: 3.1.2
       mkdirp: 1.0.4
       path-browserify: 1.0.1
@@ -5091,7 +5091,7 @@ snapshots:
       '@typescript-eslint/types': 8.19.1
       '@typescript-eslint/visitor-keys': 8.19.1
       debug: 4.4.0
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       is-glob: 4.0.3
       minimatch: 9.0.4
       semver: 7.6.0
@@ -6145,7 +6145,7 @@ snapshots:
       eslint: 8.57.1
       eslint-module-utils: 2.8.1(@typescript-eslint/parser@8.19.1(eslint@8.57.1)(typescript@5.7.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1)
       eslint-plugin-import: 2.29.1(@typescript-eslint/parser@8.19.1(eslint@8.57.1)(typescript@5.7.3))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.1)
-      fast-glob: 3.3.2
+      fast-glob: 3.3.3
       get-tsconfig: 4.7.3
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -6819,7 +6819,7 @@ snapshots:
 
   ignore@5.3.2: {}
 
-  ignore@7.0.0: {}
+  ignore@7.0.1: {}
 
   import-fresh@3.3.0:
     dependencies:
@@ -8364,21 +8364,21 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.26.0
 
-  stylelint-config-recommended@14.0.1(stylelint@16.13.0(typescript@5.7.3)):
+  stylelint-config-recommended@14.0.1(stylelint@16.13.1(typescript@5.7.3)):
     dependencies:
-      stylelint: 16.13.0(typescript@5.7.3)
+      stylelint: 16.13.1(typescript@5.7.3)
 
-  stylelint-config-standard@36.0.1(stylelint@16.13.0(typescript@5.7.3)):
+  stylelint-config-standard@36.0.1(stylelint@16.13.1(typescript@5.7.3)):
     dependencies:
-      stylelint: 16.13.0(typescript@5.7.3)
-      stylelint-config-recommended: 14.0.1(stylelint@16.13.0(typescript@5.7.3))
+      stylelint: 16.13.1(typescript@5.7.3)
+      stylelint-config-recommended: 14.0.1(stylelint@16.13.1(typescript@5.7.3))
 
-  stylelint-config-tailwindcss@0.0.7(stylelint@16.13.0(typescript@5.7.3))(tailwindcss@3.4.17(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.7.3))):
+  stylelint-config-tailwindcss@0.0.7(stylelint@16.13.1(typescript@5.7.3))(tailwindcss@3.4.17(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.7.3))):
     dependencies:
-      stylelint: 16.13.0(typescript@5.7.3)
+      stylelint: 16.13.1(typescript@5.7.3)
       tailwindcss: 3.4.17(ts-node@10.9.1(@types/node@16.18.11)(typescript@5.7.3))
 
-  stylelint@16.13.0(typescript@5.7.3):
+  stylelint@16.13.1(typescript@5.7.3):
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.4(@csstools/css-tokenizer@3.0.3)
       '@csstools/css-tokenizer': 3.0.3
@@ -8398,7 +8398,7 @@ snapshots:
       globby: 11.1.0
       globjoin: 0.1.4
       html-tags: 3.3.1
-      ignore: 7.0.0
+      ignore: 7.0.1
       imurmurhash: 0.1.4
       is-plain-object: 5.0.0
       known-css-properties: 0.35.0
