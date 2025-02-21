@@ -47,14 +47,15 @@
   },
   "devDependencies": {
     "@tailwindcss/forms": "0.5.10",
+    "@tailwindcss/postcss": "^4.0.7",
     "@testing-library/react": "16.2.0",
     "@types/mdx": "2.0.13",
+    "@types/node": "22.13.4",
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
     "@typescript-eslint/eslint-plugin": "8.24.1",
     "@typescript-eslint/parser": "8.24.1",
     "@vitejs/plugin-react": "4.3.4",
-    "autoprefixer": "10.4.20",
     "eslint": "8.57.1",
     "eslint-config-next": "14.2.24",
     "eslint-config-prettier": "10.0.1",
@@ -69,12 +70,20 @@
     "stylelint": "16.14.1",
     "stylelint-config-standard": "36.0.1",
     "stylelint-config-tailwindcss": "1.0.0",
-    "tailwindcss": "3.4.17",
+    "tailwindcss": "4.0.7",
     "typescript": "5.7.3",
     "vercel": "41.1.4",
     "vitest": "3.0.6"
   },
   "volta": {
     "node": "22.14.0"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ],
+    "patchedDependencies": {
+      "stylelint-config-tailwindcss": "patches/stylelint-config-tailwindcss.patch"
+    }
   }
 }

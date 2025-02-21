@@ -11,19 +11,19 @@ export const components: MDXComponents = {
   ),
   h1: ({ className, ...props }) => (
     <h1
-      className={classNames("mb-5 mt-10 text-4xl font-bold", className)}
+      className={classNames("mt-10 mb-5 text-4xl font-bold", className)}
       {...props}
     />
   ),
   h2: ({ className, ...props }) => (
     <h1
-      className={classNames("mb-5 mt-10 text-3xl font-bold", className)}
+      className={classNames("mt-10 mb-5 text-3xl font-bold", className)}
       {...props}
     />
   ),
   h3: ({ className, ...props }) => (
     <h1
-      className={classNames("mb-5 mt-10 text-3xl font-bold", className)}
+      className={classNames("mt-10 mb-5 text-3xl font-bold", className)}
       {...props}
     />
   ),
@@ -51,7 +51,7 @@ export const components: MDXComponents = {
   pre: ({ className, ...props }) => (
     <pre
       className={classNames(
-        "mb-4 mt-6 overflow-x-auto rounded-lg bg-slate-800 py-4",
+        "mt-6 mb-4 overflow-x-auto rounded-lg bg-slate-800 py-4",
         className,
       )}
       {...props}
