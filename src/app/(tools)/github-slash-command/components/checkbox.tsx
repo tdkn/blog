@@ -22,9 +22,9 @@ export function CheckBox({
     <div
       aria-checked={checked}
       className={classNames(
-        "relative flex cursor-pointer select-none items-start rounded-md px-4 py-2",
+        "relative flex cursor-pointer items-start rounded-md px-4 py-2 select-none",
         {
-          "bg-white bg-opacity-5": checked,
+          "bg-opacity-5 bg-white": checked,
           "ring-2 ring-indigo-500": focused,
         },
       )}
@@ -39,7 +39,7 @@ export function CheckBox({
       <div className="flex h-6 items-center">
         <input
           checked={checked}
-          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
+          className="h-4 w-4 rounded-md border-gray-300 text-indigo-600 focus:ring-indigo-600"
           id={name}
           name={name}
           readOnly={true}

@@ -1,3 +1,5 @@
+@reference "./globals.css";
+
 :not(pre) > code {
   @apply inline-flex items-center rounded-md bg-gray-100 px-1.5 dark:bg-gray-100/10;
 }

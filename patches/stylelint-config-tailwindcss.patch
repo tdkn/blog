@@ -1,0 +1,12 @@
+diff --git a/index.js b/index.js
+index 3712b141ae66775f51a3ecde8bf3954753fd964e..c5dbe4f27f620059bb8d0f05cbbc60e6fd545e57 100644
+--- a/index.js
++++ b/index.js
+@@ -12,6 +12,7 @@ module.exports = {
+           'variant',
+           'custom-variant',
+           'plugin',
++          'reference',
+           /** tailwindcss v3 */
+           'tailwind',
+           'apply',

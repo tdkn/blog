@@ -31,7 +31,7 @@ export function Form() {
       {/* Input: owner/repo */}
       <input
         autoFocus={true}
-        className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-white sm:text-sm sm:leading-6"
+        className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white ring-1 shadow-xs ring-white/10 ring-inset focus:ring-2 focus:ring-white focus:ring-inset sm:text-sm sm:leading-6"
         onChange={(e) => setRepo(e.target.value)}
         placeholder="owner/repo"
         ref={repoInputRef}
@@ -106,10 +106,10 @@ export function Form() {
       </fieldset>
 
       {/* Output: command */}
-      <div className="mt-2 flex rounded-md shadow-sm">
-        <div className="relative flex flex-grow items-stretch focus-within:z-10">
+      <div className="mt-2 flex rounded-md shadow-xs">
+        <div className="relative flex grow items-stretch focus-within:z-10">
           <input
-            className="block w-full rounded-none rounded-l-md border-0 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+            className="block w-full rounded-none rounded-l-md border-0 py-1.5 text-gray-900 ring-1 ring-gray-300 ring-inset placeholder:text-gray-400 focus:ring-2 focus:ring-indigo-600 focus:ring-inset sm:text-sm sm:leading-6"
             placeholder={`/github subscribe owner/repo ${features.length > 0 ? features.join(" ") : "[feature]"}`}
             readOnly={true}
             ref={outputRef}
@@ -120,7 +120,7 @@ export function Form() {
           />
         </div>
         <button
-          className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+          className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50"
           onClick={() => {
             if (outputRef.current) {
               const command = outputRef.current.value;
