@@ -48,9 +48,7 @@ export function Form() {
           onChange={() => handleFeatureChange("issues")}
         />
         <CheckBox
-          description={
-            'New or merged pull requests, as well as draft pull requests marked "Ready for Review"'
-          }
+          description='New or merged pull requests, as well as draft pull requests marked "Ready for Review"'
           name="pulls"
           onChange={() => handleFeatureChange("pulls")}
         />

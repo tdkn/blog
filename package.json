@@ -8,7 +8,7 @@
     "url": "https://github.com/tdkn/blog/issues"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "preview": "next build && next start",
@@ -31,16 +31,16 @@
     "@fortawesome/free-regular-svg-icons": "6.7.2",
     "@fortawesome/free-solid-svg-icons": "6.7.2",
     "@fortawesome/react-fontawesome": "0.2.2",
-    "@next/bundle-analyzer": "14.2.24",
+    "@next/bundle-analyzer": "15.1.7",
     "clsx": "2.1.1",
     "date-fns": "4.1.0",
     "framer-motion": "12.4.7",
     "glob": "11.0.1",
     "gray-matter": "4.0.3",
-    "next": "14.2.24",
+    "next": "15.1.7",
     "next-mdx-remote": "5.0.0",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
     "rehype-pretty-code": "0.14.0",
     "shiki": "2.5.0",
     "tailwind-merge": "3.0.1"
@@ -51,13 +51,13 @@
     "@testing-library/react": "16.2.0",
     "@types/mdx": "2.0.13",
     "@types/node": "22.13.4",
-    "@types/react": "18.3.18",
-    "@types/react-dom": "18.3.5",
+    "@types/react": "19.0.10",
+    "@types/react-dom": "19.0.4",
     "@typescript-eslint/eslint-plugin": "8.24.1",
     "@typescript-eslint/parser": "8.24.1",
     "@vitejs/plugin-react": "4.3.4",
     "eslint": "8.57.1",
-    "eslint-config-next": "14.2.24",
+    "eslint-config-next": "15.1.7",
     "eslint-config-prettier": "10.0.1",
     "eslint-plugin-perfectionist": "2.11.0",
     "husky": "9.1.7",
@@ -84,6 +84,10 @@
     ],
     "patchedDependencies": {
       "stylelint-config-tailwindcss": "patches/stylelint-config-tailwindcss.patch"
+    },
+    "overrides": {
+      "@types/react": "19.0.10",
+      "@types/react-dom": "19.0.4"
     }
   }
 }
