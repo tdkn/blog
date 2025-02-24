@@ -43,7 +43,7 @@
     "react-dom": "19.0.0",
     "rehype-pretty-code": "0.14.0",
     "shiki": "2.5.0",
-    "tailwind-merge": "3.0.1"
+    "tailwind-merge": "3.0.2"
   },
   "devDependencies": {
     "@tailwindcss/forms": "0.5.10",
