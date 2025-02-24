@@ -72,7 +72,7 @@
     "stylelint-config-tailwindcss": "1.0.0",
     "tailwindcss": "4.0.7",
     "typescript": "5.7.3",
-    "vercel": "41.1.4",
+    "vercel": "41.2.0",
     "vitest": "3.0.6"
   },
   "volta": {
