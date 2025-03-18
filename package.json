@@ -51,7 +51,7 @@
     "@testing-library/react": "16.2.0",
     "@types/mdx": "2.0.13",
     "@types/node": "22.13.10",
-    "@types/react": "19.0.10",
+    "@types/react": "19.0.11",
     "@types/react-dom": "19.0.4",
     "@typescript-eslint/eslint-plugin": "8.26.1",
     "@typescript-eslint/parser": "8.26.1",
@@ -86,7 +86,7 @@
       "stylelint-config-tailwindcss": "patches/stylelint-config-tailwindcss.patch"
     },
     "overrides": {
-      "@types/react": "19.0.10",
+      "@types/react": "19.0.11",
       "@types/react-dom": "19.0.4"
     }
   }
