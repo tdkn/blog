@@ -39,8 +39,8 @@
     "gray-matter": "4.0.3",
     "next": "15.2.4",
     "next-mdx-remote": "5.0.0",
-    "react": "19.0.0",
-    "react-dom": "19.0.0",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
     "rehype-pretty-code": "0.14.1",
     "shiki": "3.2.1",
     "tailwind-merge": "3.0.2"
