@@ -59,7 +59,7 @@
     "eslint": "9.26.0",
     "eslint-config-next": "15.3.2",
     "eslint-config-prettier": "10.1.5",
-    "eslint-plugin-perfectionist": "2.11.0",
+    "eslint-plugin-perfectionist": "4.13.0",
     "husky": "9.1.7",
     "jsdom": "26.1.0",
     "lint-staged": "16.0.0",
