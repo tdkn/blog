@@ -100,8 +100,8 @@ importers:
         specifier: 8.34.1
         version: 8.34.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
       '@vitejs/plugin-react':
-        specifier: 4.5.2
-        version: 4.5.2(vite@5.2.9(@types/node@22.15.32)(lightningcss@1.29.1))
+        specifier: 4.6.0
+        version: 4.6.0(vite@5.2.9(@types/node@22.15.32)(lightningcss@1.29.1))
       eslint:
         specifier: 9.29.0
         version: 9.29.0(jiti@2.4.2)
@@ -212,20 +212,12 @@ packages:
     resolution: {integrity: sha512-1gn1Up5YXka3YYAHGKpbideQ5Yjf1tDa9qYcgysz+cNCXukyLl6DjPXhD3VRwSb8c0J9tA4b2+rHEZtc6R0tlw==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/helper-string-parser@7.25.9':
-    resolution: {integrity: sha512-4A/SCr/2KLd5jrtOMFzaKjVtAei3+2r/NChoBNoZ3EyP/+GlhoaEGoWOZUmFmoITP7zOJyHIMm+DYRd8o3PvHA==}
-    engines: {node: '>=6.9.0'}
-
   '@babel/helper-string-parser@7.27.1':
     resolution: {integrity: sha512-qMlSxKbpRlAridDExk92nSobyDdpPijUq2DW6oDnUqd0iOGxmQjyqhMIihI9+zv4LPyZdRje2cavWPbCbWm3eA==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-identifier@7.24.5':
     resolution: {integrity: sha512-3q93SSKX2TWCG30M2G2kwaKeTYgEUp5Snjuj8qm729SObL6nbtUldAi37qbxkD5gg3xnBio+f9nqpSepGZMvxA==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/helper-validator-identifier@7.25.9':
-    resolution: {integrity: sha512-Ed61U6XJc3CVRfkERJWDz4dJwKe7iLmmJsbOGu9wSloNSFttHV0I8g6UAgb7qnK5ly5bGLPd4oXZlxCdANBOWQ==}
     engines: {node: '>=6.9.0'}
 
   '@babel/helper-validator-identifier@7.27.1':
@@ -243,11 +235,6 @@ packages:
   '@babel/highlight@7.24.5':
     resolution: {integrity: sha512-8lLmua6AVh/8SLJRRVD6V8p73Hir9w5mJrhE+IPpILG31KKlI9iz5zmBYKcWPS59qSfgP9RaSBQSHHE81WKuEw==}
     engines: {node: '>=6.9.0'}
-
-  '@babel/parser@7.27.0':
-    resolution: {integrity: sha512-iaepho73/2Pz7w2eMS0Q5f83+0RKI7i4xmiYeBmDzfRVbQtTOG7Ts0S4HzJVsTMGI9keU8rNfuZr8DKfSt7Yyg==}
-    engines: {node: '>=6.0.0'}
-    hasBin: true
 
   '@babel/parser@7.27.5':
     resolution: {integrity: sha512-OsQd175SxWkGlzbny8J3K8TnnDD0N3lrIUtB92xwyRpzaenGZhxDvxN/JgU00U3CDZNj9tPuDJ5H0WS4Nt3vKg==}
@@ -276,10 +263,6 @@ packages:
 
   '@babel/traverse@7.27.4':
     resolution: {integrity: sha512-oNcu2QbHqts9BtOWJosOVJapWjBDSxGCpFvikNR5TGDYDQf3JwpIoMzIKrvfoti93cLfPJEG4tH9SPVeyCGgdA==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/types@7.27.0':
-    resolution: {integrity: sha512-H45s8fVLYjbhFH62dIJ3WtmJ6RSPt/3DRO0ZcT2SUiYiQyz3BLVb9ADEnLl91m74aQPS3AzzeajZHYOalWe3bg==}
     engines: {node: '>=6.9.0'}
 
   '@babel/types@7.27.6':
@@ -837,8 +820,8 @@ packages:
   '@polka/url@1.0.0-next.25':
     resolution: {integrity: sha512-j7P6Rgr3mmtdkeDGTe0E/aYyWEWVtc5yFXtHCRHs28/jptDEWfaVOc5T7cblqy1XKPPfCxJc/8DwQ5YgLOZOVQ==}
 
-  '@rolldown/pluginutils@1.0.0-beta.11':
-    resolution: {integrity: sha512-L/gAA/hyCSuzTF1ftlzUSI/IKr2POHsv1Dd78GfqkR83KMNuswWD61JxGV2L7nRwBBBSDr6R1gCkdTmoN7W4ag==}
+  '@rolldown/pluginutils@1.0.0-beta.19':
+    resolution: {integrity: sha512-3FL3mnMbPu0muGOCaKAhhFEYmqv9eTfPSJRJmANrCwtgK8VuxpsZDGK+m0LYAGoyO8+0j5uRe4PeyPDK1yA/hA==}
 
   '@rollup/pluginutils@5.1.4':
     resolution: {integrity: sha512-USm05zrsFxYLPdWWq+K3STlWiT/3ELn3RcV5hJMghpeAIhxfsUIg6mt12CBJBInWMV4VneoV7SfGv8xIwo2qNQ==}
@@ -1302,8 +1285,8 @@ packages:
   '@vercel/static-config@3.1.1':
     resolution: {integrity: sha512-IRtKnm9N1Uqd2ayIbLPjRtdwcl1GTWvqF1PuEVNm9O43kmoI+m9VpGlW8oga+5LQq1LmJ2Y67zHr7NbjrH1rrw==}
 
-  '@vitejs/plugin-react@4.5.2':
-    resolution: {integrity: sha512-QNVT3/Lxx99nMQWJWF7K4N6apUEuT0KlZA3mx/mVaoGj3smm/8rc8ezz15J1pcbcjDK0V15rpHetVfya08r76Q==}
+  '@vitejs/plugin-react@4.6.0':
+    resolution: {integrity: sha512-5Kgff+m8e2PB+9j51eGHEpn5kUzRKH2Ry0qGoe8ItJg7pqnkPrYPkDQZGgGmTa0EGarHrkjLvOdU3b1fzI8otQ==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.2.0 || ^5.0.0 || ^6.0.0 || ^7.0.0-beta.0
@@ -4551,13 +4534,9 @@ snapshots:
 
   '@babel/helper-plugin-utils@7.27.1': {}
 
-  '@babel/helper-string-parser@7.25.9': {}
-
   '@babel/helper-string-parser@7.27.1': {}
 
   '@babel/helper-validator-identifier@7.24.5': {}
-
-  '@babel/helper-validator-identifier@7.25.9': {}
 
   '@babel/helper-validator-identifier@7.27.1': {}
 
@@ -4574,10 +4553,6 @@ snapshots:
       chalk: 2.4.2
       js-tokens: 4.0.0
       picocolors: 1.1.1
-
-  '@babel/parser@7.27.0':
-    dependencies:
-      '@babel/types': 7.27.0
 
   '@babel/parser@7.27.5':
     dependencies:
@@ -4614,11 +4589,6 @@ snapshots:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-
-  '@babel/types@7.27.0':
-    dependencies:
-      '@babel/helper-string-parser': 7.25.9
-      '@babel/helper-validator-identifier': 7.25.9
 
   '@babel/types@7.27.6':
     dependencies:
@@ -5061,7 +5031,7 @@ snapshots:
 
   '@polka/url@1.0.0-next.25': {}
 
-  '@rolldown/pluginutils@1.0.0-beta.11': {}
+  '@rolldown/pluginutils@1.0.0-beta.19': {}
 
   '@rollup/pluginutils@5.1.4(rollup@4.14.3)':
     dependencies:
@@ -5277,24 +5247,24 @@ snapshots:
 
   '@types/babel__core@7.20.5':
     dependencies:
-      '@babel/parser': 7.27.0
-      '@babel/types': 7.27.0
+      '@babel/parser': 7.27.5
+      '@babel/types': 7.27.6
       '@types/babel__generator': 7.6.8
       '@types/babel__template': 7.4.4
       '@types/babel__traverse': 7.20.5
 
   '@types/babel__generator@7.6.8':
     dependencies:
-      '@babel/types': 7.27.0
+      '@babel/types': 7.27.6
 
   '@types/babel__template@7.4.4':
     dependencies:
-      '@babel/parser': 7.27.0
-      '@babel/types': 7.27.0
+      '@babel/parser': 7.27.5
+      '@babel/types': 7.27.6
 
   '@types/babel__traverse@7.20.5':
     dependencies:
-      '@babel/types': 7.27.0
+      '@babel/types': 7.27.6
 
   '@types/chai@5.2.2':
     dependencies:
@@ -5633,12 +5603,12 @@ snapshots:
       json-schema-to-ts: 1.6.4
       ts-morph: 12.0.0
 
-  '@vitejs/plugin-react@4.5.2(vite@5.2.9(@types/node@22.15.32)(lightningcss@1.29.1))':
+  '@vitejs/plugin-react@4.6.0(vite@5.2.9(@types/node@22.15.32)(lightningcss@1.29.1))':
     dependencies:
       '@babel/core': 7.27.4
       '@babel/plugin-transform-react-jsx-self': 7.27.1(@babel/core@7.27.4)
       '@babel/plugin-transform-react-jsx-source': 7.27.1(@babel/core@7.27.4)
-      '@rolldown/pluginutils': 1.0.0-beta.11
+      '@rolldown/pluginutils': 1.0.0-beta.19
       '@types/babel__core': 7.20.5
       react-refresh: 0.17.0
       vite: 5.2.9(@types/node@22.15.32)(lightningcss@1.29.1)
