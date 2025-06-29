@@ -14,6 +14,30 @@ type PageProps = {
   }>;
 };
 
+export default async function BlogPostPage({ params }: PageProps) {
+  const post = await getPost(params);
+
+  if (!post) {
+    notFound();
+  }
+
+  return (
+    <>
+      <div className="pb-2">
+        <h1 className="text-4xl font-bold">{post.title}</h1>
+        <p className="flex items-center space-x-2 py-8">
+          <span className="text-sm text-gray-500 dark:text-gray-400">
+            {formatDate(post.date)} ({formatTimeAgo(post.date)})
+          </span>
+          {post.deprecated && <Deprecated />}
+        </p>
+      </div>
+      <Mdx code={post.content} />
+      <Profile className="pt-10" />
+    </>
+  );
+}
+
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const params = await props.params;
 
@@ -38,28 +62,4 @@ async function getPost(params: PageProps["params"]) {
   const { slug, year } = await params;
 
   return allPosts.find((post) => post.year === year && post.slug === slug);
-}
-
-export default async function BlogPostPage({ params }: PageProps) {
-  const post = await getPost(params);
-
-  if (!post) {
-    notFound();
-  }
-
-  return (
-    <>
-      <div className="pb-2">
-        <h1 className="text-4xl font-bold">{post.title}</h1>
-        <p className="flex items-center space-x-2 py-8">
-          <span className="text-sm text-gray-500 dark:text-gray-400">
-            {formatDate(post.date)} ({formatTimeAgo(post.date)})
-          </span>
-          {post.deprecated && <Deprecated />}
-        </p>
-      </div>
-      <Mdx code={post.content} />
-      <Profile className="pt-10" />
-    </>
-  );
 }

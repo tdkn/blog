@@ -3,11 +3,14 @@ import { ComponentPropsWithoutRef, useState } from "react";
 
 import { classNames } from "~/lib/style";
 
-export type CheckBoxProps = {
+export type CheckBoxProps = Omit<
+  ComponentPropsWithoutRef<"input">,
+  "onChange"
+> & {
   description: string;
   name: string;
   onChange?: () => void;
-} & Omit<ComponentPropsWithoutRef<"input">, "onChange">;
+};
 
 export function CheckBox({
   description,
