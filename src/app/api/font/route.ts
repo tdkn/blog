@@ -1,5 +1,25 @@
 export const runtime = "edge";
 
+export async function GET(req: Request) {
+  const { pathname, searchParams } = new URL(req.url);
+
+  if (pathname !== "/api/font") return;
+
+  const font = searchParams.get("font");
+  const text = searchParams.get("text");
+
+  if (!font || !text) return;
+
+  const responseBuffer = await fetchFont(text, font);
+
+  return new Response(responseBuffer, {
+    headers: {
+      "Cache-Control": "public, max-age=31536000, immutable",
+      "Content-Type": "font/woff",
+    },
+  });
+}
+
 async function fetchFont(
   text: string,
   font: string,
@@ -27,24 +47,4 @@ async function fetchFont(
   } else {
     return (await fetch(resource[1])).arrayBuffer();
   }
-}
-
-export async function GET(req: Request) {
-  const { pathname, searchParams } = new URL(req.url);
-
-  if (pathname !== "/api/font") return;
-
-  const font = searchParams.get("font");
-  const text = searchParams.get("text");
-
-  if (!font || !text) return;
-
-  const responseBuffer = await fetchFont(text, font);
-
-  return new Response(responseBuffer, {
-    headers: {
-      "Cache-Control": "public, max-age=31536000, immutable",
-      "Content-Type": "font/woff",
-    },
-  });
 }

@@ -6,9 +6,9 @@ import { Deprecated } from "~/components/common";
 import { Link } from "~/components/ui";
 import { formatDate } from "~/lib/format-date";
 
-export type PostCardProps = {
+export type PostCardProps = ComponentPropsWithoutRef<"article"> & {
   post: Post;
-} & ComponentPropsWithoutRef<"article">;
+};
 
 const PostCard: FC<PostCardProps> = ({ post }) => (
   <article className="py-5">

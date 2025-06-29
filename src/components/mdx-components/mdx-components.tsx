@@ -6,7 +6,6 @@ import { classNames } from "~/lib/style";
 import Image from "./Image";
 
 export const components: MDXComponents = {
-  Image,
   a: ({ className, ...props }: ComponentPropsWithoutRef<"a">) => (
     <a className={classNames("dark:text-yellow-200", className)} {...props} />
   ),
@@ -34,6 +33,7 @@ export const components: MDXComponents = {
       {...props}
     />
   ),
+  Image,
   kbd: ({ className, ...props }: ComponentPropsWithoutRef<"kbd">) => (
     <kbd className={classNames("", className)} {...props} />
   ),
