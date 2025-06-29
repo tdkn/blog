@@ -31,7 +31,7 @@ export function Form() {
       {/* Input: owner/repo */}
       <input
         autoFocus={true}
-        className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white ring-1 shadow-xs ring-white/10 ring-inset focus:ring-2 focus:ring-white focus:ring-inset sm:text-sm sm:leading-6"
+        className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-xs ring-1 ring-white/10 ring-inset focus:ring-2 focus:ring-white focus:ring-inset sm:text-sm sm:leading-6"
         onChange={(e) => setRepo(e.target.value)}
         placeholder="owner/repo"
         ref={repoInputRef}
