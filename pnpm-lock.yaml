@@ -154,8 +154,8 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
       vercel:
-        specifier: 44.2.7
-        version: 44.2.7(rollup@4.14.3)
+        specifier: 44.2.8
+        version: 44.2.8(rollup@4.14.3)
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@edge-runtime/vm@3.2.0)(@types/debug@4.1.12)(@types/node@22.15.34)(jsdom@26.1.0)(lightningcss@1.30.1)
@@ -4206,8 +4206,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@44.2.7:
-    resolution: {integrity: sha512-Y4RvCHxYSL82K5qp7l8jmAkHohJO/dBBuXb736RhD+LK8hD8ivOs2fGb9cvuEikkv57CK7iG2RsBZw7kAh22eg==}
+  vercel@44.2.8:
+    resolution: {integrity: sha512-sEvKPP4S/9LK4S8pAxjpJOgg1skUvXFUr9y+8G3ScjevH5HK389f6/qlMgNezkP+yLzjW04v0GW2pFpL3iaQcQ==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -4931,7 +4931,7 @@ snapshots:
   '@mapbox/node-pre-gyp@2.0.0':
     dependencies:
       consola: 3.3.3
-      detect-libc: 2.0.3
+      detect-libc: 2.0.4
       https-proxy-agent: 7.0.6
       node-fetch: 2.7.0
       nopt: 8.0.0
@@ -8970,7 +8970,7 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@44.2.7(rollup@4.14.3):
+  vercel@44.2.8(rollup@4.14.3):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 10.6.1
