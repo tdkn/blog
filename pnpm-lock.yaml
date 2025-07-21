@@ -139,14 +139,14 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       stylelint:
-        specifier: 16.21.1
-        version: 16.21.1(typescript@5.8.3)
+        specifier: 16.22.0
+        version: 16.22.0(typescript@5.8.3)
       stylelint-config-standard:
         specifier: 38.0.0
-        version: 38.0.0(stylelint@16.21.1(typescript@5.8.3))
+        version: 38.0.0(stylelint@16.22.0(typescript@5.8.3))
       stylelint-config-tailwindcss:
         specifier: 1.0.0
-        version: 1.0.0(patch_hash=c4fbf443918b3c9906d975bcefb181cdae23ad7581ea1229efb9f22b3857adcc)(stylelint@16.21.1(typescript@5.8.3))(tailwindcss@4.1.11)
+        version: 1.0.0(patch_hash=c4fbf443918b3c9906d975bcefb181cdae23ad7581ea1229efb9f22b3857adcc)(stylelint@16.22.0(typescript@5.8.3))(tailwindcss@4.1.11)
       tailwindcss:
         specifier: 4.1.11
         version: 4.1.11
@@ -3983,8 +3983,8 @@ packages:
       stylelint: '>=13.13.1'
       tailwindcss: '>=2.2.16'
 
-  stylelint@16.21.1:
-    resolution: {integrity: sha512-WCXdXnYK2tpCbebgMF0Bme3YZH/Rh/UXerj75twYo4uLULlcrLwFVdZTvTEF8idFnAcW21YUDJFyKOfaf6xJRw==}
+  stylelint@16.22.0:
+    resolution: {integrity: sha512-SVEMTdjKNV4ollUrIY9ordZ36zHv2/PHzPjfPMau370MlL2VYXeLgSNMMiEbLGRO8RmD2R8/BVUeF2DfnfkC0w==}
     engines: {node: '>=18.12.0'}
     hasBin: true
 
@@ -8688,21 +8688,21 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.28.0
 
-  stylelint-config-recommended@16.0.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-config-recommended@16.0.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
 
-  stylelint-config-standard@38.0.0(stylelint@16.21.1(typescript@5.8.3)):
+  stylelint-config-standard@38.0.0(stylelint@16.22.0(typescript@5.8.3)):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
-      stylelint-config-recommended: 16.0.0(stylelint@16.21.1(typescript@5.8.3))
+      stylelint: 16.22.0(typescript@5.8.3)
+      stylelint-config-recommended: 16.0.0(stylelint@16.22.0(typescript@5.8.3))
 
-  stylelint-config-tailwindcss@1.0.0(patch_hash=c4fbf443918b3c9906d975bcefb181cdae23ad7581ea1229efb9f22b3857adcc)(stylelint@16.21.1(typescript@5.8.3))(tailwindcss@4.1.11):
+  stylelint-config-tailwindcss@1.0.0(patch_hash=c4fbf443918b3c9906d975bcefb181cdae23ad7581ea1229efb9f22b3857adcc)(stylelint@16.22.0(typescript@5.8.3))(tailwindcss@4.1.11):
     dependencies:
-      stylelint: 16.21.1(typescript@5.8.3)
+      stylelint: 16.22.0(typescript@5.8.3)
       tailwindcss: 4.1.11
 
-  stylelint@16.21.1(typescript@5.8.3):
+  stylelint@16.22.0(typescript@5.8.3):
     dependencies:
       '@csstools/css-parser-algorithms': 3.0.5(@csstools/css-tokenizer@3.0.4)
       '@csstools/css-tokenizer': 3.0.4
