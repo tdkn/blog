@@ -154,8 +154,8 @@ importers:
         specifier: 5.8.3
         version: 5.8.3
       vercel:
-        specifier: 44.5.0
-        version: 44.5.0(rollup@4.14.3)
+        specifier: 44.5.1
+        version: 44.5.1(rollup@4.14.3)
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@edge-runtime/vm@3.2.0)(@types/debug@4.1.12)(@types/node@22.16.5)(jsdom@26.1.0)(lightningcss@1.30.1)
@@ -1313,8 +1313,8 @@ packages:
   '@vercel/hydrogen@1.2.3':
     resolution: {integrity: sha512-sU0HWHabNxlTdKQWPMDqwr+3MqnhXc4Tvnl4i9cbdEYn5061SEKhdfpl2RhuvPByQJ8sZL8soVXFHIjFBJAR4w==}
 
-  '@vercel/next@4.10.2':
-    resolution: {integrity: sha512-KIoC5HzjTvRhM8j8g0EmvD0dHQ607KU+MqAvNCL/JsfqpOM+Tv0PFnOIXJjmbkEXwWkTvnu8WSsJTfpEUyM55g==}
+  '@vercel/next@4.10.3':
+    resolution: {integrity: sha512-bfFYXNAzsKLf7ysbAOWyMen+MIpiAnGtGpqy5ZUbOr0xSDC7J5HkpKiUedy82tmxvyyLA1LIoZjG/BpH5UjGYA==}
 
   '@vercel/nft@0.29.2':
     resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
@@ -4237,8 +4237,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@44.5.0:
-    resolution: {integrity: sha512-bA0xj2jEY75eScjf6SZrKTeIDScAhhSLNkSYIu0RPH2gBYfvI0aXhLLy04Tn6RiyyCX/DnLSNvaaC7kLrr64FA==}
+  vercel@44.5.1:
+    resolution: {integrity: sha512-E3l9DFn+yAXBvSM8SzWSijca8aCt0LDIvZCrKqZygR9Ahqr1E1pDly7p2O0hxFfGkpMN1/N/UUtBGcMY4WCvDg==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -5590,7 +5590,7 @@ snapshots:
       '@vercel/static-config': 3.1.1
       ts-morph: 12.0.0
 
-  '@vercel/next@4.10.2(rollup@4.14.3)':
+  '@vercel/next@4.10.3(rollup@4.14.3)':
     dependencies:
       '@vercel/nft': 0.29.2(rollup@4.14.3)
     transitivePeerDependencies:
@@ -9027,14 +9027,14 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@44.5.0(rollup@4.14.3):
+  vercel@44.5.1(rollup@4.14.3):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 10.6.7
       '@vercel/fun': 1.1.6
       '@vercel/go': 3.2.2
       '@vercel/hydrogen': 1.2.3
-      '@vercel/next': 4.10.2(rollup@4.14.3)
+      '@vercel/next': 4.10.3(rollup@4.14.3)
       '@vercel/node': 5.3.6(rollup@4.14.3)
       '@vercel/python': 4.7.4
       '@vercel/redwood': 2.3.4(rollup@4.14.3)
