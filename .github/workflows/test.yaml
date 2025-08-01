@@ -15,8 +15,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: pnpm/action-setup@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Cache pnpm store
+        run: pnpm store path
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -24,21 +31,10 @@ jobs:
           cache: "pnpm"
 
       - name: Check Node version
-        shell: bash
+        working-directory: .
         run: |
-          NVM_NODE_VERSION=$(cat .nvmrc)
-          VOLTA_NODE_VERSION=$(node -p "require('./package.json').volta.node")
-
-          echo "Checking Node.js versions in .nvmrc and package.json (volta)..."
-          echo "NVM: $NVM_NODE_VERSION"
-          echo "Volta: $VOLTA_NODE_VERSION"
-
-          if [ "$VOLTA_NODE_VERSION" != "$NVM_NODE_VERSION" ]; then
-            echo "Error: Node.js versions in .nvmrc and package.json (volta) do not match."
-            exit 1
-          else
-            echo "Check passed!"
-          fi
+          chmod +x ./scripts/check-node-version.sh
+          ./scripts/check-node-version.sh
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

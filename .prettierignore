@@ -1,8 +1,12 @@
+# Build outputs
 build
 coverage
 .next
 out
-posts/index.json
-.yarn
-.vercel
+
+# Package managers
 pnpm-lock.yaml
+.pnpm-store
+
+# Deployment
+.vercel
