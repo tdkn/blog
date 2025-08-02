@@ -3,7 +3,7 @@
   "timezone": "Asia/Tokyo",
   "extends": ["config:recommended", "schedule:weekdays"],
   "rangeStrategy": "pin",
-  "enabledManagers": ["npm", "nvm"],
+  "enabledManagers": ["npm", "nvm", "devcontainer"],
   "reviewers": ["tdkn"],
   "automerge": true,
   "platformAutomerge": true,
@@ -11,6 +11,10 @@
     {
       "matchManagers": ["npm"],
       "labels": ["dependencies", "javascript"]
+    },
+    {
+      "matchManagers": ["devcontainer"],
+      "labels": ["dependencies", "devcontainer"]
     }
   ]
 }
