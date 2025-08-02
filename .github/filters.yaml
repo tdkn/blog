@@ -1,0 +1,31 @@
+node-version:
+  - ".nvmrc"
+  - ".node-version"
+  - "package.json"
+  - "scripts/check-node-version.sh"
+
+pnpm:
+  - "pnpm-lock.yaml"
+  - "package.json"
+
+source:
+  - "src/**"
+  - "posts/**"
+  - "*.config.*"
+  - "*.json"
+  - "*.yaml"
+  - "*.yml"
+
+build:
+  - "src/**"
+  - "posts/**"
+  - "public/**"
+  - "next.config.js"
+  - "tsconfig.json"
+  - "tailwind.config.ts"
+  - "postcss.config.js"
+
+test:
+  - "src/**"
+  - "vitest.config.ts"
+  - "tsconfig.json"
