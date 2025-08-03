@@ -154,8 +154,8 @@ importers:
         specifier: 5.9.2
         version: 5.9.2
       vercel:
-        specifier: 44.6.6
-        version: 44.6.6(rollup@4.14.3)
+        specifier: 44.7.0
+        version: 44.7.0(rollup@4.14.3)
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@edge-runtime/vm@3.2.0)(@types/debug@4.1.12)(@types/node@22.16.5)(jsdom@26.1.0)(lightningcss@1.30.1)
@@ -1306,22 +1306,22 @@ packages:
   '@vercel/go@3.2.2':
     resolution: {integrity: sha512-yYIU3OXkuoxzr47vf+HZnVGujzkVW/e5hrUK0jzCzzmjgo4+5ECrXDSA1bTB6qmWEy6HVsSovnKoHkwDqNIN6Q==}
 
-  '@vercel/hono@0.0.6':
-    resolution: {integrity: sha512-f+xVriumanp6E3NKckwCHW6PCtagzIddAUHOYpGePSrnVkVzjmR+DZJpWvIrKprt7s4cjewkmPU6j0BeKip7Mg==}
+  '@vercel/hono@0.0.8':
+    resolution: {integrity: sha512-Fb9z8E7Tp4fdXli6GGp1nAT4JmO/Yhl9/UBCrhvaJXfEVU+/IxLhK76ddnk9XuEpbqif8ssTcJNNPQIR5wcwIQ==}
 
   '@vercel/hydrogen@1.2.3':
     resolution: {integrity: sha512-sU0HWHabNxlTdKQWPMDqwr+3MqnhXc4Tvnl4i9cbdEYn5061SEKhdfpl2RhuvPByQJ8sZL8soVXFHIjFBJAR4w==}
 
-  '@vercel/next@4.10.10':
-    resolution: {integrity: sha512-oslxciZ0zl43n489EdgkQ8RJDJ1xxCOYWmsuFN75/CwUvRSdlsmUPcwfl5sSLmunoZpclbIqPqYo/8u08/0FVQ==}
+  '@vercel/next@4.11.0':
+    resolution: {integrity: sha512-FIm8U1U2JCuo+oWbLcR3/hsvT69zVcmQSulcIJXZsfiT2miG6NYie5UuEHY30m2HGyB41lZzgukBhQwIXFSAow==}
 
   '@vercel/nft@0.29.2':
     resolution: {integrity: sha512-A/Si4mrTkQqJ6EXJKv5EYCDQ3NL6nJXxG8VGXePsaiQigsomHYQC9xSpX8qGk7AEZk4b1ssbYIqJ0ISQQ7bfcA==}
     engines: {node: '>=18'}
     hasBin: true
 
-  '@vercel/node@5.3.8':
-    resolution: {integrity: sha512-PiLs/5WqZMeXUH4FV8sHIIfhNFtTkFFE683GjRsoffXEx/4KS1NQvavEJK/BUxLntACBD/Q+J6tAtDOwb3IzOQ==}
+  '@vercel/node@5.3.10':
+    resolution: {integrity: sha512-hJuCwPpv7EDZnmHLtAV6GdpTkGlUcRrcRLhnJ0Ma1uOMhx7ZYudOhnfusUW3D60+kY9KgvABi+Ox1U43Gq0ofg==}
 
   '@vercel/python@5.0.0':
     resolution: {integrity: sha512-JHpYKQ8d478REzmF7NcJTJcncFziJhVOwzan8wW4F1RJOHGDBTPkATAgi4CPQIijToRamPCkgeECzNOvLUDR+w==}
@@ -4227,8 +4227,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@44.6.6:
-    resolution: {integrity: sha512-fQ5z9XmRgc/SLOeaXiJ+/mpN1Gc77ArvwmR8pLaNci+JOUbgorQDfmIVn9MT+cMNCxTAvztDox4nWjUpRLjRng==}
+  vercel@44.7.0:
+    resolution: {integrity: sha512-cTZthZ/103KXZPs3vmg0sJs+0H3lzaAyqs1iPTfDJNtqNcFa8b1FslKsHztP7kcsWLC7Nd09i/XA7tHkBQNFPA==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -5569,9 +5569,9 @@ snapshots:
 
   '@vercel/go@3.2.2': {}
 
-  '@vercel/hono@0.0.6(rollup@4.14.3)':
+  '@vercel/hono@0.0.8(rollup@4.14.3)':
     dependencies:
-      '@vercel/node': 5.3.8(rollup@4.14.3)
+      '@vercel/node': 5.3.10(rollup@4.14.3)
       '@vercel/static-config': 3.1.1
       ts-morph: 12.0.0
     transitivePeerDependencies:
@@ -5586,7 +5586,7 @@ snapshots:
       '@vercel/static-config': 3.1.1
       ts-morph: 12.0.0
 
-  '@vercel/next@4.10.10(rollup@4.14.3)':
+  '@vercel/next@4.11.0(rollup@4.14.3)':
     dependencies:
       '@vercel/nft': 0.29.2(rollup@4.14.3)
     transitivePeerDependencies:
@@ -5613,7 +5613,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vercel/node@5.3.8(rollup@4.14.3)':
+  '@vercel/node@5.3.10(rollup@4.14.3)':
     dependencies:
       '@edge-runtime/node-utils': 2.3.0
       '@edge-runtime/primitives': 4.1.0
@@ -9014,16 +9014,16 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@44.6.6(rollup@4.14.3):
+  vercel@44.7.0(rollup@4.14.3):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 11.0.0
       '@vercel/fun': 1.1.6
       '@vercel/go': 3.2.2
-      '@vercel/hono': 0.0.6(rollup@4.14.3)
+      '@vercel/hono': 0.0.8(rollup@4.14.3)
       '@vercel/hydrogen': 1.2.3
-      '@vercel/next': 4.10.10(rollup@4.14.3)
-      '@vercel/node': 5.3.8(rollup@4.14.3)
+      '@vercel/next': 4.11.0(rollup@4.14.3)
+      '@vercel/node': 5.3.10(rollup@4.14.3)
       '@vercel/python': 5.0.0
       '@vercel/redwood': 2.3.4(rollup@4.14.3)
       '@vercel/remix-builder': 5.4.10(rollup@4.14.3)
