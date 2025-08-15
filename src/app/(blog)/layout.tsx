@@ -1,6 +1,7 @@
 import { Metadata, Viewport } from "next";
 import Script from "next/script";
 
+import { CommandMenu } from "~/components/command-menu";
 import { Footer, Header } from "~/components/common";
 import "~/styles/globals.css";
 
@@ -78,6 +79,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <CommandMenu />
       </body>
     </html>
   );
