@@ -154,8 +154,8 @@ importers:
         specifier: 5.9.2
         version: 5.9.2
       vercel:
-        specifier: 45.0.10
-        version: 45.0.10(rollup@4.14.3)
+        specifier: 46.0.1
+        version: 46.0.1(rollup@4.14.3)
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@edge-runtime/vm@3.2.0)(@types/debug@4.1.12)(@types/node@22.17.2)(jsdom@26.1.0)(lightningcss@1.30.1)
@@ -4224,8 +4224,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@45.0.10:
-    resolution: {integrity: sha512-4qdrEFlOfAj9LJugZa3slpfj+EcEZhosu59bGtRmn9K6e8gXAaRTiSI3TKkiWuq11S4P50R+594UnP8i5YJOIA==}
+  vercel@46.0.1:
+    resolution: {integrity: sha512-zKF1cvUhkTtin0qKcs/qUQvN8jsUhuJ052oznAKQc+fW1Ft/fA7e5EHQW+/qqawTXlhKCakBUdB3K/6YwjO27Q==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -9027,7 +9027,7 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@45.0.10(rollup@4.14.3):
+  vercel@46.0.1(rollup@4.14.3):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 11.0.1
