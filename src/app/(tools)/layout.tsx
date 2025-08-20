@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import Script from "next/script";
 
+import { CommandMenu } from "~/components/command-menu";
+
 export const metadata: Metadata = {
   icons: {
     apple: "/apple-touch-icon.png",
@@ -47,6 +49,7 @@ export default function RootLayout({
           />
         </noscript>
         {children}
+        <CommandMenu />
       </body>
     </html>
   );
