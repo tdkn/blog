@@ -7,11 +7,17 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
+  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
-    ignores: ["**/out/*", "**/public/*", "**/.next/*"],
+    ignores: [
+      "node_modules/**",
+      ".next/**",
+      "out/**",
+      "build/**",
+      "next-env.d.ts",
+    ],
   },
   ...compat.config({
-    extends: ["next/core-web-vitals", "prettier"],
     overrides: [
       {
         extends: ["plugin:@typescript-eslint/recommended-type-checked"],

@@ -7,6 +7,10 @@ on:
 
   workflow_dispatch:
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 env:
   HUSKY: 0
 
@@ -16,7 +20,7 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Detect file changes
         uses: dorny/paths-filter@v3
@@ -41,7 +45,7 @@ jobs:
 
       - name: Setup Node.js
         if: steps.changes.outputs.node == 'true' || steps.changes.outputs.pnpm == 'true' || steps.changes.outputs.source == 'true'
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version-file: ".nvmrc"
           cache: "pnpm"

@@ -12,5 +12,10 @@ export default defineConfig({
   },
   test: {
     environment: "jsdom",
+    server: {
+      deps: {
+        inline: [/@fortawesome/],
+      },
+    },
   },
 });

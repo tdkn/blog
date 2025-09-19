@@ -1,7 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Asia/Tokyo",
-  "extends": ["config:recommended", "schedule:weekdays"],
+  "extends": [
+    "config:recommended",
+    "schedule:weekdays",
+    "helpers:pinGitHubActionDigests"
+  ],
   "rangeStrategy": "pin",
   "enabledManagers": ["npm", "nvm", "devcontainer"],
   "reviewers": ["tdkn"],
@@ -15,6 +19,10 @@
     {
       "matchManagers": ["devcontainer"],
       "labels": ["dependencies", "devcontainer"]
+    },
+    {
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "7 days"
     }
   ]
 }
