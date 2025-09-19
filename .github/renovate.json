@@ -7,7 +7,7 @@
     "helpers:pinGitHubActionDigests"
   ],
   "rangeStrategy": "pin",
-  "enabledManagers": ["npm", "nvm", "devcontainer"],
+  "enabledManagers": ["npm", "nvm", "devcontainer", "github-actions"],
   "reviewers": ["tdkn"],
   "automerge": true,
   "platformAutomerge": true,
