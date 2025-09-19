@@ -22,28 +22,40 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v5
 
+      - name: Detect file changes
+        uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: .github/filters.yaml
+
       - name: Check Node version
+        if: steps.changes.outputs.node == 'true' || steps.changes.outputs.source == 'true'
         working-directory: .
         run: |
           chmod +x ./scripts/check-node-version.sh
           ./scripts/check-node-version.sh
 
       - name: Install pnpm
+        if: steps.changes.outputs.pnpm == 'true' || steps.changes.outputs.source == 'true'
         uses: pnpm/action-setup@v4
 
       - name: Cache pnpm store
+        if: steps.changes.outputs.pnpm == 'true' || steps.changes.outputs.source == 'true'
         run: pnpm store path
 
       - name: Setup Node.js
+        if: steps.changes.outputs.node == 'true' || steps.changes.outputs.pnpm == 'true' || steps.changes.outputs.source == 'true'
         uses: actions/setup-node@v5
         with:
           node-version-file: ".nvmrc"
           cache: "pnpm"
 
       - name: Install dependencies
+        if: steps.changes.outputs.pnpm == 'true' || steps.changes.outputs.source == 'true'
         run: pnpm install --frozen-lockfile
 
       - name: Restore Next.js cache
+        if: steps.changes.outputs.build == 'true'
         uses: actions/cache@v4
         with:
           path: ${{ github.workspace }}/.next/cache
@@ -52,10 +64,13 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
 
       - name: Build
+        if: steps.changes.outputs.build == 'true'
         run: pnpm run build
 
       - name: Lint
+        if: steps.changes.outputs.source == 'true'
         run: pnpm run lint
 
       - name: Testing
+        if: steps.changes.outputs.test == 'true'
         run: pnpm run test
