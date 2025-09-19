@@ -15,6 +15,10 @@
     {
       "matchManagers": ["devcontainer"],
       "labels": ["dependencies", "devcontainer"]
+    },
+    {
+      "matchDatasources": ["npm"],
+      "minimumReleaseAge": "14 days"
     }
   ]
 }
