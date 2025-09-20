@@ -1,7 +1,9 @@
 import { Metadata, Viewport } from "next";
 import Script from "next/script";
 
+import { CommandMenu } from "~/components/command-menu";
 import { Footer, Header } from "~/components/common";
+import { PostsProvider } from "~/contexts/PostsContext";
 import "~/styles/globals.css";
 
 export const viewport: Viewport = {
@@ -73,11 +75,14 @@ export default function RootLayout({
           />
         </noscript>
 
-        <div className="container mx-auto max-w-3xl px-4">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <PostsProvider>
+          <div className="container mx-auto max-w-3xl px-4">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+          <CommandMenu />
+        </PostsProvider>
       </body>
     </html>
   );
