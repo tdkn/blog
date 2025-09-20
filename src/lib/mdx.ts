@@ -10,7 +10,7 @@ export async function getAllPosts(): Promise<Post[]> {
   const POSTS_PATH: string = path.join(process.cwd(), "posts");
   const postFiles = await glob("**/*.mdx", { cwd: POSTS_PATH });
 
-  return postFiles.map((relativePath: string) => {
+  const posts = postFiles.map((relativePath: string) => {
     const [year, slug] = relativePath.replace(/\.mdx?$/, "").split("/");
     const absolutePath = path.join(POSTS_PATH, relativePath);
     const source = fs.readFileSync(absolutePath);
@@ -18,6 +18,7 @@ export async function getAllPosts(): Promise<Post[]> {
 
     let date: Date = new Date();
     let deprecated: boolean = false;
+    let published: boolean = true;
     let summary: string = "";
     let title: string = "";
 
@@ -27,6 +28,10 @@ export async function getAllPosts(): Promise<Post[]> {
 
     if (typeof frontMatter.deprecated === "boolean") {
       deprecated = frontMatter.deprecated;
+    }
+
+    if (typeof frontMatter.published === "boolean") {
+      published = frontMatter.published;
     }
 
     if (typeof frontMatter.summary === "string") {
@@ -41,11 +46,15 @@ export async function getAllPosts(): Promise<Post[]> {
       content,
       date,
       deprecated,
+      published,
       slug,
+      source: "local" as const,
       summary,
       title,
       url: `/${year}/${slug}`,
       year,
     };
   });
+
+  return posts.filter((post) => post.published);
 }

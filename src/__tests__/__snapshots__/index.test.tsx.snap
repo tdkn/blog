@@ -34,110 +34,312 @@ exports[`Home > renders homepage unchanged 1`] = `
     </p>
   </aside>
   <main
-    class="pt-8"
+    class="space-y-6 pt-8"
   >
-    <article
-      class="py-5"
+    <section
+      class="space-y-0"
     >
-      <div
-        class="flex items-center space-x-2"
+      <h1
+        class="mb-6 text-2xl font-bold text-gray-900 dark:text-white"
+      >
+        Posts
+      </h1>
+      <article
+        class="py-5"
       >
         <div
-          class="text-sm font-medium text-gray-500 dark:text-gray-400"
+          class="flex items-center space-x-2"
         >
-          May 10, 2022
+          <div
+            class="text-sm font-medium text-gray-500 dark:text-gray-400"
+          >
+            May 10, 2022
+          </div>
         </div>
-      </div>
-      <a
-        class="dark:text-yellow-200"
-        href="/2022/aws-cli"
-      >
-        <h2
-          class="text-xl font-bold text-black dark:text-yellow-200"
+        <a
+          class="dark:text-yellow-200"
+          href="/2022/aws-cli"
         >
-          AWS CLI を docker run 経由で使う
-        </h2>
-      </a>
-    </article>
-    <article
-      class="py-5"
-    >
-      <div
-        class="flex items-center space-x-2"
+          <h2
+            class="text-xl font-bold text-black dark:text-yellow-200"
+          >
+            AWS CLI を docker run 経由で使う
+          </h2>
+        </a>
+      </article>
+      <article
+        class="py-5"
       >
         <div
-          class="text-sm font-medium text-gray-500 dark:text-gray-400"
+          class="flex items-center space-x-2"
         >
-          February 24, 2021
+          <div
+            class="text-sm font-medium text-gray-500 dark:text-gray-400"
+          >
+            January 21, 2021
+          </div>
         </div>
-        <span
-          class="inline-flex items-center rounded-md bg-yellow-100 px-2 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-100/20 dark:text-orange-500"
+        <a
+          class="dark:text-yellow-200"
+          href="/2021/how-to-use-yarn-patch"
         >
-          Deprecated
-        </span>
-      </div>
-      <a
-        class="dark:text-yellow-200"
-        href="/2021/vercel-next-playwright"
-      >
-        <h2
-          class="text-xl font-bold text-black dark:text-yellow-200"
-        >
-          Vercel + Next.js + PlaywrightでOGP画像をページ別に自動生成する
-        </h2>
-      </a>
-    </article>
-    <article
-      class="py-5"
-    >
-      <div
-        class="flex items-center space-x-2"
+          <h2
+            class="text-xl font-bold text-black dark:text-yellow-200"
+          >
+            yarn patch の使い方
+          </h2>
+        </a>
+      </article>
+      <article
+        class="py-5"
       >
         <div
-          class="text-sm font-medium text-gray-500 dark:text-gray-400"
+          class="flex items-center space-x-2"
         >
-          January 21, 2021
+          <div
+            class="text-sm font-medium text-gray-500 dark:text-gray-400"
+          >
+            April 9, 2020
+          </div>
+          <span
+            class="inline-flex items-center rounded-md bg-yellow-100 px-2 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-100/20 dark:text-orange-500"
+          >
+            Deprecated
+          </span>
         </div>
-      </div>
-      <a
-        class="dark:text-yellow-200"
-        href="/2021/how-to-use-yarn-patch"
-      >
-        <h2
-          class="text-xl font-bold text-black dark:text-yellow-200"
+        <a
+          class="dark:text-yellow-200"
+          href="/2020/swiftui-darkmode"
         >
-          yarn patch の使い方
-        </h2>
-      </a>
-    </article>
-    <article
-      class="py-5"
+          <h2
+            class="text-xl font-bold text-black dark:text-yellow-200"
+          >
+            SwiftUI のダークモードプレビュー時の不具合を回避する
+          </h2>
+        </a>
+      </article>
+    </section>
+    <h1
+      class="mt-12 mb-6 text-2xl font-bold text-gray-900 dark:text-white"
     >
-      <div
-        class="flex items-center space-x-2"
-      >
-        <div
-          class="text-sm font-medium text-gray-500 dark:text-gray-400"
-        >
-          April 9, 2020
-        </div>
-        <span
-          class="inline-flex items-center rounded-md bg-yellow-100 px-2 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-100/20 dark:text-orange-500"
-        >
-          Deprecated
-        </span>
-      </div>
+      Elsewhere
+    </h1>
+    <section
+      class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3"
+    >
       <a
-        class="dark:text-yellow-200"
-        href="/2020/swiftui-darkmode"
+        class="dark:text-yellow-200 group block overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-md dark:bg-gray-800"
+        href="https://zenn.dev/tdkn/articles/3a9db8442694f0"
+        rel="noopener noreferrer"
+        target="_blank"
       >
-        <h2
-          class="text-xl font-bold text-black dark:text-yellow-200"
-        >
-          SwiftUI のダークモードプレビュー時の不具合を回避する
-        </h2>
+        <article>
+          <div
+            class="relative bg-gradient-to-br from-blue-100 to-blue-200 px-4 py-8 dark:from-blue-900/40 dark:to-blue-800/40"
+          >
+            <div
+              class="absolute top-3 left-3"
+            >
+              <span
+                class="rounded-xl bg-[#3EA8FF] px-2.5 py-1 text-xs font-medium text-white"
+              >
+                Zenn
+              </span>
+            </div>
+            <div
+              class="absolute top-3 right-3"
+            >
+              <svg
+                class="h-4 w-4 text-blue-400/60 dark:text-blue-300/50"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex items-center justify-center"
+            >
+              <span
+                class="text-5xl"
+              >
+                👻
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex h-32 flex-col justify-between p-4"
+          >
+            <h3
+              class="line-clamp-3 text-base leading-tight font-bold text-gray-900 dark:text-white"
+            >
+              なぜ Ghostty で option+backspace が効かない？単語削除できるようにする設定方法
+            </h3>
+            <div
+              class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
+            >
+              <span>
+                September 18, 2025
+              </span>
+            </div>
+          </div>
+        </article>
       </a>
-    </article>
+      <a
+        class="dark:text-yellow-200 group block overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-md dark:bg-gray-800"
+        href="https://zenn.dev/tdkn/articles/e01ae9aa87fe70"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <article>
+          <div
+            class="relative bg-gradient-to-br from-blue-100 to-blue-200 px-4 py-8 dark:from-blue-900/40 dark:to-blue-800/40"
+          >
+            <div
+              class="absolute top-3 left-3"
+            >
+              <span
+                class="rounded-xl bg-[#3EA8FF] px-2.5 py-1 text-xs font-medium text-white"
+              >
+                Zenn
+              </span>
+            </div>
+            <div
+              class="absolute top-3 right-3"
+            >
+              <svg
+                class="h-4 w-4 text-blue-400/60 dark:text-blue-300/50"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex items-center justify-center"
+            >
+              <span
+                class="text-5xl"
+              >
+                🛠️
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex h-32 flex-col justify-between p-4"
+          >
+            <h3
+              class="line-clamp-3 text-base leading-tight font-bold text-gray-900 dark:text-white"
+            >
+              CocoaPods を Docker を介して実行する方法
+            </h3>
+            <div
+              class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
+            >
+              <span>
+                November 1, 2023
+              </span>
+              <span
+                class="flex items-center gap-1"
+              >
+                <span>
+                  ♡
+                </span>
+                <span>
+                  1
+                </span>
+              </span>
+            </div>
+          </div>
+        </article>
+      </a>
+      <a
+        class="dark:text-yellow-200 group block overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-md dark:bg-gray-800"
+        href="https://zenn.dev/tdkn/articles/c52a0cc7bea561"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <article>
+          <div
+            class="relative bg-gradient-to-br from-blue-100 to-blue-200 px-4 py-8 dark:from-blue-900/40 dark:to-blue-800/40"
+          >
+            <div
+              class="absolute top-3 left-3"
+            >
+              <span
+                class="rounded-xl bg-[#3EA8FF] px-2.5 py-1 text-xs font-medium text-white"
+              >
+                Zenn
+              </span>
+            </div>
+            <div
+              class="absolute top-3 right-3"
+            >
+              <svg
+                class="h-4 w-4 text-blue-400/60 dark:text-blue-300/50"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                />
+              </svg>
+            </div>
+            <div
+              class="flex items-center justify-center"
+            >
+              <span
+                class="text-5xl"
+              >
+                🎭
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex h-32 flex-col justify-between p-4"
+          >
+            <h3
+              class="line-clamp-3 text-base leading-tight font-bold text-gray-900 dark:text-white"
+            >
+              Vercel + Next.js + PlaywrightでOGP画像を自動生成する
+            </h3>
+            <div
+              class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
+            >
+              <span>
+                February 24, 2021
+              </span>
+              <span
+                class="flex items-center gap-1"
+              >
+                <span>
+                  ♡
+                </span>
+                <span>
+                  133
+                </span>
+              </span>
+            </div>
+          </div>
+        </article>
+      </a>
+    </section>
   </main>
 </div>
 `;
