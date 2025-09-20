@@ -33,6 +33,7 @@
     "@fortawesome/react-fontawesome": "3.0.2",
     "@next/bundle-analyzer": "15.5.3",
     "clsx": "2.1.1",
+    "cmdk": "^1.1.1",
     "date-fns": "4.1.0",
     "framer-motion": "12.23.16",
     "glob": "11.0.3",
@@ -82,7 +83,9 @@
   "pnpm": {
     "onlyBuiltDependencies": [
       "@tailwindcss/oxide",
-      "esbuild"
+      "esbuild",
+      "sharp",
+      "unrs-resolver"
     ],
     "patchedDependencies": {
       "stylelint-config-tailwindcss": "patches/stylelint-config-tailwindcss.patch"

@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 import Script from "next/script";
 
+import { CommandMenu } from "~/components/command-menu";
+import { PostsProvider } from "~/contexts/PostsContext";
+
 export const metadata: Metadata = {
   icons: {
     apple: "/apple-touch-icon.png",
@@ -46,7 +49,10 @@ export default function RootLayout({
             width="0"
           />
         </noscript>
-        {children}
+        <PostsProvider>
+          {children}
+          <CommandMenu />
+        </PostsProvider>
       </body>
     </html>
   );
