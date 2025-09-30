@@ -18,18 +18,40 @@ const toBase64 = (str: string) =>
     ? Buffer.from(str).toString("base64")
     : window.btoa(str);
 
-const Image = ({ height, width, ...otherProps }: ImageProps) => (
-  <NextImage
-    blurDataURL={`data:image/svg+xml;base64,${toBase64(
-      shimmer(width, height),
-    )}`}
-    height={height}
-    placeholder="blur"
-    sizes="100vw"
-    style={{ height: "auto", width: "100%" }}
-    width={width}
-    {...otherProps}
-  />
-);
+interface CustomImageProps extends ImageProps {
+  caption?: string;
+}
+
+const Image = ({
+  alt,
+  caption,
+  height,
+  width,
+  ...otherProps
+}: CustomImageProps) => {
+  const displayCaption = caption || alt;
+
+  return (
+    <figure className="my-8">
+      <NextImage
+        alt={alt}
+        blurDataURL={`data:image/svg+xml;base64,${toBase64(
+          shimmer(width, height),
+        )}`}
+        height={height}
+        placeholder="blur"
+        sizes="100vw"
+        style={{ height: "auto", width: "100%" }}
+        width={width}
+        {...otherProps}
+      />
+      {displayCaption && (
+        <figcaption className="mt-2 text-center text-sm text-gray-400 dark:text-gray-600">
+          {displayCaption}
+        </figcaption>
+      )}
+    </figure>
+  );
+};
 
 export default Image;

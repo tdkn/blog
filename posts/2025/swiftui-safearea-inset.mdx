@@ -1,0 +1,72 @@
+---
+title: "地味に困る iOS の Bottom Safe Area による余白問題"
+date: "2025-09-30"
+summary: "Home Indicator がないデバイスでも下部の余白を最適化するために、bottom safe area の有無を Environment で扱う方法を紹介します。"
+published: true
+---
+
+iPhone SE のような Home Indicator がないデバイスでは、画面下端に余白（Safe Area）が存在しません。そのため、下部に配置したボタンやツールバーがギリギリまで寄ってしまうことがあります。
+
+<Image
+  src="/2025/safe-area-inset.png"
+  width={1200}
+  height={675}
+  alt="Home Indicator がある場合（左）とない場合（右）"
+/>
+
+この問題を解決するために、`@Environment` を活用して「bottom Safe Area が存在するかどうか」を判定できるプロパティを自作してみましょう。
+
+## 実装例
+
+```swift
+import SwiftUI
+import UIKit
+
+private struct HasBottomSafeAreaKey: EnvironmentKey {
+  static var defaultValue: Bool {
+    let bottomInset = UIApplication.shared
+      .connectedScenes
+      .compactMap { $0 as? UIWindowScene }
+      .flatMap { $0.windows }
+      .first(where: \.isKeyWindow)?
+      .safeAreaInsets.bottom ?? 0
+
+    return bottomInset > 0
+  }
+}
+
+extension EnvironmentValues {
+  var hasBottomSafeArea: Bool {
+    get { self[HasBottomSafeAreaKey.self] }
+    set { self[HasBottomSafeAreaKey.self] = newValue }
+  }
+}
+```
+
+これで `@Environment(\.hasBottomSafeArea)` が使えるようになります。
+
+## 利用方法
+
+```swift
+struct ContentView: View {
+  @Environment(\.hasBottomSafeArea) private var hasBottomSafeArea
+
+  var body: some View {
+    VStack {
+      Spacer()
+      Button("Action") {
+        // do something
+      }
+      .padding(.bottom, hasBottomSafeArea ? 0 : 16)
+    }
+  }
+}
+```
+
+- Home Indicator あり（Face ID デバイス）→ Safe Area があるので追加の `padding` は不要
+- Home Indicator なし（iPhone SE など）→ Bottom Safe Area が無いため 16pt の余白を確保
+
+## 注意点と工夫
+
+- 取得タイミング: Safe Area はビューがまだ表示されていない段階では 0 になる場合があります。より動的に扱いたい場合は `GeometryReader` や `safeAreaInset` を組み合わせて `Environment` を更新するのも手です。
+- 画面回転やレイアウト変化: デバイスの回転や `TabView` の有無で Safe Area が変わることがあります。必要に応じて上位のビューで動的に環境値を更新しましょう。
