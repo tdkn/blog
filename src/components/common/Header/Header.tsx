@@ -1,52 +1,39 @@
-import {
-  faBluesky,
-  faFacebook,
-  faGithub,
-  faMastodon,
-  faXTwitter,
-} from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+"use client";
+
 import Link from "next/link";
 
 import { Logo } from "~/components/ui";
 
-const Header = () => (
-  <div className="flex items-center justify-between py-10">
-    <Link aria-label="Home" href="/">
-      <Logo />
-    </Link>
+const Header = () => {
+  const handleSearchClick = () => {
+    const event = new KeyboardEvent("keydown", {
+      bubbles: true,
+      key: "k",
+      metaKey: true,
+    });
+    document.dispatchEvent(event);
+  };
 
-    <div className="flex items-center space-x-4">
-      <Link aria-label="GitHub" href="https://github.com/tdkn" target="_blank">
-        <FontAwesomeIcon className="h-5 w-5" icon={faGithub} />
+  return (
+    <div className="flex items-center justify-between py-10">
+      <Link aria-label="Home" href="/">
+        <Logo />
       </Link>
-      <Link aria-label="X" href="https://x.com/tdkn_" target="_blank">
-        <FontAwesomeIcon className="h-5 w-5" icon={faXTwitter} />
-      </Link>
-      <Link
-        aria-label="Bluesky"
-        href="https://bsky.app/profile/tdkn.bsky.social"
-        target="_blank"
-      >
-        <FontAwesomeIcon className="h-5 w-5" icon={faBluesky} />
-      </Link>
-      <Link
-        aria-label="Mastodon"
-        href="https://mastodon.social/@tdkn"
-        rel="me"
-        target="_blank"
-      >
-        <FontAwesomeIcon className="h-5 w-5" icon={faMastodon} />
-      </Link>
-      <Link
-        aria-label="Facebook"
-        href="https://facebook.com/shun.tedokon"
-        target="_blank"
-      >
-        <FontAwesomeIcon className="h-5 w-5" icon={faFacebook} />
-      </Link>
+
+      <div className="hidden items-center space-x-4 md:flex">
+        <button
+          className="flex cursor-pointer items-center gap-1 rounded border border-gray-300 py-1 pr-1 pl-2 text-xs text-gray-600 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800"
+          onClick={handleSearchClick}
+          type="button"
+        >
+          <span>Search</span>
+          <kbd className="rounded border border-gray-300 bg-gray-100 px-1 py-0.5 text-xs dark:border-gray-700 dark:bg-gray-700">
+            ⌘K
+          </kbd>
+        </button>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Header;

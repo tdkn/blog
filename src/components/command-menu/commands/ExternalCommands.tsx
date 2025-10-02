@@ -77,7 +77,7 @@ export function ExternalCommands({ setIsOpen }: ExternalCommandsProps) {
     >
       {externalLinks.map((link) => (
         <Command.Item
-          className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-slate-100 data-[selected=true]:bg-slate-200 dark:hover:bg-slate-800 dark:data-[selected=true]:bg-slate-700"
+          className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-gray-100 data-[selected=true]:bg-gray-200 dark:hover:bg-gray-800 dark:data-[selected=true]:bg-gray-700"
           key={link.id}
           keywords={[link.label, link.description]}
           onSelect={() => handleSelect(link.url)}
