@@ -34,7 +34,7 @@ export function CommandMenu() {
 
   return (
     <div
-      className="animate-in fade-in-0 fixed inset-0 z-50 bg-black/50 backdrop-blur-sm duration-200"
+      className="animate-in fade-in-0 fixed inset-0 z-50 bg-black/50 duration-200"
       onClick={() => setIsOpen(false)}
     >
       <div
@@ -42,7 +42,7 @@ export function CommandMenu() {
         onClick={(e) => e.stopPropagation()}
       >
         <Command
-          className="overflow-hidden rounded-xl bg-white/95 shadow-2xl backdrop-blur-xl dark:bg-slate-900/95 dark:shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_20px_25px_-5px_rgba(0,0,0,0.3),0_10px_10px_-5px_rgba(0,0,0,0.04)]"
+          className="overflow-hidden rounded-xl bg-white shadow-2xl dark:bg-slate-900 dark:shadow-[0_0_0_1px_rgba(255,255,255,0.1),0_20px_25px_-5px_rgba(0,0,0,0.3),0_10px_10px_-5px_rgba(0,0,0,0.04)]"
           shouldFilter={true}
           vimBindings={true}
         >

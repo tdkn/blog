@@ -85,7 +85,10 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
         : []),
       {
         action: () => {
-          window.open("https://github.com/tdkn/blog/issues", "_blank");
+          window.open(
+            "https://github.com/tdkn/blog/issues/new?template=1.bug_report.yml",
+            "_blank",
+          );
         },
         description: "Open GitHub issues to report a bug",
         icon: <FontAwesomeIcon className="h-4 w-4" icon={faBug} />,
@@ -108,13 +111,13 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
     >
       {actionItems.map((item) => (
         <Command.Item
-          className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-slate-100 data-[selected=true]:bg-slate-200 dark:hover:bg-slate-800 dark:data-[selected=true]:bg-slate-700"
+          className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-gray-100 data-[selected=true]:bg-gray-200 dark:hover:bg-gray-800 dark:data-[selected=true]:bg-gray-700"
           key={item.id}
           keywords={[item.label, item.description]}
           onSelect={() => handleSelect(item.action)}
           value={`${item.label} ${item.description}`}
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-slate-100 text-slate-600 dark:bg-slate-800 dark:text-slate-400">
+          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-[#F7C953] to-[#F28E53] text-white">
             {item.icon}
           </div>
           <div className="flex-1">
