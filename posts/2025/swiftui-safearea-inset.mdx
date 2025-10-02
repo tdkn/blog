@@ -65,8 +65,3 @@ struct ContentView: View {
 
 - Home Indicator あり（Face ID デバイス）→ Safe Area があるので追加の `padding` は不要
 - Home Indicator なし（iPhone SE など）→ Bottom Safe Area が無いため 16pt の余白を確保
-
-## 注意点と工夫
-
-- 取得タイミング: Safe Area はビューがまだ表示されていない段階では 0 になる場合があります。より動的に扱いたい場合は `GeometryReader` や `safeAreaInset` を組み合わせて `Environment` を更新するのも手です。
-- 画面回転やレイアウト変化: デバイスの回転や `TabView` の有無で Safe Area が変わることがあります。必要に応じて上位のビューで動的に環境値を更新しましょう。
