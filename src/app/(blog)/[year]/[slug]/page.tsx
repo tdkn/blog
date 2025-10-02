@@ -42,10 +42,25 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const params = await props.params;
 
   const { slug, year } = params;
+  const post = await getPost(props.params);
+
+  if (!post) {
+    return {};
+  }
 
   return {
-    openGraph: { images: `/api/og/${year}/${slug}.png` },
-    twitter: { images: `/api/og/${year}/${slug}.png` },
+    description: post.summary,
+    openGraph: {
+      description: post.summary,
+      images: `/api/og/${year}/${slug}.png`,
+      title: post.title,
+    },
+    title: post.title,
+    twitter: {
+      description: post.summary,
+      images: `/api/og/${year}/${slug}.png`,
+      title: post.title,
+    },
   };
 }
 
