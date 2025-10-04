@@ -1,0 +1,101 @@
+---
+title: "iOS 26 の Liquid Glass 効果をランタイムで動的に切り替えるテクニック"
+date: "2025-10-05"
+summary: "iOS 26 の Liquid Glass エフェクトを無効化する公式設定と、プログラムで動的に切り替えるテクニックを紹介します。"
+published: true
+---
+
+iOS 26 で導入された Liquid Glass エフェクトは、システム全体のウィンドウ背景に半透明かつ物理ベースのブラーを自動適用する新しいビジュアルレイヤーです。既存 UI との整合性やパフォーマンス面で問題がある場合や開発リソースの問題から、無効化して一時しのぎしたいケースがあります。
+
+## 動的な切り替えの必要性
+
+我々のアプリでは、開発者のみがアクセスできるデバッグメニューに Liquid Glass の有効・無効を切り替えるトグルを設けることで、顧客向けには Info.plist の設定による互換モードでのリリースを維持しつつ、開発中は Liquid Glass の挙動を手軽に確認できるようにしています。
+
+<Image
+  src="/2025/developer-settings.png"
+  width={1200}
+  height={675}
+  alt="Liquid Glass の有効・無効を切り替えるデバッグメニュー"
+/>
+
+## 従来の Info.plist による設定
+
+公式には、`Info.plist` にキー `UIDesignRequiresCompatibility` を追加し、互換モードを指定することで Liquid Glass の適用を制御します。これによりアプリ全体で効果を無効にすることが可能です。
+
+```xml
+<key>UIDesignRequiresCompatibility</key>
+<true/>
+```
+
+<Image
+  src="/2025/disable-liquid-glass.png"
+  width={1200}
+  height={675}
+  alt="iOS 26 の Liquid Glass エフェクトを Info.plist で無効化する"
+/>
+
+## 動的に切り替えたい場合
+
+`Info.plist` で互換モードを指定すると、開発中に Liquid Glass の挙動を確認できなくなります。iOS 26 対応を進めながらリリースでは互換モードを維持したい場合、Method Swizzling を使ったテクニックがあります。
+
+```swift
+import Foundation
+
+extension Bundle {
+  static func swizzleInfoDictionary(_ modifier: @escaping (inout [String: Any]?) -> Void) {
+    guard #available(iOS 26.0, *) else { return }
+
+    let originalSelector = #selector(getter: infoDictionary)
+    let swizzledSelector = #selector(getter: swizzledInfoDictionary)
+
+    guard let original = class_getInstanceMethod(Self.self, originalSelector),
+          let swizzled = class_getInstanceMethod(Self.self, swizzledSelector) else { return }
+
+    _infoDictionaryModifier = modifier
+    method_exchangeImplementations(original, swizzled)
+  }
+
+  private static var _infoDictionaryModifier: ((inout [String: Any]?) -> Void)?
+
+  @objc private var swizzledInfoDictionary: [String: Any]? {
+    var dict = self.swizzledInfoDictionary
+    Bundle._infoDictionaryModifier?(&dict)
+    return dict
+  }
+}
+```
+
+これは何をしているかというと、`Bundle` クラスの `infoDictionary` プロパティのゲッターを差し替え、呼び出されるたびにクロージャで dictionary を修正できるようにしています。これにより、アプリ起動後に `Info.plist` の内容を動的に変更することができるわけです。
+
+### SwiftUI アプリでの呼び出し例
+
+起動後にシステムが値を読み取る前に差し替える必要があるため、アプリ起動時のなるべく早い段階で `swizzleInfoDictionary()` を呼び出してください。反映にはアプリの再起動が必要です。
+
+```swift
+import SwiftUI
+
+@main
+struct MyApp: App {
+  init() {
+    Bundle.swizzleInfoDictionary { dict in
+      dict?["UIDesignRequiresCompatibility"] = false
+    }
+  }
+  /* ... */
+}
+```
+
+デバッグビルドでのみ Liquid Glass を有効にしたい場合は、`#if DEBUG` ディレクティブを使用することもできます。
+
+```swift
+#if DEBUG
+Bundle.swizzleInfoDictionary { dict in
+  dict?["UIDesignRequiresCompatibility"] = false
+}
+#endif
+```
+
+## まとめ
+
+Liquid Glass の無効化は `Info.plist` での設定が推奨されますが、動的な切り替えが必要な場合は Method Swizzling の使用も検討してみると良いでしょう。
+なお、Method Swizzling は使い方によっては予期せぬ副作用を引き起こす可能性があるため、十分にテストを行い、必要最小限の範囲で使用することをお勧めします。

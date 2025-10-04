@@ -157,6 +157,29 @@ exports[`Home > renders homepage unchanged 1`] = `
           <div
             class="text-sm font-medium text-gray-500 dark:text-gray-400"
           >
+            October 5, 2025
+          </div>
+        </div>
+        <a
+          class="dark:text-yellow-200"
+          href="/2025/disable-liquid-glass"
+        >
+          <h2
+            class="text-xl font-bold text-black dark:text-yellow-200"
+          >
+            iOS 26 の Liquid Glass 効果をランタイムで動的に切り替えるテクニック
+          </h2>
+        </a>
+      </article>
+      <article
+        class="py-5"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="text-sm font-medium text-gray-500 dark:text-gray-400"
+          >
             September 30, 2025
           </div>
         </div>
