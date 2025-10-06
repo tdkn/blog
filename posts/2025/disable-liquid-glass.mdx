@@ -69,7 +69,9 @@ extension Bundle {
 
 ### SwiftUI アプリでの呼び出し例
 
-起動後にシステムが値を読み取る前に差し替える必要があるため、アプリ起動時のなるべく早い段階で `swizzleInfoDictionary()` を呼び出してください。反映にはアプリの再起動が必要です。
+起動後にシステムが値を読み取る前に差し替える必要があるため、アプリ起動時のなるべく早い段階で `swizzleInfoDictionary()` を呼び出してください。
+
+**アプリが完全に起動したあとに値を変更した場合などは、リアルタイムで UI に反映されるわけではないため、アプリの再起動が必要です。**
 
 ```swift
 import SwiftUI
@@ -78,7 +80,15 @@ import SwiftUI
 struct MyApp: App {
   init() {
     Bundle.swizzleInfoDictionary { dict in
+      // Liquid Glass を無効化する場合 (true)
+      dict?["UIDesignRequiresCompatibility"] = true
+
+      // Liquid Glass を有効化する場合 (false)
       dict?["UIDesignRequiresCompatibility"] = false
+
+      // 値を UserDefaults などで管理することもできる
+      dict?["UIDesignRequiresCompatibility"]
+        = UserDefaults.standard.bool(forKey: "isLiquidGlassDisabled")
     }
   }
   /* ... */
