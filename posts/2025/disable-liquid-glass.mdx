@@ -38,11 +38,11 @@ iOS 26 で導入された Liquid Glass エフェクトは、システム全体�
 
 `Info.plist` で互換モードを指定すると、開発中に Liquid Glass の挙動を確認できなくなります。iOS 26 対応を進めながらリリースでは互換モードを維持したい場合、Method Swizzling を使ったテクニックがあります。
 
-```swift
+```swift {13,22,25,28-29} /NSMutableDictionary/
 import Foundation
 
 extension Bundle {
-  static func swizzleInfoDictionary(_ modifier: @escaping (inout [String: Any]?) -> Void) {
+  static func swizzleInfoDictionary() {
     guard #available(iOS 26.0, *) else { return }
 
     let originalSelector = #selector(getter: infoDictionary)
@@ -51,15 +51,24 @@ extension Bundle {
     guard let original = class_getInstanceMethod(Self.self, originalSelector),
           let swizzled = class_getInstanceMethod(Self.self, swizzledSelector) else { return }
 
-    _infoDictionaryModifier = modifier
     method_exchangeImplementations(original, swizzled)
   }
 
-  private static var _infoDictionaryModifier: ((inout [String: Any]?) -> Void)?
+  @objc private var swizzledInfoDictionary: NSDictionary? {
+    let dict = NSMutableDictionary(
+      dictionary: self.swizzledInfoDictionary ?? [:]
+    )
 
-  @objc private var swizzledInfoDictionary: [String: Any]? {
-    var dict = self.swizzledInfoDictionary
-    Bundle._infoDictionaryModifier?(&dict)
+    // Liquid Glass をオフにする場合 (true)
+    // dict["UIDesignRequiresCompatibility"] = true
+
+    // Liquid Glass をオンにする場合 (false)
+    // dict["UIDesignRequiresCompatibility"] = false
+
+    // オン・オフを UserDefaults で管理する場合
+    dict["UIDesignRequiresCompatibility"]
+      = !UserDefaults.standard.bool(forKey: "isLiquidGlassEnabled")
+
     return dict
   }
 }
@@ -79,30 +88,14 @@ import SwiftUI
 @main
 struct MyApp: App {
   init() {
-    Bundle.swizzleInfoDictionary { dict in
-      // Liquid Glass を無効化する場合 (true)
-      dict?["UIDesignRequiresCompatibility"] = true
-
-      // Liquid Glass を有効化する場合 (false)
-      dict?["UIDesignRequiresCompatibility"] = false
-
-      // 値を UserDefaults などで管理することもできる
-      dict?["UIDesignRequiresCompatibility"]
-        = UserDefaults.standard.bool(forKey: "isLiquidGlassDisabled")
-    }
+    // DEBUG ビルドまたは開発者向けにのみ有効化してください。
+    // 本番環境では使用しないことを強く推奨します。
+    #if DEBUG || DANGEROUSLY_ENABLE_SWIZZLING
+      Bundle.swizzleInfoDictionary()
+    #endif
   }
   /* ... */
 }
-```
-
-デバッグビルドでのみ Liquid Glass を有効にしたい場合は、`#if DEBUG` ディレクティブを使用することもできます。
-
-```swift
-#if DEBUG
-Bundle.swizzleInfoDictionary { dict in
-  dict?["UIDesignRequiresCompatibility"] = false
-}
-#endif
 ```
 
 ## まとめ
