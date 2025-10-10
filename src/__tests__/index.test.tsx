@@ -3,6 +3,13 @@ import { describe, expect, it, vi } from "vitest";
 
 import Home from "~/app/(blog)/page";
 
+import { mockZennArticlesResponse } from "./fixtures/zenn";
+
+// Mock Zenn API to avoid external dependencies and ensure consistent test results
+vi.mock("~/lib/zenn", () => ({
+  getZennArticles: vi.fn(() => Promise.resolve(mockZennArticlesResponse)),
+}));
+
 describe("Home", () => {
   it("renders a Home", async () => {
     vi.spyOn(console, "error").mockImplementation(() => {
