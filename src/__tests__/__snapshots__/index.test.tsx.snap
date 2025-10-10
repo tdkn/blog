@@ -279,7 +279,7 @@ exports[`Home > renders homepage unchanged 1`] = `
     >
       <a
         class="dark:text-yellow-200 group block overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-md dark:bg-gray-800"
-        href="https://zenn.dev/tdkn/articles/3a9db8442694f0"
+        href="https://zenn.dev/tdkn/articles/abc123def456"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -319,7 +319,7 @@ exports[`Home > renders homepage unchanged 1`] = `
               <span
                 class="text-5xl"
               >
-                👻
+                📝
               </span>
             </div>
           </div>
@@ -329,13 +329,13 @@ exports[`Home > renders homepage unchanged 1`] = `
             <h3
               class="line-clamp-3 text-base leading-tight font-bold text-gray-900 dark:text-white"
             >
-              なぜ Ghostty で option+backspace が効かない？単語削除できるようにする設定方法
+              Sample Article Title for Testing
             </h3>
             <div
               class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
             >
               <span>
-                September 18, 2025
+                January 15, 2024
               </span>
               <span
                 class="flex items-center gap-1"
@@ -344,155 +344,7 @@ exports[`Home > renders homepage unchanged 1`] = `
                   ♡
                 </span>
                 <span>
-                  1
-                </span>
-              </span>
-            </div>
-          </div>
-        </article>
-      </a>
-      <a
-        class="dark:text-yellow-200 group block overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-md dark:bg-gray-800"
-        href="https://zenn.dev/tdkn/articles/e01ae9aa87fe70"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <article>
-          <div
-            class="relative bg-gradient-to-br from-blue-100 to-blue-200 px-4 py-8 dark:from-blue-900/40 dark:to-blue-800/40"
-          >
-            <div
-              class="absolute top-3 left-3"
-            >
-              <span
-                class="rounded-xl bg-[#3EA8FF] px-2.5 py-1 text-xs font-medium text-white"
-              >
-                Zenn
-              </span>
-            </div>
-            <div
-              class="absolute top-3 right-3"
-            >
-              <svg
-                class="h-4 w-4 text-blue-400/60 dark:text-blue-300/50"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-            <div
-              class="flex items-center justify-center"
-            >
-              <span
-                class="text-5xl"
-              >
-                🛠️
-              </span>
-            </div>
-          </div>
-          <div
-            class="flex h-32 flex-col justify-between p-4"
-          >
-            <h3
-              class="line-clamp-3 text-base leading-tight font-bold text-gray-900 dark:text-white"
-            >
-              CocoaPods を Docker を介して実行する方法
-            </h3>
-            <div
-              class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
-            >
-              <span>
-                November 1, 2023
-              </span>
-              <span
-                class="flex items-center gap-1"
-              >
-                <span>
-                  ♡
-                </span>
-                <span>
-                  1
-                </span>
-              </span>
-            </div>
-          </div>
-        </article>
-      </a>
-      <a
-        class="dark:text-yellow-200 group block overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-md dark:bg-gray-800"
-        href="https://zenn.dev/tdkn/articles/c52a0cc7bea561"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        <article>
-          <div
-            class="relative bg-gradient-to-br from-blue-100 to-blue-200 px-4 py-8 dark:from-blue-900/40 dark:to-blue-800/40"
-          >
-            <div
-              class="absolute top-3 left-3"
-            >
-              <span
-                class="rounded-xl bg-[#3EA8FF] px-2.5 py-1 text-xs font-medium text-white"
-              >
-                Zenn
-              </span>
-            </div>
-            <div
-              class="absolute top-3 right-3"
-            >
-              <svg
-                class="h-4 w-4 text-blue-400/60 dark:text-blue-300/50"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                />
-              </svg>
-            </div>
-            <div
-              class="flex items-center justify-center"
-            >
-              <span
-                class="text-5xl"
-              >
-                🎭
-              </span>
-            </div>
-          </div>
-          <div
-            class="flex h-32 flex-col justify-between p-4"
-          >
-            <h3
-              class="line-clamp-3 text-base leading-tight font-bold text-gray-900 dark:text-white"
-            >
-              Vercel + Next.js + PlaywrightでOGP画像を自動生成する
-            </h3>
-            <div
-              class="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400"
-            >
-              <span>
-                February 24, 2021
-              </span>
-              <span
-                class="flex items-center gap-1"
-              >
-                <span>
-                  ♡
-                </span>
-                <span>
-                  133
+                  42
                 </span>
               </span>
             </div>
