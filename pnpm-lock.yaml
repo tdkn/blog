@@ -157,8 +157,8 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
       vercel:
-        specifier: 48.2.6
-        version: 48.2.6(rollup@4.14.3)
+        specifier: 48.2.8
+        version: 48.2.8(rollup@4.14.3)
       vitest:
         specifier: 3.2.4
         version: 3.2.4(@edge-runtime/vm@3.2.0)(@types/debug@4.1.12)(@types/node@22.18.8)(jsdom@27.0.0(postcss@8.5.6))(lightningcss@1.30.1)
@@ -1576,8 +1576,8 @@ packages:
   '@vercel/hydrogen@1.2.4':
     resolution: {integrity: sha512-eb16oesfgHuBlXxe+WqI+rMdP4QpeHXLJh9ropFy+StkWC2F0ZFKegutEpvJCRg0FHttRnn9uMzMmzJ2F4xKkg==}
 
-  '@vercel/next@4.13.2':
-    resolution: {integrity: sha512-BL/NFVe59u1sqICyq3wzrQFgldKrVE3ktZzHLmF/qoTj3lq71tOgsNvIUV4nnOyvQkFOAOw+riPHLkZvg7cfKA==}
+  '@vercel/next@4.13.3':
+    resolution: {integrity: sha512-Gyn6mEsoXVmHrRmKEZlZ+xFWwV4gkDGAg5v44lkeIksFefMHaTiCbo9YOPDqzHrwQ9w/QAsX1xOI4mrnicSy3g==}
 
   '@vercel/nft@0.30.1':
     resolution: {integrity: sha512-2mgJZv4AYBFkD/nJ4QmiX5Ymxi+AisPLPcS/KPXVqniyQNqKXX+wjieAbDXQP3HcogfEbpHoRMs49Cd4pfkk8g==}
@@ -4570,8 +4570,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@48.2.6:
-    resolution: {integrity: sha512-If5lXYbrJP6gY528me5jYygdN2ZlQyaMvAqjUik05ETEVK16XAR2GD6Q9TWu8Nd6hMlTNsk3Axf3d90+PEHmkg==}
+  vercel@48.2.8:
+    resolution: {integrity: sha512-Eaqk8iK33ZSgLpTDqO0IaLqfvFBG/I+XD3C0T7RygS04rjb/xFVFEzpMqZ2qNADuRQ2JxpozDQB6+ounJXGxUw==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -6176,7 +6176,7 @@ snapshots:
       '@vercel/static-config': 3.1.2
       ts-morph: 12.0.0
 
-  '@vercel/next@4.13.2(rollup@4.14.3)':
+  '@vercel/next@4.13.3(rollup@4.14.3)':
     dependencies:
       '@vercel/nft': 0.30.1(rollup@4.14.3)
     transitivePeerDependencies:
@@ -9698,7 +9698,7 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@48.2.6(rollup@4.14.3):
+  vercel@48.2.8(rollup@4.14.3):
     dependencies:
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 12.1.2
@@ -9709,7 +9709,7 @@ snapshots:
       '@vercel/h3': 0.1.4(rollup@4.14.3)
       '@vercel/hono': 0.1.5(rollup@4.14.3)
       '@vercel/hydrogen': 1.2.4
-      '@vercel/next': 4.13.2(rollup@4.14.3)
+      '@vercel/next': 4.13.3(rollup@4.14.3)
       '@vercel/node': 5.3.26(rollup@4.14.3)
       '@vercel/python': 5.0.8
       '@vercel/redwood': 2.3.6(rollup@4.14.3)
