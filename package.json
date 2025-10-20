@@ -54,7 +54,7 @@
     "@types/mdx": "2.0.13",
     "@types/node": "22.18.10",
     "@types/react": "19.2.2",
-    "@types/react-dom": "19.2.1",
+    "@types/react-dom": "19.2.2",
     "@typescript-eslint/eslint-plugin": "8.46.0",
     "@typescript-eslint/parser": "8.46.0",
     "@vitejs/plugin-react": "5.0.4",
@@ -92,7 +92,7 @@
     },
     "overrides": {
       "@types/react": "19.2.2",
-      "@types/react-dom": "19.2.1"
+      "@types/react-dom": "19.2.2"
     },
     "minimumReleaseAge": 10080
   }
