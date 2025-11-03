@@ -75,7 +75,7 @@
     "tailwindcss": "4.1.16",
     "typescript": "5.9.3",
     "vercel": "48.6.0",
-    "vitest": "4.0.3"
+    "vitest": "4.0.4"
   },
   "volta": {
     "node": "24.11.0"
