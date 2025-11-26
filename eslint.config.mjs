@@ -1,4 +1,6 @@
 import { FlatCompat } from "@eslint/eslintrc";
+import tseslint from "@typescript-eslint/eslint-plugin";
+import tsparser from "@typescript-eslint/parser";
 import perfectionist from "eslint-plugin-perfectionist";
 
 const compat = new FlatCompat({
@@ -17,28 +19,7 @@ const eslintConfig = [
       "next-env.d.ts",
     ],
   },
-  ...compat.config({
-    overrides: [
-      {
-        extends: ["plugin:@typescript-eslint/recommended-type-checked"],
-        files: ["*.ts", "*.tsx"],
-        parserOptions: {
-          project: "./tsconfig.json",
-        },
-        rules: {
-          "@typescript-eslint/no-explicit-any": "off",
-          "@typescript-eslint/no-unused-vars": [
-            "error",
-            {
-              argsIgnorePattern: "^_",
-              caughtErrorsIgnorePattern: "^_",
-              destructuredArrayIgnorePattern: "^_",
-              varsIgnorePattern: "^_",
-            },
-          ],
-        },
-      },
-    ],
+  {
     rules: {
       "arrow-body-style": ["error", "as-needed"],
       "import/newline-after-import": ["error"],
@@ -58,7 +39,32 @@ const eslintConfig = [
       "react/jsx-no-useless-fragment": ["error", { allowExpressions: true }],
       "react/self-closing-comp": ["error"],
     },
-  }),
+  },
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parser: tsparser,
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
+    },
+    plugins: {
+      "@typescript-eslint": tseslint,
+    },
+    rules: {
+      ...tseslint.configs["recommended-type-checked"].rules,
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
   // Perfectionist plugin configuration using recommended-natural preset
   perfectionist.configs["recommended-natural"],
 ];
