@@ -157,8 +157,8 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
       vercel:
-        specifier: 50.3.3
-        version: 50.3.3(rollup@4.52.5)(typescript@5.9.3)
+        specifier: 50.4.0
+        version: 50.4.0(rollup@4.52.5)(typescript@5.9.3)
       vitest:
         specifier: 4.0.17
         version: 4.0.17(@edge-runtime/vm@3.2.0)(@types/node@24.10.8)(jiti@2.6.1)(jsdom@27.4.0(postcss@8.5.6))(lightningcss@1.30.2)(tsx@4.21.0)(yaml@2.8.1)
@@ -1774,8 +1774,8 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@vercel/backends@0.0.21':
-    resolution: {integrity: sha512-/IvjltreJa3o4vl3vt7Oa+iiWcGOZHuKeo4qZGKMq8CJFLGdH8WKrs7jreGM5TzUZK2qd12fP4eooID5hoHAIQ==}
+  '@vercel/backends@0.0.22':
+    resolution: {integrity: sha512-O+HmKvFkvWbTG7ESN8vOfzBMzjfKdg8qP7/qqqsCK0IqtuihlVOkLRM9Smb5pAgk/QrlTfsBM6fjhneBNcHXtQ==}
 
   '@vercel/blob@1.0.2':
     resolution: {integrity: sha512-Im/KeFH4oPx7UsM+QiteimnE07bIUD7JK6CBafI9Z0jRFogaialTBMiZj8EKk/30ctUYsrpIIyP9iIY1YxWnUQ==}
@@ -1828,8 +1828,8 @@ packages:
   '@vercel/hydrogen@1.3.5':
     resolution: {integrity: sha512-7EE6yVKcCnjMb1io9y069GkLyGyIzRbW3Krm3Q7EEfJ3P46h9xe9v/O5UhBoPrwtqDUHxmDngZp9YyfgY8IITA==}
 
-  '@vercel/introspection@0.0.8':
-    resolution: {integrity: sha512-iECaa8RlfXw+ldWZXH8V+NMxox62ggfNeBph2aFcYCujudcXjtjBrWwV9mMOeMysm8zTM9Ux0lb5oMXc/ivYTg==}
+  '@vercel/introspection@0.0.9':
+    resolution: {integrity: sha512-JWaKUpnDwOKEZldQK82HRufo1o+XYK/RIUoOZSzWWFCYnyx6Ve5wR2BkZzRx6aJPx+MGNEx2HWDu+JI5X2BTKQ==}
 
   '@vercel/koa@0.1.2':
     resolution: {integrity: sha512-7CURkocAEfIpJvVES114jW8aCsa22czmSEavr/hhFKAFTCJidJf7kiTZTI3OW6Zln7D3yA0PAXY65PPCs0nZ9A==}
@@ -4707,8 +4707,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@50.3.3:
-    resolution: {integrity: sha512-RCSU7U+G69DrUKCeJkgXrtVrrt52SnDYPEXQzuOySEbUUX1p/daKIQtvzV3Xpt2oxNAS04LMh40DwEzNbcXAtg==}
+  vercel@50.4.0:
+    resolution: {integrity: sha512-o/u54pjMfDkItHaEhYEOutfxbsdWijbBYynV9ZBxGxICPwDjaUjZs7VP8ayVHjW8X00sb38dL8xfc75wxFV2Yw==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -6326,10 +6326,10 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vercel/backends@0.0.21(rollup@4.52.5)(typescript@5.9.3)':
+  '@vercel/backends@0.0.22(rollup@4.52.5)(typescript@5.9.3)':
     dependencies:
       '@vercel/cervel': 0.0.9(typescript@5.9.3)
-      '@vercel/introspection': 0.0.8
+      '@vercel/introspection': 0.0.9
       '@vercel/nft': 1.1.1(rollup@4.52.5)
       '@vercel/static-config': 3.1.2
       fs-extra: 11.1.0
@@ -6471,7 +6471,7 @@ snapshots:
       '@vercel/static-config': 3.1.2
       ts-morph: 12.0.0
 
-  '@vercel/introspection@0.0.8':
+  '@vercel/introspection@0.0.9':
     dependencies:
       path-to-regexp: 8.3.0
       zod: 3.22.4
@@ -9981,9 +9981,9 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@50.3.3(rollup@4.52.5)(typescript@5.9.3):
+  vercel@50.4.0(rollup@4.52.5)(typescript@5.9.3):
     dependencies:
-      '@vercel/backends': 0.0.21(rollup@4.52.5)(typescript@5.9.3)
+      '@vercel/backends': 0.0.22(rollup@4.52.5)(typescript@5.9.3)
       '@vercel/blob': 1.0.2
       '@vercel/build-utils': 13.2.8
       '@vercel/detect-agent': 1.0.0
