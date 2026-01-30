@@ -35,7 +35,7 @@ const eslintConfig = [
       },
     },
     rules: {
-      ...typescriptPlugin.configs["recommended-type-checked"].rules,
+      ...typescriptPlugin.configs["flat/recommended-type-checked"].rules,
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": [
         "error",
