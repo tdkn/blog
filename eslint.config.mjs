@@ -1,44 +1,12 @@
-import { FlatCompat } from "@eslint/eslintrc";
+import typescriptPlugin from "@typescript-eslint/eslint-plugin";
+import nextConfig from "eslint-config-next";
+import prettierConfig from "eslint-config-prettier";
 import perfectionist from "eslint-plugin-perfectionist";
 
-const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
-  baseDirectory: import.meta.dirname,
-});
-
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
+  ...nextConfig,
+  prettierConfig,
   {
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "next-env.d.ts",
-    ],
-  },
-  ...compat.config({
-    overrides: [
-      {
-        extends: ["plugin:@typescript-eslint/recommended-type-checked"],
-        files: ["*.ts", "*.tsx"],
-        parserOptions: {
-          project: "./tsconfig.json",
-        },
-        rules: {
-          "@typescript-eslint/no-explicit-any": "off",
-          "@typescript-eslint/no-unused-vars": [
-            "error",
-            {
-              argsIgnorePattern: "^_",
-              caughtErrorsIgnorePattern: "^_",
-              destructuredArrayIgnorePattern: "^_",
-              varsIgnorePattern: "^_",
-            },
-          ],
-        },
-      },
-    ],
     rules: {
       "arrow-body-style": ["error", "as-needed"],
       "import/newline-after-import": ["error"],
@@ -58,7 +26,28 @@ const eslintConfig = [
       "react/jsx-no-useless-fragment": ["error", { allowExpressions: true }],
       "react/self-closing-comp": ["error"],
     },
-  }),
+  },
+  {
+    files: ["**/*.ts", "**/*.tsx"],
+    languageOptions: {
+      parserOptions: {
+        project: "./tsconfig.json",
+      },
+    },
+    rules: {
+      ...typescriptPlugin.configs["recommended-type-checked"].rules,
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
+    },
+  },
   // Perfectionist plugin configuration using recommended-natural preset
   perfectionist.configs["recommended-natural"],
 ];
