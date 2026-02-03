@@ -157,8 +157,8 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
       vercel:
-        specifier: 50.6.1
-        version: 50.6.1(rollup@4.52.5)(typescript@5.9.3)
+        specifier: 50.7.0
+        version: 50.7.0(rollup@4.52.5)(typescript@5.9.3)
       vitest:
         specifier: 4.0.18
         version: 4.0.18(@edge-runtime/vm@3.2.0)(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0(postcss@8.5.6))(lightningcss@1.30.2)(tsx@4.21.0)(yaml@2.8.1)
@@ -4486,12 +4486,12 @@ packages:
   tar@6.2.1:
     resolution: {integrity: sha512-DZ4yORTwrbTj/7MZYq2w+/ZFdI6OZ/f9SFHR+71gIVUZhOQPHzVCLpvRnPgyaMpfWxxk/4ONva3GQSyNIKRv6A==}
     engines: {node: '>=10'}
-    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   tar@7.5.1:
     resolution: {integrity: sha512-nlGpxf+hv0v7GkWBK2V9spgactGOp0qvfWRxUMjqHyzrt3SgwE48DIv/FhqPHJYLHpgW1opq3nERbz5Anq7n1g==}
     engines: {node: '>=18'}
-    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exhorbitant rates) by contacting i@izs.me
+    deprecated: Old versions of tar are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
 
   throttleit@2.1.0:
     resolution: {integrity: sha512-nt6AMGKW1p/70DF/hGBdJB57B8Tspmbp5gfJ8ilhLnt7kkr2ye7hzD6NVG8GGErk2HWF34igrL2CXmNIkzKqKw==}
@@ -4726,8 +4726,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@50.6.1:
-    resolution: {integrity: sha512-EpcZN/hXPlcfLH68HwUuTbdnlVUvfUvPNOQ8BLxCzOK64qMR84x/UJ4fIs3eT1w70VLgPcK38FqSmYAobsg1fw==}
+  vercel@50.7.0:
+    resolution: {integrity: sha512-0UN3ETJMogpzjDUqLFJFjyvhuWhBmqYRGjgG0lPgmSAsgVlQ4mAkn7+r/gXXcZ3Ux7Zc0Yy5nUl8pi/V/7TalA==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -9951,7 +9951,7 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@50.6.1(rollup@4.52.5)(typescript@5.9.3):
+  vercel@50.7.0(rollup@4.52.5)(typescript@5.9.3):
     dependencies:
       '@vercel/backends': 0.0.23(rollup@4.52.5)(typescript@5.9.3)
       '@vercel/blob': 1.0.2
