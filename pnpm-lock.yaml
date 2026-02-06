@@ -157,8 +157,8 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
       vercel:
-        specifier: 50.9.3
-        version: 50.9.3(rollup@4.52.5)(typescript@5.9.3)
+        specifier: 50.9.5
+        version: 50.9.5(rollup@4.52.5)(typescript@5.9.3)
       vitest:
         specifier: 4.0.18
         version: 4.0.18(@edge-runtime/vm@3.2.0)(@types/node@24.10.9)(jiti@2.6.1)(jsdom@27.4.0(postcss@8.5.6))(lightningcss@1.30.2)(tsx@4.21.0)(yaml@2.8.1)
@@ -1888,8 +1888,8 @@ packages:
   '@vercel/nestjs@0.2.31':
     resolution: {integrity: sha512-OGcUy8rrGKnrQO/izSfwEG01wcJBQCv2IXR1jTlPjAd6ijEfss9qBPGC/Rmp6yaYeg8IFZl9J0479gyZ+l3qUA==}
 
-  '@vercel/next@4.15.18':
-    resolution: {integrity: sha512-BUZ2hZgK12u0vAE8fPqINP/8Hjaw+Ck3Rf+J7lXRpzs91UCSUgxrUWRFqwjNKi4QW/24fihryZ6Q7wswAgkU4Q==}
+  '@vercel/next@4.15.19':
+    resolution: {integrity: sha512-o8jYfrm4Bb/W7xfEiBxAOYsjsYGLfnFGX8NGSDlZmmh7C4KqkmRDZwangw6oMpgYVO6ygDbRrdlsGq+wRPbutA==}
 
   '@vercel/nft@1.1.1':
     resolution: {integrity: sha512-mKMGa7CEUcXU75474kOeqHbtvK1kAcu4wiahhmlUenB5JbTQB8wVlDI8CyHR3rpGo0qlzoRWqcDzI41FUoBJCA==}
@@ -1899,8 +1899,8 @@ packages:
   '@vercel/node@5.5.28':
     resolution: {integrity: sha512-zuhUKqFdeoTz+o6S5zyKKXERrxbJpFmbt5qMrsg7t2pfxJZSAR6xg+HRSJd710uJnKpmi4h89hp/TIu1CuvAUQ==}
 
-  '@vercel/python@6.4.0':
-    resolution: {integrity: sha512-lUzaY9qm7aLE3BaLDX+QChaXHZlDOtepJEzKrFlB3G03/iqFsagJRP/zGhkdRAxOTymT7NJkeo2ceyXTC7Zg0A==}
+  '@vercel/python@6.4.1':
+    resolution: {integrity: sha512-7921TTz4OXQGhiSLpL7A2n7FIOQLA2Pth4f1SXXoU4C4pJT5ds6gdl0F776Osb5XzP0GjZfFKv6gMRvZdP9nHA==}
 
   '@vercel/redwood@2.4.9':
     resolution: {integrity: sha512-U7bYIuWfMEFMIcKKbX7lTT8pFNjig9Q3vLeCYRYQUrKVP8xLoUBXSEfW3ijtWJBUV8GmbZCDI30A16uUfNhN+g==}
@@ -4763,8 +4763,8 @@ packages:
   v8-compile-cache-lib@3.0.1:
     resolution: {integrity: sha512-wa7YjyUGfNZngI/vtK0UHAN+lgDCxBPCylVXGp0zu59Fz5aiGtNXaq3DhIov063MorB+VfufLh3JlF2KdTK3xg==}
 
-  vercel@50.9.3:
-    resolution: {integrity: sha512-a3QjiZJRX5hh59i/BIjb4PELvrwfYpZAEUrIPOSfb8ttWmjNWky5DGBh3fqwRhuPv6BcksOOzLyvacjCwn8HWA==}
+  vercel@50.9.5:
+    resolution: {integrity: sha512-D0sGpN/QtPpKTlp5SLYIlTDsrlbXGXZhAawXKfKwFwjROGRhY2HjR/OaNtjrbpwAEXJHhzaQUZGRVKSsWTEcKA==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -6561,7 +6561,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vercel/next@4.15.18(rollup@4.52.5)':
+  '@vercel/next@4.15.19(rollup@4.52.5)':
     dependencies:
       '@vercel/nft': 1.1.1(rollup@4.52.5)
     transitivePeerDependencies:
@@ -6620,7 +6620,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vercel/python@6.4.0': {}
+  '@vercel/python@6.4.1': {}
 
   '@vercel/redwood@2.4.9(rollup@4.52.5)':
     dependencies:
@@ -10039,7 +10039,7 @@ snapshots:
 
   v8-compile-cache-lib@3.0.1: {}
 
-  vercel@50.9.3(rollup@4.52.5)(typescript@5.9.3):
+  vercel@50.9.5(rollup@4.52.5)(typescript@5.9.3):
     dependencies:
       '@vercel/backends': 0.0.23(rollup@4.52.5)(typescript@5.9.3)
       '@vercel/blob': 1.0.2
@@ -10055,9 +10055,9 @@ snapshots:
       '@vercel/hydrogen': 1.3.5
       '@vercel/koa': 0.1.10(rollup@4.52.5)
       '@vercel/nestjs': 0.2.31(rollup@4.52.5)
-      '@vercel/next': 4.15.18(rollup@4.52.5)
+      '@vercel/next': 4.15.19(rollup@4.52.5)
       '@vercel/node': 5.5.28(rollup@4.52.5)
-      '@vercel/python': 6.4.0
+      '@vercel/python': 6.4.1
       '@vercel/redwood': 2.4.9(rollup@4.52.5)
       '@vercel/remix-builder': 5.5.9(rollup@4.52.5)
       '@vercel/ruby': 2.2.5
