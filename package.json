@@ -74,6 +74,7 @@
     "stylelint-config-tailwindcss": "1.0.1",
     "tailwindcss": "4.1.18",
     "typescript": "5.9.3",
+    "typescript-eslint": "^8.54.0",
     "vercel": "50.9.5",
     "vitest": "4.0.18"
   },
