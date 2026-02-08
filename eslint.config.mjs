@@ -1,45 +1,42 @@
-import { FlatCompat } from "@eslint/eslintrc";
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTs from "eslint-config-next/typescript";
+import prettier from "eslint-config-prettier/flat";
 import perfectionist from "eslint-plugin-perfectionist";
+import { defineConfig, globalIgnores } from "eslint/config";
+import tseslint from "typescript-eslint";
 
-const compat = new FlatCompat({
-  // import.meta.dirname is available after Node.js v20.11.0
-  baseDirectory: import.meta.dirname,
-});
-
-const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTs,
+  prettier,
+  globalIgnores([
+    "node_modules/**",
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
   {
-    ignores: [
-      "node_modules/**",
-      ".next/**",
-      "out/**",
-      "build/**",
-      "next-env.d.ts",
-    ],
-  },
-  ...compat.config({
-    overrides: [
-      {
-        extends: ["plugin:@typescript-eslint/recommended-type-checked"],
-        files: ["*.ts", "*.tsx"],
-        parserOptions: {
-          project: "./tsconfig.json",
-        },
-        rules: {
-          "@typescript-eslint/no-explicit-any": "off",
-          "@typescript-eslint/no-unused-vars": [
-            "error",
-            {
-              argsIgnorePattern: "^_",
-              caughtErrorsIgnorePattern: "^_",
-              destructuredArrayIgnorePattern: "^_",
-              varsIgnorePattern: "^_",
-            },
-          ],
-        },
+    extends: [tseslint.configs.recommendedTypeChecked],
+    files: ["**.{ts,tsx}"],
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
       },
-    ],
+    },
+  },
+  {
     rules: {
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+          destructuredArrayIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+        },
+      ],
       "arrow-body-style": ["error", "as-needed"],
       "import/newline-after-import": ["error"],
       "no-console": ["error", { allow: ["warn", "error"] }],
@@ -58,9 +55,8 @@ const eslintConfig = [
       "react/jsx-no-useless-fragment": ["error", { allowExpressions: true }],
       "react/self-closing-comp": ["error"],
     },
-  }),
-  // Perfectionist plugin configuration using recommended-natural preset
+  },
   perfectionist.configs["recommended-natural"],
-];
+]);
 
 export default eslintConfig;

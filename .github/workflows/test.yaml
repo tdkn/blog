@@ -54,6 +54,11 @@ jobs:
       - name: Build
         run: pnpm run build
 
+      - name: Check fix (no uncommitted changes after pnpm run fix)
+        run: |
+          pnpm run fix
+          git diff --exit-code
+
       - name: Lint
         run: pnpm run lint
 
