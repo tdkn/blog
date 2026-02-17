@@ -142,14 +142,14 @@ importers:
         specifier: 4.1.0
         version: 4.1.0
       stylelint:
-        specifier: 17.1.1
-        version: 17.1.1(typescript@5.9.3)
+        specifier: 17.2.0
+        version: 17.2.0(typescript@5.9.3)
       stylelint-config-standard:
         specifier: 40.0.0
-        version: 40.0.0(stylelint@17.1.1(typescript@5.9.3))
+        version: 40.0.0(stylelint@17.2.0(typescript@5.9.3))
       stylelint-config-tailwindcss:
         specifier: 1.0.1
-        version: 1.0.1(patch_hash=c4fbf443918b3c9906d975bcefb181cdae23ad7581ea1229efb9f22b3857adcc)(stylelint@17.1.1(typescript@5.9.3))(tailwindcss@4.1.18)
+        version: 1.0.1(patch_hash=c4fbf443918b3c9906d975bcefb181cdae23ad7581ea1229efb9f22b3857adcc)(stylelint@17.2.0(typescript@5.9.3))(tailwindcss@4.1.18)
       tailwindcss:
         specifier: 4.1.18
         version: 4.1.18
@@ -316,6 +316,9 @@ packages:
   '@csstools/css-syntax-patches-for-csstree@1.0.25':
     resolution: {integrity: sha512-g0Kw9W3vjx5BEBAF8c5Fm2NcB/Fs8jJXh85aXqwEXiL+tqtOut07TWgyaGzAAfTM+gKckrrncyeGEZPcaRgm2Q==}
     engines: {node: '>=18'}
+
+  '@csstools/css-syntax-patches-for-csstree@1.0.27':
+    resolution: {integrity: sha512-sxP33Jwg1bviSUXAV43cVYdmjt2TLnLXNqCWl9xmxHawWVjGz/kEbdkr7F9pxJNBN2Mh+dq0crgItbW6tQvyow==}
 
   '@csstools/css-tokenizer@4.0.0':
     resolution: {integrity: sha512-QxULHAm7cNu72w97JUNCBFODFaXpbDg+dP8b/oWFAZ2MTRppA3U00Y2L1HqaS4J6yBqxwa/Y3nMBaxVKbB/NsA==}
@@ -4625,8 +4628,8 @@ packages:
       stylelint: '>=13.13.1'
       tailwindcss: '>=2.2.16'
 
-  stylelint@17.1.1:
-    resolution: {integrity: sha512-SBHVcLEcRF1M9OkD3oT0hT2PayDNLw2hd+aovmzfNQ2ys4Xd3oS9ZNizILWqhQvW802AqKN/vUTMwJqQYMBlWw==}
+  stylelint@17.2.0:
+    resolution: {integrity: sha512-602jhMkRt6P1dSh9kEzbFIaOKY//h4D0E7u/w2WHKxmi5VAjjMqe6P8rQPJuCWdbB3apOkjOFN5kcg6qWPIZWQ==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -5307,6 +5310,8 @@ snapshots:
       '@csstools/css-tokenizer': 4.0.0
 
   '@csstools/css-syntax-patches-for-csstree@1.0.25': {}
+
+  '@csstools/css-syntax-patches-for-csstree@1.0.27': {}
 
   '@csstools/css-tokenizer@4.0.0': {}
 
@@ -9970,24 +9975,25 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.29.0
 
-  stylelint-config-recommended@18.0.0(stylelint@17.1.1(typescript@5.9.3)):
+  stylelint-config-recommended@18.0.0(stylelint@17.2.0(typescript@5.9.3)):
     dependencies:
-      stylelint: 17.1.1(typescript@5.9.3)
+      stylelint: 17.2.0(typescript@5.9.3)
 
-  stylelint-config-standard@40.0.0(stylelint@17.1.1(typescript@5.9.3)):
+  stylelint-config-standard@40.0.0(stylelint@17.2.0(typescript@5.9.3)):
     dependencies:
-      stylelint: 17.1.1(typescript@5.9.3)
-      stylelint-config-recommended: 18.0.0(stylelint@17.1.1(typescript@5.9.3))
+      stylelint: 17.2.0(typescript@5.9.3)
+      stylelint-config-recommended: 18.0.0(stylelint@17.2.0(typescript@5.9.3))
 
-  stylelint-config-tailwindcss@1.0.1(patch_hash=c4fbf443918b3c9906d975bcefb181cdae23ad7581ea1229efb9f22b3857adcc)(stylelint@17.1.1(typescript@5.9.3))(tailwindcss@4.1.18):
+  stylelint-config-tailwindcss@1.0.1(patch_hash=c4fbf443918b3c9906d975bcefb181cdae23ad7581ea1229efb9f22b3857adcc)(stylelint@17.2.0(typescript@5.9.3))(tailwindcss@4.1.18):
     dependencies:
-      stylelint: 17.1.1(typescript@5.9.3)
+      stylelint: 17.2.0(typescript@5.9.3)
       tailwindcss: 4.1.18
 
-  stylelint@17.1.1(typescript@5.9.3):
+  stylelint@17.2.0(typescript@5.9.3):
     dependencies:
+      '@csstools/css-calc': 3.0.0(@csstools/css-parser-algorithms@4.0.0(@csstools/css-tokenizer@4.0.0))(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
-      '@csstools/css-syntax-patches-for-csstree': 1.0.25
+      '@csstools/css-syntax-patches-for-csstree': 1.0.27
       '@csstools/css-tokenizer': 4.0.0
       '@csstools/media-query-list-parser': 5.0.0(@csstools/css-parser-algorithms@4.0.0(@csstools/css-tokenizer@4.0.0))(@csstools/css-tokenizer@4.0.0)
       '@csstools/selector-resolve-nested': 4.0.0(postcss-selector-parser@7.1.1)
