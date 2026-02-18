@@ -9,6 +9,9 @@ overrides:
   '@types/react-dom': 19.2.3
 
 patchedDependencies:
+  eslint-plugin-react@7.37.4:
+    hash: ed781ccfecf393e7693d12649639a9d941c059ecb9ecc5042aa96619c6069d7b
+    path: patches/eslint-plugin-react@7.37.4.patch
   stylelint-config-tailwindcss:
     hash: c4fbf443918b3c9906d975bcefb181cdae23ad7581ea1229efb9f22b3857adcc
     path: patches/stylelint-config-tailwindcss.patch
@@ -7629,7 +7632,7 @@ snapshots:
       eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@8.55.0(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.32.0)(eslint@10.0.0(jiti@2.6.1))
       eslint-plugin-import: 2.32.0(@typescript-eslint/parser@8.55.0(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.3))(eslint-import-resolver-typescript@3.6.1)(eslint@10.0.0(jiti@2.6.1))
       eslint-plugin-jsx-a11y: 6.10.2(eslint@10.0.0(jiti@2.6.1))
-      eslint-plugin-react: 7.37.4(eslint@10.0.0(jiti@2.6.1))
+      eslint-plugin-react: 7.37.4(patch_hash=ed781ccfecf393e7693d12649639a9d941c059ecb9ecc5042aa96619c6069d7b)(eslint@10.0.0(jiti@2.6.1))
       eslint-plugin-react-hooks: 7.0.1(eslint@10.0.0(jiti@2.6.1))
       globals: 16.4.0
       typescript-eslint: 8.55.0(eslint@10.0.0(jiti@2.6.1))(typescript@5.9.3)
@@ -7759,7 +7762,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-react@7.37.4(eslint@10.0.0(jiti@2.6.1)):
+  eslint-plugin-react@7.37.4(patch_hash=ed781ccfecf393e7693d12649639a9d941c059ecb9ecc5042aa96619c6069d7b)(eslint@10.0.0(jiti@2.6.1)):
     dependencies:
       array-includes: 3.1.8
       array.prototype.findlast: 1.2.5
