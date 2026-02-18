@@ -89,7 +89,8 @@
       "unrs-resolver"
     ],
     "patchedDependencies": {
-      "stylelint-config-tailwindcss": "patches/stylelint-config-tailwindcss.patch"
+      "stylelint-config-tailwindcss": "patches/stylelint-config-tailwindcss.patch",
+      "eslint-plugin-react@7.37.4": "patches/eslint-plugin-react@7.37.4.patch"
     },
     "overrides": {
       "@types/react": "19.2.13",
