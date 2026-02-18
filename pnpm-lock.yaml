@@ -160,8 +160,8 @@ importers:
         specifier: 8.55.0
         version: 8.55.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       vercel:
-        specifier: 50.15.0
-        version: 50.15.0(rollup@4.52.5)(typescript@5.9.3)
+        specifier: 50.15.1
+        version: 50.15.1(rollup@4.52.5)(typescript@5.9.3)
       vitest:
         specifier: 4.0.18
         version: 4.0.18(@edge-runtime/vm@3.2.0)(@types/node@24.10.13)(jiti@2.6.1)(jsdom@28.0.0)(lightningcss@1.30.2)(tsx@4.21.0)(yaml@2.8.1)
@@ -2018,8 +2018,8 @@ packages:
   '@vercel/python-analysis@0.4.0':
     resolution: {integrity: sha512-u1t5ZpbtSVYKw4fPEB+doFLY3z898TjNZaoNOjSPUqYNTxmuSeipNgpRPxJGwOkjB1A2LZYDLSfsB2Y4gwDvxQ==}
 
-  '@vercel/python@6.11.0':
-    resolution: {integrity: sha512-JNbGN33e2fzF2JNoXi6sYnSeXjl7W4HcimvphV4vWiBN1pUjF29FHhtUiGBazYYMqUfdz3dN0yjP6ifX8PhHKA==}
+  '@vercel/python@6.11.1':
+    resolution: {integrity: sha512-QUVZf6z6f5jyH80FETRqO7xfMdkHe/2FzC5fOmS0MxyEtuzaOO978Vh+Bvy2AImE2tBrrRKMYp+cfopTyOa8Cw==}
 
   '@vercel/redwood@2.4.9':
     resolution: {integrity: sha512-U7bYIuWfMEFMIcKKbX7lTT8pFNjig9Q3vLeCYRYQUrKVP8xLoUBXSEfW3ijtWJBUV8GmbZCDI30A16uUfNhN+g==}
@@ -4890,8 +4890,8 @@ packages:
   util-deprecate@1.0.2:
     resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
 
-  vercel@50.15.0:
-    resolution: {integrity: sha512-98Rig2heM0XQh9kC5Yd4V7UcI2jN150xIiNcCscOmP8Sg47zP6PwY1WLQIDeDp6tmPlmh0TcH1TTMh+MMH6QGg==}
+  vercel@50.15.1:
+    resolution: {integrity: sha512-selhG+F7MEpt2XAKEKUVbSws0c9Cw6YAij6J92XXr1g6d8qLi4xjhE5z/5IdUMiVsX04BQUhzuHx0gSl5mXTIA==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -6801,7 +6801,7 @@ snapshots:
       smol-toml: 1.5.2
       zod: 3.22.4
 
-  '@vercel/python@6.11.0':
+  '@vercel/python@6.11.1':
     dependencies:
       '@vercel/python-analysis': 0.4.0
 
@@ -10307,7 +10307,7 @@ snapshots:
 
   util-deprecate@1.0.2: {}
 
-  vercel@50.15.0(rollup@4.52.5)(typescript@5.9.3):
+  vercel@50.15.1(rollup@4.52.5)(typescript@5.9.3):
     dependencies:
       '@vercel/backends': 0.0.32(rollup@4.52.5)(typescript@5.9.3)
       '@vercel/blob': 1.0.2
@@ -10325,7 +10325,7 @@ snapshots:
       '@vercel/nestjs': 0.2.39(rollup@4.52.5)
       '@vercel/next': 4.15.28(rollup@4.52.5)
       '@vercel/node': 5.6.2(rollup@4.52.5)
-      '@vercel/python': 6.11.0
+      '@vercel/python': 6.11.1
       '@vercel/redwood': 2.4.9(rollup@4.52.5)
       '@vercel/remix-builder': 5.5.10(rollup@4.52.5)
       '@vercel/ruby': 2.3.0
