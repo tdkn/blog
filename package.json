@@ -44,7 +44,7 @@
     "react-dom": "19.2.4",
     "rehype-pretty-code": "0.14.1",
     "shiki": "3.22.0",
-    "tailwind-merge": "3.4.0"
+    "tailwind-merge": "3.4.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.3",
