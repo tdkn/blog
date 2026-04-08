@@ -19,9 +19,7 @@ const PostCard: FC<PostCardProps> = ({ post }) => (
       {post.deprecated && <Deprecated />}
     </div>
     <Link href={post.url}>
-      <h2 className="text-xl font-bold text-black dark:text-yellow-200">
-        {post.title}
-      </h2>
+      <h2 className="text-xl font-bold text-black dark:text-yellow-200">{post.title}</h2>
     </Link>
   </article>
 );

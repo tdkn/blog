@@ -4,10 +4,7 @@ import createMDX from "@next/mdx";
 const withMDX = createMDX({
   options: {
     rehypePlugins: [["rehype-pretty-code", { theme: "dracula-soft" }]],
-    remarkPlugins: [
-      "remark-frontmatter",
-      ["remark-mdx-frontmatter", { name: "frontmatter" }],
-    ],
+    remarkPlugins: ["remark-frontmatter", ["remark-mdx-frontmatter", { name: "frontmatter" }]],
   },
 });
 

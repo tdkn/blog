@@ -7,10 +7,7 @@ import { getAllPosts } from "~/lib/mdx";
 import { getZennArticles } from "~/lib/zenn";
 
 export default async function HomePage() {
-  const [localPosts, zennData] = await Promise.all([
-    getAllPosts(),
-    getZennArticles(),
-  ]);
+  const [localPosts, zennData] = await Promise.all([getAllPosts(), getZennArticles()]);
 
   const sortedLocalPosts = localPosts.sort((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
@@ -26,9 +23,7 @@ export default async function HomePage() {
       <main className="space-y-6 pt-8">
         {/* Local Blog Posts */}
         <section className="space-y-0">
-          <h1 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">
-            Posts
-          </h1>
+          <h1 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">Posts</h1>
           {sortedLocalPosts.map((post, key) => (
             <PostCard key={key} post={post} />
           ))}
@@ -45,9 +40,7 @@ export default async function HomePage() {
                 const zennArticle = zennData.articlesData.find(
                   (article) => article.slug === post.slug,
                 );
-                return (
-                  <ZennCard key={key} post={post} zennData={zennArticle} />
-                );
+                return <ZennCard key={key} post={post} zennData={zennArticle} />;
               })}
             </section>
           </>

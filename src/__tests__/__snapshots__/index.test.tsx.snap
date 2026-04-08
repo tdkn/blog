@@ -23,8 +23,7 @@ exports[`Home > renders homepage unchanged 1`] = `
       <p
         class="leading-none text-gray-700 dark:text-gray-300"
       >
-        Personal blog by
-         
+        Personal blog by 
         <a
           class="dark:text-yellow-200"
           href="https://twitter.com/tdkn_"

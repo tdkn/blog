@@ -7,12 +7,9 @@ export async function getZennArticles(): Promise<{
   posts: Post[];
 }> {
   try {
-    const response = await fetch(
-      "https://zenn.dev/api/articles?username=tdkn",
-      {
-        next: { revalidate: 3600 },
-      },
-    );
+    const response = await fetch("https://zenn.dev/api/articles?username=tdkn", {
+      next: { revalidate: 3600 },
+    });
 
     if (!response.ok) {
       console.error("Failed to fetch Zenn articles:", response.status);

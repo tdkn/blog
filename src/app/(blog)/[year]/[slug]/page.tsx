@@ -69,9 +69,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams(): Promise<
-  { slug: string; year: string }[]
-> {
+export async function generateStaticParams(): Promise<{ slug: string; year: string }[]> {
   const allPosts = await getAllPosts();
 
   return allPosts.map(({ slug, year }) => ({ slug, year }));

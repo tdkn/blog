@@ -9,13 +9,7 @@ const eslintConfig = defineConfig([
   ...nextVitals,
   ...nextTs,
   prettier,
-  globalIgnores([
-    "node_modules/**",
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
+  globalIgnores(["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts"]),
   {
     extends: [tseslint.configs.recommendedTypeChecked],
     files: ["**.{ts,tsx}"],
@@ -41,11 +35,7 @@ const eslintConfig = defineConfig([
       "import/newline-after-import": ["error"],
       "no-console": ["error", { allow: ["warn", "error"] }],
       "react/button-has-type": ["error"],
-      "react/destructuring-assignment": [
-        "error",
-        "always",
-        { destructureInSignature: "always" },
-      ],
+      "react/destructuring-assignment": ["error", "always", { destructureInSignature: "always" }],
       "react/hook-use-state": ["error", { allowDestructuredState: true }],
       "react/jsx-boolean-value": ["error", "always"],
       "react/jsx-curly-brace-presence": [

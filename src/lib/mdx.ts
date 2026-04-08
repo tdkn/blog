@@ -74,9 +74,7 @@ export function normalizePostFrontmatter(
   };
 }
 
-const getPostPaths = cache(
-  async (): Promise<string[]> => glob(POSTS_PATTERN, { cwd: POSTS_PATH }),
-);
+const getPostPaths = cache(async (): Promise<string[]> => glob(POSTS_PATTERN, { cwd: POSTS_PATH }));
 
 const importPostModule = cache(
   async (year: string, slug: string): Promise<PostModule> =>
@@ -107,19 +105,15 @@ export const getAllPosts = cache(async (): Promise<Post[]> => {
   return posts.filter((post) => post.published);
 });
 
-export const getPost = cache(
-  async (year: string, slug: string): Promise<null | PostEntry> => {
-    const posts = await getAllPosts();
-    const post = posts.find(
-      (entry) => entry.year === year && entry.slug === slug,
-    );
+export const getPost = cache(async (year: string, slug: string): Promise<null | PostEntry> => {
+  const posts = await getAllPosts();
+  const post = posts.find((entry) => entry.year === year && entry.slug === slug);
 
-    if (!post) {
-      return null;
-    }
+  if (!post) {
+    return null;
+  }
 
-    const { default: component } = await importPostModule(year, slug);
+  const { default: component } = await importPostModule(year, slug);
 
-    return { component, post };
-  },
-);
+  return { component, post };
+});
