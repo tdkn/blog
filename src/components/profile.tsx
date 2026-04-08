@@ -10,7 +10,7 @@ import Image from "next/image";
 import NextLink from "next/link";
 import { ComponentPropsWithoutRef } from "react";
 
-import { Link } from "~/components/ui";
+import Link from "~/components/link";
 import { classNames } from "~/lib/style";
 
 const Profile = ({

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import { Logo } from "~/components/ui";
+import Logo from "~/components/logo";
 
 const Header = () => {
   const handleSearchClick = () => {

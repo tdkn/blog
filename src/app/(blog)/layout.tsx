@@ -2,7 +2,8 @@ import { Metadata, Viewport } from "next";
 import Script from "next/script";
 
 import { CommandMenu } from "~/components/command-menu";
-import { Footer, Header } from "~/components/common";
+import Footer from "~/components/footer";
+import Header from "~/components/header";
 import { PostsProvider } from "~/contexts/PostsContext";
 import "~/styles/globals.css";
 

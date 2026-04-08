@@ -3,10 +3,10 @@
 import { Command } from "cmdk";
 import { useEffect, useState } from "react";
 
-import { ActionCommands } from "./commands/ActionCommands";
-import { ExternalCommands } from "./commands/ExternalCommands";
-import { NavigationCommands } from "./commands/NavigationCommands";
-import { SearchCommands } from "./commands/SearchCommands";
+import { ActionCommands } from "~/components/action-commands";
+import { ExternalCommands } from "~/components/external-commands";
+import { NavigationCommands } from "~/components/navigation-commands";
+import { SearchCommands } from "~/components/search-commands";
 
 export function CommandMenu() {
   const [isOpen, setIsOpen] = useState(false);

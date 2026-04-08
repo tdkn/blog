@@ -2,8 +2,8 @@ import type { ComponentPropsWithoutRef, FC } from "react";
 
 import type { Post } from "~/types/post";
 
-import { Deprecated } from "~/components/common";
-import { Link } from "~/components/ui";
+import Deprecated from "~/components/deprecated";
+import Link from "~/components/link";
 import { formatDate } from "~/lib/format-date";
 
 export type PostCardProps = ComponentPropsWithoutRef<"article"> & {
