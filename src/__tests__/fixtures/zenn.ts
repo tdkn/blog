@@ -22,7 +22,6 @@ export const mockZennArticle: ZennArticle = {
 };
 
 export const mockZennPost: Post = {
-  content: "",
   date: new Date("2024-01-15T00:00:00.000Z"),
   deprecated: false,
   emoji: "📝",

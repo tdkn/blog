@@ -1,5 +1,4 @@
 export type Post = {
-  content: string;
   date: Date;
   deprecated: boolean;
   emoji?: string;

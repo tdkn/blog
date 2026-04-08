@@ -1,5 +1,6 @@
 import { ImageResponse } from "next/og";
 
+import { fetchFont } from "~/lib/font";
 import { getAllPosts } from "~/lib/mdx";
 
 export const runtime = "nodejs";
@@ -14,15 +15,11 @@ export async function GET(req: Request) {
     return new Response(null, { status: 404 });
   }
 
-  const baseUrl =
-    process.env.NODE_ENV === "production"
-      ? "https://tdkn.dev"
-      : "http://localhost:3000";
-  const fontData = await fetch(
-    `${baseUrl}/api/font?font=M+PLUS+Rounded+1c:wght@700&text=${encodeURIComponent(
-      post.title,
-    )}`,
-  ).then((res) => res.arrayBuffer());
+  const fontData = await fetchFont(post.title, "M PLUS Rounded 1c:wght@700");
+
+  if (!fontData) {
+    throw new Error("Failed to resolve an OpenType font for OG image");
+  }
 
   return new ImageResponse(
     <div

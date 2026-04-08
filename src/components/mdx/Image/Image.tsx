@@ -18,7 +18,8 @@ const toBase64 = (str: string) =>
     ? Buffer.from(str).toString("base64")
     : window.btoa(str);
 
-interface CustomImageProps extends ImageProps {
+interface CustomImageProps extends Omit<ImageProps, "alt"> {
+  alt?: string;
   caption?: string;
 }
 
@@ -29,12 +30,13 @@ const Image = ({
   width,
   ...otherProps
 }: CustomImageProps) => {
-  const displayCaption = caption || alt;
+  const safeAlt = alt ?? "";
+  const displayCaption = caption || safeAlt;
 
   return (
     <figure className="my-8">
       <NextImage
-        alt={alt}
+        alt={safeAlt}
         blurDataURL={`data:image/svg+xml;base64,${toBase64(
           shimmer(width, height),
         )}`}

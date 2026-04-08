@@ -1,16 +1,26 @@
+import { fetchFont } from "~/lib/font";
+
 export const runtime = "edge";
 
 export async function GET(req: Request) {
   const { pathname, searchParams } = new URL(req.url);
 
-  if (pathname !== "/api/font") return;
+  if (pathname !== "/api/font") {
+    return new Response(null, { status: 404 });
+  }
 
   const font = searchParams.get("font");
   const text = searchParams.get("text");
 
-  if (!font || !text) return;
+  if (!font || !text) {
+    return new Response(null, { status: 400 });
+  }
 
   const responseBuffer = await fetchFont(text, font);
+
+  if (!responseBuffer) {
+    return new Response(null, { status: 404 });
+  }
 
   return new Response(responseBuffer, {
     headers: {
@@ -18,33 +28,4 @@ export async function GET(req: Request) {
       "Content-Type": "font/woff",
     },
   });
-}
-
-async function fetchFont(
-  text: string,
-  font: string,
-): Promise<ArrayBuffer | null> {
-  const API = `https://fonts.googleapis.com/css2?family=${font}&text=${encodeURIComponent(
-    text,
-  )}`;
-
-  const response = await fetch(API, {
-    headers: {
-      // Make sure it returns TTF.
-      "User-Agent":
-        "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; de-at) AppleWebKit/533.21.1 (KHTML, like Gecko) Version/5.0.5 Safari/533.21.1",
-    },
-  });
-
-  const css = await response.text();
-
-  const resource = css.match(
-    /src: url\((.+)\) format\('(opentype|truetype)'\)/,
-  );
-
-  if (!resource) {
-    return null;
-  } else {
-    return (await fetch(resource[1])).arrayBuffer();
-  }
 }
