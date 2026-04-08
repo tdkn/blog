@@ -16,7 +16,7 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
   const [copied, setCopied] = useState<null | string>(null);
 
   const currentUrl = typeof window !== "undefined" ? window.location.href : "";
-  const isPostPage = pathname.match(/^\/\d{4}\/[^\/]+$/);
+  const isPostPage = pathname.match(/^\/\d{4}\/[^/]+$/);
 
   const githubSourceUrl = isPostPage
     ? `https://github.com/tdkn/blog/blob/main/posts${pathname}.mdx`
