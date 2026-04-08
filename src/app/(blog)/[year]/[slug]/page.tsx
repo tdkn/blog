@@ -1,11 +1,11 @@
-import { Metadata } from "next";
+import type { Metadata } from "next";
+
 import { notFound } from "next/navigation";
 
 import { Deprecated, Profile } from "~/components/common";
 import { formatDate, formatTimeAgo } from "~/lib/format-date";
-import { getAllPosts } from "~/lib/mdx";
-
-import Mdx from "./mdx";
+import { getAllPosts, getPost } from "~/lib/mdx";
+import "~/styles/mdx.css";
 
 type PageProps = {
   params: Promise<{
@@ -15,11 +15,14 @@ type PageProps = {
 };
 
 export default async function BlogPostPage({ params }: PageProps) {
-  const post = await getPost(params);
+  const routeParams = await params;
+  const entry = await getPost(routeParams.year, routeParams.slug);
 
-  if (!post) {
+  if (!entry) {
     notFound();
   }
+
+  const { component: Content, post } = entry;
 
   return (
     <>
@@ -32,7 +35,7 @@ export default async function BlogPostPage({ params }: PageProps) {
           {post.deprecated && <Deprecated />}
         </p>
       </div>
-      <Mdx code={post.content} />
+      <Content />
       <Profile className="pt-10" />
     </>
   );
@@ -40,13 +43,14 @@ export default async function BlogPostPage({ params }: PageProps) {
 
 export async function generateMetadata(props: PageProps): Promise<Metadata> {
   const params = await props.params;
-
   const { slug, year } = params;
-  const post = await getPost(props.params);
+  const entry = await getPost(year, slug);
 
-  if (!post) {
+  if (!entry) {
     return {};
   }
+
+  const { post } = entry;
 
   return {
     description: post.summary,
@@ -70,11 +74,4 @@ export async function generateStaticParams(): Promise<
   const allPosts = await getAllPosts();
 
   return allPosts.map(({ slug, year }) => ({ slug, year }));
-}
-
-async function getPost(params: PageProps["params"]) {
-  const allPosts = await getAllPosts();
-  const { slug, year } = await params;
-
-  return allPosts.find((post) => post.year === year && post.slug === slug);
 }

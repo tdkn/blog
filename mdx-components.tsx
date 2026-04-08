@@ -1,11 +1,10 @@
 import type { MDXComponents } from "mdx/types";
 import type { ComponentPropsWithoutRef } from "react";
 
+import Image from "~/components/mdx/Image";
 import { classNames } from "~/lib/style";
 
-import Image from "./Image";
-
-export const components: MDXComponents = {
+const components = {
   a: ({ className, ...props }: ComponentPropsWithoutRef<"a">) => (
     <a className={classNames("dark:text-yellow-200", className)} {...props} />
   ),
@@ -61,4 +60,8 @@ export const components: MDXComponents = {
   ul: ({ className, ...props }: ComponentPropsWithoutRef<"ul">) => (
     <ul className={classNames("my-2 ml-6 list-disc", className)} {...props} />
   ),
-};
+} satisfies MDXComponents;
+
+export function useMDXComponents(): MDXComponents {
+  return components;
+}

@@ -22,7 +22,6 @@ export async function getZennArticles(): Promise<{
     const data = (await response.json()) as { articles: ZennArticle[] };
 
     const posts = data.articles.map((article) => ({
-      content: "",
       date: parseISO(article.published_at),
       deprecated: false,
       emoji: article.emoji,

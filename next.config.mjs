@@ -1,7 +1,19 @@
 // @ts-check
+import createMDX from "@next/mdx";
+
+const withMDX = createMDX({
+  options: {
+    rehypePlugins: [["rehype-pretty-code", { theme: "dracula-soft" }]],
+    remarkPlugins: [
+      "remark-frontmatter",
+      ["remark-mdx-frontmatter", { name: "frontmatter" }],
+    ],
+  },
+});
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   poweredByHeader: false,
   async redirects() {
     return [
@@ -34,4 +46,4 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+export default withMDX(nextConfig);
