@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 import { notFound } from "next/navigation";
 
-import { Deprecated, Profile } from "~/components/common";
+import Deprecated from "~/components/deprecated";
+import Profile from "~/components/profile";
 import { formatDate, formatTimeAgo } from "~/lib/format-date";
 import { getAllPosts, getPost } from "~/lib/mdx";
 import "~/styles/mdx.css";
