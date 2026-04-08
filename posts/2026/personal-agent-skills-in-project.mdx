@@ -1,0 +1,44 @@
+---
+title: "個人用の Agent Skills を Git に乗せずプロジェクト内に置く"
+date: "2026-04-08"
+summary: "Project-specific な Agent Skills をグローバル gitignore を使ってプロジェクト内に配置しつつ、リポジトリには含めない方法。"
+published: true
+---
+
+プロジェクトで使う Skill は、基本的には `.agents/skills/<skill-name>` に置いて共有するのが素直だと思っています。
+
+ただ、たまに「そのプロジェクトでは使うけれど、自分だけが使いたい Skill」もあります。
+`$HOME/.agents/skills` のようなグローバル空間に置けば、リポジトリには含めず自分だけ使えます。
+とはいえ、そういう Skill はそのプロジェクト固有の内容になりがちで、再利用性は高くありません。
+なので、置き場所としてはあまりしっくりこなくて、できればプロジェクトの近くに置いておきたいです。
+
+一方で、そのためにプロジェクトの `.gitignore` をいじるのも違和感があります。
+自分のローカル事情をリポジトリに持ち込みたくなかったので、そこで次のような global ignore を使っています。
+
+```txt
+# ~/.config/git/ignore
+.agents/.skills/(*)/
+```
+
+配置はこうです。
+
+```txt
+.
+├── .agents
+│   └── .skills
+│       └── (update-global-css)
+│           └── SKILL.md
+├── ...
+└── README.md
+```
+
+`(...)` のようなカッコ付きのディレクトリ名を個人用にしています。視覚的にも分かりやすいです。
+
+ちなみに最初はこれも試しました。
+
+```txt
+<repo-root>/.agents/skills/local/<skill-name>/SKILL.md
+```
+
+このように、`/local/` ディレクトリを挟んで1階層深くするような方法は Codex は認識してくれましたが、Claude Code では認識されませんでした。
+今は `.agents/.skills/(...)` にしています。
