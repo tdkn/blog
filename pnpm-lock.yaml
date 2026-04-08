@@ -33,16 +33,16 @@ importers:
         specifier: 3.3.0
         version: 3.3.0(@fortawesome/fontawesome-svg-core@7.2.0)(react@19.2.4)
       '@mdx-js/loader':
-        specifier: ^3.1.1
+        specifier: 3.1.1
         version: 3.1.1
       '@mdx-js/react':
-        specifier: ^3.1.1
+        specifier: 3.1.1
         version: 3.1.1(@types/react@19.2.14)(react@19.2.4)
       '@next/bundle-analyzer':
         specifier: 16.2.2
         version: 16.2.2
       '@next/mdx':
-        specifier: ^16.2.2
+        specifier: 16.2.2
         version: 16.2.2(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.4))
       clsx:
         specifier: 2.1.1
@@ -75,7 +75,7 @@ importers:
         specifier: ^5.0.0
         version: 5.0.0
       remark-mdx-frontmatter:
-        specifier: ^5.2.0
+        specifier: 5.2.0
         version: 5.2.0
       shiki:
         specifier: 4.0.2
@@ -88,7 +88,7 @@ importers:
         specifier: 3.3.5
         version: 3.3.5
       '@mdx-js/rollup':
-        specifier: ^3.1.1
+        specifier: 3.1.1
         version: 3.1.1(rollup@4.52.5)
       '@tailwindcss/forms':
         specifier: 0.5.11
