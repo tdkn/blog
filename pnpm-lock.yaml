@@ -130,10 +130,10 @@ importers:
         specifier: 0.44.0
         version: 0.44.0
       oxlint:
-        specifier: ^1.59.0
+        specifier: 1.59.0
         version: 1.59.0(oxlint-tsgolint@0.20.0)
       oxlint-tsgolint:
-        specifier: ^0.20.0
+        specifier: 0.20.0
         version: 0.20.0
       postcss:
         specifier: 8.5.8
