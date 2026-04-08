@@ -157,6 +157,29 @@ exports[`Home > renders homepage unchanged 1`] = `
           <div
             class="text-sm font-medium text-gray-500 dark:text-gray-400"
           >
+            April 8, 2026
+          </div>
+        </div>
+        <a
+          class="dark:text-yellow-200"
+          href="/2026/personal-agent-skills-in-project"
+        >
+          <h2
+            class="text-xl font-bold text-black dark:text-yellow-200"
+          >
+            個人用の Agent Skills を Git に乗せずプロジェクト内に置く
+          </h2>
+        </a>
+      </article>
+      <article
+        class="py-5"
+      >
+        <div
+          class="flex items-center space-x-2"
+        >
+          <div
+            class="text-sm font-medium text-gray-500 dark:text-gray-400"
+          >
             October 5, 2025
           </div>
         </div>
