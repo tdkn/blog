@@ -1,7 +1,7 @@
 import type { MDXComponents } from "mdx/types";
 import type { ComponentPropsWithoutRef } from "react";
 
-import Image from "~/components/mdx-image";
+import { Image } from "~/components/mdx-image";
 import { classNames } from "~/lib/style";
 
 const components = {

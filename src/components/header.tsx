@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 
-import Logo from "~/components/logo";
+import { Logo } from "~/components/logo";
 
 const Header = () => {
   const handleSearchClick = () => {
@@ -36,4 +36,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export { Header };

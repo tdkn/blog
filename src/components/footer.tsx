@@ -11,4 +11,4 @@ const Footer: FC<ComponentPropsWithoutRef<"footer">> = ({ className }) => (
   </footer>
 );
 
-export default Footer;
+export { Footer };

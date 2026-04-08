@@ -13,4 +13,4 @@ const Link: FC<ComponentPropsWithoutRef<typeof NextLink>> = ({
   />
 );
 
-export default Link;
+export { Link };
