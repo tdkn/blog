@@ -44,7 +44,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "rehype-pretty-code": "0.14.3",
-    "remark-frontmatter": "^5.0.0",
+    "remark-frontmatter": "5.0.0",
     "remark-mdx-frontmatter": "5.2.0",
     "shiki": "4.0.2",
     "tailwind-merge": "3.5.0"
