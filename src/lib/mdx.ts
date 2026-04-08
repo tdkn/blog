@@ -78,7 +78,7 @@ const getPostPaths = cache(async (): Promise<string[]> => glob(POSTS_PATTERN, { 
 
 const importPostModule = cache(
   async (year: string, slug: string): Promise<PostModule> =>
-    import(`../../posts/${year}/${slug}.mdx`),
+    (await import(`../../posts/${year}/${slug}.mdx`)) as PostModule,
 );
 
 function getPostPathParams(relativePath: string): PostPathParams {
