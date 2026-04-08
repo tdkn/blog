@@ -13,4 +13,4 @@ const Deprecated = ({ className }: ComponentPropsWithoutRef<"span">) => (
   </span>
 );
 
-export default Deprecated;
+export { Deprecated };

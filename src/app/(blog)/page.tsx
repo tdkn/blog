@@ -1,8 +1,8 @@
 import { compareDesc } from "date-fns";
 
-import PostCard from "~/components/post-card";
-import Profile from "~/components/profile";
-import ZennCard from "~/components/zenn-card";
+import { PostCard } from "~/components/post-card";
+import { Profile } from "~/components/profile";
+import { ZennCard } from "~/components/zenn-card";
 import { getAllPosts } from "~/lib/mdx";
 import { getZennArticles } from "~/lib/zenn";
 

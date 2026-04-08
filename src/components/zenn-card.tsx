@@ -2,7 +2,7 @@ import type { ComponentPropsWithoutRef, FC } from "react";
 
 import type { Post, ZennArticle } from "~/types/post";
 
-import Link from "~/components/link";
+import { Link } from "~/components/link";
 import { formatDate } from "~/lib/format-date";
 
 export type ZennCardProps = ComponentPropsWithoutRef<"article"> & {
@@ -65,4 +65,4 @@ const ZennCard: FC<ZennCardProps> = ({ post, zennData }) => (
   </Link>
 );
 
-export default ZennCard;
+export { ZennCard };
