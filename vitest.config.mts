@@ -11,10 +11,7 @@ export default defineConfig({
   plugins: [
     mdx({
       rehypePlugins: [[rehypePrettyCode, { theme: "dracula-soft" }]],
-      remarkPlugins: [
-        remarkFrontmatter,
-        [remarkMdxFrontmatter, { name: "frontmatter" }],
-      ],
+      remarkPlugins: [remarkFrontmatter, [remarkMdxFrontmatter, { name: "frontmatter" }]],
     }),
     react(),
   ],

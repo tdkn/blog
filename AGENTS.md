@@ -19,9 +19,9 @@ pnpm analyze          # Analyze bundle size
 pnpm test             # Run Vitest (TZ=Asia/Tokyo)
 
 # Linting & Formatting
-pnpm lint             # Run all linters (ESLint, Prettier, Stylelint, TypeScript)
+pnpm lint             # Run all linters (ESLint, oxfmt, Stylelint, TypeScript)
 pnpm lint:eslint      # Run ESLint only
-pnpm lint:prettier    # Check Prettier formatting
+pnpm lint:oxfmt       # Check oxfmt formatting
 pnpm lint:stylelint   # Run Stylelint on CSS files
 pnpm lint:types       # Run TypeScript type checking
 
@@ -29,7 +29,7 @@ pnpm lint:types       # Run TypeScript type checking
 pnpm fix              # Run all fixers sequentially
 pnpm fix:eslint       # Fix ESLint issues
 pnpm fix:stylelint    # Fix Stylelint issues
-pnpm fix:prettier     # Format with Prettier
+pnpm fix:oxfmt        # Format with oxfmt
 ```
 
 ## Architecture

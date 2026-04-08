@@ -7,10 +7,7 @@ import { PostsProvider } from "~/contexts/PostsContext";
 export const metadata: Metadata = {
   icons: {
     apple: "/apple-touch-icon.png",
-    icon: [
-      { url: "/favicon.ico" },
-      { type: "image/svg+xml", url: "/icon.svg" },
-    ],
+    icon: [{ url: "/favicon.ico" }, { type: "image/svg+xml", url: "/icon.svg" }],
   },
   manifest: "/site.webmanifest",
   metadataBase: new URL("https://tdkn.dev"),
@@ -25,11 +22,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body>
