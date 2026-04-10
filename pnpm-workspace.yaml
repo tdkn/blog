@@ -1,6 +1,7 @@
 minimumReleaseAge: 10080
 
 minimumReleaseAgeExclude:
+  - "oxfmt"
   - "@oxlint/*"
   - "@oxfmt/*"
   - "@oxlint-tsgolint/*"
