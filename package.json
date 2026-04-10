@@ -74,8 +74,5 @@
     "vercel": "50.38.3",
     "vitest": "4.1.2"
   },
-  "volta": {
-    "node": "24.14.1"
-  },
   "packageManager": "pnpm@10.33.0"
 }

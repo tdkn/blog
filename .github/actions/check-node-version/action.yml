@@ -1,0 +1,55 @@
+name: "Check Node.js Version Consistency"
+description: "Verify that Node.js versions match across .nvmrc and .devcontainer/devcontainer.json"
+
+runs:
+  using: "composite"
+  steps:
+    - name: Check Node.js version consistency
+      shell: bash
+      run: |
+        set -e
+
+        # Get version from .nvmrc
+        if [ ! -f .nvmrc ]; then
+          echo "::error::.nvmrc not found"
+          exit 1
+        fi
+        NVM_VERSION=$(tr -d '[:space:]' < .nvmrc)
+
+        # Get version from .devcontainer/devcontainer.json
+        DEVCONTAINER_FILE=".devcontainer/devcontainer.json"
+        if [ ! -f "$DEVCONTAINER_FILE" ]; then
+          echo "::error::$DEVCONTAINER_FILE not found"
+          exit 1
+        fi
+        # Strip JS-style comments before parsing with jq
+        DEVCONTAINER_VERSION=$(sed 's|//.*$||' "$DEVCONTAINER_FILE" | jq -r '.features["ghcr.io/devcontainers/features/node:1"].version')
+
+        # Validate
+        if [ -z "$NVM_VERSION" ]; then
+          echo "::error::.nvmrc is empty"
+          exit 1
+        fi
+        if [ -z "$DEVCONTAINER_VERSION" ] || [ "$DEVCONTAINER_VERSION" = "null" ]; then
+          echo "::error::Node.js version not found in $DEVCONTAINER_FILE"
+          exit 1
+        fi
+
+        # Compare
+        echo "| Source | Version |" >> "$GITHUB_STEP_SUMMARY"
+        echo "| --- | --- |" >> "$GITHUB_STEP_SUMMARY"
+        echo "| .nvmrc | $NVM_VERSION |" >> "$GITHUB_STEP_SUMMARY"
+        echo "| devcontainer.json | $DEVCONTAINER_VERSION |" >> "$GITHUB_STEP_SUMMARY"
+
+        if [ "$NVM_VERSION" = "$DEVCONTAINER_VERSION" ]; then
+          echo ""
+          echo "✓ Node.js versions match: $NVM_VERSION"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "✅ Versions match: \`$NVM_VERSION\`" >> "$GITHUB_STEP_SUMMARY"
+        else
+          echo ""
+          echo "::error::Node.js versions do not match: .nvmrc=$NVM_VERSION, devcontainer=$DEVCONTAINER_VERSION"
+          echo "" >> "$GITHUB_STEP_SUMMARY"
+          echo "❌ Versions do not match" >> "$GITHUB_STEP_SUMMARY"
+          exit 1
+        fi
