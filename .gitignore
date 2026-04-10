@@ -4,6 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
+.yarn/install-state.gz
 
 # testing
 /coverage
@@ -23,24 +24,16 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-.pnpm-debug.log*
 
-# local env files
-.env*.local
+# env files (can opt-in for commiting if needed)
+.env*
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-
-# yarn v2
-.yarn/*
-!.yarn/releases
-!.yarn/plugins
-!.yarn/sdks
-!.yarn/versions
-.pnp.*
+next-env.d.ts
 
 # og image
 /public/og/*
