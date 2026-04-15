@@ -65,7 +65,7 @@
     "oxfmt": "0.44.0",
     "oxlint": "1.59.0",
     "oxlint-tsgolint": "0.20.0",
-    "postcss": "8.5.8",
+    "postcss": "8.5.9",
     "stylelint": "17.6.0",
     "stylelint-config-standard": "40.0.0",
     "stylelint-config-tailwindcss": "1.0.1",
