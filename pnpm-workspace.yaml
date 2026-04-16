@@ -5,6 +5,8 @@ minimumReleaseAgeExclude:
   - "@oxlint/*"
   - "@oxfmt/*"
   - "@oxlint-tsgolint/*"
+  # Renovate security update: next@16.2.3
+  - next@16.2.3
 
 onlyBuiltDependencies:
   - "@tailwindcss/oxide"
