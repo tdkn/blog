@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 
 import "~/styles/globals.css";
-
 import { Form } from "./components/form";
 
 export const metadata: Metadata = {

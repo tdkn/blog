@@ -1,9 +1,8 @@
 import type { ComponentPropsWithoutRef, FC } from "react";
 
-import type { Post, ZennArticle } from "~/types/post";
-
 import { Link } from "~/components/link";
 import { formatDate } from "~/lib/format-date";
+import type { Post, ZennArticle } from "~/types/post";
 
 export type ZennCardProps = ComponentPropsWithoutRef<"article"> & {
   post: Post;

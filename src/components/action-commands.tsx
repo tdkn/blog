@@ -124,10 +124,14 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
             <div className="font-medium text-slate-900 dark:text-slate-100">
               {item.label}
               {copied === item.id.split("-")[1] && (
-                <span className="ml-1 text-green-600 dark:text-green-400">✓</span>
+                <span className="ml-1 text-green-600 dark:text-green-400">
+                  ✓
+                </span>
               )}
             </div>
-            <div className="text-xs text-slate-500 dark:text-slate-400">{item.description}</div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">
+              {item.description}
+            </div>
           </div>
         </Command.Item>
       ))}

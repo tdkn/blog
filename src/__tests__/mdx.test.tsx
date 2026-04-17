@@ -8,7 +8,9 @@ describe("MDX posts", () => {
   it("reads frontmatter exports from local posts", async () => {
     const posts = await getAllPosts();
     const post = posts.find(
-      (entry) => entry.year === "2026" && entry.slug === "personal-agent-skills-in-project",
+      (entry) =>
+        entry.year === "2026" &&
+        entry.slug === "personal-agent-skills-in-project",
     );
 
     expect(post).toMatchObject({
@@ -31,7 +33,9 @@ describe("MDX posts", () => {
       }),
     );
 
-    expect(screen.getByRole("heading", { level: 1, name: "yarn patch の使い方" })).toBeTruthy();
+    expect(
+      screen.getByRole("heading", { level: 1, name: "yarn patch の使い方" }),
+    ).toBeTruthy();
     expect(screen.getByText("手順")).toBeTruthy();
     expect(screen.getByText(/patch:puppeteer-core@\^5\.5\.0/)).toBeTruthy();
   });

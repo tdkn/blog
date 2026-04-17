@@ -1,10 +1,9 @@
 import type { ComponentPropsWithoutRef, FC } from "react";
 
-import type { Post } from "~/types/post";
-
 import { Deprecated } from "~/components/deprecated";
 import { Link } from "~/components/link";
 import { formatDate } from "~/lib/format-date";
+import type { Post } from "~/types/post";
 
 export type PostCardProps = ComponentPropsWithoutRef<"article"> & {
   post: Post;
@@ -19,7 +18,9 @@ const PostCard: FC<PostCardProps> = ({ post }) => (
       {post.deprecated && <Deprecated />}
     </div>
     <Link href={post.url}>
-      <h2 className="text-xl font-bold text-black dark:text-yellow-200">{post.title}</h2>
+      <h2 className="text-xl font-bold text-black dark:text-yellow-200">
+        {post.title}
+      </h2>
     </Link>
   </article>
 );

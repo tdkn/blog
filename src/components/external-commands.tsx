@@ -28,7 +28,9 @@ export function ExternalCommands({ setIsOpen }: ExternalCommandsProps) {
     {
       bgColor: "bg-black",
       description: "@tdkn_",
-      icon: <FontAwesomeIcon className="h-4 w-4 text-white" icon={faXTwitter} />,
+      icon: (
+        <FontAwesomeIcon className="h-4 w-4 text-white" icon={faXTwitter} />
+      ),
       id: "x",
       label: "X",
       url: "https://twitter.com/tdkn_",
@@ -44,7 +46,9 @@ export function ExternalCommands({ setIsOpen }: ExternalCommandsProps) {
     {
       bgColor: "bg-[#6364FF]",
       description: "@tdkn@mastodon.social",
-      icon: <FontAwesomeIcon className="h-4 w-4 text-white" icon={faMastodon} />,
+      icon: (
+        <FontAwesomeIcon className="h-4 w-4 text-white" icon={faMastodon} />
+      ),
       id: "mastodon",
       label: "Mastodon",
       url: "https://mastodon.social/@tdkn",
@@ -52,7 +56,9 @@ export function ExternalCommands({ setIsOpen }: ExternalCommandsProps) {
     {
       bgColor: "bg-[#1877F2]",
       description: "@shun.tedokon",
-      icon: <FontAwesomeIcon className="h-4 w-4 text-white" icon={faFacebook} />,
+      icon: (
+        <FontAwesomeIcon className="h-4 w-4 text-white" icon={faFacebook} />
+      ),
       id: "facebook",
       label: "Facebook",
       url: "https://facebook.com/shun.tedokon",
@@ -77,14 +83,23 @@ export function ExternalCommands({ setIsOpen }: ExternalCommandsProps) {
           onSelect={() => handleSelect(link.url)}
           value={link.url}
         >
-          <div className={`flex h-8 w-8 items-center justify-center rounded-md ${link.bgColor}`}>
+          <div
+            className={`flex h-8 w-8 items-center justify-center rounded-md ${link.bgColor}`}
+          >
             {link.icon}
           </div>
           <div className="flex flex-1 items-center gap-2">
-            <div className="font-medium text-slate-900 dark:text-slate-100">{link.label}</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400">{link.description}</div>
+            <div className="font-medium text-slate-900 dark:text-slate-100">
+              {link.label}
+            </div>
+            <div className="text-xs text-slate-500 dark:text-slate-400">
+              {link.description}
+            </div>
           </div>
-          <FontAwesomeIcon className="h-4 w-4 opacity-50" icon={faArrowUpRightFromSquare} />
+          <FontAwesomeIcon
+            className="h-4 w-4 opacity-50"
+            icon={faArrowUpRightFromSquare}
+          />
         </Command.Item>
       ))}
     </Command.Group>
