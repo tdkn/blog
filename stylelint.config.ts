@@ -1,7 +1,6 @@
-// @ts-check
+import type { Config } from "stylelint";
 
-/** @type {import("stylelint").Config} */
-const stylelintConfig = {
+const stylelintConfig: Config = {
   extends: ["stylelint-config-standard", "stylelint-config-tailwindcss"],
   ignoreFiles: ["*", "!src/**/*.css"],
   rules: {
