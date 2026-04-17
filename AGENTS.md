@@ -55,7 +55,7 @@ pnpm fix:oxfmt        # Format with oxfmt
 
 3. **Styling**: Tailwind CSS v4 with PostCSS. MDX content uses `src/styles/mdx.css`.
 
-4. **Code Highlighting**: `rehype-pretty-code` with Shiki (theme `dracula-soft` in `next.config.mjs`).
+4. **Code Highlighting**: `rehype-pretty-code` with Shiki (theme `dracula-soft` in `next.config.ts`).
 
 5. **Testing**: Vitest with React Testing Library; tests run with `TZ=Asia/Tokyo`.
 
