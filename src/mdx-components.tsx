@@ -5,26 +5,34 @@ import { Image } from "~/components/mdx-image";
 import { classNames } from "~/lib/style";
 
 const components = {
-  a: ({ className, ...props }: ComponentPropsWithoutRef<"a">) => (
-    <a className={classNames("dark:text-yellow-200", className)} {...props} />
+  a: ({ children, className, ...props }: ComponentPropsWithoutRef<"a">) => (
+    <a className={classNames("dark:text-yellow-200", className)} {...props}>
+      {children}
+    </a>
   ),
-  h1: ({ className, ...props }: ComponentPropsWithoutRef<"h1">) => (
+  h1: ({ children, className, ...props }: ComponentPropsWithoutRef<"h1">) => (
     <h1
       className={classNames("mt-10 mb-5 text-4xl font-bold", className)}
       {...props}
-    />
+    >
+      {children}
+    </h1>
   ),
-  h2: ({ className, ...props }: ComponentPropsWithoutRef<"h2">) => (
+  h2: ({ children, className, ...props }: ComponentPropsWithoutRef<"h2">) => (
     <h2
       className={classNames("mt-10 mb-5 text-3xl font-bold", className)}
       {...props}
-    />
+    >
+      {children}
+    </h2>
   ),
-  h3: ({ className, ...props }: ComponentPropsWithoutRef<"h3">) => (
+  h3: ({ children, className, ...props }: ComponentPropsWithoutRef<"h3">) => (
     <h3
       className={classNames("mt-10 mb-5 text-3xl font-bold", className)}
       {...props}
-    />
+    >
+      {children}
+    </h3>
   ),
   hr: ({ className, ...props }: ComponentPropsWithoutRef<"hr">) => (
     <hr

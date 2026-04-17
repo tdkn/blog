@@ -58,7 +58,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
+    <html lang="ja">
       <body className="bg-white text-slate-800 dark:bg-[#1a202c] dark:text-slate-300">
         <Script id="gtm-init" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -73,6 +73,7 @@ export default function RootLayout({
             height="0"
             src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
             style={{ display: "none", visibility: "hidden" }}
+            title="Google Tag Manager"
             width="0"
           />
         </noscript>
