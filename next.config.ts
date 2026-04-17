@@ -1,5 +1,5 @@
-// @ts-check
 import createMDX from "@next/mdx";
+import type { NextConfig } from "next";
 
 const withMDX = createMDX({
   options: {
@@ -8,8 +8,7 @@ const withMDX = createMDX({
   },
 });
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   poweredByHeader: false,
   async redirects() {
