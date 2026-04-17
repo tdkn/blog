@@ -1,6 +1,9 @@
 import { format, formatDistance, parseISO } from "date-fns";
 
-export const formatDate = (dateStr: Date | string, formatStr = "MMMM d, yyyy") => {
+export const formatDate = (
+  dateStr: Date | string,
+  formatStr = "MMMM d, yyyy",
+) => {
   if (typeof dateStr === "string") {
     return format(parseISO(dateStr), formatStr);
   } else {

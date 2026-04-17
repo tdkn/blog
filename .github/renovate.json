@@ -1,7 +1,11 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "timezone": "Asia/Tokyo",
-  "extends": ["config:recommended", "schedule:weekdays", "helpers:pinGitHubActionDigests"],
+  "extends": [
+    "config:recommended",
+    "schedule:weekdays",
+    "helpers:pinGitHubActionDigests"
+  ],
   "rangeStrategy": "pin",
   "enabledManagers": ["npm", "nvm", "devcontainer", "github-actions"],
   "reviewers": ["tdkn"],

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-
 import { notFound } from "next/navigation";
 
 import { Deprecated } from "~/components/deprecated";
 import { Profile } from "~/components/profile";
 import { formatDate, formatTimeAgo } from "~/lib/format-date";
 import { getAllPosts, getPost } from "~/lib/mdx";
+
 import "~/styles/mdx.css";
 
 type PageProps = {
@@ -69,7 +69,9 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams(): Promise<{ slug: string; year: string }[]> {
+export async function generateStaticParams(): Promise<
+  { slug: string; year: string }[]
+> {
   const allPosts = await getAllPosts();
 
   return allPosts.map(({ slug, year }) => ({ slug, year }));

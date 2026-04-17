@@ -39,7 +39,9 @@ export function PostsProvider({ children }: PostsProviderProps) {
       });
   }, []);
 
-  return <PostsContext value={{ error, loading, posts }}>{children}</PostsContext>;
+  return (
+    <PostsContext value={{ error, loading, posts }}>{children}</PostsContext>
+  );
 }
 
 export function usePostsContext(): PostsContextType {

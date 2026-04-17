@@ -14,14 +14,22 @@ const shimmer = (w?: number | string, h?: number | string) => `
     </svg>`;
 
 const toBase64 = (str: string) =>
-  typeof window === "undefined" ? Buffer.from(str).toString("base64") : window.btoa(str);
+  typeof window === "undefined"
+    ? Buffer.from(str).toString("base64")
+    : window.btoa(str);
 
 interface CustomImageProps extends Omit<ImageProps, "alt"> {
   alt?: string;
   caption?: string;
 }
 
-const Image = ({ alt, caption, height, width, ...otherProps }: CustomImageProps) => {
+const Image = ({
+  alt,
+  caption,
+  height,
+  width,
+  ...otherProps
+}: CustomImageProps) => {
   const safeAlt = alt ?? "";
   const displayCaption = caption || safeAlt;
 

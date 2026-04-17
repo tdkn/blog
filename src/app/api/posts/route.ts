@@ -7,6 +7,9 @@ export async function GET() {
     return NextResponse.json(await getAllPosts());
   } catch (error) {
     console.error("Error fetching posts:", error);
-    return NextResponse.json({ error: "Failed to fetch posts" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to fetch posts" },
+      { status: 500 },
+    );
   }
 }
