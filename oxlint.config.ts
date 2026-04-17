@@ -7,14 +7,40 @@ export default defineConfig({
   env: {
     builtin: true,
   },
-  ignorePatterns: [".next/**", "out/**", "build/**", "next-env.d.ts", "node_modules/**"],
+  ignorePatterns: [
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+    "node_modules/**",
+  ],
   jsPlugins: ["eslint-plugin-perfectionist"],
   options: {
     typeAware: true,
   },
   overrides: [
     {
+      files: ["oxlint.config.ts"],
+      rules: {
+        "perfectionist/sort-objects": "off",
+      },
+    },
+    {
+      env: {
+        browser: true,
+        node: true,
+      },
       files: ["**/*.{js,jsx,mjs,ts,tsx,mts,cts}"],
+      globals: {
+        AudioWorkletGlobalScope: "readonly",
+        AudioWorkletProcessor: "readonly",
+        currentFrame: "readonly",
+        currentTime: "readonly",
+        registerProcessor: "readonly",
+        sampleRate: "readonly",
+        WorkletGlobalScope: "readonly",
+      },
+      plugins: ["import", "jsx-a11y"],
       rules: {
         "react/display-name": "error",
         "react/jsx-key": "error",
@@ -51,20 +77,6 @@ export default defineConfig({
         "react/rules-of-hooks": "error",
         "react/exhaustive-deps": "warn",
       },
-      globals: {
-        AudioWorkletGlobalScope: "readonly",
-        AudioWorkletProcessor: "readonly",
-        currentFrame: "readonly",
-        currentTime: "readonly",
-        registerProcessor: "readonly",
-        sampleRate: "readonly",
-        WorkletGlobalScope: "readonly",
-      },
-      plugins: ["import", "jsx-a11y"],
-      env: {
-        browser: true,
-        node: true,
-      },
     },
     {
       files: ["**/*.ts", "**/*.tsx", "**/*.mts", "**/*.cts"],
@@ -92,6 +104,7 @@ export default defineConfig({
     {
       files: ["**.{ts,tsx}"],
       rules: {
+        "no-throw-literal": "off",
         "no-unused-expressions": "error",
         "no-unused-vars": [
           "error",
@@ -102,7 +115,6 @@ export default defineConfig({
             varsIgnorePattern: "^_",
           },
         ],
-        "no-throw-literal": "off",
         "prefer-promise-reject-errors": "off",
         "require-await": "off",
         "typescript/await-thenable": "error",
@@ -134,8 +146,36 @@ export default defineConfig({
   ],
   plugins: ["nextjs", "typescript", "unicorn", "react"],
   rules: {
-    "no-array-constructor": "error",
+    "arrow-body-style": ["error", "as-needed"],
     "getter-return": "error",
+    "nextjs/google-font-display": "warn",
+    "nextjs/google-font-preconnect": "warn",
+    "nextjs/inline-script-id": "error",
+    "nextjs/next-script-for-ga": "warn",
+    "nextjs/no-assign-module-variable": "error",
+    "nextjs/no-async-client-component": "warn",
+    "nextjs/no-before-interactive-script-outside-document": "warn",
+    "nextjs/no-css-tags": "warn",
+    "nextjs/no-document-import-in-page": "error",
+    "nextjs/no-duplicate-head": "error",
+    "nextjs/no-head-element": "warn",
+    "nextjs/no-head-import-in-document": "error",
+    "nextjs/no-html-link-for-pages": "error",
+    "nextjs/no-img-element": "warn",
+    "nextjs/no-page-custom-font": "warn",
+    "nextjs/no-script-component-in-head": "error",
+    "nextjs/no-styled-jsx-in-document": "warn",
+    "nextjs/no-sync-scripts": "error",
+    "nextjs/no-title-in-document-head": "warn",
+    "nextjs/no-typos": "warn",
+    "nextjs/no-unwanted-polyfillio": "warn",
+    "no-array-constructor": "error",
+    "no-console": [
+      "error",
+      {
+        allow: ["warn", "error"],
+      },
+    ],
     "no-undef": "error",
     "no-unreachable": "error",
     "no-unused-expressions": "warn",
@@ -148,15 +188,154 @@ export default defineConfig({
         varsIgnorePattern: "^_",
       },
     ],
-    "arrow-body-style": ["error", "as-needed"],
-    "no-console": [
+    "perfectionist/sort-array-includes": [
       "error",
       {
-        allow: ["warn", "error"],
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-classes": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-decorators": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-enums": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-export-attributes": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-exports": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-heritage-clauses": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-import-attributes": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-interfaces": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-intersection-types": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-jsx-props": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-maps": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-modules": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-named-exports": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-named-imports": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-object-types": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-objects": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-sets": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-switch-case": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-union-types": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
+      },
+    ],
+    "perfectionist/sort-variable-declarations": [
+      "error",
+      {
+        type: "natural",
+        order: "asc",
       },
     ],
     "react/button-has-type": ["error"],
-    "react/require-render-return": "error",
     "react/hook-use-state": [
       "error",
       {
@@ -178,175 +357,8 @@ export default defineConfig({
         allowExpressions: true,
       },
     ],
+    "react/require-render-return": "error",
     "react/self-closing-comp": ["error"],
-    "perfectionist/sort-variable-declarations": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-intersection-types": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-import-attributes": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-export-attributes": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-heritage-clauses": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-array-includes": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-named-imports": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-named-exports": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-object-types": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-union-types": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-switch-case": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-decorators": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-interfaces": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-jsx-props": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-modules": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-classes": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-exports": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-objects": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-enums": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-sets": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "perfectionist/sort-maps": [
-      "error",
-      {
-        type: "natural",
-        order: "asc",
-      },
-    ],
-    "nextjs/google-font-display": "warn",
-    "nextjs/google-font-preconnect": "warn",
-    "nextjs/next-script-for-ga": "warn",
-    "nextjs/no-async-client-component": "warn",
-    "nextjs/no-before-interactive-script-outside-document": "warn",
-    "nextjs/no-css-tags": "warn",
-    "nextjs/no-head-element": "warn",
-    "nextjs/no-html-link-for-pages": "error",
-    "nextjs/no-img-element": "warn",
-    "nextjs/no-page-custom-font": "warn",
-    "nextjs/no-styled-jsx-in-document": "warn",
-    "nextjs/no-sync-scripts": "error",
-    "nextjs/no-title-in-document-head": "warn",
-    "nextjs/no-typos": "warn",
-    "nextjs/no-unwanted-polyfillio": "warn",
-    "nextjs/inline-script-id": "error",
-    "nextjs/no-assign-module-variable": "error",
-    "nextjs/no-document-import-in-page": "error",
-    "nextjs/no-duplicate-head": "error",
-    "nextjs/no-head-import-in-document": "error",
-    "nextjs/no-script-component-in-head": "error",
     "typescript/ban-ts-comment": "error",
     "typescript/no-duplicate-enum-values": "error",
     "typescript/no-empty-object-type": "error",

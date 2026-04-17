@@ -4,14 +4,17 @@ import type { NextConfig } from "next";
 const withMDX = createMDX({
   options: {
     rehypePlugins: [["rehype-pretty-code", { theme: "dracula-soft" }]],
-    remarkPlugins: ["remark-frontmatter", ["remark-mdx-frontmatter", { name: "frontmatter" }]],
+    remarkPlugins: [
+      "remark-frontmatter",
+      ["remark-mdx-frontmatter", { name: "frontmatter" }],
+    ],
   },
 });
 
 const nextConfig: NextConfig = {
   pageExtensions: ["js", "jsx", "md", "mdx", "ts", "tsx"],
   poweredByHeader: false,
-  async redirects() {
+  redirects() {
     return [
       {
         destination: "https://github.com/tdkn",
