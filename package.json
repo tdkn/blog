@@ -64,7 +64,7 @@
     "jsdom": "29.0.2",
     "lint-staged": "16.4.0",
     "oxfmt": "0.45.0",
-    "oxlint": "1.59.0",
+    "oxlint": "1.60.0",
     "oxlint-tsgolint": "0.20.0",
     "postcss": "8.5.9",
     "stylelint": "17.7.0",
