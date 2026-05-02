@@ -14,11 +14,10 @@
     "preview": "next build && next start",
     "analyze": "ANALYZE=true next build",
     "lint": "pnpm run --aggregate-output /^lint:.*/",
-    "lint:ultracite": "ultracite check",
+    "lint:ultracite": "ultracite check --type-aware --type-check",
     "lint:stylelint": "stylelint -f verbose 'src/**/*.css' --max-warnings=0",
-    "lint:types": "tsc --pretty --noEmit",
     "fix": "pnpm run --sequential /^fix:.*/",
-    "fix:ultracite": "ultracite fix",
+    "fix:ultracite": "ultracite fix --type-aware --type-check",
     "fix:stylelint": "stylelint './src/**/*.css' -f verbose --fix",
     "test": "TZ='Asia/Tokyo' vitest",
     "postinstall": "husky"
