@@ -1,7 +1,4 @@
-export async function fetchFont(
-  text: string,
-  font: string,
-): Promise<ArrayBuffer | null> {
+export async function fetchFont(text: string, font: string): Promise<ArrayBuffer | null> {
   const url = new URL("https://fonts.googleapis.com/css2");
   url.searchParams.set("family", font);
   url.searchParams.set("text", text);
@@ -19,9 +16,7 @@ export async function fetchFont(
   }
 
   const css = await response.text();
-  const resource = css.match(
-    /src: url\((.+)\) format\('(opentype|truetype)'\)/,
-  );
+  const resource = css.match(/src: url\((.+)\) format\('(opentype|truetype)'\)/);
 
   if (!resource) {
     return null;

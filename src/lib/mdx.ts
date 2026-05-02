@@ -1,36 +1,37 @@
-import path from "path";
+import path from "node:path";
 
 import { parseISO } from "date-fns";
 import { glob } from "glob";
-import { cache, type ComponentType } from "react";
+import { cache } from 'react';
+import type { ComponentType } from 'react';
 
 import type { Post } from "~/types/post";
 
 const POSTS_PATH = path.join(process.cwd(), "posts");
 const POSTS_PATTERN = "**/*.mdx";
 
-export type PostEntry = {
+export interface PostEntry {
   component: ComponentType;
   post: Post;
-};
+}
 
-type PostFrontmatter = {
+interface PostFrontmatter {
   date?: string;
   deprecated?: boolean;
   published?: boolean;
   summary?: string;
   title?: string;
-};
+}
 
-type PostModule = {
+interface PostModule {
   default: ComponentType;
   frontmatter?: PostFrontmatter;
-};
+}
 
-type PostPathParams = {
+interface PostPathParams {
   slug: string;
   year: string;
-};
+}
 
 export function normalizePostFrontmatter(
   frontmatter: PostFrontmatter | undefined,
@@ -47,19 +48,19 @@ export function normalizePostFrontmatter(
   }
 
   if (typeof frontmatter?.deprecated === "boolean") {
-    deprecated = frontmatter.deprecated;
+    ({ deprecated } = frontmatter);
   }
 
   if (typeof frontmatter?.published === "boolean") {
-    published = frontmatter.published;
+    ({ published } = frontmatter);
   }
 
   if (typeof frontmatter?.summary === "string") {
-    summary = frontmatter.summary;
+    ({ summary } = frontmatter);
   }
 
   if (typeof frontmatter?.title === "string") {
-    title = frontmatter.title;
+    ({ title } = frontmatter);
   }
 
   return {
@@ -75,9 +76,7 @@ export function normalizePostFrontmatter(
   };
 }
 
-const getPostPaths = cache(
-  async (): Promise<string[]> => glob(POSTS_PATTERN, { cwd: POSTS_PATH }),
-);
+const getPostPaths = cache(async (): Promise<string[]> => glob(POSTS_PATTERN, { cwd: POSTS_PATH }));
 
 const importPostModule = cache(
   async (year: string, slug: string): Promise<PostModule> =>
@@ -95,7 +94,7 @@ function getPostPathParams(relativePath: string): PostPathParams {
 }
 
 export const getAllPosts = cache(async (): Promise<Post[]> => {
-  const postPaths = (await getPostPaths()).sort();
+  const postPaths = (await getPostPaths()).toSorted();
   const posts = await Promise.all(
     postPaths.map(async (relativePath) => {
       const params = getPostPathParams(relativePath);
@@ -108,19 +107,15 @@ export const getAllPosts = cache(async (): Promise<Post[]> => {
   return posts.filter((post) => post.published);
 });
 
-export const getPost = cache(
-  async (year: string, slug: string): Promise<null | PostEntry> => {
-    const posts = await getAllPosts();
-    const post = posts.find(
-      (entry) => entry.year === year && entry.slug === slug,
-    );
+export const getPost = cache(async (year: string, slug: string): Promise<null | PostEntry> => {
+  const posts = await getAllPosts();
+  const post = posts.find((entry) => entry.year === year && entry.slug === slug);
 
-    if (!post) {
-      return null;
-    }
+  if (!post) {
+    return null;
+  }
 
-    const { default: component } = await importPostModule(year, slug);
+  const { default: component } = await importPostModule(year, slug);
 
-    return { component, post };
-  },
-);
+  return { component, post };
+});

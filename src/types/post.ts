@@ -1,4 +1,4 @@
-export type Post = {
+export interface Post {
   date: Date;
   deprecated: boolean;
   emoji?: string;
@@ -9,9 +9,9 @@ export type Post = {
   title: string;
   url: string;
   year: string;
-};
+}
 
-export type ZennArticle = {
+export interface ZennArticle {
   article_type: string;
   body_letters_count: number;
   comments_count: number;
@@ -30,4 +30,4 @@ export type ZennArticle = {
     name: string;
     username: string;
   };
-};
+}

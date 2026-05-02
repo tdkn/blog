@@ -13,9 +13,7 @@ export function Form() {
 
   const handleFeatureChange = (feature: string) => {
     setFeatures((prev) =>
-      prev.includes(feature)
-        ? prev.filter((f) => f !== feature)
-        : [...prev, feature],
+      prev.includes(feature) ? prev.filter((f) => f !== feature) : [...prev, feature],
     );
   };
 
@@ -110,9 +108,7 @@ export function Form() {
             readOnly={true}
             ref={outputRef}
             type="text"
-            value={
-              repo ? `/github subscribe ${repo} ${features.join(" ")}` : ""
-            }
+            value={repo ? `/github subscribe ${repo} ${features.join(" ")}` : ""}
           />
         </div>
         <button

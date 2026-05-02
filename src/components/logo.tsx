@@ -1,11 +1,8 @@
-import { ComponentPropsWithoutRef } from "react";
+import type { ComponentPropsWithoutRef } from "react";
 
 import { classNames } from "~/lib/style";
 
-const Logo = ({
-  className,
-  ...otherProps
-}: ComponentPropsWithoutRef<"svg">) => (
+const Logo = ({ className, ...otherProps }: ComponentPropsWithoutRef<"svg">) => (
   <svg
     className={classNames("h-8 w-auto fill-none", className)}
     viewBox="0 0 410 70"

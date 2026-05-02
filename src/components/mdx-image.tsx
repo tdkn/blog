@@ -1,4 +1,5 @@
-import NextImage, { ImageProps } from "next/image";
+import type { ImageProps } from "next/image";
+import NextImage from "next/image";
 
 const shimmer = (w?: number | string, h?: number | string) => `
     <svg width="${w}" height="${h}" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -14,22 +15,14 @@ const shimmer = (w?: number | string, h?: number | string) => `
     </svg>`;
 
 const toBase64 = (str: string) =>
-  typeof window === "undefined"
-    ? Buffer.from(str).toString("base64")
-    : window.btoa(str);
+  typeof window === "undefined" ? Buffer.from(str).toString("base64") : window.btoa(str);
 
 interface CustomImageProps extends Omit<ImageProps, "alt"> {
   alt?: string;
   caption?: string;
 }
 
-const Image = ({
-  alt,
-  caption,
-  height,
-  width,
-  ...otherProps
-}: CustomImageProps) => {
+const Image = ({ alt, caption, height, width, ...otherProps }: CustomImageProps) => {
   const safeAlt = alt ?? "";
   const displayCaption = caption || safeAlt;
 

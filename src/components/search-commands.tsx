@@ -27,9 +27,7 @@ export function SearchCommands({ setIsOpen }: SearchCommandsProps) {
         className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-slate-500 dark:[&_[cmdk-group-heading]]:text-slate-400"
         heading="Posts"
       >
-        <div className="px-2 py-4 text-sm text-slate-500 dark:text-slate-400">
-          Loading posts...
-        </div>
+        <div className="px-2 py-4 text-sm text-slate-500 dark:text-slate-400">Loading posts...</div>
       </Command.Group>
     );
   }
@@ -68,9 +66,7 @@ export function SearchCommands({ setIsOpen }: SearchCommandsProps) {
             <FontAwesomeIcon className="h-3 w-3" icon={faFile} />
           </div>
           <div className="flex-1">
-            <div className="font-medium text-slate-900 dark:text-slate-100">
-              {post.title}
-            </div>
+            <div className="font-medium text-slate-900 dark:text-slate-100">{post.title}</div>
             <div className="text-xs text-slate-500 dark:text-slate-400">
               {formatDate(post.date)}
             </div>

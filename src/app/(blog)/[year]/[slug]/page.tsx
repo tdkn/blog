@@ -8,12 +8,12 @@ import { getAllPosts, getPost } from "~/lib/mdx";
 
 import "~/styles/mdx.css";
 
-type PageProps = {
+interface PageProps {
   params: Promise<{
     slug: string;
     year: string;
   }>;
-};
+}
 
 export default async function BlogPostPage({ params }: PageProps) {
   const routeParams = await params;
@@ -69,9 +69,7 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
   };
 }
 
-export async function generateStaticParams(): Promise<
-  { slug: string; year: string }[]
-> {
+export async function generateStaticParams(): Promise<{ slug: string; year: string }[]> {
   const allPosts = await getAllPosts();
 
   return allPosts.map(({ slug, year }) => ({ slug, year }));
