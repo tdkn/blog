@@ -24,7 +24,7 @@ interface CustomImageProps extends Omit<ImageProps, "alt"> {
 
 const Image = ({ alt, caption, height, width, ...otherProps }: CustomImageProps) => {
   const safeAlt = alt ?? "";
-  const displayCaption = caption || safeAlt;
+  const displayCaption = caption ?? safeAlt;
 
   return (
     <figure className="my-8">

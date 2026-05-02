@@ -28,7 +28,9 @@ export function Form() {
       {/* Input: owner/repo */}
       <input
         className="min-w-0 flex-auto rounded-md border-0 bg-white/5 px-3.5 py-2 text-white shadow-xs ring-1 ring-white/10 ring-inset focus:ring-2 focus:ring-white focus:ring-inset sm:text-sm sm:leading-6"
-        onChange={(e) => setRepo(e.target.value)}
+        onChange={(e) => {
+          setRepo(e.target.value);
+        }}
         placeholder="owner/repo"
         ref={repoInputRef}
         required={true}
@@ -41,61 +43,81 @@ export function Form() {
         <CheckBox
           description="Opened or closed issues"
           name="issues"
-          onChange={() => handleFeatureChange("issues")}
+          onChange={() => {
+            handleFeatureChange("issues");
+          }}
         />
         <CheckBox
           description='New or merged pull requests, as well as draft pull requests marked "Ready for Review"'
           name="pulls"
-          onChange={() => handleFeatureChange("pulls")}
+          onChange={() => {
+            handleFeatureChange("pulls");
+          }}
         />
         <CheckBox
           description="New commits across all branches"
           name="commits:*"
-          onChange={() => handleFeatureChange("commits:*")}
+          onChange={() => {
+            handleFeatureChange("commits:*");
+          }}
         />
         <CheckBox
           description="Published releases"
           name="releases"
-          onChange={() => handleFeatureChange("releases")}
+          onChange={() => {
+            handleFeatureChange("releases");
+          }}
         />
         <CheckBox
           description="Deployment status updates"
           name="deployments"
-          onChange={() => handleFeatureChange("deployments")}
+          onChange={() => {
+            handleFeatureChange("deployments");
+          }}
         />
         <CheckBox
           description="Actions workflow run notifications"
           name="workflows"
-          onChange={() =>
+          onChange={() => {
             handleFeatureChange(
               `workflows:{name:"your workflow name" event:"workflow event" branch:"branch name" actor:"actor name"}`,
-            )
-          }
+            );
+          }}
         />
         <CheckBox
           description="Pull request reviews"
           name="reviews"
-          onChange={() => handleFeatureChange("reviews")}
+          onChange={() => {
+            handleFeatureChange("reviews");
+          }}
         />
         <CheckBox
           description="New comments on issues and pull requests"
           name="comments"
-          onChange={() => handleFeatureChange("comments")}
+          onChange={() => {
+            handleFeatureChange("comments");
+          }}
         />
         <CheckBox
           description="Created or deleted branches"
           name="branches"
-          onChange={() => handleFeatureChange("branches")}
+          onChange={() => {
+            handleFeatureChange("branches");
+          }}
         />
         <CheckBox
           description="Filter issues, pull-requests and comments based on their labels"
           name="label"
-          onChange={() => handleFeatureChange(`+label:"your label"`)}
+          onChange={() => {
+            handleFeatureChange(`+label:"your label"`);
+          }}
         />
         <CheckBox
           description="Discussions created or answered"
           name="discussions"
-          onChange={() => handleFeatureChange("discussions")}
+          onChange={() => {
+            handleFeatureChange("discussions");
+          }}
         />
       </fieldset>
 
@@ -120,7 +142,9 @@ export function Form() {
                 .writeText(command)
                 .then(() => {
                   setCopyButtonText("Copied!");
-                  setTimeout(() => setCopyButtonText("Copy"), 2000);
+                  setTimeout(() => {
+                    setCopyButtonText("Copy");
+                  }, 2000);
                 })
                 .catch(() => {
                   alert("Failed to copy the command.");

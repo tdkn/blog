@@ -8,7 +8,7 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vitest/config";
 
-const dirname = import.meta.dirname;
+const { dirname } = import.meta;
 
 // https://vitejs.dev/config/
 export default defineConfig({

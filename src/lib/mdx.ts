@@ -2,8 +2,8 @@ import path from "node:path";
 
 import { parseISO } from "date-fns";
 import { glob } from "glob";
-import { cache } from 'react';
-import type { ComponentType } from 'react';
+import { cache } from "react";
+import type { ComponentType } from "react";
 
 import type { Post } from "~/types/post";
 

@@ -1,5 +1,5 @@
 "use client";
-import type { ComponentPropsWithoutRef} from "react";
+import type { ComponentPropsWithoutRef } from "react";
 import { useState } from "react";
 
 import { classNames } from "~/lib/style";

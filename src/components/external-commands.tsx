@@ -74,7 +74,9 @@ export function ExternalCommands({ setIsOpen }: ExternalCommandsProps) {
           className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-gray-100 data-[selected=true]:bg-gray-200 dark:hover:bg-gray-800 dark:data-[selected=true]:bg-gray-700"
           key={link.id}
           keywords={[link.label, link.description]}
-          onSelect={() => handleSelect(link.url)}
+          onSelect={() => {
+            handleSelect(link.url);
+          }}
           value={link.url}
         >
           <div className={`flex h-8 w-8 items-center justify-center rounded-md ${link.bgColor}`}>

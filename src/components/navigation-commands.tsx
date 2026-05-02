@@ -44,7 +44,9 @@ export function NavigationCommands({ setIsOpen }: NavigationCommandsProps) {
           className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-gray-100 data-[selected=true]:bg-gray-200 dark:hover:bg-gray-800 dark:data-[selected=true]:bg-gray-700"
           key={item.id}
           keywords={[item.label, item.description]}
-          onSelect={() => handleSelect(item.path)}
+          onSelect={() => {
+            handleSelect(item.path);
+          }}
           value={`${item.label} ${item.description}`}
         >
           <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-[#F7C953] to-[#F28E53] text-white">
