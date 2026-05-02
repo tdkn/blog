@@ -29,7 +29,9 @@ export function CommandMenu() {
     };
 
     document.addEventListener("keydown", down);
-    return () => document.removeEventListener("keydown", down);
+    return () => {
+      document.removeEventListener("keydown", down);
+    };
   }, [isOpen]);
 
   useEffect(() => {
@@ -38,19 +40,25 @@ export function CommandMenu() {
     }
   }, [isOpen]);
 
-  if (!isOpen) {return null;}
+  if (!isOpen) {
+    return null;
+  }
 
   return (
     <div
       aria-label="Command menu"
       aria-modal={true}
       className="animate-in fade-in-0 fixed inset-0 z-50 bg-black/50 duration-200"
-      onMouseDown={() => setIsOpen(false)}
+      onMouseDown={() => {
+        setIsOpen(false);
+      }}
       role="dialog"
     >
       <div
         className="animate-in slide-in-from-bottom-10 fixed top-[20%] left-[50%] max-h-[500px] w-full max-w-[640px] translate-x-[-50%] transform duration-300"
-        onMouseDown={(e) => e.stopPropagation()}
+        onMouseDown={(e) => {
+          e.stopPropagation();
+        }}
         role="document"
       >
         <Command

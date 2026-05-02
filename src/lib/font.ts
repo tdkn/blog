@@ -16,7 +16,7 @@ export async function fetchFont(text: string, font: string): Promise<ArrayBuffer
   }
 
   const css = await response.text();
-  const resource = css.match(/src: url\((.+)\) format\('(opentype|truetype)'\)/);
+  const resource = /src: url\((.+)\) format\('(opentype|truetype)'\)/.exec(css);
 
   if (!resource) {
     return null;

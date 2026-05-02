@@ -27,7 +27,7 @@ export function PostsProvider({ children }: PostsProviderProps) {
 
   useEffect(() => {
     fetch("/api/posts")
-      .then((res) => res.json())
+      .then(async (res) => res.json())
       .then((data: Post[]) => {
         setPosts(data);
         setLoading(false);

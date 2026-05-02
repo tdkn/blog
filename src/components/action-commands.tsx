@@ -16,7 +16,7 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
   const [copied, setCopied] = useState<null | string>(null);
 
   const currentUrl = typeof window !== "undefined" ? window.location.href : "";
-  const isPostPage = pathname.match(/^\/\d{4}\/[^/]+$/);
+  const isPostPage = /^\/\d{4}\/[^/]+$/.exec(pathname);
 
   const githubSourceUrl = isPostPage
     ? `https://github.com/tdkn/blog/blob/main/posts${pathname}.mdx`
@@ -36,7 +36,9 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
         action: () => {
           void navigator.clipboard.writeText(currentUrl).then(() => {
             setCopied("url");
-            setTimeout(() => setCopied(null), 2000);
+            setTimeout(() => {
+              setCopied(null);
+            }, 2000);
           });
         },
         description: "Copy current page URL to clipboard",
@@ -114,7 +116,9 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
           className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-gray-100 data-[selected=true]:bg-gray-200 dark:hover:bg-gray-800 dark:data-[selected=true]:bg-gray-700"
           key={item.id}
           keywords={[item.label, item.description]}
-          onSelect={() => handleSelect(item.action)}
+          onSelect={() => {
+            handleSelect(item.action);
+          }}
           value={`${item.label} ${item.description}`}
         >
           <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-[#F7C953] to-[#F28E53] text-white">

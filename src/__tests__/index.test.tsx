@@ -6,8 +6,8 @@ import Home from "~/app/(blog)/page";
 import { mockZennArticlesResponse } from "./fixtures/zenn";
 
 // Mock Zenn API to avoid external dependencies and ensure consistent test results
-vi.mock(import('~/lib/zenn'), () => ({
-  getZennArticles: vi.fn(() => Promise.resolve(mockZennArticlesResponse)),
+vi.mock(import("~/lib/zenn"), () => ({
+  getZennArticles: vi.fn(async () => mockZennArticlesResponse),
 }));
 
 describe(Home, () => {
