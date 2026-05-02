@@ -8,17 +8,14 @@ import remarkFrontmatter from "remark-frontmatter";
 import remarkMdxFrontmatter from "remark-mdx-frontmatter";
 import { defineConfig } from "vitest/config";
 
-const dirname = fileURLToPath(new URL(".", import.meta.url));
+const dirname = import.meta.dirname;
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     mdx({
       rehypePlugins: [[rehypePrettyCode, { theme: "dracula-soft" }]],
-      remarkPlugins: [
-        remarkFrontmatter,
-        [remarkMdxFrontmatter, { name: "frontmatter" }],
-      ],
+      remarkPlugins: [remarkFrontmatter, [remarkMdxFrontmatter, { name: "frontmatter" }]],
     }),
     react(),
   ],

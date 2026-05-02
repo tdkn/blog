@@ -38,7 +38,7 @@ export function CommandMenu() {
     }
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isOpen) {return null;}
 
   return (
     <div

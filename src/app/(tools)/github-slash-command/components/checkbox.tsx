@@ -1,23 +1,16 @@
 "use client";
-import { ComponentPropsWithoutRef, useState } from "react";
+import type { ComponentPropsWithoutRef} from "react";
+import { useState } from "react";
 
 import { classNames } from "~/lib/style";
 
-export type CheckBoxProps = Omit<
-  ComponentPropsWithoutRef<"input">,
-  "onChange"
-> & {
+export type CheckBoxProps = Omit<ComponentPropsWithoutRef<"input">, "onChange"> & {
   description: string;
   name: string;
   onChange?: () => void;
 };
 
-export function CheckBox({
-  description,
-  name,
-  onChange,
-  ...otherProps
-}: CheckBoxProps) {
+export function CheckBox({ description, name, onChange, ...otherProps }: CheckBoxProps) {
   const [checked, setChecked] = useState(false);
 
   return (

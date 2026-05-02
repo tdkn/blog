@@ -1,10 +1,6 @@
 "use client";
 
-import {
-  faChevronRight,
-  faHouse,
-  faWrench,
-} from "@fortawesome/free-solid-svg-icons";
+import { faChevronRight, faHouse, faWrench } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Command } from "cmdk";
 import { useRouter } from "next/navigation";
@@ -55,14 +51,9 @@ export function NavigationCommands({ setIsOpen }: NavigationCommandsProps) {
             {item.icon}
           </div>
           <div className="flex-1">
-            <div className="font-medium text-slate-900 dark:text-slate-100">
-              {item.label}
-            </div>
+            <div className="font-medium text-slate-900 dark:text-slate-100">{item.label}</div>
           </div>
-          <FontAwesomeIcon
-            className="h-4 w-4 opacity-50"
-            icon={faChevronRight}
-          />
+          <FontAwesomeIcon className="h-4 w-4 opacity-50" icon={faChevronRight} />
         </Command.Item>
       ))}
     </Command.Group>

@@ -1,4 +1,4 @@
-import { Metadata, Viewport } from "next";
+import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 
 import { CommandMenu } from "~/components/command-menu";
@@ -22,16 +22,11 @@ export function generateMetadata(): Metadata {
     },
     icons: {
       apple: "/apple-touch-icon.png",
-      icon: [
-        { url: "/favicon.ico" },
-        { type: "image/svg+xml", url: "/icon.svg" },
-      ],
+      icon: [{ url: "/favicon.ico" }, { type: "image/svg+xml", url: "/icon.svg" }],
     },
     manifest: "/site.webmanifest",
     metadataBase: new URL(
-      process.env.NODE_ENV === "production"
-        ? "https://tdkn.dev"
-        : "http://localhost:3000",
+      process.env.NODE_ENV === "production" ? "https://tdkn.dev" : "http://localhost:3000",
     ),
     openGraph: {
       description: "Shun Tedokon's Personal Website",
@@ -52,11 +47,7 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ja">
       <body className="bg-white text-slate-800 dark:bg-[#1a202c] dark:text-slate-300">
