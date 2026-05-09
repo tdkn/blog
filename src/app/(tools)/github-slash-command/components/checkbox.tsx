@@ -10,7 +10,7 @@ export type CheckBoxProps = Omit<ComponentPropsWithoutRef<"input">, "onChange"> 
   onChange?: () => void;
 };
 
-export function CheckBox({ description, name, onChange, ...otherProps }: CheckBoxProps) {
+export const CheckBox = ({ description, name, onChange, ...otherProps }: CheckBoxProps) => {
   const [checked, setChecked] = useState(false);
 
   return (
@@ -42,4 +42,4 @@ export function CheckBox({ description, name, onChange, ...otherProps }: CheckBo
       </div>
     </label>
   );
-}
+};

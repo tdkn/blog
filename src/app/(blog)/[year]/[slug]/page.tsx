@@ -15,11 +15,11 @@ interface PageProps {
   }>;
 }
 
-export default async function BlogPostPage({ params }: PageProps) {
+const BlogPostPage = async ({ params }: PageProps) => {
   const routeParams = await params;
   const entry = await getPost(routeParams.year, routeParams.slug);
 
-  if (!entry) {
+  if (entry === null) {
     notFound();
   }
 
@@ -40,14 +40,14 @@ export default async function BlogPostPage({ params }: PageProps) {
       <Profile className="pt-10" />
     </>
   );
-}
+};
 
-export async function generateMetadata(props: PageProps): Promise<Metadata> {
+export const generateMetadata = async (props: PageProps): Promise<Metadata> => {
   const params = await props.params;
   const { slug, year } = params;
   const entry = await getPost(year, slug);
 
-  if (!entry) {
+  if (entry === null) {
     return {};
   }
 
@@ -67,10 +67,12 @@ export async function generateMetadata(props: PageProps): Promise<Metadata> {
       title: post.title,
     },
   };
-}
+};
 
-export async function generateStaticParams(): Promise<{ slug: string; year: string }[]> {
+export const generateStaticParams = async (): Promise<{ slug: string; year: string }[]> => {
   const allPosts = await getAllPosts();
 
   return allPosts.map(({ slug, year }) => ({ slug, year }));
-}
+};
+
+export default BlogPostPage;

@@ -2,7 +2,7 @@ import { fetchFont } from "~/lib/font";
 
 export const runtime = "edge";
 
-export async function GET(req: Request) {
+export const GET = async (req: Request) => {
   const { pathname, searchParams } = new URL(req.url);
 
   if (pathname !== "/api/font") {
@@ -12,13 +12,13 @@ export async function GET(req: Request) {
   const font = searchParams.get("font");
   const text = searchParams.get("text");
 
-  if (!font || !text) {
+  if (font === null || text === null) {
     return new Response(null, { status: 400 });
   }
 
   const responseBuffer = await fetchFont(text, font);
 
-  if (!responseBuffer) {
+  if (responseBuffer === null) {
     return new Response(null, { status: 404 });
   }
 
@@ -28,4 +28,4 @@ export async function GET(req: Request) {
       "Content-Type": "font/woff",
     },
   });
-}
+};

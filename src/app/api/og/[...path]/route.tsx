@@ -5,19 +5,20 @@ import { getAllPosts } from "~/lib/mdx";
 
 export const runtime = "nodejs";
 
-export async function GET(req: Request) {
+export const GET = async (req: Request) => {
   const { pathname } = new URL(req.url);
-  const post = (await getAllPosts()).find(
-    (post) => post.url === pathname.replace("/api/og", "").replace(".png", ""),
+  const posts = await getAllPosts();
+  const post = posts.find(
+    (entry) => entry.url === pathname.replace("/api/og", "").replace(".png", ""),
   );
 
-  if (!post) {
+  if (post === undefined) {
     return new Response(null, { status: 404 });
   }
 
   const fontData = await fetchFont(post.title, "M PLUS Rounded 1c:wght@700");
 
-  if (!fontData) {
+  if (fontData === null) {
     throw new Error("Failed to resolve an OpenType font for OG image");
   }
 
@@ -93,4 +94,4 @@ export async function GET(req: Request) {
       width: 1200,
     },
   );
-}
+};

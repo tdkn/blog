@@ -1,4 +1,4 @@
-export async function fetchFont(text: string, font: string): Promise<ArrayBuffer | null> {
+export const fetchFont = async (text: string, font: string): Promise<ArrayBuffer | null> => {
   const url = new URL("https://fonts.googleapis.com/css2");
   url.searchParams.set("family", font);
   url.searchParams.set("text", text);
@@ -11,22 +11,22 @@ export async function fetchFont(text: string, font: string): Promise<ArrayBuffer
     },
   });
 
-  if (!response.ok) {
-    throw new Error(`Failed to load Google Fonts CSS: ${response.status}`);
-  }
+  if (response.ok) {
+    const css = await response.text();
+    const resource = /src: url\((.+)\) format\('(opentype|truetype)'\)/.exec(css);
 
-  const css = await response.text();
-  const resource = /src: url\((.+)\) format\('(opentype|truetype)'\)/.exec(css);
+    if (resource === null) {
+      return null;
+    }
 
-  if (!resource) {
-    return null;
-  }
+    const fontResponse = await fetch(resource[1]);
 
-  const fontResponse = await fetch(resource[1]);
+    if (fontResponse.ok) {
+      return fontResponse.arrayBuffer();
+    }
 
-  if (!fontResponse.ok) {
     throw new Error(`Failed to load font binary: ${fontResponse.status}`);
   }
 
-  return fontResponse.arrayBuffer();
-}
+  throw new Error(`Failed to load Google Fonts CSS: ${response.status}`);
+};

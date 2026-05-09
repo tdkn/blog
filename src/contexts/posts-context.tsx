@@ -16,32 +16,40 @@ const PostsContext = createContext<PostsContextType>({
   posts: [],
 });
 
+const isPostArray = (value: unknown): value is Post[] => Array.isArray(value);
+
 interface PostsProviderProps {
   children: React.ReactNode;
 }
 
-export function PostsProvider({ children }: PostsProviderProps) {
+export const PostsProvider = ({ children }: PostsProviderProps) => {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch("/api/posts")
-      .then(async (res) => res.json())
-      .then((data: Post[]) => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch("/api/posts");
+        const data: unknown = await response.json();
+
+        if (!isPostArray(data)) {
+          throw new TypeError("Invalid posts response");
+        }
+
         setPosts(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Failed to fetch posts:", error);
-        setLoading(false);
+      } catch (fetchError: unknown) {
+        console.error("Failed to fetch posts:", fetchError);
         setError(true);
-      });
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    void fetchPosts();
   }, []);
 
   return <PostsContext value={{ error, loading, posts }}>{children}</PostsContext>;
-}
+};
 
-export function usePostsContext(): PostsContextType {
-  return use(PostsContext);
-}
+export const usePostsContext = (): PostsContextType => use(PostsContext);

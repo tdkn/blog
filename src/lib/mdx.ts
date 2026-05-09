@@ -33,10 +33,38 @@ interface PostPathParams {
   year: string;
 }
 
-export function normalizePostFrontmatter(
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null;
+
+const isPostFrontmatter = (value: unknown): value is PostFrontmatter => {
+  if (isRecord(value)) {
+    return (
+      (typeof value.date === "string" || value.date === undefined) &&
+      (typeof value.deprecated === "boolean" || value.deprecated === undefined) &&
+      (typeof value.published === "boolean" || value.published === undefined) &&
+      (typeof value.summary === "string" || value.summary === undefined) &&
+      (typeof value.title === "string" || value.title === undefined)
+    );
+  }
+
+  return false;
+};
+
+const isPostModule = (value: unknown): value is PostModule => {
+  if (isRecord(value)) {
+    return (
+      typeof value.default === "function" &&
+      (value.frontmatter === undefined || isPostFrontmatter(value.frontmatter))
+    );
+  }
+
+  return false;
+};
+
+export const normalizePostFrontmatter = (
   frontmatter: PostFrontmatter | undefined,
   { slug, year }: PostPathParams,
-): Post {
+): Post => {
   let date = new Date();
   let deprecated = false;
   let published = true;
@@ -74,29 +102,39 @@ export function normalizePostFrontmatter(
     url: `/${year}/${slug}`,
     year,
   };
-}
+};
 
-const getPostPaths = cache(async (): Promise<string[]> => glob(POSTS_PATTERN, { cwd: POSTS_PATH }));
+const getPostPaths = cache(async (): Promise<string[]> => {
+  const paths = await glob(POSTS_PATTERN, { cwd: POSTS_PATH });
 
-const importPostModule = cache(
-  async (year: string, slug: string): Promise<PostModule> =>
-    (await import(`../../posts/${year}/${slug}.mdx`)) as PostModule,
-);
+  return paths;
+});
 
-function getPostPathParams(relativePath: string): PostPathParams {
+const importPostModule = cache(async (year: string, slug: string): Promise<PostModule> => {
+  const postModule: unknown = await import(`../../posts/${year}/${slug}.mdx`);
+
+  if (isPostModule(postModule)) {
+    return postModule;
+  }
+
+  throw new TypeError(`Invalid post module: ${year}/${slug}`);
+});
+
+const getPostPathParams = (relativePath: string): PostPathParams => {
   const [year, slug] = relativePath.replace(/\.mdx$/, "").split("/");
 
-  if (!year || !slug) {
+  if (year === undefined || slug === undefined) {
     throw new Error(`Invalid post path: ${relativePath}`);
   }
 
   return { slug, year };
-}
+};
 
 export const getAllPosts = cache(async (): Promise<Post[]> => {
-  const postPaths = (await getPostPaths()).toSorted();
+  const postPaths = await getPostPaths();
+  const sortedPostPaths = postPaths.toSorted();
   const posts = await Promise.all(
-    postPaths.map(async (relativePath) => {
+    sortedPostPaths.map(async (relativePath) => {
       const params = getPostPathParams(relativePath);
       const { frontmatter } = await importPostModule(params.year, params.slug);
 
@@ -111,7 +149,7 @@ export const getPost = cache(async (year: string, slug: string): Promise<null | 
   const posts = await getAllPosts();
   const post = posts.find((entry) => entry.year === year && entry.slug === slug);
 
-  if (!post) {
+  if (post === undefined) {
     return null;
   }
 

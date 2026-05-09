@@ -6,7 +6,7 @@ import { ZennCard } from "~/components/zenn-card";
 import { getAllPosts } from "~/lib/mdx";
 import { getZennArticles } from "~/lib/zenn";
 
-export default async function HomePage() {
+const HomePage = async () => {
   const [localPosts, zennData] = await Promise.all([getAllPosts(), getZennArticles()]);
 
   const sortedLocalPosts = localPosts.toSorted((a, b) =>
@@ -48,4 +48,6 @@ export default async function HomePage() {
       </main>
     </>
   );
-}
+};
+
+export default HomePage;

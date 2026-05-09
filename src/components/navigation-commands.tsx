@@ -9,7 +9,7 @@ interface NavigationCommandsProps {
   setIsOpen: (open: boolean) => void;
 }
 
-export function NavigationCommands({ setIsOpen }: NavigationCommandsProps) {
+export const NavigationCommands = ({ setIsOpen }: NavigationCommandsProps) => {
   const router = useRouter();
 
   const navigationItems = [
@@ -60,4 +60,4 @@ export function NavigationCommands({ setIsOpen }: NavigationCommandsProps) {
       ))}
     </Command.Group>
   );
-}
+};

@@ -5,49 +5,54 @@ import { faBug, faLink, faShare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Command } from "cmdk";
 import { usePathname } from "next/navigation";
-import { useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 
 interface ActionCommandsProps {
   setIsOpen: (open: boolean) => void;
 }
 
-export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
+export const ActionCommands = ({ setIsOpen }: ActionCommandsProps) => {
   const pathname = usePathname();
   const [copied, setCopied] = useState<null | string>(null);
 
-  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
-  const isPostPage = /^\/\d{4}\/[^/]+$/.exec(pathname);
+  const currentUrl = typeof window === "undefined" ? "" : window.location.href;
+  const documentTitle = typeof document === "undefined" ? "" : document.title;
+  const isPostPage = /^\/\d{4}\/[^/]+$/.exec(pathname) !== null;
 
   const githubSourceUrl = isPostPage
     ? `https://github.com/tdkn/blog/blob/main/posts${pathname}.mdx`
     : null;
 
   const twitterShareUrl = isPostPage
-    ? `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(`Check out this post: ${typeof document !== "undefined" ? document.title : ""}`)}`
+    ? `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}&text=${encodeURIComponent(`Check out this post: ${documentTitle}`)}`
     : null;
 
   const blueskyShareUrl = isPostPage
-    ? `https://bsky.app/intent/compose?text=${encodeURIComponent(`Check out this post: ${typeof document !== "undefined" ? document.title : ""} ${currentUrl}`)}`
+    ? `https://bsky.app/intent/compose?text=${encodeURIComponent(`Check out this post: ${documentTitle} ${currentUrl}`)}`
     : null;
+
+  const copyCurrentUrl = useCallback(async () => {
+    await navigator.clipboard.writeText(currentUrl);
+    setCopied("url");
+    setTimeout(() => {
+      setCopied(null);
+    }, 2000);
+  }, [currentUrl]);
 
   const actionItems = useMemo(
     () => [
       {
         action: () => {
-          void navigator.clipboard.writeText(currentUrl).then(() => {
-            setCopied("url");
-            setTimeout(() => {
-              setCopied(null);
-            }, 2000);
-          });
+          void copyCurrentUrl();
         },
         description: "Copy current page URL to clipboard",
         icon: <FontAwesomeIcon className="h-4 w-4" icon={faLink} />,
         id: "copy-url",
         label: "Copy URL",
       },
-      ...(twitterShareUrl
-        ? [
+      ...(twitterShareUrl === null
+        ? []
+        : [
             {
               action: () => {
                 window.open(twitterShareUrl, "_blank");
@@ -57,10 +62,10 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
               id: "share-twitter",
               label: "Share on X/Twitter",
             },
-          ]
-        : []),
-      ...(blueskyShareUrl
-        ? [
+          ]),
+      ...(blueskyShareUrl === null
+        ? []
+        : [
             {
               action: () => {
                 window.open(blueskyShareUrl, "_blank");
@@ -70,10 +75,10 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
               id: "share-bluesky",
               label: "Share on Bluesky",
             },
-          ]
-        : []),
-      ...(githubSourceUrl
-        ? [
+          ]),
+      ...(githubSourceUrl === null
+        ? []
+        : [
             {
               action: () => {
                 window.open(githubSourceUrl, "_blank");
@@ -83,8 +88,7 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
               id: "github-source",
               label: "View Source on GitHub",
             },
-          ]
-        : []),
+          ]),
       {
         action: () => {
           window.open(
@@ -98,7 +102,7 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
         label: "Report a Bug",
       },
     ],
-    [currentUrl, twitterShareUrl, blueskyShareUrl, githubSourceUrl],
+    [copyCurrentUrl, twitterShareUrl, blueskyShareUrl, githubSourceUrl],
   );
 
   const handleSelect = (action: () => Promise<void> | void) => {
@@ -137,4 +141,4 @@ export function ActionCommands({ setIsOpen }: ActionCommandsProps) {
       ))}
     </Command.Group>
   );
-}
+};
