@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import "~/styles/globals.css";
 import { CheckBox } from "../components/checkbox";
 
-export function Form() {
+export const Form = () => {
   const repoInputRef = useRef<HTMLInputElement>(null);
   const outputRef = useRef<HTMLInputElement>(null);
   const [repo, setRepo] = useState("owner/repo");
@@ -15,6 +15,25 @@ export function Form() {
     setFeatures((prev) =>
       prev.includes(feature) ? prev.filter((f) => f !== feature) : [...prev, feature],
     );
+  };
+
+  const copyCommand = async () => {
+    if (outputRef.current === null) {
+      return;
+    }
+
+    const command = outputRef.current.value;
+
+    try {
+      await navigator.clipboard.writeText(command);
+      setCopyButtonText("Copied!");
+    } catch {
+      setCopyButtonText("Copy failed");
+    }
+
+    setTimeout(() => {
+      setCopyButtonText("Copy");
+    }, 2000);
   };
 
   useEffect(() => {
@@ -130,26 +149,13 @@ export function Form() {
             readOnly={true}
             ref={outputRef}
             type="text"
-            value={repo ? `/github subscribe ${repo} ${features.join(" ")}` : ""}
+            value={repo.length === 0 ? "" : `/github subscribe ${repo} ${features.join(" ")}`}
           />
         </div>
         <button
           className="relative -ml-px inline-flex items-center gap-x-1.5 rounded-r-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 ring-1 ring-gray-300 ring-inset hover:bg-gray-50"
           onClick={() => {
-            if (outputRef.current) {
-              const command = outputRef.current.value;
-              navigator.clipboard
-                .writeText(command)
-                .then(() => {
-                  setCopyButtonText("Copied!");
-                  setTimeout(() => {
-                    setCopyButtonText("Copy");
-                  }, 2000);
-                })
-                .catch(() => {
-                  alert("Failed to copy the command.");
-                });
-            }
+            void copyCommand();
           }}
           type="button"
         >
@@ -158,4 +164,4 @@ export function Form() {
       </div>
     </form>
   );
-}
+};

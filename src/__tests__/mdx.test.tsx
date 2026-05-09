@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-import BlogPostPage from "~/app/(blog)/[year]/[slug]/page";
 import { getAllPosts } from "~/lib/mdx";
+import BlogPostPage from "../app/(blog)/[year]/[slug]/page";
 
 describe("MDX posts", () => {
   it("reads frontmatter exports from local posts", async () => {

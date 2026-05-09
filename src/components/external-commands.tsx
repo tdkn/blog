@@ -15,7 +15,7 @@ interface ExternalCommandsProps {
   setIsOpen: (open: boolean) => void;
 }
 
-export function ExternalCommands({ setIsOpen }: ExternalCommandsProps) {
+export const ExternalCommands = ({ setIsOpen }: ExternalCommandsProps) => {
   const externalLinks = [
     {
       bgColor: "bg-slate-900 dark:bg-slate-800",
@@ -91,4 +91,4 @@ export function ExternalCommands({ setIsOpen }: ExternalCommandsProps) {
       ))}
     </Command.Group>
   );
-}
+};

@@ -4,7 +4,7 @@ import Script from "next/script";
 import { CommandMenu } from "~/components/command-menu";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
-import { PostsProvider } from "~/contexts/PostsContext";
+import { PostsProvider } from "~/contexts/posts-context";
 
 import "~/styles/globals.css";
 
@@ -13,71 +13,69 @@ export const viewport: Viewport = {
   width: "device-width",
 };
 
-export function generateMetadata(): Metadata {
-  return {
-    appleWebApp: {
-      capable: true,
-      statusBarStyle: "black-translucent",
-      title: "tdkn.dev",
-    },
-    icons: {
-      apple: "/apple-touch-icon.png",
-      icon: [{ url: "/favicon.ico" }, { type: "image/svg+xml", url: "/icon.svg" }],
-    },
-    manifest: "/site.webmanifest",
-    metadataBase: new URL(
-      process.env.NODE_ENV === "production" ? "https://tdkn.dev" : "http://localhost:3000",
-    ),
-    openGraph: {
-      description: "Shun Tedokon's Personal Website",
-      images: "/twitter-large-card.png",
-      locale: "ja_jp",
-      siteName: "tdkn.dev",
-      title: "tdkn.dev",
-      type: "website",
-      url: "https://tdkn.dev",
-    },
+export const generateMetadata = (): Metadata => ({
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
     title: "tdkn.dev",
-    twitter: {
-      card: "summary_large_image",
-      creator: "@tdkn_",
-      images: "/twitter-large-card.png",
-      site: "@tdkn_",
-    },
-  };
-}
+  },
+  icons: {
+    apple: "/apple-touch-icon.png",
+    icon: [{ url: "/favicon.ico" }, { type: "image/svg+xml", url: "/icon.svg" }],
+  },
+  manifest: "/site.webmanifest",
+  metadataBase: new URL(
+    process.env.NODE_ENV === "production" ? "https://tdkn.dev" : "http://localhost:3000",
+  ),
+  openGraph: {
+    description: "Shun Tedokon's Personal Website",
+    images: "/twitter-large-card.png",
+    locale: "ja_jp",
+    siteName: "tdkn.dev",
+    title: "tdkn.dev",
+    type: "website",
+    url: "https://tdkn.dev",
+  },
+  title: "tdkn.dev",
+  twitter: {
+    card: "summary_large_image",
+    creator: "@tdkn_",
+    images: "/twitter-large-card.png",
+    site: "@tdkn_",
+  },
+});
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
-  return (
-    <html lang="ja">
-      <body className="bg-white text-slate-800 dark:bg-[#1a202c] dark:text-slate-300">
-        <Script id="gtm-init" strategy="afterInteractive">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+const RootLayout = ({ children }: { children: React.ReactNode }) => (
+  <html lang="ja">
+    <body className="bg-white text-slate-800 dark:bg-[#1a202c] dark:text-slate-300">
+      <Script id="gtm-init" strategy="afterInteractive">
+        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
           })(window,document,'script','dataLayer','${process.env.NEXT_PUBLIC_GTM_ID}');`}
-        </Script>
+      </Script>
 
-        <noscript>
-          <iframe
-            height="0"
-            src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
-            style={{ display: "none", visibility: "hidden" }}
-            title="Google Tag Manager"
-            width="0"
-          />
-        </noscript>
+      <noscript>
+        <iframe
+          height="0"
+          src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}
+          style={{ display: "none", visibility: "hidden" }}
+          title="Google Tag Manager"
+          width="0"
+        />
+      </noscript>
 
-        <PostsProvider>
-          <div className="container mx-auto max-w-3xl px-4">
-            <Header />
-            {children}
-            <Footer />
-          </div>
-          <CommandMenu />
-        </PostsProvider>
-      </body>
-    </html>
-  );
-}
+      <PostsProvider>
+        <div className="container mx-auto max-w-3xl px-4">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+        <CommandMenu />
+      </PostsProvider>
+    </body>
+  </html>
+);
+
+export default RootLayout;

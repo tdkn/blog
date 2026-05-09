@@ -52,6 +52,4 @@ const components = {
   ),
 } satisfies MDXComponents;
 
-export function useMDXComponents(): MDXComponents {
-  return components;
-}
+export const useMDXComponents = (): MDXComponents => components;

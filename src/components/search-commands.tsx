@@ -5,14 +5,14 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Command } from "cmdk";
 import { useRouter } from "next/navigation";
 
-import { usePostsContext } from "~/contexts/PostsContext";
+import { usePostsContext } from "~/contexts/posts-context";
 import { formatDate } from "~/lib/format-date";
 
 interface SearchCommandsProps {
   setIsOpen: (open: boolean) => void;
 }
 
-export function SearchCommands({ setIsOpen }: SearchCommandsProps) {
+export const SearchCommands = ({ setIsOpen }: SearchCommandsProps) => {
   const router = useRouter();
   const { error, loading, posts } = usePostsContext();
 
@@ -77,4 +77,4 @@ export function SearchCommands({ setIsOpen }: SearchCommandsProps) {
       ))}
     </Command.Group>
   );
-}
+};
