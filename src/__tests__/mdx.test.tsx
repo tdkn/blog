@@ -60,4 +60,15 @@ describe("MDX posts", () => {
     expect(response.headers.get("content-type")).toBe("text/markdown; charset=utf-8");
     await expect(response.text()).resolves.toContain("## 背景");
   });
+
+  it("returns not found for missing markdown posts", async () => {
+    const response = await GET(new Request("http://localhost/api/markdown/2999/missing-post"), {
+      params: Promise.resolve({
+        slug: "missing-post",
+        year: "2999",
+      }),
+    });
+
+    expect(response.status).toBe(404);
+  });
 });

@@ -1,5 +1,7 @@
 import { getPostMarkdown } from "~/lib/mdx";
 
+export const runtime = "nodejs";
+
 interface RouteContext {
   params: Promise<{
     slug: string;
