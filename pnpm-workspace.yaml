@@ -7,9 +7,9 @@ minimumReleaseAgeExclude:
   - "@oxlint-tsgolint/*"
   # Renovate security update: next@16.2.3
   - next@16.2.3
-
-onlyBuiltDependencies:
-  - "@tailwindcss/oxide"
-  - "esbuild"
-  - "sharp"
-  - "unrs-resolver"
+allowBuilds:
+  "@tailwindcss/oxide": true
+  esbuild: true
+  msw: false
+  sharp: true
+  unrs-resolver: true
