@@ -9,42 +9,28 @@ import { getZennArticles } from "~/lib/zenn";
 const HomePage = async () => {
   const [localPosts, zennData] = await Promise.all([getAllPosts(), getZennArticles()]);
 
-  const sortedLocalPosts = localPosts.toSorted((a, b) =>
-    compareDesc(new Date(a.date), new Date(b.date)),
-  );
-
-  const sortedZennPosts = zennData.posts.toSorted((a, b) =>
+  const sortedPosts = [...localPosts, ...zennData.posts].toSorted((a, b) =>
     compareDesc(new Date(a.date), new Date(b.date)),
   );
 
   return (
     <>
       <Profile />
-      <main className="space-y-6 pt-8">
-        {/* Local Blog Posts */}
-        <section className="space-y-0">
-          <h1 className="mb-6 text-2xl font-bold text-gray-900 dark:text-white">Posts</h1>
-          {sortedLocalPosts.map((post, key) => (
-            <PostCard key={key} post={post} />
-          ))}
+      <main className="flex flex-col gap-12 pt-10">
+        <section>
+          <div className="mb-5 flex items-end justify-between border-b pb-3">
+            <h1 className="font-heading text-2xl font-semibold">Writing</h1>
+          </div>
+          <div className="grid grid-cols-1 gap-y-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
+            {sortedPosts.map((post) =>
+              post.source === "zenn" ? (
+                <ZennCard key={`zenn-${post.slug}`} post={post} />
+              ) : (
+                <PostCard key={`local-${post.year}-${post.slug}`} post={post} />
+              ),
+            )}
+          </div>
         </section>
-
-        {/* Zenn Articles */}
-        {sortedZennPosts.length > 0 && (
-          <>
-            <h1 className="mt-12 mb-6 text-2xl font-bold text-gray-900 dark:text-white">
-              Elsewhere
-            </h1>
-            <section className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {sortedZennPosts.map((post, key) => {
-                const zennArticle = zennData.articlesData.find(
-                  (article) => article.slug === post.slug,
-                );
-                return <ZennCard key={key} post={post} zennData={zennArticle} />;
-              })}
-            </section>
-          </>
-        )}
       </main>
     </>
   );

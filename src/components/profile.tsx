@@ -11,47 +11,70 @@ import NextLink from "next/link";
 import type { ComponentPropsWithoutRef } from "react";
 
 import { Link } from "~/components/link";
-import { classNames } from "~/lib/style";
+import { cn } from "~/lib/utils";
+
+const socialLinks = [
+  {
+    href: "https://github.com/tdkn",
+    icon: faGithub,
+    label: "GitHub",
+  },
+  {
+    href: "https://x.com/tdkn_",
+    icon: faXTwitter,
+    label: "X",
+  },
+  {
+    href: "https://bsky.app/profile/tdkn.bsky.social",
+    icon: faBluesky,
+    label: "Bluesky",
+  },
+  {
+    href: "https://mastodon.social/@tdkn",
+    icon: faMastodon,
+    label: "Mastodon",
+    rel: "me",
+  },
+  {
+    href: "https://facebook.com/shun.tedokon",
+    icon: faFacebook,
+    label: "Facebook",
+  },
+];
 
 const Profile = ({ className, ...otherProps }: ComponentPropsWithoutRef<"aside">) => (
-  <aside className={classNames("flex flex-row items-center text-sm", className)} {...otherProps}>
-    <Image
-      alt="Shun Tedokon"
-      className="inline-block h-16 w-16 rounded-full"
-      height={64}
-      src="/avatar.jpg"
-      width={64}
-    />
-    <div className="ml-4 flex flex-col space-y-1">
-      <p className="leading-none text-gray-700 dark:text-gray-300">
-        Personal blog by <Link href="https://twitter.com/tdkn_">Shun Tedokon</Link>.
-        <br />I write about design, programming, and thinking.
-      </p>
-      <div className="flex items-center space-x-2">
-        <NextLink aria-label="GitHub" href="https://github.com/tdkn" target="_blank">
-          <FontAwesomeIcon className="h-5 w-5" icon={faGithub} />
-        </NextLink>
-        <NextLink aria-label="X" href="https://x.com/tdkn_" target="_blank">
-          <FontAwesomeIcon className="h-5 w-5" icon={faXTwitter} />
-        </NextLink>
-        <NextLink
-          aria-label="Bluesky"
-          href="https://bsky.app/profile/tdkn.bsky.social"
-          target="_blank"
-        >
-          <FontAwesomeIcon className="h-5 w-5" icon={faBluesky} />
-        </NextLink>
-        <NextLink
-          aria-label="Mastodon"
-          href="https://mastodon.social/@tdkn"
-          rel="me"
-          target="_blank"
-        >
-          <FontAwesomeIcon className="h-5 w-5" icon={faMastodon} />
-        </NextLink>
-        <NextLink aria-label="Facebook" href="https://facebook.com/shun.tedokon" target="_blank">
-          <FontAwesomeIcon className="h-5 w-5" icon={faFacebook} />
-        </NextLink>
+  <aside className={cn("py-5 text-sm", className)} {...otherProps}>
+    <div className="grid gap-4 md:grid-cols-[auto_1fr] md:items-center">
+      <Image
+        alt="Shun Tedokon"
+        className="size-14 rounded-full object-cover ring-1 ring-border/80 md:size-16"
+        height={64}
+        src="/avatar.jpg"
+        width={64}
+      />
+      <div className="flex min-w-0 flex-col gap-3 md:flex-row md:items-end md:justify-between">
+        <div className="max-w-xl">
+          <p className="leading-relaxed text-muted-foreground">
+            Writing by <Link href="https://twitter.com/tdkn_">Shun Tedokon</Link> on software,
+            design,
+            <br />
+            and the craft of making things.
+          </p>
+        </div>
+        <nav aria-label="Social links" className="flex items-center gap-3 text-muted-foreground">
+          {socialLinks.map((socialLink) => (
+            <NextLink
+              key={socialLink.href}
+              aria-label={socialLink.label}
+              className="inline-flex size-5 items-center justify-center transition-colors hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring/50"
+              href={socialLink.href}
+              rel={socialLink.rel}
+              target="_blank"
+            >
+              <FontAwesomeIcon className="size-4" icon={socialLink.icon} />
+            </NextLink>
+          ))}
+        </nav>
       </div>
     </div>
   </aside>

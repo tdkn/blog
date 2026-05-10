@@ -7,9 +7,10 @@ import {
   faMastodon,
   faXTwitter,
 } from "@fortawesome/free-brands-svg-icons";
-import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Command } from "cmdk";
+import { ExternalLinkIcon } from "lucide-react";
+
+import { CommandGroup, CommandItem } from "~/components/ui/command";
 
 interface ExternalCommandsProps {
   setIsOpen: (open: boolean) => void;
@@ -20,7 +21,7 @@ export const ExternalCommands = ({ setIsOpen }: ExternalCommandsProps) => {
     {
       bgColor: "bg-slate-900 dark:bg-slate-800",
       description: "@tdkn",
-      icon: <FontAwesomeIcon className="h-4 w-4 text-white" icon={faGithub} />,
+      icon: <FontAwesomeIcon icon={faGithub} />,
       id: "github",
       label: "GitHub",
       url: "https://github.com/tdkn",
@@ -28,7 +29,7 @@ export const ExternalCommands = ({ setIsOpen }: ExternalCommandsProps) => {
     {
       bgColor: "bg-black",
       description: "@tdkn_",
-      icon: <FontAwesomeIcon className="h-4 w-4 text-white" icon={faXTwitter} />,
+      icon: <FontAwesomeIcon icon={faXTwitter} />,
       id: "x",
       label: "X",
       url: "https://twitter.com/tdkn_",
@@ -36,7 +37,7 @@ export const ExternalCommands = ({ setIsOpen }: ExternalCommandsProps) => {
     {
       bgColor: "bg-[#00A8E8]",
       description: "@tdkn.bsky.social",
-      icon: <FontAwesomeIcon className="h-4 w-4 text-white" icon={faBluesky} />,
+      icon: <FontAwesomeIcon icon={faBluesky} />,
       id: "bluesky",
       label: "Bluesky",
       url: "https://bsky.app/profile/tdkn.bsky.social",
@@ -44,7 +45,7 @@ export const ExternalCommands = ({ setIsOpen }: ExternalCommandsProps) => {
     {
       bgColor: "bg-[#6364FF]",
       description: "@tdkn@mastodon.social",
-      icon: <FontAwesomeIcon className="h-4 w-4 text-white" icon={faMastodon} />,
+      icon: <FontAwesomeIcon icon={faMastodon} />,
       id: "mastodon",
       label: "Mastodon",
       url: "https://mastodon.social/@tdkn",
@@ -52,7 +53,7 @@ export const ExternalCommands = ({ setIsOpen }: ExternalCommandsProps) => {
     {
       bgColor: "bg-[#1877F2]",
       description: "@shun.tedokon",
-      icon: <FontAwesomeIcon className="h-4 w-4 text-white" icon={faFacebook} />,
+      icon: <FontAwesomeIcon icon={faFacebook} />,
       id: "facebook",
       label: "Facebook",
       url: "https://facebook.com/shun.tedokon",
@@ -65,13 +66,10 @@ export const ExternalCommands = ({ setIsOpen }: ExternalCommandsProps) => {
   };
 
   return (
-    <Command.Group
-      className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-slate-500 dark:[&_[cmdk-group-heading]]:text-slate-400"
-      heading="External Links"
-    >
+    <CommandGroup heading="External Links">
       {externalLinks.map((link) => (
-        <Command.Item
-          className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-gray-100 data-[selected=true]:bg-gray-200 dark:hover:bg-gray-800 dark:data-[selected=true]:bg-gray-700"
+        <CommandItem
+          className="py-2"
           key={link.id}
           keywords={[link.label, link.description]}
           onSelect={() => {
@@ -79,16 +77,18 @@ export const ExternalCommands = ({ setIsOpen }: ExternalCommandsProps) => {
           }}
           value={link.url}
         >
-          <div className={`flex h-8 w-8 items-center justify-center rounded-md ${link.bgColor}`}>
+          <div
+            className={`flex size-8 items-center justify-center rounded-lg text-white ${link.bgColor}`}
+          >
             {link.icon}
           </div>
           <div className="flex flex-1 items-center gap-2">
-            <div className="font-medium text-slate-900 dark:text-slate-100">{link.label}</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400">{link.description}</div>
+            <div className="font-medium">{link.label}</div>
+            <div className="text-xs text-muted-foreground">{link.description}</div>
           </div>
-          <FontAwesomeIcon className="h-4 w-4 opacity-50" icon={faArrowUpRightFromSquare} />
-        </Command.Item>
+          <ExternalLinkIcon className="opacity-50" />
+        </CommandItem>
       ))}
-    </Command.Group>
+    </CommandGroup>
   );
 };

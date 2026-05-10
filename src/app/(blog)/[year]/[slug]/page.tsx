@@ -27,15 +27,18 @@ const BlogPostPage = async ({ params }: PageProps) => {
 
   return (
     <>
-      <div className="pb-2">
-        <h1 className="text-4xl font-bold">{post.title}</h1>
-        <p className="flex items-center space-x-2 py-8">
-          <span className="text-sm text-gray-500 dark:text-gray-400">
+      <header className="border-b pb-8">
+        <h1 className="font-heading text-4xl font-semibold leading-tight">{post.title}</h1>
+        <p className="flex items-center gap-2 pt-5">
+          <span className="text-sm text-muted-foreground">
             {formatDate(post.date)} ({formatTimeAgo(post.date)})
           </span>
           {post.deprecated && <Deprecated />}
         </p>
-      </div>
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground">
+          {post.summary}
+        </p>
+      </header>
       <Content />
       <Profile className="pt-10" />
     </>

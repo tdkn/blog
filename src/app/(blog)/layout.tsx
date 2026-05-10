@@ -4,6 +4,7 @@ import Script from "next/script";
 import { CommandMenu } from "~/components/command-menu";
 import { Footer } from "~/components/footer";
 import { Header } from "~/components/header";
+import { TooltipProvider } from "~/components/ui/tooltip";
 import { PostsProvider } from "~/contexts/posts-context";
 
 import "~/styles/globals.css";
@@ -47,7 +48,7 @@ export const generateMetadata = (): Metadata => ({
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => (
   <html lang="ja">
-    <body className="bg-white text-slate-800 dark:bg-[#1a202c] dark:text-slate-300">
+    <body>
       <Script id="gtm-init" strategy="afterInteractive">
         {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -66,14 +67,16 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
         />
       </noscript>
 
-      <PostsProvider>
-        <div className="container mx-auto max-w-3xl px-4">
-          <Header />
-          {children}
-          <Footer />
-        </div>
-        <CommandMenu />
-      </PostsProvider>
+      <TooltipProvider>
+        <PostsProvider>
+          <div className="container mx-auto max-w-3xl px-4">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+          <CommandMenu />
+        </PostsProvider>
+      </TooltipProvider>
     </body>
   </html>
 );

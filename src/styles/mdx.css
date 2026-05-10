@@ -1,7 +1,7 @@
 @reference "./globals.css";
 
 :not(pre) > code {
-  @apply inline-flex items-center rounded-md bg-gray-100 px-1.5 dark:bg-gray-100/10;
+  @apply inline-flex items-center rounded-md bg-muted px-1.5 text-muted-foreground;
 }
 
 [data-rehype-pretty-code-figure] code {

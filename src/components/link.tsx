@@ -1,10 +1,13 @@
 import NextLink from "next/link";
 import type { ComponentPropsWithoutRef, FC } from "react";
 
-import { classNames } from "~/lib/style";
+import { cn } from "~/lib/utils";
 
 const Link: FC<ComponentPropsWithoutRef<typeof NextLink>> = ({ className, ...otherProps }) => (
-  <NextLink className={classNames("dark:text-yellow-200", className)} {...otherProps} />
+  <NextLink
+    className={cn("text-primary underline-offset-4 hover:underline", className)}
+    {...otherProps}
+  />
 );
 
 export { Link };

@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 import { CommandMenu } from "~/components/command-menu";
+import { TooltipProvider } from "~/components/ui/tooltip";
 import { PostsProvider } from "~/contexts/posts-context";
+
+import "~/styles/globals.css";
 
 export const metadata: Metadata = {
   icons: {
@@ -42,10 +45,12 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
           width="0"
         />
       </noscript>
-      <PostsProvider>
-        {children}
-        <CommandMenu />
-      </PostsProvider>
+      <TooltipProvider>
+        <PostsProvider>
+          {children}
+          <CommandMenu />
+        </PostsProvider>
+      </TooltipProvider>
     </body>
   </html>
 );
