@@ -10,7 +10,7 @@
     "CLAUDE_CONFIG_DIR": "/home/vscode/.claude"
   },
   "features": {
-    "ghcr.io/devcontainers/features/node:1": {
+    "ghcr.io/devcontainers/features/node:2": {
       "version": "24.15.0"
     },
     "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
