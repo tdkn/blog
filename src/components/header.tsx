@@ -1,8 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import { SearchIcon } from "lucide-react";
 
 import { Logo } from "~/components/logo";
+import { Button } from "~/components/ui/button";
 
 const handleSearchClick = () => {
   const event = new KeyboardEvent("keydown", {
@@ -19,17 +21,20 @@ const Header = () => (
       <Logo />
     </Link>
 
-    <div className="hidden items-center space-x-4 md:flex">
-      <button
-        className="flex cursor-pointer items-center gap-1 rounded border border-gray-300 py-1 pr-1 pl-2 text-xs text-gray-600 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-800"
+    <div className="hidden items-center gap-4 md:flex">
+      <Button
+        className="h-8 rounded-[10px] px-2.5 pr-[5px]"
         onClick={handleSearchClick}
+        size="sm"
         type="button"
+        variant="outline"
       >
+        <SearchIcon data-icon="inline-start" />
         <span>Search</span>
-        <kbd className="rounded border border-gray-300 bg-gray-100 px-1 py-0.5 text-xs dark:border-gray-700 dark:bg-gray-700">
+        <kbd className="rounded-[5px] bg-muted px-1 py-0.5 font-sans text-xs text-muted-foreground">
           ⌘K
         </kbd>
-      </button>
+      </Button>
     </div>
   </div>
 );

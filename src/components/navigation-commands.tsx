@@ -1,9 +1,9 @@
 "use client";
 
-import { faChevronRight, faHouse, faWrench } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Command } from "cmdk";
+import { ChevronRightIcon, HouseIcon, WrenchIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
+
+import { CommandGroup, CommandItem } from "~/components/ui/command";
 
 interface NavigationCommandsProps {
   setIsOpen: (open: boolean) => void;
@@ -15,14 +15,14 @@ export const NavigationCommands = ({ setIsOpen }: NavigationCommandsProps) => {
   const navigationItems = [
     {
       description: "Navigate to the home page",
-      icon: <FontAwesomeIcon className="h-4 w-4" icon={faHouse} />,
+      icon: <HouseIcon />,
       id: "home",
       label: "Home",
       path: "/",
     },
     {
       description: "Access GitHub slash command tool",
-      icon: <FontAwesomeIcon className="h-4 w-4" icon={faWrench} />,
+      icon: <WrenchIcon />,
       id: "tools",
       label: "GitHub Slash Command Generator",
       path: "/github-slash-command",
@@ -35,13 +35,10 @@ export const NavigationCommands = ({ setIsOpen }: NavigationCommandsProps) => {
   };
 
   return (
-    <Command.Group
-      className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-slate-500 dark:[&_[cmdk-group-heading]]:text-slate-400"
-      heading="Navigation"
-    >
+    <CommandGroup heading="Navigation">
       {navigationItems.map((item) => (
-        <Command.Item
-          className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-gray-100 data-[selected=true]:bg-gray-200 dark:hover:bg-gray-800 dark:data-[selected=true]:bg-gray-700"
+        <CommandItem
+          className="py-2"
           key={item.id}
           keywords={[item.label, item.description]}
           onSelect={() => {
@@ -49,15 +46,15 @@ export const NavigationCommands = ({ setIsOpen }: NavigationCommandsProps) => {
           }}
           value={`${item.label} ${item.description}`}
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-[#F7C953] to-[#F28E53] text-white">
+          <div className="flex size-8 items-center justify-center rounded-lg bg-secondary text-secondary-foreground">
             {item.icon}
           </div>
           <div className="flex-1">
-            <div className="font-medium text-slate-900 dark:text-slate-100">{item.label}</div>
+            <div className="font-medium">{item.label}</div>
           </div>
-          <FontAwesomeIcon className="h-4 w-4 opacity-50" icon={faChevronRight} />
-        </Command.Item>
+          <ChevronRightIcon className="opacity-50" />
+        </CommandItem>
       ))}
-    </Command.Group>
+    </CommandGroup>
   );
 };

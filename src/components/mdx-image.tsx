@@ -39,7 +39,7 @@ const Image = ({ alt, caption, height, width, ...otherProps }: CustomImageProps)
         {...otherProps}
       />
       {displayCaption && (
-        <figcaption className="mt-2 text-center text-sm text-gray-400 dark:text-gray-600">
+        <figcaption className="mt-2 text-center text-sm text-muted-foreground">
           {displayCaption}
         </figcaption>
       )}

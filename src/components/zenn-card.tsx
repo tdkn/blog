@@ -1,67 +1,52 @@
 import type { ComponentPropsWithoutRef, FC } from "react";
 
+import { ExternalLinkIcon } from "lucide-react";
+
 import { Link } from "~/components/link";
+import { Badge } from "~/components/ui/badge";
 import { formatDate } from "~/lib/format-date";
-import type { Post, ZennArticle } from "~/types/post";
+import { cn } from "~/lib/utils";
+import type { Post } from "~/types/post";
 
 export type ZennCardProps = ComponentPropsWithoutRef<"article"> & {
   post: Post;
-  zennData?: ZennArticle;
 };
 
-const ZennCard: FC<ZennCardProps> = ({ post, zennData }) => (
-  <Link
-    className="group block overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:shadow-md dark:bg-gray-800"
-    href={post.url}
-    rel="noopener noreferrer"
-    target="_blank"
-  >
-    <article>
-      {/* Top section with blue background and emoji */}
-      <div className="relative bg-gradient-to-br from-blue-100 to-blue-200 px-4 py-8 dark:from-blue-900/40 dark:to-blue-800/40">
-        <div className="absolute top-3 left-3">
-          <span className="rounded-xl bg-[#3EA8FF] px-2.5 py-1 text-xs font-medium text-white">
-            Zenn
-          </span>
-        </div>
-        <div className="absolute top-3 right-3">
-          <svg
-            className="h-4 w-4 text-blue-400/60 dark:text-blue-300/50"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
+const ZennCard: FC<ZennCardProps> = ({ className, post, ...otherProps }) => (
+  <article className={cn("group pt-1 md:pt-4", className)} {...otherProps}>
+    <Link
+      className="block h-full text-foreground no-underline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ring/50 hover:no-underline"
+      href={post.url}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <div className="flex flex-col gap-2 pb-1 md:min-h-28 md:gap-3 md:pb-2">
+        <div className="flex items-center justify-between gap-3 text-xs font-medium text-muted-foreground">
+          <time dateTime={post.date.toISOString()}>{formatDate(post.date)}</time>
+          <Badge
+            className="h-4 rounded-md border-[#3EA8FF]/10 bg-[#3EA8FF]/15 px-1.5 py-0 text-[10px] leading-none text-[#147EAD] dark:border-[#3EA8FF]/20 dark:bg-[#3EA8FF]/20 dark:text-[#8FD7FF] [&>svg]:size-2.5!"
+            variant="secondary"
           >
-            <path
-              d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth={2}
-            />
-          </svg>
+            <span>Zenn</span>
+            <ExternalLinkIcon data-icon="inline-end" aria-hidden="true" />
+          </Badge>
         </div>
-        <div className="flex items-center justify-center">
-          <span className="text-5xl">{post.emoji}</span>
-        </div>
-      </div>
-
-      {/* Bottom section with white background and content */}
-      <div className="flex h-32 flex-col justify-between p-4">
-        <h3 className="line-clamp-3 text-base leading-tight font-bold text-gray-900 dark:text-white">
-          {post.title}
-        </h3>
-
-        <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
-          <span>{formatDate(post.date)}</span>
-          {(zennData?.liked_count ?? 0) > 0 && (
-            <span className="flex items-center gap-1">
-              <span>♡</span>
-              <span>{zennData?.liked_count}</span>
+        <h2
+          className={cn(
+            "text-base leading-relaxed font-semibold text-foreground md:line-clamp-3",
+            "transition-colors group-hover:text-primary group-hover:underline group-hover:decoration-primary/50 group-hover:underline-offset-4",
+          )}
+        >
+          {typeof post.emoji === "string" && post.emoji.length > 0 && (
+            <span className="mr-1.5 inline-block leading-none" aria-hidden="true">
+              {post.emoji}
             </span>
           )}
-        </div>
+          {post.title}
+        </h2>
       </div>
-    </article>
-  </Link>
+    </Link>
+  </article>
 );
 
 export { ZennCard };

@@ -1,16 +1,18 @@
 import type { ComponentPropsWithoutRef } from "react";
 
-import { classNames } from "~/lib/style";
+import { Badge } from "~/components/ui/badge";
+import { cn } from "~/lib/utils";
 
 const Deprecated = ({ className }: ComponentPropsWithoutRef<"span">) => (
-  <span
-    className={classNames(
-      "inline-flex items-center rounded-md bg-yellow-100 px-2 py-0.5 text-xs font-medium text-yellow-800 dark:bg-yellow-100/20 dark:text-orange-500",
+  <Badge
+    className={cn(
+      "bg-amber-100 text-amber-900 dark:bg-amber-400/15 dark:text-amber-300",
       className,
     )}
+    variant="secondary"
   >
     Deprecated
-  </span>
+  </Badge>
 );
 
 export { Deprecated };

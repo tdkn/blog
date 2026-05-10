@@ -1,10 +1,10 @@
 import { getYear } from "date-fns";
 import type { ComponentPropsWithoutRef, FC } from "react";
 
-import { classNames } from "~/lib/style";
+import { cn } from "~/lib/utils";
 
 const Footer: FC<ComponentPropsWithoutRef<"footer">> = ({ className }) => (
-  <footer className={classNames("py-20 text-center text-sm text-gray-500", className)}>
+  <footer className={cn("py-20 text-center text-sm text-muted-foreground", className)}>
     Copyright © {getYear(new Date())} Shun Tedokon.
   </footer>
 );

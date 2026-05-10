@@ -1,10 +1,9 @@
 "use client";
 
-import { faFile } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Command } from "cmdk";
+import { FileTextIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 
+import { CommandGroup, CommandItem } from "~/components/ui/command";
 import { usePostsContext } from "~/contexts/posts-context";
 import { formatDate } from "~/lib/format-date";
 
@@ -23,25 +22,19 @@ export const SearchCommands = ({ setIsOpen }: SearchCommandsProps) => {
 
   if (loading) {
     return (
-      <Command.Group
-        className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-slate-500 dark:[&_[cmdk-group-heading]]:text-slate-400"
-        heading="Posts"
-      >
-        <div className="px-2 py-4 text-sm text-slate-500 dark:text-slate-400">Loading posts...</div>
-      </Command.Group>
+      <CommandGroup heading="Posts">
+        <div className="px-2 py-4 text-sm text-muted-foreground">Loading posts...</div>
+      </CommandGroup>
     );
   }
 
   if (error) {
     return (
-      <Command.Group
-        className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-slate-500 dark:[&_[cmdk-group-heading]]:text-slate-400"
-        heading="Posts"
-      >
-        <div className="px-2 py-4 text-sm text-slate-500 dark:text-slate-400">
+      <CommandGroup heading="Posts">
+        <div className="px-2 py-4 text-sm text-muted-foreground">
           Failed to load posts. Please try again later.
         </div>
-      </Command.Group>
+      </CommandGroup>
     );
   }
 
@@ -50,13 +43,10 @@ export const SearchCommands = ({ setIsOpen }: SearchCommandsProps) => {
   }
 
   return (
-    <Command.Group
-      className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-slate-500 dark:[&_[cmdk-group-heading]]:text-slate-400"
-      heading="Posts"
-    >
+    <CommandGroup heading="Posts">
       {posts.map((post) => (
-        <Command.Item
-          className="relative flex cursor-pointer items-start gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-gray-100 data-[selected=true]:bg-gray-200 dark:hover:bg-gray-800 dark:data-[selected=true]:bg-gray-700"
+        <CommandItem
+          className="items-start py-2"
           key={post.url}
           keywords={[post.title, post.summary, post.year, post.slug]}
           onSelect={() => {
@@ -64,17 +54,15 @@ export const SearchCommands = ({ setIsOpen }: SearchCommandsProps) => {
           }}
           value={`${post.title} ${post.summary}`}
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-[#F7C953] to-[#F28E53] text-white">
-            <FontAwesomeIcon className="h-3 w-3" icon={faFile} />
+          <div className="flex size-8 items-center justify-center rounded-lg bg-primary text-primary-foreground">
+            <FileTextIcon />
           </div>
           <div className="flex-1">
-            <div className="font-medium text-slate-900 dark:text-slate-100">{post.title}</div>
-            <div className="text-xs text-slate-500 dark:text-slate-400">
-              {formatDate(post.date)}
-            </div>
+            <div className="font-medium">{post.title}</div>
+            <div className="text-xs text-muted-foreground">{formatDate(post.date)}</div>
           </div>
-        </Command.Item>
+        </CommandItem>
       ))}
-    </Command.Group>
+    </CommandGroup>
   );
 };

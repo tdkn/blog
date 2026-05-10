@@ -1,11 +1,12 @@
 "use client";
 
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faBug, faLink, faShare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Command } from "cmdk";
+import { BugIcon, CheckIcon, LinkIcon, Share2Icon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useCallback, useMemo, useState } from "react";
+
+import { CommandGroup, CommandItem } from "~/components/ui/command";
 
 interface ActionCommandsProps {
   setIsOpen: (open: boolean) => void;
@@ -46,7 +47,7 @@ export const ActionCommands = ({ setIsOpen }: ActionCommandsProps) => {
           void copyCurrentUrl();
         },
         description: "Copy current page URL to clipboard",
-        icon: <FontAwesomeIcon className="h-4 w-4" icon={faLink} />,
+        icon: <LinkIcon />,
         id: "copy-url",
         label: "Copy URL",
       },
@@ -58,7 +59,7 @@ export const ActionCommands = ({ setIsOpen }: ActionCommandsProps) => {
                 window.open(twitterShareUrl, "_blank");
               },
               description: "Share current post on X/Twitter",
-              icon: <FontAwesomeIcon className="h-4 w-4" icon={faShare} />,
+              icon: <Share2Icon />,
               id: "share-twitter",
               label: "Share on X/Twitter",
             },
@@ -71,7 +72,7 @@ export const ActionCommands = ({ setIsOpen }: ActionCommandsProps) => {
                 window.open(blueskyShareUrl, "_blank");
               },
               description: "Share current post on Bluesky",
-              icon: <FontAwesomeIcon className="h-4 w-4" icon={faShare} />,
+              icon: <Share2Icon />,
               id: "share-bluesky",
               label: "Share on Bluesky",
             },
@@ -84,7 +85,7 @@ export const ActionCommands = ({ setIsOpen }: ActionCommandsProps) => {
                 window.open(githubSourceUrl, "_blank");
               },
               description: "Open post source code on GitHub",
-              icon: <FontAwesomeIcon className="h-4 w-4" icon={faGithub} />,
+              icon: <FontAwesomeIcon icon={faGithub} />,
               id: "github-source",
               label: "View Source on GitHub",
             },
@@ -97,7 +98,7 @@ export const ActionCommands = ({ setIsOpen }: ActionCommandsProps) => {
           );
         },
         description: "Open GitHub issues to report a bug",
-        icon: <FontAwesomeIcon className="h-4 w-4" icon={faBug} />,
+        icon: <BugIcon />,
         id: "report-bug",
         label: "Report a Bug",
       },
@@ -111,13 +112,10 @@ export const ActionCommands = ({ setIsOpen }: ActionCommandsProps) => {
   };
 
   return (
-    <Command.Group
-      className="[&_[cmdk-group-heading]]:px-2 [&_[cmdk-group-heading]]:py-1.5 [&_[cmdk-group-heading]]:text-xs [&_[cmdk-group-heading]]:font-medium [&_[cmdk-group-heading]]:text-slate-500 dark:[&_[cmdk-group-heading]]:text-slate-400"
-      heading="Actions"
-    >
+    <CommandGroup heading="Actions">
       {actionItems.map((item) => (
-        <Command.Item
-          className="relative flex cursor-pointer items-center gap-2 rounded-lg px-2 py-2 text-sm transition-colors outline-none hover:bg-gray-100 data-[selected=true]:bg-gray-200 dark:hover:bg-gray-800 dark:data-[selected=true]:bg-gray-700"
+        <CommandItem
+          className="py-2"
           key={item.id}
           keywords={[item.label, item.description]}
           onSelect={() => {
@@ -125,20 +123,18 @@ export const ActionCommands = ({ setIsOpen }: ActionCommandsProps) => {
           }}
           value={`${item.label} ${item.description}`}
         >
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-gradient-to-br from-[#F7C953] to-[#F28E53] text-white">
+          <div className="flex size-8 items-center justify-center rounded-lg bg-secondary text-secondary-foreground">
             {item.icon}
           </div>
           <div className="flex-1">
-            <div className="font-medium text-slate-900 dark:text-slate-100">
+            <div className="flex items-center gap-1 font-medium">
               {item.label}
-              {copied === item.id.split("-")[1] && (
-                <span className="ml-1 text-green-600 dark:text-green-400">✓</span>
-              )}
+              {copied === item.id.split("-")[1] && <CheckIcon className="text-primary" />}
             </div>
-            <div className="text-xs text-slate-500 dark:text-slate-400">{item.description}</div>
+            <div className="text-xs text-muted-foreground">{item.description}</div>
           </div>
-        </Command.Item>
+        </CommandItem>
       ))}
-    </Command.Group>
+    </CommandGroup>
   );
 };
