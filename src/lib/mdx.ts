@@ -1,3 +1,4 @@
+import { readFile } from "node:fs/promises";
 import path from "node:path";
 
 import { parseISO } from "date-fns";
@@ -156,4 +157,15 @@ export const getPost = cache(async (year: string, slug: string): Promise<null | 
   const { default: component } = await importPostModule(year, slug);
 
   return { component, post };
+});
+
+export const getPostMarkdown = cache(async (year: string, slug: string): Promise<null | string> => {
+  const posts = await getAllPosts();
+  const post = posts.find((entry) => entry.year === year && entry.slug === slug);
+
+  if (post === undefined) {
+    return null;
+  }
+
+  return readFile(path.join(POSTS_PATH, year, `${slug}.mdx`), "utf-8");
 });

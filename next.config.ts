@@ -40,6 +40,14 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  rewrites() {
+    return [
+      {
+        destination: "/api/markdown/:year/:slug",
+        source: "/:year(\\d{4})/:slug.md",
+      },
+    ];
+  },
 };
 
 export default withMDX(nextConfig);
