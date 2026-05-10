@@ -14,7 +14,10 @@ get_versions() {
     const content = fs.readFileSync('.devcontainer/devcontainer.json', 'utf8');
     const json = content.replace(/\/\/.*$/gm, '').replace(/\/\*[\s\S]*?\*\//g, '');
     const parsed = JSON.parse(json);
-    parsed.features['ghcr.io/devcontainers/features/node:1'].version;
+    const nodeFeature = Object.entries(parsed.features ?? {}).find(([name]) =>
+      /^ghcr\.io\/devcontainers\/features\/node(?::.+)?$/.test(name),
+    );
+    nodeFeature?.[1]?.version;
   ")
 }
 
