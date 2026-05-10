@@ -1,7 +1,8 @@
 import { render, screen } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
-import { getAllPosts } from "~/lib/mdx";
+import { getAllPosts, getPostMarkdown } from "~/lib/mdx";
+import { GET } from "../app/api/markdown/[year]/[slug]/route";
 import BlogPostPage from "../app/(blog)/[year]/[slug]/page";
 
 describe("MDX posts", () => {
@@ -34,5 +35,29 @@ describe("MDX posts", () => {
     expect(screen.getByRole("heading", { level: 1, name: "yarn patch の使い方" })).toBeTruthy();
     expect(screen.getByText("手順")).toBeTruthy();
     expect(screen.getByText(/patch:puppeteer-core@\^5\.5\.0/)).toBeTruthy();
+  });
+
+  it("reads markdown source for a local post", async () => {
+    const markdown = await getPostMarkdown("2026", "personal-agent-skills-in-project");
+
+    expect(markdown).toContain(
+      'title: "個人用の Agent Skills を Git に乗せずプロジェクト内に置く"',
+    );
+    expect(markdown).toContain("## 背景");
+  });
+
+  it("returns markdown from the markdown route handler", async () => {
+    const response = await GET(
+      new Request("http://localhost/api/markdown/2026/personal-agent-skills-in-project"),
+      {
+        params: Promise.resolve({
+          slug: "personal-agent-skills-in-project",
+          year: "2026",
+        }),
+      },
+    );
+
+    expect(response.headers.get("content-type")).toBe("text/markdown; charset=utf-8");
+    await expect(response.text()).resolves.toContain("## 背景");
   });
 });
