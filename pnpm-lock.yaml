@@ -142,8 +142,8 @@ importers:
         specifier: 6.0.3
         version: 6.0.3
       ultracite:
-        specifier: 7.6.1
-        version: 7.6.1(oxfmt@0.47.0)(oxlint@1.62.0(oxlint-tsgolint@0.22.1))
+        specifier: 7.6.2
+        version: 7.6.2(oxfmt@0.47.0)(oxlint@1.62.0(oxlint-tsgolint@0.22.1))
       vercel:
         specifier: 53.0.1
         version: 53.0.1(rollup@4.52.5)(typescript@6.0.3)
@@ -4524,8 +4524,8 @@ packages:
   uid-promise@1.0.0:
     resolution: {integrity: sha512-R8375j0qwXyIu/7R0tjdF06/sElHqbmdmWC9M2qQHpEVbvE4I5+38KJI7LUUmQMp7NVq4tKHiBMkT0NFM453Ig==}
 
-  ultracite@7.6.1:
-    resolution: {integrity: sha512-flfiWIwxiBFLgRed6yHQOAOpBvwtvwdpSO5YWj5txmpbUutZOADqCX7WZDtAFG+BlttYkwvRD9lyewQWyPQ1vA==}
+  ultracite@7.6.2:
+    resolution: {integrity: sha512-HonD+l9o8bFEUcVLlefpg5JuvaZH/UTB0jpCVtKAZ6xV1LGZj/hq4nGlz/eezIMmFfd6fe43LMxn1CaY/N/LaA==}
     hasBin: true
     peerDependencies:
       oxfmt: '>=0.1.0'
@@ -9255,7 +9255,7 @@ snapshots:
 
   uid-promise@1.0.0: {}
 
-  ultracite@7.6.1(oxfmt@0.47.0)(oxlint@1.62.0(oxlint-tsgolint@0.22.1)):
+  ultracite@7.6.2(oxfmt@0.47.0)(oxlint@1.62.0(oxlint-tsgolint@0.22.1)):
     dependencies:
       '@clack/prompts': 1.2.0
       commander: 14.0.3
