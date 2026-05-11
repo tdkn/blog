@@ -139,14 +139,14 @@ importers:
         specifier: 8.5.13
         version: 8.5.13
       stylelint:
-        specifier: 17.9.1
-        version: 17.9.1(typescript@6.0.3)
+        specifier: 17.10.0
+        version: 17.10.0(typescript@6.0.3)
       stylelint-config-standard:
         specifier: 40.0.0
-        version: 40.0.0(stylelint@17.9.1(typescript@6.0.3))
+        version: 40.0.0(stylelint@17.10.0(typescript@6.0.3))
       stylelint-config-tailwindcss:
         specifier: 1.0.1
-        version: 1.0.1(stylelint@17.9.1(typescript@6.0.3))(tailwindcss@4.2.4)
+        version: 1.0.1(stylelint@17.10.0(typescript@6.0.3))(tailwindcss@4.2.4)
       tailwindcss:
         specifier: 4.2.4
         version: 4.2.4
@@ -5021,10 +5021,6 @@ packages:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
     engines: {node: '>=8'}
 
-  string-width@7.1.0:
-    resolution: {integrity: sha512-SEIJCWiX7Kg4c129n48aDRwLbFb2LJmXXFrWBG4NGaRtMQ3myKPKbwrD1BKqQn74oCoNMBVrfDEr5M9YxCsrkw==}
-    engines: {node: '>=18'}
-
   string-width@7.2.0:
     resolution: {integrity: sha512-tsaTIkKW9b4N+AEj+SVA+WhJzV7/zMhcSu78mLKWSk7cXMOSHsBKFWUs0fWwq8QyK3MgJBQRX6Gbi4kYbdvGkQ==}
     engines: {node: '>=18'}
@@ -5097,8 +5093,8 @@ packages:
       stylelint: '>=13.13.1'
       tailwindcss: '>=2.2.16'
 
-  stylelint@17.9.1:
-    resolution: {integrity: sha512-THTmnAPJTrg/JhkTWZlSyrO+HUYMx6ELthIHeMyD2WOKqXIJUFQv2Yxn91bvUrZdbBJaW2dUuQdPST2wcQ6C3g==}
+  stylelint@17.10.0:
+    resolution: {integrity: sha512-cI7I6HHEYOHHVNVci+s92WlA3QfmNhjwFdgCgYV3TLEysilOjk+B3EFxMED1xY9GYB0Kre3OD+mSLj19VLTIvA==}
     engines: {node: '>=20.19.0'}
     hasBin: true
 
@@ -7584,7 +7580,7 @@ snapshots:
       glob: 13.0.6
       graceful-fs: 4.2.11
       node-gyp-build: 4.8.0
-      picomatch: 4.0.3
+      picomatch: 4.0.4
       resolve-from: 5.0.0
     transitivePeerDependencies:
       - encoding
@@ -10640,12 +10636,6 @@ snapshots:
       is-fullwidth-code-point: 3.0.0
       strip-ansi: 6.0.1
 
-  string-width@7.1.0:
-    dependencies:
-      emoji-regex: 10.3.0
-      get-east-asian-width: 1.5.0
-      strip-ansi: 7.1.2
-
   string-width@7.2.0:
     dependencies:
       emoji-regex: 10.3.0
@@ -10697,21 +10687,21 @@ snapshots:
     optionalDependencies:
       '@babel/core': 7.29.0
 
-  stylelint-config-recommended@18.0.0(stylelint@17.9.1(typescript@6.0.3)):
+  stylelint-config-recommended@18.0.0(stylelint@17.10.0(typescript@6.0.3)):
     dependencies:
-      stylelint: 17.9.1(typescript@6.0.3)
+      stylelint: 17.10.0(typescript@6.0.3)
 
-  stylelint-config-standard@40.0.0(stylelint@17.9.1(typescript@6.0.3)):
+  stylelint-config-standard@40.0.0(stylelint@17.10.0(typescript@6.0.3)):
     dependencies:
-      stylelint: 17.9.1(typescript@6.0.3)
-      stylelint-config-recommended: 18.0.0(stylelint@17.9.1(typescript@6.0.3))
+      stylelint: 17.10.0(typescript@6.0.3)
+      stylelint-config-recommended: 18.0.0(stylelint@17.10.0(typescript@6.0.3))
 
-  stylelint-config-tailwindcss@1.0.1(stylelint@17.9.1(typescript@6.0.3))(tailwindcss@4.2.4):
+  stylelint-config-tailwindcss@1.0.1(stylelint@17.10.0(typescript@6.0.3))(tailwindcss@4.2.4):
     dependencies:
-      stylelint: 17.9.1(typescript@6.0.3)
+      stylelint: 17.10.0(typescript@6.0.3)
       tailwindcss: 4.2.4
 
-  stylelint@17.9.1(typescript@6.0.3):
+  stylelint@17.10.0(typescript@6.0.3):
     dependencies:
       '@csstools/css-calc': 3.2.0(@csstools/css-parser-algorithms@4.0.0(@csstools/css-tokenizer@4.0.0))(@csstools/css-tokenizer@4.0.0)
       '@csstools/css-parser-algorithms': 4.0.0(@csstools/css-tokenizer@4.0.0)
@@ -11219,7 +11209,7 @@ snapshots:
   wrap-ansi@9.0.0:
     dependencies:
       ansi-styles: 6.2.1
-      string-width: 7.1.0
+      string-width: 7.2.0
       strip-ansi: 7.1.2
 
   wrappy@1.0.2: {}
