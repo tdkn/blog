@@ -1,12 +1,5 @@
-minimumReleaseAge: 10080
+minimumReleaseAge: 10080 # 1 week
 
-minimumReleaseAgeExclude:
-  - "oxfmt"
-  - "@oxlint/*"
-  - "@oxfmt/*"
-  - "@oxlint-tsgolint/*"
-  # Renovate security update: next@16.2.3
-  - next@16.2.3
 allowBuilds:
   "@tailwindcss/oxide": true
   esbuild: true
