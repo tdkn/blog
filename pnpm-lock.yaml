@@ -33,11 +33,11 @@ importers:
         specifier: 3.1.1
         version: 3.1.1(@types/react@19.2.14)(react@19.2.5)
       '@next/bundle-analyzer':
-        specifier: 16.2.4
-        version: 16.2.4
+        specifier: 16.2.6
+        version: 16.2.6
       '@next/mdx':
-        specifier: 16.2.4
-        version: 16.2.4(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.5))
+        specifier: 16.2.6
+        version: 16.2.6(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.5))
       class-variance-authority:
         specifier: 0.7.1
         version: 0.7.1
@@ -1179,14 +1179,14 @@ packages:
   '@napi-rs/wasm-runtime@1.1.1':
     resolution: {integrity: sha512-p64ah1M1ld8xjWv3qbvFwHiFVWrq1yFvV4f7w+mzaqiR4IlSgkqhcRdHwsGgomwzBH51sRY4NEowLxnaBjcW/A==}
 
-  '@next/bundle-analyzer@16.2.4':
-    resolution: {integrity: sha512-EAA9xTDv0P1IiUcZaASJJPkNDjRvL7OMTha6XN8MBzALYGfn7I52Mn7vRiyjVfNrtUPi2qiacY+eFVXe3lKCXA==}
+  '@next/bundle-analyzer@16.2.6':
+    resolution: {integrity: sha512-amPkVtHCTJAdBwyhhl5+qztHk24O4JlASgrWqh15AmnYi74apfZR46NGC0u4pM6BMAU1mYld4WdzD3cRBP3dOA==}
 
   '@next/env@16.2.6':
     resolution: {integrity: sha512-gd8HoHN4ufj73WmR3JmVolrpJR47ILK6LouP5xElPglaVxir6e1a7VzvTvDWkOoPXT9rkkTzyCxBu4yeZfZwcw==}
 
-  '@next/mdx@16.2.4':
-    resolution: {integrity: sha512-e/3bgla+/oF3vDlndI0eFPa0bnP47HPVA0InsAJi7Jr3DwV8WpEGuOcm/3PdI5/93FfNiBhMVeVHZpm1sFlmJw==}
+  '@next/mdx@16.2.6':
+    resolution: {integrity: sha512-0hdoSkzRbyud1dNRRDiyqD9FrxR2wwdiW+ffhYx+n+fXrFOJ7Nwpi8o7nUz2LiiM44BB9M0eIO1Evy3BBrS50A==}
     peerDependencies:
       '@mdx-js/loader': '>=0.15.0'
       '@mdx-js/react': '>=0.15.0'
@@ -6562,7 +6562,7 @@ snapshots:
       '@tybys/wasm-util': 0.10.1
     optional: true
 
-  '@next/bundle-analyzer@16.2.4':
+  '@next/bundle-analyzer@16.2.6':
     dependencies:
       webpack-bundle-analyzer: 4.10.1
     transitivePeerDependencies:
@@ -6571,7 +6571,7 @@ snapshots:
 
   '@next/env@16.2.6': {}
 
-  '@next/mdx@16.2.4(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.5))':
+  '@next/mdx@16.2.6(@mdx-js/loader@3.1.1)(@mdx-js/react@3.1.1(@types/react@19.2.14)(react@19.2.5))':
     dependencies:
       source-map: 0.7.4
     optionalDependencies:
