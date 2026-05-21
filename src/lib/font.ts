@@ -13,7 +13,7 @@ export const fetchFont = async (text: string, font: string): Promise<ArrayBuffer
 
   if (response.ok) {
     const css = await response.text();
-    const resource = /src: url\((.+)\) format\('(opentype|truetype)'\)/.exec(css);
+    const resource = /src: url\((.+)\) format\('(opentype|truetype)'\)/u.exec(css);
 
     if (resource === null) {
       return null;
@@ -22,7 +22,7 @@ export const fetchFont = async (text: string, font: string): Promise<ArrayBuffer
     const fontResponse = await fetch(resource[1]);
 
     if (fontResponse.ok) {
-      return fontResponse.arrayBuffer();
+      return await fontResponse.arrayBuffer();
     }
 
     throw new Error(`Failed to load font binary: ${fontResponse.status}`);

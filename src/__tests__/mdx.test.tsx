@@ -34,7 +34,7 @@ describe("MDX posts", () => {
 
     expect(screen.getByRole("heading", { level: 1, name: "yarn patch の使い方" })).toBeTruthy();
     expect(screen.getByText("手順")).toBeTruthy();
-    expect(screen.getByText(/patch:puppeteer-core@\^5\.5\.0/)).toBeTruthy();
+    expect(screen.getByText(/patch:puppeteer-core@\^5\.5\.0/u)).toBeTruthy();
   });
 
   it("reads markdown source for a local post", async () => {
