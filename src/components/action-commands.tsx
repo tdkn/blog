@@ -18,7 +18,7 @@ export const ActionCommands = ({ setIsOpen }: ActionCommandsProps) => {
 
   const currentUrl = typeof window === "undefined" ? "" : window.location.href;
   const documentTitle = typeof document === "undefined" ? "" : document.title;
-  const isPostPage = /^\/\d{4}\/[^/]+$/.exec(pathname) !== null;
+  const isPostPage = /^\/\d{4}\/[^/]+$/u.exec(pathname) !== null;
 
   const githubSourceUrl = isPostPage
     ? `https://github.com/tdkn/blog/blob/main/posts${pathname}.mdx`

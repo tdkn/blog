@@ -122,7 +122,7 @@ const importPostModule = cache(async (year: string, slug: string): Promise<PostM
 });
 
 const getPostPathParams = (relativePath: string): PostPathParams => {
-  const [year, slug] = relativePath.replace(/\.mdx$/, "").split("/");
+  const [year, slug] = relativePath.replace(/\.mdx$/u, "").split("/");
 
   if (year === undefined || slug === undefined) {
     throw new Error(`Invalid post path: ${relativePath}`);
@@ -167,5 +167,5 @@ export const getPostMarkdown = cache(async (year: string, slug: string): Promise
     return null;
   }
 
-  return readFile(path.join(POSTS_PATH, year, `${slug}.mdx`), "utf-8");
+  return await readFile(path.join(POSTS_PATH, year, `${slug}.mdx`), "utf-8");
 });
