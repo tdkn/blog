@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronRightIcon, HouseIcon, WrenchIcon } from "lucide-react";
+import { ChevronRightIcon, HouseIcon, SlidersHorizontalIcon, WrenchIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 
 import { CommandGroup, CommandItem } from "~/components/ui/command";
@@ -26,6 +26,13 @@ export const NavigationCommands = ({ setIsOpen }: NavigationCommandsProps) => {
       id: "tools",
       label: "GitHub Slash Command Generator",
       path: "/github-slash-command",
+    },
+    {
+      description: "Pick nix-darwin system.defaults values",
+      icon: <SlidersHorizontalIcon />,
+      id: "macos-defaults-picker",
+      label: "macOS Defaults Picker",
+      path: "/macos-defaults-picker",
     },
   ];
 
