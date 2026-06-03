@@ -77,5 +77,5 @@
     "vercel": "54.5.0",
     "vitest": "4.1.7"
   },
-  "packageManager": "pnpm@11.3.0"
+  "packageManager": "pnpm@11.4.0"
 }
