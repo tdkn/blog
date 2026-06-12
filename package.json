@@ -73,7 +73,7 @@
     "stylelint-config-tailwindcss": "1.0.1",
     "tailwindcss": "4.3.0",
     "typescript": "6.0.3",
-    "ultracite": "7.7.0",
+    "ultracite": "7.8.1",
     "vercel": "54.9.1",
     "vitest": "4.1.8"
   },
