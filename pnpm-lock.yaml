@@ -157,8 +157,8 @@ importers:
         specifier: 7.7.0
         version: 7.7.0(oxfmt@0.56.0)(oxlint@1.71.0(oxlint-tsgolint@0.23.0))
       vercel:
-        specifier: 54.17.0
-        version: 54.17.0(rollup@4.52.5)
+        specifier: 54.17.1
+        version: 54.17.1(rollup@4.52.5)
       vitest:
         specifier: 4.1.9
         version: 4.1.9(@edge-runtime/vm@3.2.0)(@types/node@24.13.2)(jsdom@29.1.1(@noble/hashes@1.8.0))(msw@2.14.2(@types/node@24.13.2)(typescript@6.0.3))(vite@7.1.12(@types/node@24.13.2)(jiti@2.7.0)(lightningcss@1.32.0)(tsx@4.21.0)(yaml@2.9.0))
@@ -2544,8 +2544,8 @@ packages:
   '@vercel/nestjs@0.2.101':
     resolution: {integrity: sha512-twHcHBLJN97bK6z9NtGOzwrd9HrR/10e6FGGMCgckz3REAS4a4Us2dyS3IQennNbAT0Nfc1zdH/+trB5WIHUaw==}
 
-  '@vercel/next@4.20.0':
-    resolution: {integrity: sha512-xlAuG371FMIUUMicBtjQDngeQDyxJ/vlvqezHNgmLWFMux9Z3LZOs5Ixxar9y2nx8xiQDvj74zSWPT0YtnMxiQ==}
+  '@vercel/next@4.20.1':
+    resolution: {integrity: sha512-MvZSuRQUGvd4W9rcztpbj+7cNzCFlxhjEFMF4gJbW635+ZP7tN44wEcr7bzVj1m8wi6lYlrs19qXr5vsJKlsmw==}
 
   '@vercel/nft@1.10.0':
     resolution: {integrity: sha512-iLOW4fcsgkipfOh2Bw3wB38YDfxTlxr7+j4uFeui2OswkNT28jIitS/aMce7tS0mef1YPQ8zLIDYr3a0aahNrA==}
@@ -5525,8 +5525,8 @@ packages:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
 
-  vercel@54.17.0:
-    resolution: {integrity: sha512-iAtQjjHh2tL9uVmvkZbv6kZgdixkaYvIckDiTco1QVrcqVhMeQNirCAbrRSnt0EsX0OmGSV69a18cybA1CnQSg==}
+  vercel@54.17.1:
+    resolution: {integrity: sha512-FNzQKz+Da1geI4v5dHxrKn9i1vE0jp4yDxLJ2FwAI0mBwQwEqNCCJNGgRBC+dXsKl2Sv1i+PR19zbRIVAq4r7g==}
     engines: {node: '>= 18'}
     hasBin: true
 
@@ -7774,7 +7774,7 @@ snapshots:
       - rollup
       - supports-color
 
-  '@vercel/next@4.20.0(rollup@4.52.5)':
+  '@vercel/next@4.20.1(rollup@4.52.5)':
     dependencies:
       '@vercel/nft': 1.10.0(rollup@4.52.5)
     transitivePeerDependencies:
@@ -11257,7 +11257,7 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vercel@54.17.0(rollup@4.52.5):
+  vercel@54.17.1(rollup@4.52.5):
     dependencies:
       '@vercel/backends': 0.8.18(rollup@4.52.5)
       '@vercel/blob': 2.4.0
@@ -11276,7 +11276,7 @@ snapshots:
       '@vercel/hydrogen': 1.4.0
       '@vercel/koa': 0.1.80(rollup@4.52.5)
       '@vercel/nestjs': 0.2.101(rollup@4.52.5)
-      '@vercel/next': 4.20.0(rollup@4.52.5)
+      '@vercel/next': 4.20.1(rollup@4.52.5)
       '@vercel/node': 5.8.21(rollup@4.52.5)
       '@vercel/prepare-flags-definitions': 0.3.0
       '@vercel/python': 6.47.1
