@@ -66,8 +66,8 @@ importers:
         specifier: 19.2.7
         version: 19.2.7(react@19.2.7)
       rehype-pretty-code:
-        specifier: 0.14.3
-        version: 0.14.3(shiki@4.3.1)
+        specifier: 0.14.4
+        version: 0.14.4(shiki@4.3.1)
       remark-frontmatter:
         specifier: 5.0.0
         version: 5.0.0
@@ -4808,8 +4808,8 @@ packages:
   rehype-parse@9.0.0:
     resolution: {integrity: sha512-WG7nfvmWWkCR++KEkZevZb/uw41E8TsH4DsY9UxsTbIXCVGbAs4S+r8FrQ+OtH5EEQAs+5UxKC42VinkmpA1Yw==}
 
-  rehype-pretty-code@0.14.3:
-    resolution: {integrity: sha512-Cz692FeYusTjT5cfFWLc4r7JhgC3/JlJptgUh4iffBxWxUnWW1oqbWFi7jGCeq00DYUm8yzoTnvpocaYa5x82g==}
+  rehype-pretty-code@0.14.4:
+    resolution: {integrity: sha512-FKPkiSnTqtJHKjCwfqfQs0tXSkmcq7K3jsryZI0rpazo2kWgSYw+sk18GAhxDzKdPk004WWWZ5yiZFEUQhN4Bg==}
     engines: {node: '>=18'}
     peerDependencies:
       shiki: ^1.0.0 || ^2.0.0 || ^3.0.0 || ^4.0.0
@@ -10336,7 +10336,7 @@ snapshots:
       hast-util-from-html: 2.0.1
       unified: 11.0.5
 
-  rehype-pretty-code@0.14.3(shiki@4.3.1):
+  rehype-pretty-code@0.14.4(shiki@4.3.1):
     dependencies:
       '@types/hast': 3.0.4
       hast-util-to-string: 3.0.0
