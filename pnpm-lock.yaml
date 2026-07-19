@@ -136,8 +136,8 @@ importers:
         specifier: 0.24.0
         version: 0.24.0
       postcss:
-        specifier: 8.5.16
-        version: 8.5.16
+        specifier: 8.5.17
+        version: 8.5.17
       stylelint:
         specifier: 17.14.0
         version: 17.14.0(typescript@6.0.3)
@@ -4665,6 +4665,10 @@ packages:
     resolution: {integrity: sha512-vuwillviilfKZsg0VGj5R/YwwcHx4SLsIOI/7K6mQkWx+l5cUHTjj5g0AasTBcyXsbfTgrwsUNmVUb5xVwyPwg==}
     engines: {node: ^10 || ^12 || >=14}
 
+  postcss@8.5.17:
+    resolution: {integrity: sha512-J7EF+8X+CzRPaJPOv9Ck2wNWJvGnnl3PcNPAdGg6GTLjyVpyQ0yATMSXRFRV01BviT/9Gwuc3rjEyJbDJG9a4w==}
+    engines: {node: ^10 || ^12 || >=14}
+
   powershell-utils@0.1.0:
     resolution: {integrity: sha512-dM0jVuXJPsDN6DvRpea484tCUaMiXWjuCn++HGTqUWzGDjv5tZkEZldAJ/UMlqRYGFrD/etByo4/xOuC/snX2A==}
     engines: {node: '>=20'}
@@ -7364,7 +7368,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.3.2
       '@tailwindcss/oxide': 4.3.2
-      postcss: 8.5.16
+      postcss: 8.5.17
       tailwindcss: 4.3.2
 
   '@testing-library/dom@10.0.0':
@@ -10177,9 +10181,9 @@ snapshots:
 
   pkce-challenge@5.0.1: {}
 
-  postcss-safe-parser@7.0.1(postcss@8.5.16):
+  postcss-safe-parser@7.0.1(postcss@8.5.17):
     dependencies:
-      postcss: 8.5.16
+      postcss: 8.5.17
 
   postcss-selector-parser@7.1.4:
     dependencies:
@@ -10195,6 +10199,12 @@ snapshots:
       source-map-js: 1.2.1
 
   postcss@8.5.16:
+    dependencies:
+      nanoid: 3.3.12
+      picocolors: 1.1.1
+      source-map-js: 1.2.1
+
+  postcss@8.5.17:
     dependencies:
       nanoid: 3.3.12
       picocolors: 1.1.1
@@ -10576,7 +10586,7 @@ snapshots:
       kleur: 4.1.5
       open: 11.0.0
       ora: 8.2.0
-      postcss: 8.5.16
+      postcss: 8.5.17
       postcss-selector-parser: 7.1.4
       prompts: 2.4.2
       recast: 0.23.11
@@ -10867,8 +10877,8 @@ snapshots:
       micromatch: 4.0.8
       normalize-path: 3.0.0
       picocolors: 1.1.1
-      postcss: 8.5.16
-      postcss-safe-parser: 7.0.1(postcss@8.5.16)
+      postcss: 8.5.17
+      postcss-safe-parser: 7.0.1(postcss@8.5.17)
       postcss-selector-parser: 7.1.4
       postcss-value-parser: 4.2.0
       string-width: 8.2.1
