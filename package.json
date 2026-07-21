@@ -74,7 +74,7 @@
     "tailwindcss": "4.3.2",
     "typescript": "6.0.3",
     "ultracite": "7.7.0",
-    "vercel": "55.0.0",
+    "vercel": "56.2.0",
     "vitest": "4.1.10"
   },
   "packageManager": "pnpm@11.11.0"
