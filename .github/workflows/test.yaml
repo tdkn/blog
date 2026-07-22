@@ -46,10 +46,10 @@ jobs:
           pnpm run fix
           git diff --exit-code
 
-      - parallel:
-          - name: Build
-            run: pnpm run build
+      - name: Build
+        run: pnpm run build
 
+      - parallel:
           - name: Lint
             run: pnpm run lint
 
