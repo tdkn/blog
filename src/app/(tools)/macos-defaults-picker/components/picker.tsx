@@ -48,24 +48,30 @@ export const MacOSDefaultsPicker = () => {
   const [values, setValues] = useState<ValuesState>(initialValues);
 
   useEffect(() => {
-    try {
-      const payload: unknown = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "null");
+    const restore = async () => {
+      await Promise.resolve();
 
-      if (isStoredState(payload)) {
-        setSelected((current) => ({
-          ...current,
-          ...filterKnownSelected(payload.selected ?? {}),
-        }));
-        setValues((current) => ({
-          ...current,
-          ...filterKnownValues(payload.values ?? {}),
-        }));
+      try {
+        const payload: unknown = JSON.parse(localStorage.getItem(STORAGE_KEY) ?? "null");
+
+        if (isStoredState(payload)) {
+          setSelected((current) => ({
+            ...current,
+            ...filterKnownSelected(payload.selected ?? {}),
+          }));
+          setValues((current) => ({
+            ...current,
+            ...filterKnownValues(payload.values ?? {}),
+          }));
+        }
+      } catch {
+        localStorage.removeItem(STORAGE_KEY);
+      } finally {
+        setHasRestored(true);
       }
-    } catch {
-      localStorage.removeItem(STORAGE_KEY);
-    } finally {
-      setHasRestored(true);
-    }
+    };
+
+    void restore();
   }, []);
 
   useEffect(() => {

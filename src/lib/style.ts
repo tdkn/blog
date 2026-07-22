@@ -1,3 +1,1 @@
-import { cn } from "~/lib/utils";
-
-export const classNames = cn;
+export { cn as classNames } from "~/lib/utils";
