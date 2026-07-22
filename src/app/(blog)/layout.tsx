@@ -58,6 +58,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => (
       </Script>
 
       <noscript>
+        {/* oxlint-disable-next-line react/iframe-missing-sandbox -- Google Tag Manager requires this fallback iframe to run without sandbox restrictions. */}
         <iframe
           height="0"
           src={`https://www.googletagmanager.com/ns.html?id=${process.env.NEXT_PUBLIC_GTM_ID}`}

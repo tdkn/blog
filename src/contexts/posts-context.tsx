@@ -1,6 +1,6 @@
 "use client";
 
-import { createContext, use, useEffect, useState } from "react";
+import { createContext, use, useEffect, useMemo, useState } from "react";
 
 import type { Post } from "~/types/post";
 
@@ -49,7 +49,9 @@ export const PostsProvider = ({ children }: PostsProviderProps) => {
     void fetchPosts();
   }, []);
 
-  return <PostsContext value={{ error, loading, posts }}>{children}</PostsContext>;
+  const value = useMemo(() => ({ error, loading, posts }), [error, loading, posts]);
+
+  return <PostsContext value={value}>{children}</PostsContext>;
 };
 
 export const usePostsContext = (): PostsContextType => use(PostsContext);

@@ -13,13 +13,14 @@ export const fetchFont = async (text: string, font: string): Promise<ArrayBuffer
 
   if (response.ok) {
     const css = await response.text();
-    const resource = /src: url\((.+)\) format\('(opentype|truetype)'\)/u.exec(css);
+    const resource = /src: url\((?:.+)\) format\('(?:opentype|truetype)'\)/u.exec(css);
 
     if (resource === null) {
       return null;
     }
 
-    const fontResponse = await fetch(resource[1]);
+    const fontUrl = resource[0].slice("src: url(".length, resource[0].lastIndexOf(") format("));
+    const fontResponse = await fetch(fontUrl);
 
     if (fontResponse.ok) {
       return await fontResponse.arrayBuffer();
