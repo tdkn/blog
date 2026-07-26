@@ -75,7 +75,7 @@
     "typescript": "6.0.3",
     "ultracite": "7.9.4",
     "vercel": "56.2.0",
-    "vite": "8.1.4",
+    "vite": "8.1.5",
     "vitest": "4.1.10"
   },
   "packageManager": "pnpm@11.11.0"
