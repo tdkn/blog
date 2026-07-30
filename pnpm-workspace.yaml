@@ -8,5 +8,5 @@ allowBuilds:
   unrs-resolver: true
 
 minimumReleaseAgeExclude:
-  # Renovate security update: next@16.2.6
-  - next@16.2.6
+  # Renovate security update: next@16.2.6 || 16.2.11
+  - next@16.2.6 || 16.2.11
