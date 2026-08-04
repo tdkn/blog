@@ -1,6 +1,5 @@
-import type { Config } from "stylelint";
-
-const stylelintConfig: Config = {
+/** @type {import("stylelint").Config} */
+const stylelintConfig = {
   extends: ["stylelint-config-standard", "stylelint-config-tailwindcss"],
   ignoreFiles: ["*", "!src/**/*.css"],
   rules: {
