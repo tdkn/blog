@@ -1,7 +1,5 @@
 import { ImageResponse } from "next/og";
 
-export const runtime = "edge";
-
 const getTheme = (value: null | string): "dark" | "light" => (value === "dark" ? "dark" : "light");
 
 export const GET = (req: Request) => {

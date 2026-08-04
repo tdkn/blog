@@ -1,7 +1,5 @@
 import { fetchFont } from "~/lib/font";
 
-export const runtime = "edge";
-
 export const GET = async (req: Request) => {
   const { pathname, searchParams } = new URL(req.url);
 
