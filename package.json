@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@mdx-js/rollup": "3.1.1",
-    "@tailwindcss/postcss": "4.3.2",
+    "@tailwindcss/postcss": "4.3.3",
     "@testing-library/react": "16.3.2",
     "@types/mdx": "2.0.14",
     "@types/node": "24.13.3",
@@ -71,7 +71,7 @@
     "stylelint": "17.14.1",
     "stylelint-config-standard": "40.0.0",
     "stylelint-config-tailwindcss": "1.0.1",
-    "tailwindcss": "4.3.2",
+    "tailwindcss": "4.3.3",
     "typescript": "7.0.2",
     "ultracite": "7.9.4",
     "vercel": "56.2.0",
