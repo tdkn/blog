@@ -24,3 +24,5 @@ minimumReleaseAgeExclude:
   - "@next/swc-win32-x64-msvc@16.3.0"
   # Renovate security update: vite@8.1.6
   - vite@8.1.6
+  # Renovate security update: glob@14.0.2
+  - glob@14.0.2
