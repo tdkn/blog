@@ -23,7 +23,7 @@ jobs:
         uses: actions/checkout@v7.0.1
 
       - name: Setup mise
-        uses: jdx/mise-action@v5.2.5
+        uses: jdx/mise-action@v5.2.7
         with:
           install: true
           cache: true

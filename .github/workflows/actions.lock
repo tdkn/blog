@@ -8,7 +8,7 @@ workflows:
     '.github/workflows/test.yaml':
         - 'actions/cache@v6.1.0'
         - 'actions/checkout@v7.0.1'
-        - 'jdx/mise-action@v5.2.5'
+        - 'jdx/mise-action@v5.2.7'
     '.github/workflows/verify-actions-lock.yaml':
         - 'actions/checkout@v7.0.1'
 dependencies:
@@ -27,8 +27,8 @@ dependencies:
         commit: 'sha1-25dd0e34f4fe68f24cc83900b1fe3fe149efef98'
         owner_id: 27347476
         repo_id: 371068214
-    'jdx/mise-action@v5.2.5':
-        ref: 'v5.2.5'
-        commit: 'sha1-6612f0ef07ed2a736cd1e00a94a065522dd41195'
+    'jdx/mise-action@v5.2.7':
+        ref: 'v5.2.7'
+        commit: 'sha1-b44d12e7d0d8ee7461bb893e1b1993500433185b'
         owner_id: 216188
         repo_id: 738284564
